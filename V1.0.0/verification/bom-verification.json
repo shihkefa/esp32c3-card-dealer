@@ -43,7 +43,7 @@
     "拓竹A1 mini"
   ],
   "printedTypes": 40,
-  "updated_design": "P04B gear thickness 7.5mm raises the original upper assembly by 1.5mm for a 2mm nominal P04A-to-P02A clearance; P26 flag extends downward 1.5mm to retain the original home sensor beam. Other 38 STL types, P32 shell and all hardware quantities unchanged.",
+  "updated_design": "P04B independently rebuilt to remove legacy carrier-nut cuts from all 60 teeth across the full 7.5mm thickness. Original 2mm nominal turntable gap, mating dimensions and fasteners retained. Only P04B needs reprinting; extended P26 and all other 39 STL types retained.",
   "preservation_report": "bom-preservation.json",
   "native_excel_recalculation_tested": false
 }

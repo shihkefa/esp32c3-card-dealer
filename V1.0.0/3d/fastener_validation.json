@@ -3,7 +3,7 @@
   "upper_head_lift_mm": 1.5,
   "coordinate_frame": "Current assembled world geometry from actors(); no repeated lift transform.",
   "source_hashes": {
-    "build_cad_py_sha256": "307f468197ff8edaa1b772ce471667d311c9bd8f3524c2bc1201a0d8f2b01c6c",
+    "build_cad_py_sha256": "ca08ed01fc6e8b6289d8ddd1879cfc32828b26102003e9c85a9c692e4e774549",
     "design_params_json_sha256": "adca2f7b7bc783b4755d79ff24bd42adda861fee32cb455af460165ef82ec1c9",
     "check_script_sha256": "a12af82378f1b0c6c0d35a726247ad21656285f942692d018fd92cb402c50704"
   },

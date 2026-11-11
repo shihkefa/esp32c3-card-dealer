@@ -12,7 +12,8 @@ USB CDC On Boot開啟、Flash Mode DIO、4MB。也可用firmware/tools/Build-Ard
 virtual_assembly_check.py、check_fasteners.py及validate_cad.py檢查參考包絡與匯出模型。
 check_p02_split.py及check_p04_split.py核對分件列印面、插入路徑與螺母/工具間隙。
 P04B齒頂與接合面Z43.5mm、齒底Z36mm；P04A與P02A頂圈名義間隙2.0mm。
-只變更P04B與P26原生列印幾何，其餘38種STL保持不變。P04A與整個上半部裝配抬高1.5mm；下方軸頸、軸承肩、P06、滑環與P05保持原位。
+本次完整60齒修正只變更P04B原生列印幾何，其餘39種STL包含現有延長式P26保持不變。P04B應獨立建立齒輪、軸頸及必要孔槽，不繼承承載盤／馬達固定孔，避免誤切齒圈。
+先前P04A與整個上半部裝配抬高1.5mm的設計沿用；下方軸頸、軸承肩、P06、滑環與P05保持原位。完整60齒及7.5mm全齒寬另由p04_split_validation.json核對，示意圖P04B_完整60齒檢查.png供手冊第6步使用。
 P26薄片向下延長1.5mm，原生最低Z34.1mm，裝配最低Z35.6mm；P25與光電高度保持不變。
 組裝匯出與示意圖應使用assembly_pose(pid, shape)及inclined_head_pose(shape)，不得把抬高量烘焙進所有零件STL，亦不得讓傾斜後座標重複旋轉或抬高。
 check_p05_fasteners.py核對P05A/P05B分件裝入、完整錐座/閉孔、螺母捕捉及包含P02A的L型工具入場、轉動與換位。

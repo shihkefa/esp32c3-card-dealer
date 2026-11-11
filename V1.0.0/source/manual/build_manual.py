@@ -58,7 +58,7 @@ detail_map={
     'step-02':[('P02螺母裝入詳圖',rawfig['details']['p02Nuts'])],
     'step-04':[('P05分件爆炸圖',rawfig['details']['p05Exploded']),('螺絲承壓與防脫',rawfig['details']['p05Seat'])],
     'step-05':[('P05分件組裝',rawfig['details']['p05Exploded'])],
-    'step-06':[('P04螺母裝入詳圖',rawfig['details']['p04Nuts'])],
+    'step-06':[('P04B完整60齒檢查','3d/P04B_完整60齒檢查.png'),('P04螺母裝入詳圖',rawfig['details']['p04Nuts'])],
     'step-07':[('P04B抬高與2mm間隙','3d/P04B_抬高與2mm間隙.png'),('P06捕捉螺母詳圖',rawfig['details']['p06'])],
     'step-08':[('P06輕調接觸位置',rawfig['details']['p06'])],
     'step-17':[('上殼台階包覆詳圖','3d/P32_台階包覆與接縫.png'),('上殼內側連接詳圖','3d/P32_內側接合與列印方向.png'),('前階段居中比較','3d/P32_居中與分件組裝.png'),('頂部操作位置',rawfig['controls'])],

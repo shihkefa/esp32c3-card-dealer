@@ -52,6 +52,14 @@ assert load(root/'3d/virtual_assembly_report.json')['summary']['all_passed']
 assert load(root/'3d/p02_split_validation.json')['all_passed']
 assert load(root/'3d/p04_split_validation.json')['all_passed']
 assert (root/'3d/P04B_抬高與2mm間隙.png').is_file()
+assert (root/'3d/P04B_完整60齒檢查.png').is_file()
+p04_checks={check['test']:check for check in load(root/'3d/p04_split_validation.json')['checks']}
+for required_tooth_check in (
+    'All 60 CAD teeth retain the complete pristine profile over full height',
+    'Complete P04B matches independent gear journal and own-interface reference',
+    'Exported P04B STL roundtrip retains all 60 full-height tooth profiles',
+    'Negative control rejects the legacy N20 pocket at tooth index35 angle210deg'):
+    assert p04_checks[required_tooth_check]['passed']
 for report_name,script_name in [('p04_split_validation.json','check_p04_split.py'),
                                 ('fastener_validation.json','check_fasteners.py')]:
     checked_sources=load(root/'3d'/report_name)['source_hashes']

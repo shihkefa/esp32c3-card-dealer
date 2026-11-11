@@ -10,14 +10,14 @@
     "optional P12 narrow-card spacers",
     "P30 fit coupon"
   ],
-  "triangles": 197410,
+  "triangles": 194880,
   "dimensions_mm": [
     186.2,
     196.4,
     132.8
   ],
   "all_component_shells_closed": true,
-  "bytes": 9870584,
+  "bytes": 9744084,
   "note": "Individual closed shells can touch; do not fuse or print this as a working mechanism.",
   "components": [
     {
@@ -52,8 +52,8 @@
     },
     {
       "id": "P04B",
-      "name": "加厚60齒齒輪與空心轉軸",
-      "triangles": 10630,
+      "name": "完整齒形60齒齒輪與空心轉軸",
+      "triangles": 8100,
       "closed": true
     },
     {

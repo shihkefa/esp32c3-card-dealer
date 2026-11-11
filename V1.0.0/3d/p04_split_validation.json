@@ -4,9 +4,9 @@
   "upper_head_lift_mm": 1.5,
   "P04_mating_plane_z_mm": 43.5,
   "source_hashes": {
-    "build_cad_py_sha256": "307f468197ff8edaa1b772ce471667d311c9bd8f3524c2bc1201a0d8f2b01c6c",
+    "build_cad_py_sha256": "ca08ed01fc6e8b6289d8ddd1879cfc32828b26102003e9c85a9c692e4e774549",
     "design_params_json_sha256": "adca2f7b7bc783b4755d79ff24bd42adda861fee32cb455af460165ef82ec1c9",
-    "check_script_sha256": "9c853477e61b1f5cba32c9a47182a18c6eae2874e584af7511f0a43f56195129"
+    "check_script_sha256": "59b625a52870aa5e7bd6cd5697761e0da0a1e33079d7827915607be765718e55"
   },
   "scope": "Nominal CAD/reference-envelope geometry; no physical assembly or slicer test.",
   "print_contact": [
@@ -363,8 +363,3226 @@
       "maximum_identifier_radius_mm": 15.639,
       "location": "齒輪軸側內圈背面；避開齒面、軸承配合面與螺母槽",
       "tooth_root_radius_mm": 34.5
+    },
+    {
+      "test": "All 60 CAD teeth retain the complete pristine profile over full height",
+      "passed": true,
+      "scan": {
+        "all_60_teeth_passed": true,
+        "working_radius_lower_bound_mm": 34.5,
+        "full_height_z_band_mm": [
+          36,
+          43.5
+        ],
+        "missing_total_mm3": 0.0,
+        "extra_total_mm3": 0.0,
+        "total_tolerance_mm3": 0.006,
+        "export_float32_ulp_mm": 0.0,
+        "conservative_vertex_recovery_bound_mm": 0.0,
+        "failed_tooth_indices_0based": [],
+        "teeth": [
+          {
+            "tooth_index_0based": 0,
+            "tooth_number_1based": 1,
+            "centre_angle_deg": 0,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 1,
+            "tooth_number_1based": 2,
+            "centre_angle_deg": 6,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 2,
+            "tooth_number_1based": 3,
+            "centre_angle_deg": 12,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 3,
+            "tooth_number_1based": 4,
+            "centre_angle_deg": 18,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 4,
+            "tooth_number_1based": 5,
+            "centre_angle_deg": 24,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 5,
+            "tooth_number_1based": 6,
+            "centre_angle_deg": 30,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 6,
+            "tooth_number_1based": 7,
+            "centre_angle_deg": 36,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 7,
+            "tooth_number_1based": 8,
+            "centre_angle_deg": 42,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 8,
+            "tooth_number_1based": 9,
+            "centre_angle_deg": 48,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 9,
+            "tooth_number_1based": 10,
+            "centre_angle_deg": 54,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 10,
+            "tooth_number_1based": 11,
+            "centre_angle_deg": 60,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 11,
+            "tooth_number_1based": 12,
+            "centre_angle_deg": 66,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 12,
+            "tooth_number_1based": 13,
+            "centre_angle_deg": 72,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 13,
+            "tooth_number_1based": 14,
+            "centre_angle_deg": 78,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 14,
+            "tooth_number_1based": 15,
+            "centre_angle_deg": 84,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 15,
+            "tooth_number_1based": 16,
+            "centre_angle_deg": 90,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 16,
+            "tooth_number_1based": 17,
+            "centre_angle_deg": 96,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 17,
+            "tooth_number_1based": 18,
+            "centre_angle_deg": 102,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 18,
+            "tooth_number_1based": 19,
+            "centre_angle_deg": 108,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 19,
+            "tooth_number_1based": 20,
+            "centre_angle_deg": 114,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 20,
+            "tooth_number_1based": 21,
+            "centre_angle_deg": 120,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 21,
+            "tooth_number_1based": 22,
+            "centre_angle_deg": 126,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 22,
+            "tooth_number_1based": 23,
+            "centre_angle_deg": 132,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 23,
+            "tooth_number_1based": 24,
+            "centre_angle_deg": 138,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 24,
+            "tooth_number_1based": 25,
+            "centre_angle_deg": 144,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 25,
+            "tooth_number_1based": 26,
+            "centre_angle_deg": 150,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 26,
+            "tooth_number_1based": 27,
+            "centre_angle_deg": 156,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 27,
+            "tooth_number_1based": 28,
+            "centre_angle_deg": 162,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 28,
+            "tooth_number_1based": 29,
+            "centre_angle_deg": 168,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 29,
+            "tooth_number_1based": 30,
+            "centre_angle_deg": 174,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 30,
+            "tooth_number_1based": 31,
+            "centre_angle_deg": 180,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 31,
+            "tooth_number_1based": 32,
+            "centre_angle_deg": 186,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 32,
+            "tooth_number_1based": 33,
+            "centre_angle_deg": 192,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 33,
+            "tooth_number_1based": 34,
+            "centre_angle_deg": 198,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 34,
+            "tooth_number_1based": 35,
+            "centre_angle_deg": 204,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 35,
+            "tooth_number_1based": 36,
+            "centre_angle_deg": 210,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 36,
+            "tooth_number_1based": 37,
+            "centre_angle_deg": 216,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 37,
+            "tooth_number_1based": 38,
+            "centre_angle_deg": 222,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 38,
+            "tooth_number_1based": 39,
+            "centre_angle_deg": 228,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 39,
+            "tooth_number_1based": 40,
+            "centre_angle_deg": 234,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 40,
+            "tooth_number_1based": 41,
+            "centre_angle_deg": 240,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 41,
+            "tooth_number_1based": 42,
+            "centre_angle_deg": 246,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 42,
+            "tooth_number_1based": 43,
+            "centre_angle_deg": 252,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 43,
+            "tooth_number_1based": 44,
+            "centre_angle_deg": 258,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 44,
+            "tooth_number_1based": 45,
+            "centre_angle_deg": 264,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 45,
+            "tooth_number_1based": 46,
+            "centre_angle_deg": 270,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 46,
+            "tooth_number_1based": 47,
+            "centre_angle_deg": 276,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 47,
+            "tooth_number_1based": 48,
+            "centre_angle_deg": 282,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 48,
+            "tooth_number_1based": 49,
+            "centre_angle_deg": 288,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 49,
+            "tooth_number_1based": 50,
+            "centre_angle_deg": 294,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 50,
+            "tooth_number_1based": 51,
+            "centre_angle_deg": 300,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 51,
+            "tooth_number_1based": 52,
+            "centre_angle_deg": 306,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 52,
+            "tooth_number_1based": 53,
+            "centre_angle_deg": 312,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 53,
+            "tooth_number_1based": 54,
+            "centre_angle_deg": 318,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 54,
+            "tooth_number_1based": 55,
+            "centre_angle_deg": 324,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 55,
+            "tooth_number_1based": 56,
+            "centre_angle_deg": 330,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 56,
+            "tooth_number_1based": 57,
+            "centre_angle_deg": 336,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 57,
+            "tooth_number_1based": 58,
+            "centre_angle_deg": 342,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 58,
+            "tooth_number_1based": 59,
+            "centre_angle_deg": 348,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 59,
+            "tooth_number_1based": 60,
+            "centre_angle_deg": 354,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "test": "Complete P04B matches independent gear journal and own-interface reference",
+      "passed": true,
+      "symmetric_difference_mm3": 0.0,
+      "scope": "Independent intended B body including bore, shoulder, six internal slots, four own fasteners/key and identifier; no P04A mounting holes."
+    },
+    {
+      "test": "Exported P04B STL roundtrip retains all 60 full-height tooth profiles",
+      "passed": true,
+      "exported_stl": {
+        "file": "C:\\Chat\\codex\\發牌機\\V1.0.0\\3d\\STL\\P04B.stl",
+        "sha256": "6199faa7bea0ba10a52fc080b20d70300778313a013dfb848fb502d98fb154b0",
+        "watertight": true,
+        "positive_volume": true,
+        "manifold_status": "Error.NoError",
+        "export_coordinate_max_mm": 74.39957427978516
+      },
+      "scan": {
+        "all_60_teeth_passed": true,
+        "working_radius_lower_bound_mm": 34.5,
+        "full_height_z_band_mm": [
+          36,
+          43.5
+        ],
+        "missing_total_mm3": 0.00042225,
+        "extra_total_mm3": 0.00034796,
+        "total_tolerance_mm3": 0.1502748,
+        "export_float32_ulp_mm": 7.62939453125e-06,
+        "conservative_vertex_recovery_bound_mm": 3.0517578125e-05,
+        "failed_tooth_indices_0based": [],
+        "teeth": [
+          {
+            "tooth_index_0based": 0,
+            "tooth_number_1based": 1,
+            "centre_angle_deg": 0,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 6.75e-06,
+            "extra_volume_mm3": 3.77e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 1,
+            "tooth_number_1based": 2,
+            "centre_angle_deg": 6,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.63e-06,
+            "extra_volume_mm3": 1.679e-05,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 2,
+            "tooth_number_1based": 3,
+            "centre_angle_deg": 12,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.029e-05,
+            "extra_volume_mm3": 4.49e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 3,
+            "tooth_number_1based": 4,
+            "centre_angle_deg": 18,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 6.58e-06,
+            "extra_volume_mm3": 1e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 4,
+            "tooth_number_1based": 5,
+            "centre_angle_deg": 24,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 9.24e-06,
+            "extra_volume_mm3": 8.24e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 5,
+            "tooth_number_1based": 6,
+            "centre_angle_deg": 30,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 7.18e-06,
+            "extra_volume_mm3": 7e-07,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 6,
+            "tooth_number_1based": 7,
+            "centre_angle_deg": 36,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.581e-05,
+            "extra_volume_mm3": 5.44e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 7,
+            "tooth_number_1based": 8,
+            "centre_angle_deg": 42,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 3.68e-06,
+            "extra_volume_mm3": 2.65e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 8,
+            "tooth_number_1based": 9,
+            "centre_angle_deg": 48,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.109e-05,
+            "extra_volume_mm3": 3.05e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 9,
+            "tooth_number_1based": 10,
+            "centre_angle_deg": 54,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.096e-05,
+            "extra_volume_mm3": 2.96e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 10,
+            "tooth_number_1based": 11,
+            "centre_angle_deg": 60,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.919e-05,
+            "extra_volume_mm3": 3.6e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 11,
+            "tooth_number_1based": 12,
+            "centre_angle_deg": 66,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 9.54e-06,
+            "extra_volume_mm3": 8.56e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 12,
+            "tooth_number_1based": 13,
+            "centre_angle_deg": 72,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 4.47e-06,
+            "extra_volume_mm3": 5.86e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 13,
+            "tooth_number_1based": 14,
+            "centre_angle_deg": 78,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 2.33e-06,
+            "extra_volume_mm3": 6.67e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 14,
+            "tooth_number_1based": 15,
+            "centre_angle_deg": 84,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 6.79e-06,
+            "extra_volume_mm3": 8.22e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 15,
+            "tooth_number_1based": 16,
+            "centre_angle_deg": 90,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 5.51e-06,
+            "extra_volume_mm3": 7.02e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 16,
+            "tooth_number_1based": 17,
+            "centre_angle_deg": 96,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 3.06e-06,
+            "extra_volume_mm3": 7.07e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 17,
+            "tooth_number_1based": 18,
+            "centre_angle_deg": 102,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 5.19e-06,
+            "extra_volume_mm3": 4.89e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 18,
+            "tooth_number_1based": 19,
+            "centre_angle_deg": 108,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 3.91e-06,
+            "extra_volume_mm3": 3.22e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 19,
+            "tooth_number_1based": 20,
+            "centre_angle_deg": 114,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 2.74e-06,
+            "extra_volume_mm3": 2.27e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 20,
+            "tooth_number_1based": 21,
+            "centre_angle_deg": 120,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 3.52e-06,
+            "extra_volume_mm3": 1.34e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 21,
+            "tooth_number_1based": 22,
+            "centre_angle_deg": 126,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 2.47e-06,
+            "extra_volume_mm3": 1.48e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 22,
+            "tooth_number_1based": 23,
+            "centre_angle_deg": 132,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 5.4e-06,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 23,
+            "tooth_number_1based": 24,
+            "centre_angle_deg": 138,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 5.27e-06,
+            "extra_volume_mm3": -0.0,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 24,
+            "tooth_number_1based": 25,
+            "centre_angle_deg": 144,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 7.41e-06,
+            "extra_volume_mm3": 1.5e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 25,
+            "tooth_number_1based": 26,
+            "centre_angle_deg": 150,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.052e-05,
+            "extra_volume_mm3": 1.2e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 26,
+            "tooth_number_1based": 27,
+            "centre_angle_deg": 156,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.12e-05,
+            "extra_volume_mm3": 2.03e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 27,
+            "tooth_number_1based": 28,
+            "centre_angle_deg": 162,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.068e-05,
+            "extra_volume_mm3": 3.76e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 28,
+            "tooth_number_1based": 29,
+            "centre_angle_deg": 168,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.067e-05,
+            "extra_volume_mm3": 3.22e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 29,
+            "tooth_number_1based": 30,
+            "centre_angle_deg": 174,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 8.84e-06,
+            "extra_volume_mm3": 5.71e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 30,
+            "tooth_number_1based": 31,
+            "centre_angle_deg": 180,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.398e-05,
+            "extra_volume_mm3": 3.75e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 31,
+            "tooth_number_1based": 32,
+            "centre_angle_deg": 186,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 7.72e-06,
+            "extra_volume_mm3": 1.125e-05,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 32,
+            "tooth_number_1based": 33,
+            "centre_angle_deg": 192,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.184e-05,
+            "extra_volume_mm3": 1.01e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 33,
+            "tooth_number_1based": 34,
+            "centre_angle_deg": 198,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 8.63e-06,
+            "extra_volume_mm3": 1e-08,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 34,
+            "tooth_number_1based": 35,
+            "centre_angle_deg": 204,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 9.8e-06,
+            "extra_volume_mm3": 2.49e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 35,
+            "tooth_number_1based": 36,
+            "centre_angle_deg": 210,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.355e-05,
+            "extra_volume_mm3": 4.6e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 36,
+            "tooth_number_1based": 37,
+            "centre_angle_deg": 216,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 8.56e-06,
+            "extra_volume_mm3": 5.21e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 37,
+            "tooth_number_1based": 38,
+            "centre_angle_deg": 222,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 4.23e-06,
+            "extra_volume_mm3": 4.81e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 38,
+            "tooth_number_1based": 39,
+            "centre_angle_deg": 228,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 5.16e-06,
+            "extra_volume_mm3": 6.16e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 39,
+            "tooth_number_1based": 40,
+            "centre_angle_deg": 234,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.275e-05,
+            "extra_volume_mm3": 6.46e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 40,
+            "tooth_number_1based": 41,
+            "centre_angle_deg": 240,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 9.41e-06,
+            "extra_volume_mm3": 3.77e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 41,
+            "tooth_number_1based": 42,
+            "centre_angle_deg": 246,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 6.35e-06,
+            "extra_volume_mm3": 6.28e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 42,
+            "tooth_number_1based": 43,
+            "centre_angle_deg": 252,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.93e-06,
+            "extra_volume_mm3": 8.62e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 43,
+            "tooth_number_1based": 44,
+            "centre_angle_deg": 258,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 9.44e-06,
+            "extra_volume_mm3": 1.563e-05,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 44,
+            "tooth_number_1based": 45,
+            "centre_angle_deg": 264,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.6e-07,
+            "extra_volume_mm3": 9.04e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 45,
+            "tooth_number_1based": 46,
+            "centre_angle_deg": 270,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 5.02e-06,
+            "extra_volume_mm3": 8.68e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 46,
+            "tooth_number_1based": 47,
+            "centre_angle_deg": 276,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 2.19e-06,
+            "extra_volume_mm3": 1.194e-05,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 47,
+            "tooth_number_1based": 48,
+            "centre_angle_deg": 282,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.83e-06,
+            "extra_volume_mm3": 1.532e-05,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 48,
+            "tooth_number_1based": 49,
+            "centre_angle_deg": 288,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 3.02e-06,
+            "extra_volume_mm3": 1.662e-05,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 49,
+            "tooth_number_1based": 50,
+            "centre_angle_deg": 294,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.68e-06,
+            "extra_volume_mm3": 9.69e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 50,
+            "tooth_number_1based": 51,
+            "centre_angle_deg": 300,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 7.55e-06,
+            "extra_volume_mm3": 3.72e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 51,
+            "tooth_number_1based": 52,
+            "centre_angle_deg": 306,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.567e-05,
+            "extra_volume_mm3": 8.79e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 52,
+            "tooth_number_1based": 53,
+            "centre_angle_deg": 312,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 4.81e-06,
+            "extra_volume_mm3": 7.4e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 53,
+            "tooth_number_1based": 54,
+            "centre_angle_deg": 318,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.21e-06,
+            "extra_volume_mm3": 8.98e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 54,
+            "tooth_number_1based": 55,
+            "centre_angle_deg": 324,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.344e-05,
+            "extra_volume_mm3": 5.03e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 55,
+            "tooth_number_1based": 56,
+            "centre_angle_deg": 330,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.091e-05,
+            "extra_volume_mm3": 1.218e-05,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 56,
+            "tooth_number_1based": 57,
+            "centre_angle_deg": 336,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.61e-06,
+            "extra_volume_mm3": 3.55e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 57,
+            "tooth_number_1based": 58,
+            "centre_angle_deg": 342,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 3.95e-06,
+            "extra_volume_mm3": 9.5e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 58,
+            "tooth_number_1based": 59,
+            "centre_angle_deg": 348,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 1.67e-06,
+            "extra_volume_mm3": 8.22e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 59,
+            "tooth_number_1based": 60,
+            "centre_angle_deg": 354,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 2.26e-06,
+            "extra_volume_mm3": 2.54e-06,
+            "tolerance_mm3": 0.00250458,
+            "passed": true
+          }
+        ]
+      },
+      "tolerance_basis": "Per tooth max(0.002mm3, expected surface area * 4 float32 exported-coordinate ULP); global tolerance is the sum, never a substitute for each tooth."
+    },
+    {
+      "test": "Negative control rejects the legacy N20 pocket at tooth index35 angle210deg",
+      "passed": true,
+      "legacy_cutter_xy_mm": [
+        -33,
+        -19
+      ],
+      "legacy_cutter_z_band_mm": [
+        41,
+        42
+      ],
+      "scan": {
+        "all_60_teeth_passed": false,
+        "working_radius_lower_bound_mm": 34.5,
+        "full_height_z_band_mm": [
+          36,
+          43.5
+        ],
+        "missing_total_mm3": 2.95348062,
+        "extra_total_mm3": 0.0,
+        "total_tolerance_mm3": 0.006,
+        "export_float32_ulp_mm": 0.0,
+        "conservative_vertex_recovery_bound_mm": 0.0,
+        "failed_tooth_indices_0based": [
+          35
+        ],
+        "teeth": [
+          {
+            "tooth_index_0based": 0,
+            "tooth_number_1based": 1,
+            "centre_angle_deg": 0,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 1,
+            "tooth_number_1based": 2,
+            "centre_angle_deg": 6,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 2,
+            "tooth_number_1based": 3,
+            "centre_angle_deg": 12,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 3,
+            "tooth_number_1based": 4,
+            "centre_angle_deg": 18,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 4,
+            "tooth_number_1based": 5,
+            "centre_angle_deg": 24,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 5,
+            "tooth_number_1based": 6,
+            "centre_angle_deg": 30,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 6,
+            "tooth_number_1based": 7,
+            "centre_angle_deg": 36,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 7,
+            "tooth_number_1based": 8,
+            "centre_angle_deg": 42,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 8,
+            "tooth_number_1based": 9,
+            "centre_angle_deg": 48,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 9,
+            "tooth_number_1based": 10,
+            "centre_angle_deg": 54,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 10,
+            "tooth_number_1based": 11,
+            "centre_angle_deg": 60,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 11,
+            "tooth_number_1based": 12,
+            "centre_angle_deg": 66,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 12,
+            "tooth_number_1based": 13,
+            "centre_angle_deg": 72,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 13,
+            "tooth_number_1based": 14,
+            "centre_angle_deg": 78,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 14,
+            "tooth_number_1based": 15,
+            "centre_angle_deg": 84,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 15,
+            "tooth_number_1based": 16,
+            "centre_angle_deg": 90,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 16,
+            "tooth_number_1based": 17,
+            "centre_angle_deg": 96,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 17,
+            "tooth_number_1based": 18,
+            "centre_angle_deg": 102,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 18,
+            "tooth_number_1based": 19,
+            "centre_angle_deg": 108,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 19,
+            "tooth_number_1based": 20,
+            "centre_angle_deg": 114,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 20,
+            "tooth_number_1based": 21,
+            "centre_angle_deg": 120,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 21,
+            "tooth_number_1based": 22,
+            "centre_angle_deg": 126,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 22,
+            "tooth_number_1based": 23,
+            "centre_angle_deg": 132,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 23,
+            "tooth_number_1based": 24,
+            "centre_angle_deg": 138,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 24,
+            "tooth_number_1based": 25,
+            "centre_angle_deg": 144,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 25,
+            "tooth_number_1based": 26,
+            "centre_angle_deg": 150,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 26,
+            "tooth_number_1based": 27,
+            "centre_angle_deg": 156,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 27,
+            "tooth_number_1based": 28,
+            "centre_angle_deg": 162,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 28,
+            "tooth_number_1based": 29,
+            "centre_angle_deg": 168,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 29,
+            "tooth_number_1based": 30,
+            "centre_angle_deg": 174,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 30,
+            "tooth_number_1based": 31,
+            "centre_angle_deg": 180,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 31,
+            "tooth_number_1based": 32,
+            "centre_angle_deg": 186,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 32,
+            "tooth_number_1based": 33,
+            "centre_angle_deg": 192,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 33,
+            "tooth_number_1based": 34,
+            "centre_angle_deg": 198,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 34,
+            "tooth_number_1based": 35,
+            "centre_angle_deg": 204,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 35,
+            "tooth_number_1based": 36,
+            "centre_angle_deg": 210,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 2.95348062,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": false
+          },
+          {
+            "tooth_index_0based": 36,
+            "tooth_number_1based": 37,
+            "centre_angle_deg": 216,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 37,
+            "tooth_number_1based": 38,
+            "centre_angle_deg": 222,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 38,
+            "tooth_number_1based": 39,
+            "centre_angle_deg": 228,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 39,
+            "tooth_number_1based": 40,
+            "centre_angle_deg": 234,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 40,
+            "tooth_number_1based": 41,
+            "centre_angle_deg": 240,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 41,
+            "tooth_number_1based": 42,
+            "centre_angle_deg": 246,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 42,
+            "tooth_number_1based": 43,
+            "centre_angle_deg": 252,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 43,
+            "tooth_number_1based": 44,
+            "centre_angle_deg": 258,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 44,
+            "tooth_number_1based": 45,
+            "centre_angle_deg": 264,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 45,
+            "tooth_number_1based": 46,
+            "centre_angle_deg": 270,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 46,
+            "tooth_number_1based": 47,
+            "centre_angle_deg": 276,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 47,
+            "tooth_number_1based": 48,
+            "centre_angle_deg": 282,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 48,
+            "tooth_number_1based": 49,
+            "centre_angle_deg": 288,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 49,
+            "tooth_number_1based": 50,
+            "centre_angle_deg": 294,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 50,
+            "tooth_number_1based": 51,
+            "centre_angle_deg": 300,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 51,
+            "tooth_number_1based": 52,
+            "centre_angle_deg": 306,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 52,
+            "tooth_number_1based": 53,
+            "centre_angle_deg": 312,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 53,
+            "tooth_number_1based": 54,
+            "centre_angle_deg": 318,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 54,
+            "tooth_number_1based": 55,
+            "centre_angle_deg": 324,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 55,
+            "tooth_number_1based": 56,
+            "centre_angle_deg": 330,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 56,
+            "tooth_number_1based": 57,
+            "centre_angle_deg": 336,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 57,
+            "tooth_number_1based": 58,
+            "centre_angle_deg": 342,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 58,
+            "tooth_number_1based": 59,
+            "centre_angle_deg": 348,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          },
+          {
+            "tooth_index_0based": 59,
+            "tooth_number_1based": 60,
+            "centre_angle_deg": 354,
+            "expected_volume_mm3": 35.210107,
+            "missing_volume_mm3": 0.0,
+            "extra_volume_mm3": 0.0,
+            "tolerance_mm3": 0.0001,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "test": "Previous defective exported STL is rejected with the original 210deg Z41..42 loss",
+      "passed": true,
+      "evidence": {
+        "available": true,
+        "exported_stl": {
+          "file": "C:\\Chat\\codex\\發牌機\\V1.0.0\\.build\\P04B_before.stl",
+          "sha256": "cb84b5826ad5288ed9f54e0163d30a449fe83242fc2dc64158573f0785aae7ad",
+          "watertight": true,
+          "positive_volume": true,
+          "manifold_status": "Error.NoError",
+          "export_coordinate_max_mm": 74.39957427978516
+        },
+        "scan": {
+          "all_60_teeth_passed": false,
+          "working_radius_lower_bound_mm": 34.5,
+          "full_height_z_band_mm": [
+            36,
+            43.5
+          ],
+          "missing_total_mm3": 2.95425535,
+          "extra_total_mm3": 0.00036367,
+          "total_tolerance_mm3": 0.1502748,
+          "export_float32_ulp_mm": 7.62939453125e-06,
+          "conservative_vertex_recovery_bound_mm": 3.0517578125e-05,
+          "failed_tooth_indices_0based": [
+            35
+          ],
+          "teeth": [
+            {
+              "tooth_index_0based": 0,
+              "tooth_number_1based": 1,
+              "centre_angle_deg": 0,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.725e-05,
+              "extra_volume_mm3": 4.53e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 1,
+              "tooth_number_1based": 2,
+              "centre_angle_deg": 6,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 4.41e-06,
+              "extra_volume_mm3": 1.198e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 2,
+              "tooth_number_1based": 3,
+              "centre_angle_deg": 12,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.557e-05,
+              "extra_volume_mm3": 4.34e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 3,
+              "tooth_number_1based": 4,
+              "centre_angle_deg": 18,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.277e-05,
+              "extra_volume_mm3": 4.3e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 4,
+              "tooth_number_1based": 5,
+              "centre_angle_deg": 24,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.505e-05,
+              "extra_volume_mm3": 6.55e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 5,
+              "tooth_number_1based": 6,
+              "centre_angle_deg": 30,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.691e-05,
+              "extra_volume_mm3": 7.1e-07,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 6,
+              "tooth_number_1based": 7,
+              "centre_angle_deg": 36,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.877e-05,
+              "extra_volume_mm3": 4.67e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 7,
+              "tooth_number_1based": 8,
+              "centre_angle_deg": 42,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 9.04e-06,
+              "extra_volume_mm3": 2.73e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 8,
+              "tooth_number_1based": 9,
+              "centre_angle_deg": 48,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.715e-05,
+              "extra_volume_mm3": 2.76e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 9,
+              "tooth_number_1based": 10,
+              "centre_angle_deg": 54,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.539e-05,
+              "extra_volume_mm3": 2.64e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 10,
+              "tooth_number_1based": 11,
+              "centre_angle_deg": 60,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 2.842e-05,
+              "extra_volume_mm3": 3.62e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 11,
+              "tooth_number_1based": 12,
+              "centre_angle_deg": 66,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.744e-05,
+              "extra_volume_mm3": 8.29e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 12,
+              "tooth_number_1based": 13,
+              "centre_angle_deg": 72,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 7.52e-06,
+              "extra_volume_mm3": 5.55e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 13,
+              "tooth_number_1based": 14,
+              "centre_angle_deg": 78,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.831e-05,
+              "extra_volume_mm3": 1.146e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 14,
+              "tooth_number_1based": 15,
+              "centre_angle_deg": 84,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.43e-05,
+              "extra_volume_mm3": 7.95e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 15,
+              "tooth_number_1based": 16,
+              "centre_angle_deg": 90,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 2.2e-05,
+              "extra_volume_mm3": 7.49e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 16,
+              "tooth_number_1based": 17,
+              "centre_angle_deg": 96,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.315e-05,
+              "extra_volume_mm3": 6.86e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 17,
+              "tooth_number_1based": 18,
+              "centre_angle_deg": 102,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.227e-05,
+              "extra_volume_mm3": 5.8e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 18,
+              "tooth_number_1based": 19,
+              "centre_angle_deg": 108,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.269e-05,
+              "extra_volume_mm3": 3.6e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 19,
+              "tooth_number_1based": 20,
+              "centre_angle_deg": 114,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.355e-05,
+              "extra_volume_mm3": 3.26e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 20,
+              "tooth_number_1based": 21,
+              "centre_angle_deg": 120,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.425e-05,
+              "extra_volume_mm3": 1.32e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 21,
+              "tooth_number_1based": 22,
+              "centre_angle_deg": 126,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.1e-05,
+              "extra_volume_mm3": 1.48e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 22,
+              "tooth_number_1based": 23,
+              "centre_angle_deg": 132,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 9.22e-06,
+              "extra_volume_mm3": 0.0,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 23,
+              "tooth_number_1based": 24,
+              "centre_angle_deg": 138,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.303e-05,
+              "extra_volume_mm3": -0.0,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 24,
+              "tooth_number_1based": 25,
+              "centre_angle_deg": 144,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.345e-05,
+              "extra_volume_mm3": 1.5e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 25,
+              "tooth_number_1based": 26,
+              "centre_angle_deg": 150,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.91e-05,
+              "extra_volume_mm3": 1.1e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 26,
+              "tooth_number_1based": 27,
+              "centre_angle_deg": 156,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.698e-05,
+              "extra_volume_mm3": 2.03e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 27,
+              "tooth_number_1based": 28,
+              "centre_angle_deg": 162,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.829e-05,
+              "extra_volume_mm3": 3.52e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 28,
+              "tooth_number_1based": 29,
+              "centre_angle_deg": 168,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.467e-05,
+              "extra_volume_mm3": 2.3e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 29,
+              "tooth_number_1based": 30,
+              "centre_angle_deg": 174,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.281e-05,
+              "extra_volume_mm3": 5.27e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 30,
+              "tooth_number_1based": 31,
+              "centre_angle_deg": 180,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 2.642e-05,
+              "extra_volume_mm3": 2.65e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 31,
+              "tooth_number_1based": 32,
+              "centre_angle_deg": 186,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.346e-05,
+              "extra_volume_mm3": 6.23e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 32,
+              "tooth_number_1based": 33,
+              "centre_angle_deg": 192,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.762e-05,
+              "extra_volume_mm3": 1.01e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 33,
+              "tooth_number_1based": 34,
+              "centre_angle_deg": 198,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 8.02e-06,
+              "extra_volume_mm3": 1e-08,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 34,
+              "tooth_number_1based": 35,
+              "centre_angle_deg": 204,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 9.39e-06,
+              "extra_volume_mm3": 2.49e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 35,
+              "tooth_number_1based": 36,
+              "centre_angle_deg": 210,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 2.9535003,
+              "extra_volume_mm3": 5.56e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": false
+            },
+            {
+              "tooth_index_0based": 36,
+              "tooth_number_1based": 37,
+              "centre_angle_deg": 216,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.675e-05,
+              "extra_volume_mm3": 5.04e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 37,
+              "tooth_number_1based": 38,
+              "centre_angle_deg": 222,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 8.61e-06,
+              "extra_volume_mm3": 4.26e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 38,
+              "tooth_number_1based": 39,
+              "centre_angle_deg": 228,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 8.46e-06,
+              "extra_volume_mm3": 1.121e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 39,
+              "tooth_number_1based": 40,
+              "centre_angle_deg": 234,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 2.221e-05,
+              "extra_volume_mm3": 6.53e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 40,
+              "tooth_number_1based": 41,
+              "centre_angle_deg": 240,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.482e-05,
+              "extra_volume_mm3": 4.1e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 41,
+              "tooth_number_1based": 42,
+              "centre_angle_deg": 246,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.206e-05,
+              "extra_volume_mm3": 7.05e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 42,
+              "tooth_number_1based": 43,
+              "centre_angle_deg": 252,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 6.8e-06,
+              "extra_volume_mm3": 1.004e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 43,
+              "tooth_number_1based": 44,
+              "centre_angle_deg": 258,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 7.1e-06,
+              "extra_volume_mm3": 1.651e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 44,
+              "tooth_number_1based": 45,
+              "centre_angle_deg": 264,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 2.97e-06,
+              "extra_volume_mm3": 6.87e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 45,
+              "tooth_number_1based": 46,
+              "centre_angle_deg": 270,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.171e-05,
+              "extra_volume_mm3": 9.6e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 46,
+              "tooth_number_1based": 47,
+              "centre_angle_deg": 276,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 4.92e-06,
+              "extra_volume_mm3": 1.302e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 47,
+              "tooth_number_1based": 48,
+              "centre_angle_deg": 282,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 2.11e-06,
+              "extra_volume_mm3": 1.52e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 48,
+              "tooth_number_1based": 49,
+              "centre_angle_deg": 288,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 7.96e-06,
+              "extra_volume_mm3": 1.23e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 49,
+              "tooth_number_1based": 50,
+              "centre_angle_deg": 294,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.45e-06,
+              "extra_volume_mm3": 1.08e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 50,
+              "tooth_number_1based": 51,
+              "centre_angle_deg": 300,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.57e-05,
+              "extra_volume_mm3": 3.73e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 51,
+              "tooth_number_1based": 52,
+              "centre_angle_deg": 306,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.718e-05,
+              "extra_volume_mm3": 9.81e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 52,
+              "tooth_number_1based": 53,
+              "centre_angle_deg": 312,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 7.05e-06,
+              "extra_volume_mm3": 6.1e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 53,
+              "tooth_number_1based": 54,
+              "centre_angle_deg": 318,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 5.56e-06,
+              "extra_volume_mm3": 1.597e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 54,
+              "tooth_number_1based": 55,
+              "centre_angle_deg": 324,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 1.546e-05,
+              "extra_volume_mm3": 5.24e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 55,
+              "tooth_number_1based": 56,
+              "centre_angle_deg": 330,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 2.403e-05,
+              "extra_volume_mm3": 1.817e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 56,
+              "tooth_number_1based": 57,
+              "centre_angle_deg": 336,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 8.25e-06,
+              "extra_volume_mm3": 4.06e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 57,
+              "tooth_number_1based": 58,
+              "centre_angle_deg": 342,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 5.95e-06,
+              "extra_volume_mm3": 9.72e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 58,
+              "tooth_number_1based": 59,
+              "centre_angle_deg": 348,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 4.24e-06,
+              "extra_volume_mm3": 1.011e-05,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            },
+            {
+              "tooth_index_0based": 59,
+              "tooth_number_1based": 60,
+              "centre_angle_deg": 354,
+              "expected_volume_mm3": 35.210107,
+              "missing_volume_mm3": 3.98e-06,
+              "extra_volume_mm3": 2.64e-06,
+              "tolerance_mm3": 0.00250458,
+              "passed": true
+            }
+          ]
+        },
+        "tooth35_missing_height_bins": [
+          {
+            "z_band_mm": [
+              41.0,
+              41.25
+            ],
+            "missing_volume_mm3": 0.73837045
+          },
+          {
+            "z_band_mm": [
+              41.25,
+              41.5
+            ],
+            "missing_volume_mm3": 0.73837044
+          },
+          {
+            "z_band_mm": [
+              41.5,
+              41.75
+            ],
+            "missing_volume_mm3": 0.73837043
+          },
+          {
+            "z_band_mm": [
+              41.75,
+              42.0
+            ],
+            "missing_volume_mm3": 0.73837043
+          }
+        ],
+        "significant_defect_z_band_mm": [
+          41.0,
+          42.0
+        ],
+        "volume_difference_from_legacy_cutter_mm3": 1.968e-05
+      },
+      "numbering": "Zero-based index35 is one-based tooth36, centred at 210deg; not an intended internal key or weight-reduction slot."
     }
   ],
+  "previous_export_evidence": {
+    "available": true,
+    "exported_stl": {
+      "file": "C:\\Chat\\codex\\發牌機\\V1.0.0\\.build\\P04B_before.stl",
+      "sha256": "cb84b5826ad5288ed9f54e0163d30a449fe83242fc2dc64158573f0785aae7ad",
+      "watertight": true,
+      "positive_volume": true,
+      "manifold_status": "Error.NoError",
+      "export_coordinate_max_mm": 74.39957427978516
+    },
+    "scan": {
+      "all_60_teeth_passed": false,
+      "working_radius_lower_bound_mm": 34.5,
+      "full_height_z_band_mm": [
+        36,
+        43.5
+      ],
+      "missing_total_mm3": 2.95425535,
+      "extra_total_mm3": 0.00036367,
+      "total_tolerance_mm3": 0.1502748,
+      "export_float32_ulp_mm": 7.62939453125e-06,
+      "conservative_vertex_recovery_bound_mm": 3.0517578125e-05,
+      "failed_tooth_indices_0based": [
+        35
+      ],
+      "teeth": [
+        {
+          "tooth_index_0based": 0,
+          "tooth_number_1based": 1,
+          "centre_angle_deg": 0,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.725e-05,
+          "extra_volume_mm3": 4.53e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 1,
+          "tooth_number_1based": 2,
+          "centre_angle_deg": 6,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 4.41e-06,
+          "extra_volume_mm3": 1.198e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 2,
+          "tooth_number_1based": 3,
+          "centre_angle_deg": 12,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.557e-05,
+          "extra_volume_mm3": 4.34e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 3,
+          "tooth_number_1based": 4,
+          "centre_angle_deg": 18,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.277e-05,
+          "extra_volume_mm3": 4.3e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 4,
+          "tooth_number_1based": 5,
+          "centre_angle_deg": 24,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.505e-05,
+          "extra_volume_mm3": 6.55e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 5,
+          "tooth_number_1based": 6,
+          "centre_angle_deg": 30,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.691e-05,
+          "extra_volume_mm3": 7.1e-07,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 6,
+          "tooth_number_1based": 7,
+          "centre_angle_deg": 36,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.877e-05,
+          "extra_volume_mm3": 4.67e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 7,
+          "tooth_number_1based": 8,
+          "centre_angle_deg": 42,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 9.04e-06,
+          "extra_volume_mm3": 2.73e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 8,
+          "tooth_number_1based": 9,
+          "centre_angle_deg": 48,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.715e-05,
+          "extra_volume_mm3": 2.76e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 9,
+          "tooth_number_1based": 10,
+          "centre_angle_deg": 54,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.539e-05,
+          "extra_volume_mm3": 2.64e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 10,
+          "tooth_number_1based": 11,
+          "centre_angle_deg": 60,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 2.842e-05,
+          "extra_volume_mm3": 3.62e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 11,
+          "tooth_number_1based": 12,
+          "centre_angle_deg": 66,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.744e-05,
+          "extra_volume_mm3": 8.29e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 12,
+          "tooth_number_1based": 13,
+          "centre_angle_deg": 72,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 7.52e-06,
+          "extra_volume_mm3": 5.55e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 13,
+          "tooth_number_1based": 14,
+          "centre_angle_deg": 78,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.831e-05,
+          "extra_volume_mm3": 1.146e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 14,
+          "tooth_number_1based": 15,
+          "centre_angle_deg": 84,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.43e-05,
+          "extra_volume_mm3": 7.95e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 15,
+          "tooth_number_1based": 16,
+          "centre_angle_deg": 90,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 2.2e-05,
+          "extra_volume_mm3": 7.49e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 16,
+          "tooth_number_1based": 17,
+          "centre_angle_deg": 96,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.315e-05,
+          "extra_volume_mm3": 6.86e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 17,
+          "tooth_number_1based": 18,
+          "centre_angle_deg": 102,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.227e-05,
+          "extra_volume_mm3": 5.8e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 18,
+          "tooth_number_1based": 19,
+          "centre_angle_deg": 108,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.269e-05,
+          "extra_volume_mm3": 3.6e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 19,
+          "tooth_number_1based": 20,
+          "centre_angle_deg": 114,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.355e-05,
+          "extra_volume_mm3": 3.26e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 20,
+          "tooth_number_1based": 21,
+          "centre_angle_deg": 120,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.425e-05,
+          "extra_volume_mm3": 1.32e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 21,
+          "tooth_number_1based": 22,
+          "centre_angle_deg": 126,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.1e-05,
+          "extra_volume_mm3": 1.48e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 22,
+          "tooth_number_1based": 23,
+          "centre_angle_deg": 132,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 9.22e-06,
+          "extra_volume_mm3": 0.0,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 23,
+          "tooth_number_1based": 24,
+          "centre_angle_deg": 138,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.303e-05,
+          "extra_volume_mm3": -0.0,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 24,
+          "tooth_number_1based": 25,
+          "centre_angle_deg": 144,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.345e-05,
+          "extra_volume_mm3": 1.5e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 25,
+          "tooth_number_1based": 26,
+          "centre_angle_deg": 150,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.91e-05,
+          "extra_volume_mm3": 1.1e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 26,
+          "tooth_number_1based": 27,
+          "centre_angle_deg": 156,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.698e-05,
+          "extra_volume_mm3": 2.03e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 27,
+          "tooth_number_1based": 28,
+          "centre_angle_deg": 162,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.829e-05,
+          "extra_volume_mm3": 3.52e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 28,
+          "tooth_number_1based": 29,
+          "centre_angle_deg": 168,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.467e-05,
+          "extra_volume_mm3": 2.3e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 29,
+          "tooth_number_1based": 30,
+          "centre_angle_deg": 174,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.281e-05,
+          "extra_volume_mm3": 5.27e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 30,
+          "tooth_number_1based": 31,
+          "centre_angle_deg": 180,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 2.642e-05,
+          "extra_volume_mm3": 2.65e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 31,
+          "tooth_number_1based": 32,
+          "centre_angle_deg": 186,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.346e-05,
+          "extra_volume_mm3": 6.23e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 32,
+          "tooth_number_1based": 33,
+          "centre_angle_deg": 192,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.762e-05,
+          "extra_volume_mm3": 1.01e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 33,
+          "tooth_number_1based": 34,
+          "centre_angle_deg": 198,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 8.02e-06,
+          "extra_volume_mm3": 1e-08,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 34,
+          "tooth_number_1based": 35,
+          "centre_angle_deg": 204,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 9.39e-06,
+          "extra_volume_mm3": 2.49e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 35,
+          "tooth_number_1based": 36,
+          "centre_angle_deg": 210,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 2.9535003,
+          "extra_volume_mm3": 5.56e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": false
+        },
+        {
+          "tooth_index_0based": 36,
+          "tooth_number_1based": 37,
+          "centre_angle_deg": 216,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.675e-05,
+          "extra_volume_mm3": 5.04e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 37,
+          "tooth_number_1based": 38,
+          "centre_angle_deg": 222,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 8.61e-06,
+          "extra_volume_mm3": 4.26e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 38,
+          "tooth_number_1based": 39,
+          "centre_angle_deg": 228,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 8.46e-06,
+          "extra_volume_mm3": 1.121e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 39,
+          "tooth_number_1based": 40,
+          "centre_angle_deg": 234,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 2.221e-05,
+          "extra_volume_mm3": 6.53e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 40,
+          "tooth_number_1based": 41,
+          "centre_angle_deg": 240,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.482e-05,
+          "extra_volume_mm3": 4.1e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 41,
+          "tooth_number_1based": 42,
+          "centre_angle_deg": 246,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.206e-05,
+          "extra_volume_mm3": 7.05e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 42,
+          "tooth_number_1based": 43,
+          "centre_angle_deg": 252,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 6.8e-06,
+          "extra_volume_mm3": 1.004e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 43,
+          "tooth_number_1based": 44,
+          "centre_angle_deg": 258,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 7.1e-06,
+          "extra_volume_mm3": 1.651e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 44,
+          "tooth_number_1based": 45,
+          "centre_angle_deg": 264,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 2.97e-06,
+          "extra_volume_mm3": 6.87e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 45,
+          "tooth_number_1based": 46,
+          "centre_angle_deg": 270,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.171e-05,
+          "extra_volume_mm3": 9.6e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 46,
+          "tooth_number_1based": 47,
+          "centre_angle_deg": 276,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 4.92e-06,
+          "extra_volume_mm3": 1.302e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 47,
+          "tooth_number_1based": 48,
+          "centre_angle_deg": 282,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 2.11e-06,
+          "extra_volume_mm3": 1.52e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 48,
+          "tooth_number_1based": 49,
+          "centre_angle_deg": 288,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 7.96e-06,
+          "extra_volume_mm3": 1.23e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 49,
+          "tooth_number_1based": 50,
+          "centre_angle_deg": 294,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.45e-06,
+          "extra_volume_mm3": 1.08e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 50,
+          "tooth_number_1based": 51,
+          "centre_angle_deg": 300,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.57e-05,
+          "extra_volume_mm3": 3.73e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 51,
+          "tooth_number_1based": 52,
+          "centre_angle_deg": 306,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.718e-05,
+          "extra_volume_mm3": 9.81e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 52,
+          "tooth_number_1based": 53,
+          "centre_angle_deg": 312,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 7.05e-06,
+          "extra_volume_mm3": 6.1e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 53,
+          "tooth_number_1based": 54,
+          "centre_angle_deg": 318,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 5.56e-06,
+          "extra_volume_mm3": 1.597e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 54,
+          "tooth_number_1based": 55,
+          "centre_angle_deg": 324,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 1.546e-05,
+          "extra_volume_mm3": 5.24e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 55,
+          "tooth_number_1based": 56,
+          "centre_angle_deg": 330,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 2.403e-05,
+          "extra_volume_mm3": 1.817e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 56,
+          "tooth_number_1based": 57,
+          "centre_angle_deg": 336,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 8.25e-06,
+          "extra_volume_mm3": 4.06e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 57,
+          "tooth_number_1based": 58,
+          "centre_angle_deg": 342,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 5.95e-06,
+          "extra_volume_mm3": 9.72e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 58,
+          "tooth_number_1based": 59,
+          "centre_angle_deg": 348,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 4.24e-06,
+          "extra_volume_mm3": 1.011e-05,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        },
+        {
+          "tooth_index_0based": 59,
+          "tooth_number_1based": 60,
+          "centre_angle_deg": 354,
+          "expected_volume_mm3": 35.210107,
+          "missing_volume_mm3": 3.98e-06,
+          "extra_volume_mm3": 2.64e-06,
+          "tolerance_mm3": 0.00250458,
+          "passed": true
+        }
+      ]
+    },
+    "tooth35_missing_height_bins": [
+      {
+        "z_band_mm": [
+          41.0,
+          41.25
+        ],
+        "missing_volume_mm3": 0.73837045
+      },
+      {
+        "z_band_mm": [
+          41.25,
+          41.5
+        ],
+        "missing_volume_mm3": 0.73837044
+      },
+      {
+        "z_band_mm": [
+          41.5,
+          41.75
+        ],
+        "missing_volume_mm3": 0.73837043
+      },
+      {
+        "z_band_mm": [
+          41.75,
+          42.0
+        ],
+        "missing_volume_mm3": 0.73837043
+      }
+    ],
+    "significant_defect_z_band_mm": [
+      41.0,
+      42.0
+    ],
+    "volume_difference_from_legacy_cutter_mm3": 1.968e-05
+  },
   "limitations": [
     "Print fit, elephant foot, screw tolerances, friction, preload, strength and loosening require physical testing.",
     "Local nut-well/locating-slot roofs may need bridge settings or local support; no zero-support claim.",

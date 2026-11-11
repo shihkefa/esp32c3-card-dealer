@@ -13,12 +13,12 @@
   "interactive_3d_steps": 21,
   "interactive_3d_overview_instances": 215,
   "interactive_3d_geometry_count": 182,
-  "interactive_3d_data_sha256": "546a19fe38d81c39fa8f18e87341ed1a965071747a33ab898d66ca01cd490464",
+  "interactive_3d_data_sha256": "cbc95b360930c377817391f49af09768ca0a46339df3a5f2b892008aa89e49df",
   "viewer3d_source_sha256": "422318b51b666bfcb23fe8d8a240750e895c22116c59e3c59cb5eeed17f0ae20",
   "three_vendor_sha256": "f01ed9ece933bb1d254f929fb6963e71cdf3c673d87ce1b3103ae8b5e0d68ea8",
-  "cad_source_sha256": "307f468197ff8edaa1b772ce471667d311c9bd8f3524c2bc1201a0d8f2b01c6c",
-  "source_data_sha256": "bb77091e22364fadcce284b973cb83e11c87037f0c057c33f402a520be7a23e4",
-  "html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
-  "bytes": 11902632,
+  "cad_source_sha256": "ca08ed01fc6e8b6289d8ddd1879cfc32828b26102003e9c85a9c692e4e774549",
+  "source_data_sha256": "065552446dd88c785256cf558be9114b30ac743006b9c738af1c50a8800a54ed",
+  "html_sha256": "136d51f8a77157e9b89cf181f977196a9148e8c5cce04e98378c140e6e3a3b65",
+  "bytes": 12042289,
   "physical_assembly_tested": false
 }

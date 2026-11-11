@@ -245,7 +245,7 @@
     },
     {
       "id": "P04B",
-      "name": "加厚60齒齒輪與空心轉軸",
+      "name": "完整齒形60齒齒輪與空心轉軸",
       "qty": 1,
       "file": "STL/P04B.stl",
       "dimensions_mm": [
@@ -253,7 +253,7 @@
         74.4,
         30.5
       ],
-      "volume_cm3": 19.726,
+      "volume_cm3": 19.753,
       "watertight": true,
       "connected_components": 1,
       "print_rotation": [
@@ -263,7 +263,7 @@
       ],
       "supports": "Z43.5齒輪大平面朝下、空心軸朝上；6.4mm定位槽局部橋接待切片",
       "material": "PLA / PETG",
-      "note": "齒寬7.5mm，齒底Z36及軸承肩臺Z31保持；上接合面由Z42提高1.5mm至Z43.5。原P04A沿用，上部裝配整體抬升，使P04A下平面與P02A圓環頂的名義間隙0.5增至2mm。四個螺母與定位槽同步上移，原M3×8沿用。需配延長遮光片P26；P05、P06、滑環位置不變。 編號P04B：齒輪軸側內圈背面；避開齒面、軸承配合面與螺母槽，凹刻0.25mm。",
+      "note": "修復承載盤孔槽誤切齒面的問題；B獨立建模，60齒全齒高7.5mm，齒底Z36及軸承肩臺Z31保持。接合面Z43.5、P04A與P02A圓環名義間隙2mm及原四組M3×8均沿用。本次只需重印P04B；P04A、已延長的P26及其餘零件可沿用。 編號P04B：齒輪軸側內圈背面；避開齒面、軸承配合面與螺母槽，凹刻0.25mm。",
       "engraving": {
         "text": "P04B",
         "type": "planar",
@@ -2016,7 +2016,7 @@
       }
     }
   ],
-  "solid_volume_total_cm3": 628.47,
+  "solid_volume_total_cm3": 628.49,
   "solid_PLA_mass_g": 779.3,
   "optional_solid_mass_g": 55.6,
   "status": "幾何原型，未經實物試裝",

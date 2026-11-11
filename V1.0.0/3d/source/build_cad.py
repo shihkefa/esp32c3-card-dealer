@@ -263,15 +263,17 @@ for x,y in HOUSING_MOUNTS:
     main=main-hole(x,y,40,9)-cyl(6.4,1.5,x,y,41.9,d2=3.4)
 P04_MOUNTS=[(x,y) for x in (-15,15) for y in (-26,26)]
 carrier=main & box(220,220,5,0,0,42)
-gear_journal=main & box(220,220,30,0,0,12)
-# Retain the bearing shoulder, lower journal and original tooth-bottom height.
-# Add only above the old mating plane: P04A's printable solid stays unchanged.
-if UPPER_LIFT:
-    extension=gear(60,1.2,UPPER_LIFT,42)+cyl(24.8,UPPER_LIFT,z0=42)
-    extension=extension-cyl(22.5,UPPER_LIFT+.2,z0=41.9)
-    for angle in range(0,360,60):
-        extension=extension-annular_sector(18,30,angle+10,angle+50,9+UPPER_LIFT,35)
-    gear_journal=gear_journal+extension
+# B is an independent gear/journal solid. Carrier-specific motor and nut
+# cutters must never reach the working teeth or the gear's supporting spokes.
+# In particular, the old (-33,-19) carrier nut well clipped tooth 35 at Z41..42.
+# Keep the original bearing shoulder, lower journal and tooth-bottom height.
+gear_journal=(gear(60,1.2,P04_GEAR_HEIGHT,P04_GEAR_BOTTOM_Z)
+              +cyl(24.8,P04_MATE_Z-13,z0=13)
+              +cyl(31,3,z0=31,d2=24.8))
+gear_journal=gear_journal-cyl(22.5,40,z0=10)
+for angle in range(0,360,60):
+    gear_journal=gear_journal-annular_sector(18,30,angle+10,angle+50,9+UPPER_LIFT,35)
+gear_journal=gear_journal-cylx(3.4,5,-14.5,0,15.5)
 for x,y in P04_MOUNTS:
     # Boss material remains inside the original tooth-root circle. Nut wells
     # open at Z36, with a 1.4mm roof and full M3 nut engagement on M3x8.
@@ -285,7 +287,7 @@ for x,y in P04_MOUNTS:
 carrier=carrier+box(6,8,1.2,31,0,40.8)
 gear_journal=gear_journal-box(6.4,8.4,1.5,31,0,40.6+UPPER_LIFT)
 add("P04A","分離式旋轉承載盤",carrier,color=PLATE,rot=(180,0,0),support="上方大平面朝下；局部孔槽待切片",note="與P04B配套。上方大平面貼床，底面偏心矩形榫定位防轉；四顆M3×8從上方鎖入P04B捕捉螺母。先組成轉盤，再裝P31與牌倉。")
-add("P04B","加厚60齒齒輪與空心轉軸",gear_journal,color=ORANGE,rot=(180,0,0),support=f"Z{P04_MATE_Z:g}齒輪大平面朝下、空心軸朝上；6.4mm定位槽局部橋接待切片",note=f"齒寬{P04_GEAR_HEIGHT:g}mm，齒底Z36及軸承肩臺Z31保持；上接合面由Z42提高{UPPER_LIFT:g}mm至Z{P04_MATE_Z:g}。原P04A沿用，上部裝配整體抬升，使P04A下平面與P02A圓環頂的名義間隙0.5增至{.5+UPPER_LIFT:g}mm。四個螺母與定位槽同步上移，原M3×8沿用。需配延長遮光片P26；P05、P06、滑環位置不變。")
+add("P04B","完整齒形60齒齒輪與空心轉軸",gear_journal,color=ORANGE,rot=(180,0,0),support=f"Z{P04_MATE_Z:g}齒輪大平面朝下、空心軸朝上；6.4mm定位槽局部橋接待切片",note=f"修復承載盤孔槽誤切齒面的問題；B獨立建模，60齒全齒高{P04_GEAR_HEIGHT:g}mm，齒底Z36及軸承肩臺Z31保持。接合面Z{P04_MATE_Z:g}、P04A與P02A圓環名義間隙{.5+UPPER_LIFT:g}mm及原四組M3×8均沿用。本次只需重印P04B；P04A、已延長的P26及其餘零件可沿用。")
 
 # P05: separate closed clamp hub and gear with a mechanical retaining skirt.
 P05_CLAMP_Z=35.4

@@ -1,6 +1,6 @@
 {
   "version": "V1.0.0",
-  "html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+  "html_sha256": "136d51f8a77157e9b89cf181f977196a9148e8c5cce04e98378c140e6e3a3b65",
   "passed": true,
   "checks": [
     {
@@ -94,7 +94,7 @@
       "explodeAmount": 0,
       "explode": 0,
       "renderCount": 2,
-      "renderedTriangles": 15118,
+      "renderedTriangles": 12588,
       "cameraPosition": [
         -103.36328352558094,
         -118.12946688637817,
@@ -110,7 +110,7 @@
     },
     "rendering": {
       "type": "WebGL2RenderingContext",
-      "triangles": 15118,
+      "triangles": 12588,
       "width": 638,
       "height": 480
     }

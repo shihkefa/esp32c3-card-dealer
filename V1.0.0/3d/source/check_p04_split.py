@@ -6,6 +6,7 @@ travel after nominal contact is NOT an allowed rigid-body interference.
 """
 import json
 import hashlib
+import math
 from pathlib import Path
 import numpy as np
 import build_cad as c
@@ -218,6 +219,140 @@ record('P04B identifier avoids gear teeth and locating tongue',
        maximum_identifier_radius_mm=round(max_radius, 3),
        location=mark['location'], tooth_root_radius_mm=34.5)
 
+# A complete 60T working band must be checked for missing material, not only
+# collision-free assembly. Carrier-only mounting holes once cut the 210deg
+# tooth between Z41 and Z42; a collision audit cannot detect that material loss.
+pristine_gear = c.gear(60, 1.2, mate_z - 36, 36)
+working_band = c.cyl(78, mate_z - 36, z0=36, n=720) - c.cyl(69, mate_z - 36 + .2, z0=35.9, n=720)
+expected_teeth = pristine_gear & working_band
+tooth_sectors = []
+for index in range(60):
+    low, high = math.radians(index * 6 - 3), math.radians(index * 6 + 3)
+    sector = c.poly([(0, 0), (60 * math.cos(low), 60 * math.sin(low)),
+                     (60 * math.cos(high), 60 * math.sin(high))], mate_z - 36, 36)
+    expected_sector = expected_teeth & sector
+    tooth_sectors.append((sector, volume(expected_sector), float(c.tm(expected_sector).area)))
+
+
+def tooth_scan(shape, exported_float32_ulp_mm=0.):
+    actual = shape & working_band
+    missing, extra = expected_teeth - actual, actual - expected_teeth
+    missing_volume, extra_volume = volume(missing), volume(extra)
+    # STL vertex quantisation is bounded before recovery into native CAD.
+    # Four exported-coordinate float32 ULPs cover serialisation, rigid recovery
+    # and boolean numeric noise. Area*distance is a conservative first-order
+    # volume budget; per-tooth checks keep a local defect from hiding in it.
+    recovery_bound = 4 * exported_float32_ulp_mm
+    samples = []
+    for index, (sector, expected_volume, area) in enumerate(tooth_sectors):
+        tolerance = max(.002, area * recovery_bound) if exported_float32_ulp_mm else .0001
+        lost = hit(missing, sector) if missing_volume > 1e-10 else 0.
+        added = hit(extra, sector) if extra_volume > 1e-10 else 0.
+        samples.append({'tooth_index_0based': index, 'tooth_number_1based': index + 1,
+                        'centre_angle_deg': index * 6, 'expected_volume_mm3': round(expected_volume, 6),
+                        'missing_volume_mm3': round(lost, 8), 'extra_volume_mm3': round(added, 8),
+                        'tolerance_mm3': round(tolerance, 8),
+                        'passed': expected_volume > 1 and max(lost, added) <= tolerance})
+    total_tolerance = sum(x['tolerance_mm3'] for x in samples)
+    result = {'all_60_teeth_passed': all(x['passed'] for x in samples)
+              and max(missing_volume, extra_volume) <= total_tolerance,
+              'working_radius_lower_bound_mm': 34.5, 'full_height_z_band_mm': [36, mate_z],
+              'missing_total_mm3': round(missing_volume, 8), 'extra_total_mm3': round(extra_volume, 8),
+              'total_tolerance_mm3': round(total_tolerance, 8),
+              'export_float32_ulp_mm': exported_float32_ulp_mm,
+              'conservative_vertex_recovery_bound_mm': recovery_bound,
+              'failed_tooth_indices_0based': [x['tooth_index_0based'] for x in samples if not x['passed']],
+              'teeth': samples}
+    return result, missing
+
+
+cad_scan, _ = tooth_scan(b)
+record('All 60 CAD teeth retain the complete pristine profile over full height',
+       cad_scan['all_60_teeth_passed'], scan=cad_scan)
+
+# Independently build only the intended B geometry, with no carrier-derived
+# N20, hopper, hood or flag mounting cuts. This also catches unwanted holes in
+# the inner spokes that a working-tooth-band comparison alone would miss.
+spec_mounts = [(x, y) for x in (-15, 15) for y in (-26, 26)]
+reference = c.gear(60, 1.2, mate_z - 36, 36) + c.cyl(24.8, mate_z - 13, z0=13)
+reference = reference + c.cyl(31, 3, z0=31, d2=24.8) - c.cyl(22.5, mate_z, z0=10)
+reference = reference - c.cylx(3.4, 5, -14.5, 0, 15.5)
+for angle in range(0, 360, 60):
+    reference = reference - c.annular_sector(18, 30, angle + 10, angle + 50, 9 + lift, 35)
+for x, y in spec_mounts:
+    boss = c.cyl(12, mate_z - 36, x, y, 36) & c.cyl(68.8, mate_z - 36, z0=36)
+    reference = reference + boss
+    reference = reference - c.cyl(3.4, 7 + lift, x, y, 35.8) - c.cyl(6.7, 4.7 + lift, x, y, 35.9, n=6)
+reference = reference - c.box(6.4, 8.4, 1.5, 31, 0, 40.6 + lift) - mark_cut
+reference_difference = volume((reference - b) + (b - reference))
+record('Complete P04B matches independent gear journal and own-interface reference',
+       reference_difference < .001 and set(c.P04_MOUNTS) == set(spec_mounts),
+       symmetric_difference_mm3=round(reference_difference, 8),
+       scope='Independent intended B body including bore, shoulder, six internal slots, four own fasteners/key and identifier; no P04A mounting holes.')
+
+
+def load_exported_stl(path):
+    mesh = c.trimesh.load_mesh(path, process=True)
+    info = {'file': str(path), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+            'watertight': bool(mesh.is_watertight), 'positive_volume': bool(mesh.volume > 0)}
+    assert tuple(parts['P04B'].print_rot) == (180, 0, 0)
+    printed_bounds = np.asarray(b.rot(*parts['P04B'].print_rot).m.bounding_box())
+    manifold = c.mf.Manifold(c.mf.Mesh(np.ascontiguousarray(mesh.vertices, dtype=np.float32),
+                                      np.ascontiguousarray(mesh.faces, dtype=np.uint32)))
+    info['manifold_status'] = str(manifold.status())
+    recovered = c.S(manifold, '').move(*printed_bounds[:3]).rot(x=-180)
+    largest = float(np.abs(np.asarray(mesh.vertices)).max())
+    ulp = float(np.spacing(np.float32(largest)))
+    info['export_coordinate_max_mm'] = largest
+    return recovered, ulp, info
+
+
+stl_path = c.OUT / 'STL' / 'P04B.stl'
+recovered_stl, stl_ulp, stl_info = load_exported_stl(stl_path)
+stl_scan, _ = tooth_scan(recovered_stl, stl_ulp)
+record('Exported P04B STL roundtrip retains all 60 full-height tooth profiles',
+       stl_info['watertight'] and stl_info['positive_volume'] and stl_scan['all_60_teeth_passed'],
+       exported_stl=stl_info, scan=stl_scan,
+       tolerance_basis='Per tooth max(0.002mm3, expected surface area * 4 float32 exported-coordinate ULP); global tolerance is the sum, never a substitute for each tooth.')
+
+# Always rerun an analytic negative control, even after temporary old STL files
+# are removed from the release workspace. It reproduces the carrier-only N20
+# pocket that used to affect the original B band before the upper extension.
+legacy_n20 = (c.cyl(3.4, 6, -33, -19, 41) + c.cyl(6.55, 2.7, -33, -19, 41, n=6))
+legacy_n20 = legacy_n20 & c.box(90, 90, 1, 0, 0, 41)
+seeded_scan, seeded_missing = tooth_scan(pristine_gear - legacy_n20)
+record('Negative control rejects the legacy N20 pocket at tooth index35 angle210deg',
+       not seeded_scan['all_60_teeth_passed'] and 35 in seeded_scan['failed_tooth_indices_0based'],
+       legacy_cutter_xy_mm=[-33, -19], legacy_cutter_z_band_mm=[41, 42], scan=seeded_scan)
+
+baseline_evidence = {'available': False,
+                     'note': 'Previous exported STL is a temporary audit artifact; the analytic negative control above is always rerun.'}
+baseline_path = Path(c.os.environ.get('CARD_DEALER_P04_BASELINE', str(c.ROOT / '.build' / 'P04B_before.stl')))
+if baseline_path.exists():
+    previous, previous_ulp, previous_info = load_exported_stl(baseline_path)
+    previous_scan, previous_missing = tooth_scan(previous, previous_ulp)
+    sector35 = tooth_sectors[35][0]
+    defect35 = previous_missing & sector35
+    threshold = previous_scan['teeth'][35]['tolerance_mm3']
+    bad_height_bins = []
+    for bottom in np.arange(36, mate_z, .25):
+        top = min(float(bottom + .25), mate_z)
+        amount = hit(defect35, c.box(90, 90, top - float(bottom), 0, 0, float(bottom)))
+        if amount > threshold:
+            bad_height_bins.append({'z_band_mm': [round(float(bottom), 4), round(top, 4)],
+                                     'missing_volume_mm3': round(amount, 8)})
+    found_band = [bad_height_bins[0]['z_band_mm'][0], bad_height_bins[-1]['z_band_mm'][1]] if bad_height_bins else None
+    defect_match = abs(previous_scan['teeth'][35]['missing_volume_mm3'] - seeded_scan['teeth'][35]['missing_volume_mm3'])
+    baseline_evidence = {'available': True, 'exported_stl': previous_info, 'scan': previous_scan,
+                         'tooth35_missing_height_bins': bad_height_bins,
+                         'significant_defect_z_band_mm': found_band,
+                         'volume_difference_from_legacy_cutter_mm3': round(defect_match, 8)}
+    record('Previous defective exported STL is rejected with the original 210deg Z41..42 loss',
+           not previous_scan['all_60_teeth_passed'] and 35 in previous_scan['failed_tooth_indices_0based']
+           and found_band == [41., 42.] and defect_match <= max(.01, threshold * 2),
+           evidence=baseline_evidence,
+           numbering='Zero-based index35 is one-based tooth36, centred at 210deg; not an intended internal key or weight-reduction slot.')
+
 report = {'revision': c.P['revision'], 'all_passed': all(x['passed'] for x in checks),
           'upper_head_lift_mm': lift, 'P04_mating_plane_z_mm': mate_z,
           'source_hashes': {
@@ -225,7 +360,7 @@ report = {'revision': c.P['revision'], 'all_passed': all(x['passed'] for x in ch
               'design_params_json_sha256': hashlib.sha256((c.HERE / 'design_params.json').read_bytes()).hexdigest(),
               'check_script_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest()},
           'scope': 'Nominal CAD/reference-envelope geometry; no physical assembly or slicer test.',
-          'print_contact': bed, 'checks': checks,
+          'print_contact': bed, 'checks': checks, 'previous_export_evidence': baseline_evidence,
           'limitations': [
               'Print fit, elephant foot, screw tolerances, friction, preload, strength and loosening require physical testing.',
               'Local nut-well/locating-slot roofs may need bridge settings or local support; no zero-support claim.',
