@@ -1,0 +1,25 @@
+本韌體使用Arduino-ESP32核心內建Wire/Preferences/LEDC/Timer，沒有第三方執行期函式庫。
+V1.0.0另使用同核心內建ESP-IDF Wi-Fi關閉API與btStop，不需第三方無線函式庫。
+
+Arduino-ESP32 LEDC API：https://docs.espressif.com/projects/arduino-esp32/en/latest/api/ledc.html
+Arduino-ESP32 I2C API：https://docs.espressif.com/projects/arduino-esp32/en/latest/api/i2c.html
+Arduino-ESP32 Timer API：https://docs.espressif.com/projects/arduino-esp32/en/latest/api/timer.html
+Arduino-ESP32 Preferences：https://docs.espressif.com/projects/arduino-esp32/en/latest/api/preferences.html
+實測核心來源版本：https://github.com/espressif/arduino-esp32/tree/3.0.5
+ESP32-C3資料：https://documentation.espressif.com/esp32-c3_datasheet_en.html
+PCF8574資料：https://www.ti.com/lit/ds/symlink/pcf8574.pdf
+DRV8833資料：https://www.ti.com/lit/ds/symlink/drv8833.pdf
+ITR9608-F資料：https://media.digikey.com/pdf/data%20sheets/everlight%20pdfs/itr9608-f.pdf
+
+中文字形為本專案從本機字型產生的點陣子集；未附原字型檔。
+重產生字形的Python腳本需Pillow及Windows字型；一般編譯直接使用已附Font16.h即可。
+主機測試執行實際DealerCore.cpp與StepperPlan.h；Zig/Clang只用於建置測試，未包入發牌機。
+SSD1306 原廠資料表（Solomon Systech，Adafruit鏡像）：
+https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf
+128x64頁模式、內建charge pump；DBh使用表列20h VCOMH設定。
+
+V1.0.0無線關閉API核對本機已安裝Arduino-ESP32 3.0.5來源及其ESP-IDF 5.1標頭：
+https://github.com/espressif/arduino-esp32/blob/3.0.5/cores/esp32/esp32-hal-bt.c
+https://github.com/espressif/esp-idf/blob/v5.1.4/components/esp_wifi/include/esp_wifi.h
+https://docs.espressif.com/projects/esp-idf/en/v5.1.4/esp32c3/api-reference/network/esp_wifi.html
+

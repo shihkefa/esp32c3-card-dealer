@@ -1,0 +1,1530 @@
+<!DOCTYPE html><html lang="en">
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151343537-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-151343537-1');
+		
+	</script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>1S 5A Battery Management Systems (BMS) - DONE.LAND</title>
+
+<meta name="description" content="BMS For A Single Battery String And 5A Max Current">
+<link rel="canonical" href="https://done.land/components/power/powersupplies/battery/bms/1s/5a/"><link rel="alternate" type="application/rss+xml" title="DONE.LAND" href="/feed.xml"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#89b3dc">
+<link rel="stylesheet" href="/assets/css/main.css"><!--<link rel="stylesheet" href="https://done.land/assets/font/css/fontawesome.min.css" >-->
+
+
+<link href="https://done.land/assets/font/css/fontawesome.min.css" rel="stylesheet" />
+<link href="https://done.land/assets/font/css/brands.min.css" rel="stylesheet" />
+<link href="https://done.land/assets/font/css/solid.min.css" rel="stylesheet" />
+<link href="https://done.land/assets/font/css/regular.min.css" rel="stylesheet" />
+<!-- update existing v5 CSS to use v6 icons and assets -->
+<link href="https://done.land/assets/font/css/v5-font-face.min.css" rel="stylesheet" /><!-- start custom head snippets -->
+
+<!-- end custom head snippets --><script>(function() {
+  window.isArray = function(val) {
+    return Object.prototype.toString.call(val) === '[object Array]';
+  };
+  window.isString = function(val) {
+    return typeof val === 'string';
+  };
+
+  window.hasEvent = function(event) {
+    return 'on'.concat(event) in window.document;
+  };
+
+  window.isOverallScroller = function(node) {
+    return node === document.documentElement || node === document.body || node === window;
+  };
+
+  window.isFormElement = function(node) {
+    var tagName = node.tagName;
+    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
+  };
+
+  window.pageLoad = (function () {
+    var loaded = false, cbs = [];
+    window.addEventListener('load', function () {
+      var i;
+      loaded = true;
+      if (cbs.length > 0) {
+        for (i = 0; i < cbs.length; i++) {
+          cbs[i]();
+        }
+      }
+    });
+    return {
+      then: function(cb) {
+        cb && (loaded ? cb() : (cbs.push(cb)));
+      }
+    };
+  })();
+})();
+(function() {
+  window.throttle = function(func, wait) {
+    var args, result, thisArg, timeoutId, lastCalled = 0;
+
+    function trailingCall() {
+      lastCalled = new Date;
+      timeoutId = null;
+      result = func.apply(thisArg, args);
+    }
+    return function() {
+      var now = new Date,
+        remaining = wait - (now - lastCalled);
+
+      args = arguments;
+      thisArg = this;
+
+      if (remaining <= 0) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+        lastCalled = now;
+        result = func.apply(thisArg, args);
+      } else if (!timeoutId) {
+        timeoutId = setTimeout(trailingCall, remaining);
+      }
+      return result;
+    };
+  };
+})();
+(function() {
+  var Set = (function() {
+    var add = function(item) {
+      var i, data = this._data;
+      for (i = 0; i < data.length; i++) {
+        if (data[i] === item) {
+          return;
+        }
+      }
+      this.size ++;
+      data.push(item);
+      return data;
+    };
+
+    var Set = function(data) {
+      this.size = 0;
+      this._data = [];
+      var i;
+      if (data.length > 0) {
+        for (i = 0; i < data.length; i++) {
+          add.call(this, data[i]);
+        }
+      }
+    };
+    Set.prototype.add = add;
+    Set.prototype.get = function(index) { return this._data[index]; };
+    Set.prototype.has = function(item) {
+      var i, data = this._data;
+      for (i = 0; i < data.length; i++) {
+        if (this.get(i) === item) {
+          return true;
+        }
+      }
+      return false;
+    };
+    Set.prototype.is = function(map) {
+      if (map._data.length !== this._data.length) { return false; }
+      var i, j, flag, tData = this._data, mData = map._data;
+      for (i = 0; i < tData.length; i++) {
+        for (flag = false, j = 0; j < mData.length; j++) {
+          if (tData[i] === mData[j]) {
+            flag = true;
+            break;
+          }
+        }
+        if (!flag) { return false; }
+      }
+      return true;
+    };
+    Set.prototype.values = function() {
+      return this._data;
+    };
+    return Set;
+  })();
+
+  window.Lazyload = (function(doc) {
+    var queue = {js: [], css: []}, sources = {js: {}, css: {}}, context = this;
+    var createNode = function(name, attrs) {
+      var node = doc.createElement(name), attr;
+      for (attr in attrs) {
+        if (attrs.hasOwnProperty(attr)) {
+          node.setAttribute(attr, attrs[attr]);
+        }
+      }
+      return node;
+    };
+    var end = function(type, url) {
+      var s, q, qi, cbs, i, j, cur, val, flag;
+      if (type === 'js' || type ==='css') {
+        s = sources[type], q = queue[type];
+        s[url] = true;
+        for (i = 0; i < q.length; i++) {
+          cur = q[i];
+          if (cur.urls.has(url)) {
+            qi = cur, val = qi.urls.values();
+            qi && (cbs = qi.callbacks);
+            for (flag = true, j = 0; j < val.length; j++) {
+              cur = val[j];
+              if (!s[cur]) {
+                flag = false;
+              }
+            }
+            if (flag && cbs && cbs.length > 0) {
+              for (j = 0; j < cbs.length; j++) {
+                cbs[j].call(context);
+              }
+              qi.load = true;
+            }
+          }
+        }
+      }
+    };
+    var load = function(type, urls, callback) {
+      var s, q, qi, node, i, cur,
+        _urls = typeof urls === 'string' ? new Set([urls]) : new Set(urls), val, url;
+      if (type === 'js' || type ==='css') {
+        s = sources[type], q = queue[type];
+        for (i = 0; i < q.length; i++) {
+          cur = q[i];
+          if (_urls.is(cur.urls)) {
+            qi = cur;
+            break;
+          }
+        }
+        val = _urls.values();
+        if (qi) {
+          callback && (qi.load || qi.callbacks.push(callback));
+          callback && (qi.load && callback());
+        } else {
+          q.push({
+            urls: _urls,
+            callbacks: callback ? [callback] : [],
+            load: false
+          });
+          for (i = 0; i < val.length; i++) {
+            node = null, url = val[i];
+            if (s[url] === undefined) {
+              (type === 'js' ) && (node = createNode('script', { src: url }));
+              (type === 'css') && (node = createNode('link', { rel: 'stylesheet', href: url }));
+              if (node) {
+                node.onload = (function(type, url) {
+                  return function() {
+                    end(type, url);
+                  };
+                })(type, url);
+                (doc.head || doc.body).appendChild(node);
+                s[url] = false;
+              }
+            }
+          }
+        }
+      }
+    };
+    return {
+      js: function(url, callback) {
+        load('js', url, callback);
+      },
+      css: function(url, callback) {
+        load('css', url, callback);
+      }
+    };
+  })(this.document);
+})();
+</script><script>
+  (function() {
+    var TEXT_VARIABLES = {
+      version: '2.2.4',
+      sources: {
+        font_awesome: 'https://done.land/assets/font/css/fontawesome.min.css',
+        jquery: 'https://done.land/assets/js/jquery.js',
+        leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js',
+        chart: 'https://done.land/assets/js/chart.4.4.1.js',
+        gitalk: {
+          js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
+          css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
+        },
+        valine: 'https://unpkg.com/valine/dist/Valine.min.js',
+        mathjax: 'https://done.land/assets/js/mathjax.js',
+        mermaid: 'https://done.land/assets/js/mermaid.js'
+      },
+      site: {
+        toc: {
+          selectors: 'h1,h2,h3'
+        }
+      },
+      paths: {
+        search_js: '/assets/search.js'
+      }
+    };
+    window.TEXT_VARIABLES = TEXT_VARIABLES;
+  })();
+</script></head>
+  <body>
+    <div class="root" data-is-touch="false">
+      <div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__mask d-print-none js-page-mask js-sidebar-hide"></div>
+  <div class="page__viewport">
+    <div class="page__actions d-print-none">
+      <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
+        <i class="fas fa-bars icon--show"></i>
+      </div>
+    </div>
+
+    <div class="grid page__grid">
+
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Navigation</li><li class="toc-h2"><a href="/">Start</a></li><li class="toc-h2"><a href="/components/">Components</a></li><li class="toc-h2"><a href="/components/power/">Power</a></li><li class="toc-h2"><a href="/components/power/powersupplies/">Power Supplies</a></li><li class="toc-h2"><a href="/components/power/powersupplies/battery/">Battery</a></li><li class="toc-h2"><a href="/components/power/powersupplies/battery/bms/">BMS</a></li><li class="toc-h1">Overview</li><li class="toc-h2"><a href="/components/power/powersupplies/battery/bms/1s/">1s</a></li><li class="toc-h1">Details</li><li class="toc-h2"><a href="/components/power/powersupplies/battery/bms/1s/2a/">2A</a></li><li class="toc-h2 active"><a href="/components/power/powersupplies/battery/bms/1s/5a/">5A</a></li><li class="toc-h2"><a href="/components/power/powersupplies/battery/bms/1s/10a/">10A</a></li></ul></div></div><div class="page__main js-page-main page__main--immersive has-aside cell cell--auto">
+
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header header--dark"><div class="main">
+      <div class="header__title">
+        <div class="header__brand"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg3783"
+   sodipodi:docname="logo.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <defs
+     id="defs3787" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3840"
+     inkscape:window-height="2213"
+     id="namedview3785"
+     showgrid="false"
+     inkscape:zoom="20.560003"
+     inkscape:cx="62.478587"
+     inkscape:cy="0.40565804"
+     inkscape:window-x="-18"
+     inkscape:window-y="-18"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3783" />
+  <metadata
+     id="metadata36">image/svg+xml<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     id="g3808"
+     transform="matrix(0.09577785,0,0,0.09577785,0.55471892,21.252756)">
+    <g
+       transform="translate(0,-224.17519)"
+       id="g3771"
+       class="currentLayer">
+      <title
+         id="title3752">Layer 1</title>
+      <path
+         style="fill:#b6b6b6;fill-opacity:1"
+         inkscape:connector-curvature="0"
+         class=""
+         d="M 141.07245,203.37892 H 99.346116 c -2.657177,0 -4.80792,2.15075 -4.80792,4.80792 0,2.65718 2.150743,4.80792 4.80792,4.80792 h 41.729534 c 2.65718,0 4.80792,-2.15074 4.80792,-4.80792 0,-2.65717 -2.15394,-4.80792 -4.81112,-4.80792 z"
+         id="path4"
+         stroke="null" />
+      <path
+         style="fill:#b6b6b6;fill-opacity:1"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 145.88037,223.37987 c 0,-2.65718 -2.15074,-4.80792 -4.80792,-4.80792 H 99.346116 c -2.657177,0 -4.80792,2.15074 -4.80792,4.80792 0,2.65718 2.150743,4.80792 4.80792,4.80792 h 41.729534 c 2.65398,0 4.80472,-2.15395 4.80472,-4.80792 z"
+         id="path6"
+         stroke="null" />
+      <path
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 7.168679,125.00412 h 27.703234 c 2.657177,0 4.80792,-2.15074 4.80792,-4.80792 0,-2.65717 -2.150743,-4.80792 -4.80792,-4.80792 H 7.168679 c -2.657177,0 -4.80792,2.15075 -4.80792,4.80792 0,2.65718 2.150743,4.80792 4.80792,4.80792 z"
+         id="path8"
+         stroke="null" />
+      <path
+         style="fill:#ebeb1a"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 7.168679,125.00412 h 27.703234 c 2.657177,0 4.80792,-2.15074 4.80792,-4.80792 0,-2.65717 -2.150743,-4.80792 -4.80792,-4.80792 H 7.168679 c -2.657177,0 -4.80792,2.15075 -4.80792,4.80792 0,2.65718 2.150743,4.80792 4.80792,4.80792 z"
+         id="svg_4"
+         stroke="null" />
+      <path
+         style="fill:#ebeb1a"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 238.05781,120.1962 c 0,-2.65717 -2.15075,-4.80792 -4.80792,-4.80792 h -27.70324 c -2.65717,0 -4.80792,2.15075 -4.80792,4.80792 0,2.65718 2.15075,4.80792 4.80792,4.80792 h 27.70324 c 2.65717,0 4.80792,-2.15074 4.80792,-4.80792 z"
+         id="path10"
+         stroke="null" />
+      <path
+         style="fill:#ebeb1a"
+         inkscape:connector-curvature="0"
+         class=""
+         d="M 115.40136,7.1556008 V 34.858835 c 0,2.657177 2.15075,4.80792 4.80792,4.80792 2.65718,0 4.80792,-2.150743 4.80792,-4.80792 V 7.1556008 c 0,-2.657177 -2.15074,-4.80792 -4.80792,-4.80792 -2.65717,0 -4.80792,2.150743 -4.80792,4.80792 z"
+         id="path12"
+         stroke="null" />
+      <path
+         style="fill:#ebeb1a"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 196.74175,36.865339 -19.58747,19.587465 c -1.87829,1.875089 -1.87829,4.92331 0,6.798399 0.93915,0.939147 2.16998,1.407118 3.40081,1.407118 1.23082,0 2.46165,-0.467971 3.4008,-1.407118 l 19.58746,-19.587465 c 1.8783,-1.875089 1.8783,-4.92331 0,-6.798399 -1.8815,-1.878294 -4.92331,-1.878294 -6.8016,0 z"
+         id="path14"
+         stroke="null" />
+      <path
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 63.264281,177.14121 c -1.878294,-1.8783 -4.920105,-1.8783 -6.798399,0 l -19.587465,19.58746 c -1.878294,1.87509 -1.878294,4.92011 0,6.7984 0.939147,0.93915 2.169974,1.40712 3.400802,1.40712 1.230827,0 2.461655,-0.46797 3.400802,-1.40712 L 63.267486,183.9396 c 1.875089,-1.87508 1.875089,-4.9201 -0.0032,-6.79839 z"
+         id="path16"
+         stroke="null" />
+      <path
+         style="fill:#ebeb1a"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 63.264281,177.14121 c -1.878294,-1.8783 -4.920105,-1.8783 -6.798399,0 l -19.587465,19.58746 c -1.878294,1.87509 -1.878294,4.92011 0,6.7984 0.939147,0.93915 2.169974,1.40712 3.400802,1.40712 1.230827,0 2.461655,-0.46797 3.400802,-1.40712 L 63.267486,183.9396 c 1.875089,-1.87508 1.875089,-4.9201 -0.0032,-6.79839 z"
+         id="svg_3"
+         stroke="null" />
+      <path
+         style="fill:#ebeb1a"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 56.465883,63.251203 c 0.939147,0.939147 2.169974,1.407118 3.400802,1.407118 1.230827,0 2.461655,-0.467971 3.400802,-1.407118 1.878294,-1.875089 1.878294,-4.92331 0,-6.798399 L 43.680022,36.865339 c -1.878294,-1.878294 -4.920105,-1.878294 -6.798399,0 -1.878294,1.875089 -1.878294,4.92331 0,6.798399 z"
+         id="path18"
+         stroke="null" />
+      <path
+         style="fill:#ebeb1a"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 196.74175,203.52707 c 0.93915,0.93915 2.16997,1.40712 3.4008,1.40712 1.23083,0 2.46166,-0.46797 3.4008,-1.40712 1.8783,-1.8783 1.8783,-4.92331 0,-6.7984 L 183.95589,177.1412 c -1.8783,-1.87829 -4.92011,-1.87829 -6.7984,0 -1.87829,1.8783 -1.87829,4.92331 0,6.7984 z"
+         id="path20"
+         stroke="null" />
+      <path
+         style="fill:#b6b6b6;fill-opacity:1"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 135.44718,238.56969 c 0,-2.65718 -2.15074,-4.80792 -4.80792,-4.80792 H 109.7761 c -2.65718,0 -4.80792,2.15074 -4.80792,4.80792 0,2.65718 2.15074,4.80792 4.80792,4.80792 h 20.86316 c 2.65718,0 4.80792,-2.15074 4.80792,-4.80792 z"
+         id="path22"
+         stroke="null" />
+      <path
+         style="fill:#ebeb1a;fill-rule:nonzero;stroke:#b6b6b6;stroke-width:10;stroke-linejoin:round;stroke-opacity:1"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 50.467982,122.80142 c 0,-37.93246 30.724582,-68.657757 68.656168,-68.657757 37.93158,0 68.65617,30.725296 68.65617,68.657757 0,37.93247 -30.72459,68.65777 -68.65617,68.65777 -37.931586,0 -68.656168,-30.7253 -68.656168,-68.65777 z"
+         id="svg_1" />
+      <path
+         style="clip-rule:evenodd;fill:none;fill-rule:evenodd"
+         inkscape:connector-curvature="0"
+         class=""
+         d="m 84.947869,190.63985 c 0,-36.94482 0.03096,-73.89002 -0.06422,-110.83446 -0.0069,-2.655734 0.462382,-3.19928 2.762436,-3.190912 31.087945,0.111068 62.177205,0.111068 93.265155,0 2.30005,-0.0084 2.76968,0.535179 2.76276,3.190912 -0.0952,36.94444 -0.0642,73.88964 -0.0642,110.83446 -1.06638,0.76378 -2.25164,0.42944 -3.38158,0.4302 -30.63281,0.0186 -61.26594,0.0186 -91.899082,0 -1.129938,-7.6e-4 -2.315203,0.33358 -3.381251,-0.4302 z"
+         id="svg_10"
+         stroke="null" />
+      <g
+         style="opacity:1;fill:#b6b6b6;fill-opacity:1"
+         class=""
+         id="svg_16"
+         stroke="null">
+        <path
+           style="clip-rule:evenodd;opacity:1;fill:#b6b6b6;fill-opacity:1;fill-rule:evenodd"
+           inkscape:connector-curvature="0"
+           d="m 127.69563,115.26368 c -1.25824,-1.47598 -2.63962,-3.17538 -4.10254,-4.79976 -8.29561,-9.21463 -16.51783,-18.497748 -24.961032,-27.57456 -3.863618,-4.15392 -5.094953,-8.187968 -0.455023,-12.288067 4.585295,-4.052803 9.090675,-3.694004 13.296785,0.968759 11.71399,12.981203 23.41411,25.977084 35.32218,38.779698 4.44585,4.78182 3.41022,8.03304 -1.48657,11.57618 -18.79539,13.60421 -37.48477,27.35602 -56.153757,41.13392 -4.196323,3.0979 -8.196938,3.8734 -11.586778,-0.70211 -3.739669,-5.04684 -0.279701,-8.04934 3.599411,-10.87407 13.873309,-10.1051 27.719704,-20.24771 41.506584,-30.47023 1.92039,-1.42378 4.67744,-2.25391 5.02074,-5.74976 z"
+           id="svg_13"
+           stroke="null" />
+        <path
+           style="clip-rule:evenodd;opacity:1;fill:#b6b6b6;fill-opacity:1;fill-rule:evenodd"
+           inkscape:connector-curvature="0"
+           d="m 133.63784,164.08324 c -5.05255,0 -10.11244,0.17369 -15.15357,-0.0554 -4.02181,-0.18185 -6.44208,-2.42924 -6.39152,-6.66552 0.0489,-4.0055 2.06799,-7.01697 6.08573,-7.12543 11.04287,-0.29601 22.10205,-0.2324 33.14899,-0.0163 3.51053,0.0685 6.10204,2.35585 6.08084,6.01397 -0.0253,4.19632 -2.23353,7.44754 -6.72749,7.71827 -5.66251,0.34249 -11.36008,0.0848 -17.04216,0.0848 -8.2e-4,0.0139 -8.2e-4,0.0302 -8.2e-4,0.0457 z"
+           id="svg_14"
+           stroke="null" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="g3776"
+     transform="translate(0,-224.17519)">
+    <title
+       id="title3773">Layer 2</title>
+    <rect
+       y="0"
+       x="0"
+       height="100%"
+       width="100%"
+       id="backgroundrect"
+       style="fill:none" />
+  </g>
+  <g
+     id="g3781"
+     transform="translate(0,-224.17519)">
+    <title
+       id="title3778">background</title>
+    <rect
+       id="canvas_background"
+       height="602"
+       width="802"
+       y="-1"
+       x="-1"
+       style="fill:none" />
+  </g>
+</svg>
+<a title="A Place for Makers, Geeks and the Technically Inspired who Enjoy Playing with Electronics and Microprocessors
+" href="/">DONE.LAND</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
+        <ul><li class="navigation__item navigation__item--active"><a href="/components">Components</a></li><li class="navigation__item"><a href="/projects">Projects</a></li><li class="navigation__item"><a href="/fundamentals">Fundamentals</a></li><li class="navigation__item"><a href="/tools">Tools</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+      </nav></div>
+  </header>
+</div><div class="page__content"><div class="article__header--overlay"><div class="hero hero--dark overlay" style="background-image:linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(1,36,86, .7)),url(/assets/img/battery.png);background-color:#203028;"><div class="hero__content"><div class ="main"><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Battery">Battery</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=BMS">BMS</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=1S">1S</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=5A">5A</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=DW01">DW01</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=8205A">8205A</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>Dr. Tobias Weltner</span></li><li><i class="far fa-calendar-alt"></i> <span>Mar 24, 2024</span>
+            </li></ul></div><div class="article__header"><header><h1>1S 5A Battery Management Systems (BMS)</h1></header></div><p class="overlay__excerpt">BMS For A Single Battery String And 5A Max Current</p></div></div>
+              </div>
+            </div><div class ="main"><div class="grid grid--reverse">
+
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
+
+              <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
+
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="1S 5A Battery Management Systems (BMS)"><meta itemprop="author" content="Dr. Tobias Weltner"/><meta itemprop="datePublished" content="2024-03-24T00:00:00+00:00">
+    <meta itemprop="keywords" content="Battery,BMS,1S,5A,DW01,8205A"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+
+<!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><p class="info"><strong>BMS</strong> often ship in <em>locked state</em>: <em>no output voltage</em> is available at the output pins. <em>Locked state</em> is also entered whenever <em>over-current protection</em> was triggered. To <em>unlock</em> the <strong>BMS</strong>, connect it to a charger. If you did not add a dedicated <em>charger board</em>, apply the appropriate charging voltage to its output terminal.</p>
+
+<h2 id="5a">5A</h2>
+
+<p><a href="https://done.land/fundamentals/battery" class="button button--success button--rounded button--sm">LiIon</a>
+ <a href="https://done.land/fundamentals/battery" class="button button--success button--rounded button--sm">LiPo</a></p>
+
+<p>For currents up to <strong>5A</strong>, there are a few commonly available choices available.</p>
+
+<p class="warning">While the vendors claim that these boards can sustain a continuous current of <strong>5A</strong>, given the small size of the boards, you should either stay below <strong>3A</strong> or add additional <em>heat sinks</em>.</p>
+
+<h3 id="sleeve-connectors">Sleeve-Connectors</h3>
+
+<p>This board comes with long metal sleeves that can be soldered or spot-welded right onto <em>18650</em> batteries (but can be used with other <em>LiIon</em> or <em>LiPo</em> batteries as well):</p>
+
+<p><img loading="lazy" class="shadowedImage" src="../../../../../../../assets/img/1s_5a_top_angle_t.png" width="50%" height="50%" /></p>
+
+<h4 id="connection">Connection</h4>
+
+<p>Its long metal sleeves are designed to be fitted to <em>18650 LiIon Cells</em> using spot welding but you can shorten the connector terminals and solder them to <em>LiPo</em> as well.</p>
+
+<p><img loading="lazy" class="shadowedImage" src="../../../../../../../assets/img/1s_5a_wiring.png" width="50%" height="50%" /></p>
+
+<p>On the backside, there are two terminals marked <strong>B+</strong> and <strong>B-</strong> that are identical to the metal sleeves and go to the battery.</p>
+
+<p>The output voltage is available at the terminals <strong>P+</strong> and <strong>P-</strong> in the middle of the backside.</p>
+
+<h4 id="specs">Specs</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Protection</th>
+      <th>Threshold</th>
+      <th>Release</th>
+      <th>Delay</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Over-Charge</td>
+      <td>&gt;4.3V</td>
+      <td>&lt;4.1V</td>
+      <td>70ms</td>
+    </tr>
+    <tr>
+      <td>Over-Discharge</td>
+      <td>&lt;2.4V</td>
+      <td>&gt;3.0V</td>
+      <td>35ms</td>
+    </tr>
+    <tr>
+      <td>Over-Current</td>
+      <td>6A</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="regular-connectors">Regular Connectors</h3>
+
+<p>This board is based on the <em>DW01</em> chip and three <em>8205A</em> MosFET:</p>
+
+<p><img loading="lazy" class="shadowedImage" src="../../../../../../../assets/img/bms_1s_5a_top_1_t.png" width="50%" height="50%" /></p>
+
+<p>All solder pads are located on the backside:</p>
+
+<p><img loading="lazy" class="shadowedImage" src="../../../../../../../assets/img/bms_1s_3a_back_1_t.png" width="50%" height="50%" /></p>
+
+<h4 id="connection-1">Connection</h4>
+
+<p>Connect the battery to <strong>B+</strong> and <strong>B-</strong>. Output voltage is available at <strong>P+</strong> and <strong>P-</strong>.</p>
+
+<h4 id="specs-1">Specs</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Protection</th>
+      <th>Threshold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Continuous Current</td>
+      <td>5A</td>
+    </tr>
+    <tr>
+      <td>Maximum Current</td>
+      <td>6A</td>
+    </tr>
+    <tr>
+      <td>Overcurrent Detection</td>
+      <td>7.5A</td>
+    </tr>
+    <tr>
+      <td>Over-Charge</td>
+      <td>&gt;4.25V (release at &lt;4.23V)</td>
+    </tr>
+    <tr>
+      <td>Over-Discharge</td>
+      <td>&lt;2.45V</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>35x7.4x2.2mm</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="charging">Charging</h4>
+
+<p>When you <em>charge</em> your battery through this <em>BMS</em>, the <em>charging voltage</em> is <em>4.2V</em>.</p>
+
+<p class="success">It is always recommended for charging to use an additional <em>dedicated charger board</em> that limits the charging current to the levels appropriate for your particular battery.   <br />These simple <em>BMS</em> are not designed to be chargers. They do limit the charging current, but there is no way for you to adjust the current. It is typically a fairly high current that may be significantly <em>too high</em> for many battery types.</p>
+
+<h2 id="slow-website">Slow Website?</h2>
+
+<p>This website is <em>very fast</em>, and pages should appear <em>instantly</em>. If this site is <strong>slow</strong> for you, then <em>your routing</em> may be messed up, and this issue does not only affect <em>done.land</em>, but potentially a few other websites and downloads as well. Here are simple steps <a href="https://done.land/tools/internet">to speed up your Internet experience and fix issues with slow websites and downloads.</a>.</p>
+<h2 id="comments">Comments</h2>
+
+<p>Please <em>do leave comments</em> below. I am using <em>utteran.ce</em>, an <em>open-source</em> and <em>ad-free</em> light-weight commenting system.</p>
+
+<details>
+    <summary>Here is how your comments are stored
+</summary>
+    
+<p>Whenever you leave a <em>comment</em>, a new <em>github issue</em> is created on your behalf.</p>
+
+<ul>
+  <li>
+    <p>All comments become trackable <em>issues</em> in the <a href="https://github.com/TobiasPSP/doneland_sources/issues">Github Issues</a> section, and I (and <em>you</em>) can follow up on them.</p>
+  </li>
+  <li>
+    <p>There is no <em>third-party provider</em>, <em>no disrupting ads</em>, and everything remains transparent inside <em>github</em>.</p>
+  </li>
+</ul>
+
+<h4 id="github-users-yes-spammers-no">Github Users Yes, Spammers No</h4>
+
+<p>To keep spammers out and comments attributable, all <em>you</em> do is <em>log in</em> using your (free) <em>github account</em> and <em>grant utteranc.es the permission</em> to submit issues on your behalf.</p>
+
+<p>If you don’t have a <em>github account</em> yet, go get yourself one - it’s free and simple.</p>
+
+<p class="info">If <em>for any reason</em> you do not feel comfortable with letting the commenting system submit issues for you, then visit <a href="https://github.com/TobiasPSP/doneland_sources/issues">Github Issues</a> directly, i.e. by clicking the red button <strong>Submit Issue</strong> at the bottom of each page, and submit your <em>issue</em> manually. You control everything.</p>
+
+<h4 id="discussions">Discussions</h4>
+
+<p>For chit-chat and quick questions, feel free to visit and participate in <a href="https://github.com/TobiasPSP/doneland_sources/discussions">Discussions</a>. They work much like classic <em>forums</em> or <em>bulletin boards</em>. Just keep in mind: your valued input isn’t equally well <em>trackable</em> there.</p>
+
+</details>
+
+<p><a class="button button--success button--rounded button--s" href="https://github.com/TobiasPSP/doneland_sources/tree/main/Components/Power/Power%20Supplies/Battery/BMS/1s/5A"><i class="fab fa-github"></i>  Show on Github</a>  <a class="button button--primary button--rounded button--s" href="https://github.com/tobiaspsp/doneland_sources/issues/new?title=Enter%20Meaningful%20Description&amp;body=[View referenced webpage](https://done.land/components/power/powersupplies/battery/bms/1s/5a)"><i class="fas fa-bug"></i>  Submit Issue</a></p>
+
+<p><sup><sub><em>(content created Mar 24, 2024)</em></sub></sup></p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-03-24T00:00:00+00:00"><!-- start custom article footer snippet -->
+
+<!-- end custom article footer snippet --><div class="article__license"><div class="license">
+    <p><a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/">
+        <img alt="Attribution-NoDerivatives 4.0 International" src="https://licensebuttons.net/l/by-nd/4.0/88x31.png" loading="lazy" />
+      </a> / <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <img alt="Attribution 4.0 International" src="https://licensebuttons.net/l/by/4.0/88x31.png" loading="lazy" />
+      </a><br/> 
+This Article is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/">Attribution-NoDerivatives 4.0 International</a> license.<br/>All Code samples are licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license. Use, share, and experiment freely.
+    </p>
+  </div></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/components/power/powersupplies/battery/bms/1s/2a/">2A</a></div><div class="next"><span>NEXT</span><a href="/components/power/powersupplies/battery/bms/1s/10a/">10A</a></div></div></div>
+
+</div>
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
+
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();
+</script></div><section class="page__comments d-print-none">
+
+<div id="utterances_thread">
+<script src="https://utteranc.es/client.js"
+  repo="tobiaspsp/doneland_sources"
+  issue-term="Comments: 1S 5A Battery Management Systems (BMS)"label="utteranc.es"theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+</div></section></article><!-- start custom main bottom snippet -->
+
+<!-- end custom main bottom snippet --></div>
+            </div></div></div><div class="page__footer d-print-none">
+<footer class="footer py-4 js-page-footer">
+  <div class="main"><div itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dr. Tobias Weltner"><meta itemprop="url" content="http://www.done.land"><meta itemprop="description" content="long-term PowerShell & electronics passionate, running psconf.eu PowerShell Conference EU, Microsoft MVP, Developer & Trainer"><div class="footer__author-links"><div class="author-links">
+  <ul class="menu menu--nowrap menu--inline"><link itemprop="url" href="https://www.done.land"><li title="Send me an Email.">
+      <a class="button button--circle mail-button" itemprop="email" href="/cdn-cgi/l/email-protection#3d49525f545c4e7d4d524a584f4e5558515113525358" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a><li title="Follow me on Twitter.">
+        <a class="button button--circle twitter-button" itemprop="sameAs" href="https://twitter.com/tobiaspsp" target="_blank">
+          <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1024.032 194.432c-37.664 16.704-78.176 28-120.672 33.088 43.36-26.016 76.672-67.168 92.384-116.224-40.608 24.064-85.568 41.568-133.408 50.976-38.336-40.832-92.928-66.336-153.344-66.336-116.032 0-210.08 94.048-210.08 210.08 0 16.48 1.856 32.512 5.44 47.872-174.592-8.768-329.408-92.416-433.024-219.52-18.08 31.04-28.448 67.104-28.448 105.632 0 72.896 37.088 137.184 93.472 174.88-34.432-1.088-66.816-10.528-95.168-26.272-0.032 0.864-0.032 1.76-0.032 2.656 0 101.792 72.416 186.688 168.512 205.984-17.632 4.8-36.192 7.36-55.36 7.36-13.536 0-26.688-1.312-39.52-3.776 26.72 83.456 104.32 144.192 196.256 145.888-71.904 56.352-162.496 89.92-260.928 89.92-16.96 0-33.664-0.992-50.112-2.944 92.96 59.616 203.392 94.4 322.048 94.4 386.432 0 597.728-320.128 597.728-597.76 0-9.12-0.192-18.176-0.608-27.168 41.056-29.632 76.672-66.624 104.832-108.736z" />
+</svg>
+</div>
+        </a>
+      </li><li title="Follow me on Github.">
+        <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/tobiaspsp" target="_blank">
+          <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path class="svgpath" data-index="path_0" fill="#272636" d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
+</svg>
+</div>
+        </a>
+      </li></ul>
+</div>
+</div>
+    </div><div class="site-info mt-2">
+      <div>© DONE.LAND 2026 - <a href="https://done.land/legal/about-site">Legal</a> - <a href="/cdn-cgi/l/email-protection#7b0f1419121a083b0b140c1e0908131e17175514151e">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.addEventListener("DOMContentLoaded", function(event) {
+  window.Lazyload.js([SOURCES.jquery, 'https://done.land/assets/js/clipboard.min.js'], function() {
+   
+   $('.highlight').each(function(i) {
+      if (!$(this).parent().hasClass('no-select-button')) {
+        if ($(this).prop('tagName').toLowerCase() == 'pre') {
+	//if ($(this).parent().parent().hasClass('language-powershell')) {
+        // create an id for the current code section
+        var currentId = "codeblock" + (i + 1);
+
+        // find the code section and add the id to it
+        var codeSection = $(this).find('code');
+        codeSection.attr('id', currentId);
+
+        // now create the button, setting the clipboard target to the id
+        var btn = document.createElement('a');
+        btn.setAttribute('type', 'btn');
+        btn.setAttribute('tooltip', 'click to copy content to clipboard');
+        btn.setAttribute('flow', 'left');
+
+        btn.setAttribute('class', 'btn-copy-code');
+        btn.setAttribute('data-clipboard-target', '#' + currentId);
+        btn.innerHTML = '<i class="far fa-file-code fa-2x"></i>';
+        this.insertBefore(btn, this.firstChild);
+        };
+        };
+
+      });
+      new ClipboardJS('.btn-copy-code');
+    })});
+
+   
+</script>
+
+<style>
+    #cookie-notice {padding: 7px 15px; display: none; text-align: center; position: fixed; bottom: 0; width: 100%; background: #222; color: rgba(255,255,255,0.8);}
+    #cookie-notice a {cursor: pointer; margin-left: 10px; color:white; font-size: 10px;}
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 13px;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+<div id="cookie-notice" font-size: 9px; style="background-color:rgba(138,98,34,0.8);"><span> This website uses cookies to provide vital parts of its functionality.<BR/>By continuing to use this website you indicate that this is ok with you.</span><br/><a id="cookie-notice-accept" class="button button--secondary button--pill button--sm">Approve</a><a href="/legal/privacy" class="button button--secondary button--pill button--sm">Privacy</a></div>
+<script>
+    var SOURCES = window.TEXT_VARIABLES.sources;
+    window.addEventListener("DOMContentLoaded", function(event) {
+  window.Lazyload.js(SOURCES.jquery, function() {
+    
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    if(readCookie('cookie-notice-dismissed')=='true') {
+       
+    } else {
+        $('#cookie-notice').show();
+    }
+    $('#cookie-notice-accept').click(function() {
+        createCookie('cookie-notice-dismissed','true',31);
+        $('#cookie-notice').hide();
+        location.reload();
+    });
+})});
+</script>
+
+</footer></div></div>
+    </div></div></div><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $body = $('body'), $window = $(window);
+    var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
+    var activeCount = 0;
+    function modal(options) {
+      var $root = this, visible, onChange, hideWhenWindowScroll = false;
+      var scrollTop;
+      function setOptions(options) {
+        var _options = options || {};
+        visible = _options.initialVisible === undefined ? false : show;
+        onChange = _options.onChange;
+        hideWhenWindowScroll = _options.hideWhenWindowScroll;
+      }
+      function init() {
+        setState(visible);
+      }
+      function setState(isShow) {
+        if (isShow === visible) {
+          return;
+        }
+        visible = isShow;
+        if (visible) {
+          activeCount++;
+          scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+          $root.addClass('modal--show');
+          $pageMain.scrollTop(scrollTop);
+          activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.on('scroll', hide);
+          $window.on('keyup', handleKeyup);
+        } else {
+          activeCount > 0 && activeCount--;
+          $root.removeClass('modal--show');
+          $window.scrollTop(scrollTop);
+          activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.off('scroll', hide);
+          $window.off('keyup', handleKeyup);
+        }
+        onChange && onChange(visible);
+      }
+      function show() {
+        setState(true);
+      }
+      function hide() {
+        setState(false);
+      }
+      function handleKeyup(e) {
+        // Char Code: 27  ESC
+        if (e.which ===  27) {
+          hide();
+        }
+      }
+      setOptions(options);
+      init();
+      return {
+        show: show,
+        hide: hide,
+        $el: $root
+      };
+    }
+    $.fn.modal = modal;
+  });
+})();
+</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+(function () {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    // search panel
+    var search = (window.search || (window.search = {}));
+    var useDefaultSearchBox = window.useDefaultSearchBox === undefined ?
+      true : window.useDefaultSearchBox ;
+
+    var $searchModal = $('.js-page-search-modal');
+    var $searchToggle = $('.js-search-toggle');
+    var searchModal = $searchModal.modal({ onChange: handleModalChange, hideWhenWindowScroll: true });
+    var modalVisible = false;
+    search.searchModal = searchModal;
+
+    var $searchBox = null;
+    var $searchInput = null;
+    var $searchClear = null;
+
+    function getModalVisible() {
+      return modalVisible;
+    }
+    search.getModalVisible = getModalVisible;
+
+    function handleModalChange(visible) {
+      modalVisible = visible;
+      if (visible) {
+        search.onShow && search.onShow();
+        useDefaultSearchBox && $searchInput[0] && $searchInput[0].focus();
+      } else {
+        search.onShow && search.onHide();
+        useDefaultSearchBox && $searchInput[0] && $searchInput[0].blur();
+        setTimeout(function() {
+          useDefaultSearchBox && ($searchInput.val(''), $searchBox.removeClass('not-empty'));
+          search.clear && search.clear();
+          window.pageAsideAffix && window.pageAsideAffix.refresh();
+        }, 400);
+      }
+    }
+
+    $searchToggle.on('click', function() {
+      modalVisible ? searchModal.hide() : searchModal.show();
+    });
+    // Char Code: 83  S, 191 /
+    $(window).on('keyup', function(e) {
+      if (!modalVisible && !window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
+        modalVisible || searchModal.show();
+      }
+    });
+
+    if (useDefaultSearchBox) {
+      $searchBox = $('.js-search-box');
+      $searchInput = $searchBox.children('input');
+      $searchClear = $searchBox.children('.js-icon-clear');
+      search.getSearchInput = function() {
+        return $searchInput.get(0);
+      };
+      search.getVal = function() {
+        return $searchInput.val();
+      };
+      search.setVal = function(val) {
+        $searchInput.val(val);
+      };
+
+      $searchInput.on('focus', function() {
+        $(this).addClass('focus');
+      });
+      $searchInput.on('blur', function() {
+        $(this).removeClass('focus');
+      });
+      $searchInput.on('input', window.throttle(function() {
+        var val = $(this).val();
+        if (val === '' || typeof val !== 'string') {
+          search.clear && search.clear();
+        } else {
+          $searchBox.addClass('not-empty');
+          search.onInputNotEmpty && search.onInputNotEmpty(val);
+        }
+      }, 400));
+      $searchClear.on('click', function() {
+        $searchInput.val(''); $searchBox.removeClass('not-empty');
+        search.clear && search.clear();
+      });
+    }
+  });
+})();
+});
+  </script><div class="search search--dark">
+  <div class="main">
+    <div class="search__header">Search</div>
+    <div class="search-bar">
+      <div class="search-box js-search-box">
+        <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
+        <input type="text" />
+        <div class="search-box__icon-clear js-icon-clear">
+          <a><i class="fas fa-times"></i></a>
+        </div>
+      </div>
+      <button class="button button--theme-dark button--pill search__cancel js-search-toggle">Cancel</button>
+    </div>
+    <div class="search-result js-search-result"></div>
+  </div>
+</div>
+<script>var SOURCES = window.TEXT_VARIABLES.sources;
+var PAHTS = window.TEXT_VARIABLES.paths;
+window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
+  var search = (window.search || (window.search = {}));
+  var searchData = window.TEXT_SEARCH_DATA || {};
+
+  function memorize(f) {
+    var cache = {};
+    return function () {
+      var key = Array.prototype.join.call(arguments, ',');
+      if (key in cache) return cache[key];
+      else return cache[key] = f.apply(this, arguments);
+    };
+  }
+
+  /// search
+  function searchByQuery(query) {
+    var i, j, key, keys, cur, _title, result = {};
+    keys = Object.keys(searchData);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      for (j = 0; j < searchData[key].length; j++) {
+        cur = searchData[key][j];
+        _title = cur.title;
+        _tags = cur.tags;
+        
+        if ((result[key] === undefined || result[key] && result[key].length < 100 )
+          && ((_title.toLowerCase().indexOf(query.toLowerCase()) >= 0) || (_tags.toLowerCase().indexOf(query.toLowerCase()) >= 0))) {
+          if (result[key] === undefined) {
+            result[key] = [];
+          }
+          result[key].push(cur);
+        }
+      }
+    }
+
+
+    // Sort each array in results by title
+    for (var key in result) {
+      var searchWord = query.toUpperCase();
+          
+      result[key].sort((a, b) => {
+          var titleA = a.title.toUpperCase();
+          var titleB = b.title.toUpperCase();
+          
+          var indexA = titleA.indexOf(searchWord);
+          var indexB = titleB.indexOf(searchWord);
+          
+          // both titles do not contain the query
+          if (indexA == -1 && indexB == -1)
+          {
+            if (titleA < titleB) {
+                return -1;
+            }
+            if (titleA > titleB) {
+                return 1;
+            }
+          }
+          // only A contains the query
+          if (indexA > -1 && indexB ==-1)
+          {
+             return -1;
+
+          }
+           // only B contains the query
+           if (indexB > -1 && indexA ==-1)
+          {
+             return 1;
+
+          }
+
+          // both titles contain the query
+          if (indexA < indexB)
+          {
+            return -1;
+          }
+          return 0;
+      });
+    }
+
+    return result;
+
+  }
+
+  var renderHeader = memorize(function(header) {
+    return $('<p class="search-result__header">' + header + '</p>');
+  });
+
+  var renderItem = function(index, title, url) {
+    return $('<li class="search-result__item" data-index="' + index + '"><a class="button" href="' + url + '">' + title + '</a></li>');
+  };
+
+  function render(data) {
+    if (!data) { return null; }
+    var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
+    keys = Object.keys(data);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      $root.append(renderHeader(key));
+      for (j = 0; j < data[key].length; j++) {
+        cur = data[key][j];
+        $root.append(renderItem(itemIndex++, cur.title, cur.url));
+      }
+    }
+    return $root;
+  }
+
+  // search box
+  var $result = $('.js-search-result'), $resultItems;
+  var lastActiveIndex, activeIndex;
+
+  function clear() {
+    $result.html(null);
+    $resultItems = $('.search-result__item'); activeIndex = 0;
+  }
+  function onInputNotEmpty(val) {
+    $result.html(render(searchByQuery(val)));
+    $resultItems = $('.search-result__item'); activeIndex = 0;
+    $resultItems.eq(0).addClass('active');
+  }
+
+  search.clear = clear;
+  search.onInputNotEmpty = onInputNotEmpty;
+
+  function updateResultItems() {
+    lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
+    activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
+  }
+
+  function moveActiveIndex(direction) {
+    var itemsCount = $resultItems ? $resultItems.length : 0;
+    if (itemsCount > 1) {
+      lastActiveIndex = activeIndex;
+      if (direction === 'up') {
+        activeIndex = (activeIndex - 1 + itemsCount) % itemsCount;
+      } else if (direction === 'down') {
+        activeIndex = (activeIndex + 1 + itemsCount) % itemsCount;
+      }
+      updateResultItems();
+    }
+  }
+
+  // Char Code: 13  Enter, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇
+  $(window).on('keyup', function(e) {
+    var modalVisible = search.getModalVisible && search.getModalVisible();
+    if (modalVisible) {
+      if (e.which === 38) {
+        modalVisible && moveActiveIndex('up');
+      } else if (e.which === 40) {
+        modalVisible && moveActiveIndex('down');
+      } else if (e.which === 13) {
+        modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+      }
+    }
+  });
+
+  $result.on('mouseover', '.search-result__item > a', function() {
+    var itemIndex = $(this).parent().data('index');
+    itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
+  });
+});
+</script>
+</div></div>
+
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function scrollToAnchor(anchor, duration, callback) {
+      var $root = this;
+      $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
+        window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
+        callback && callback();
+      });
+    }
+    $.fn.scrollToAnchor = scrollToAnchor;
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function affix(options) {
+      var $root = this, $window = $(window), $scrollTarget, $scroll,
+        offsetBottom = 0, scrollTarget = window, scroll = window.document, disabled = false, isOverallScroller = true,
+        rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop,
+        hasInit = false, curState;
+
+      function setOptions(options) {
+        var _options = options || {};
+        _options.offsetBottom && (offsetBottom = _options.offsetBottom);
+        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+        _options.scroll && (scroll = _options.scroll);
+        _options.disabled !== undefined && (disabled = _options.disabled);
+        $scrollTarget = $(scrollTarget);
+        isOverallScroller = window.isOverallScroller($scrollTarget[0]);
+        $scroll = $(scroll);
+      }
+      function preCalc() {
+        top();
+        rootHeight = $root.outerHeight();
+        rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
+        rootLeft = $root.offset().left;
+      }
+      function calc(needPreCalc) {
+        needPreCalc && preCalc();
+        scrollBottom = $scroll.outerHeight() - offsetBottom - rootHeight;
+        rootBottomTop = scrollBottom - rootTop;
+      }
+      function top() {
+        if (curState !== 'top') {
+          $root.removeClass('fixed').css({
+            left: 0,
+            top: 0
+          });
+          curState = 'top';
+        }
+      }
+      function fixed() {
+        if (curState !== 'fixed') {
+          $root.addClass('fixed').css({
+            left: rootLeft + 'px',
+            top: 0
+          });
+          curState = 'fixed';
+        }
+      }
+      function bottom() {
+        if (curState !== 'bottom') {
+          $root.removeClass('fixed').css({
+            left: 0,
+            top: rootBottomTop + 'px'
+          });
+          curState = 'bottom';
+        }
+      }
+      function setState() {
+        var scrollTop = $scrollTarget.scrollTop();
+        if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
+          fixed();
+        } else if (scrollTop < rootTop) {
+          top();
+        } else {
+          bottom();
+        }
+      }
+      function init() {
+        if(!hasInit) {
+          var interval, timeout;
+          calc(true); setState();
+          // run calc every 100 millisecond
+          interval = setInterval(function() {
+            calc();
+          }, 100);
+          timeout = setTimeout(function() {
+            clearInterval(interval);
+          }, 45000);
+          window.pageLoad.then(function() {
+            setTimeout(function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+            }, 3000);
+          });
+          $scrollTarget.on('scroll', function() {
+            disabled || setState();
+          });
+          $window.on('resize', function() {
+            disabled || (calc(true), setState());
+          });
+          hasInit = true;
+        }
+      }
+
+      setOptions(options);
+      if (!disabled) {
+        init();
+      }
+      $window.on('resize', window.throttle(function() {
+        init();
+      }, 200));
+      return {
+        setOptions: setOptions,
+        refresh: function() {
+          calc(true, { animation: false }); setState();
+        }
+      };
+    }
+    $.fn.affix = affix;
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function toc(options) {
+      var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="toc toc--ellipsis"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
+        selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
+        headingsPos, scrolling = false, hasRendered = false, hasInit = false;
+
+      function setOptions(options) {
+        var _options = options || {};
+        _options.selectors && (selectors = _options.selectors);
+        _options.container && (container = _options.container);
+        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+        _options.scroller && (scroller = _options.scroller);
+        _options.disabled !== undefined && (disabled = _options.disabled);
+        $headings = $(container).find(selectors).filter('[id]');
+        $scrollTarget = $(scrollTarget);
+        $scroller = $(scroller);
+      }
+      function calc() {
+        headingsPos = [];
+        $headings.each(function() {
+          headingsPos.push(Math.floor($(this).position().top));
+        });
+      }
+      function setState(element, disabled) {
+        var scrollTop = $scrollTarget.scrollTop(), i;
+        if (disabled || !headingsPos || headingsPos.length < 1) { return; }
+        if (element) {
+          $activeCur = element;
+        } else {
+          for (i = 0; i < headingsPos.length; i++) {
+            if (scrollTop >= headingsPos[i]) {
+              $activeCur = $tocLi.eq(i);
+            } else {
+              $activeCur || ($activeCur = $tocLi.eq(i));
+              break;
+            }
+          }
+        }
+        $activeLast && $activeLast.removeClass('active');
+        ($activeLast = $activeCur).addClass('active');
+      }
+      function render() {
+        if(!hasRendered) {
+          $root.append($tocUl);
+          $headings.each(function() {
+            var $this = $(this);
+            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+              .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
+          });
+          $tocLi = $tocUl.children('li');
+          $tocUl.on('click', 'a', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            scrolling = true;
+            setState($this.parent());
+            $scroller.scrollToAnchor($this.attr('href'), 400, function() {
+              scrolling = false;
+            });
+          });
+        }
+        hasRendered = true;
+      }
+      function init() {
+        var interval, timeout;
+        if(!hasInit) {
+          render(); calc(); setState(null, scrolling);
+          // run calc every 100 millisecond
+          interval = setInterval(function() {
+            calc();
+          }, 100);
+          timeout = setTimeout(function() {
+            clearInterval(interval);
+          }, 45000);
+          window.pageLoad.then(function() {
+            setTimeout(function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+            }, 3000);
+          });
+          $scrollTarget.on('scroll', function() {
+            disabled || setState(null, scrolling);
+          });
+          $window.on('resize', window.throttle(function() {
+            if (!disabled) {
+              render(); calc(); setState(null, scrolling);
+            }
+          }, 100));
+        }
+        hasInit = true;
+      }
+
+      setOptions(options);
+      if (!disabled) {
+        init();
+      }
+      $window.on('resize', window.throttle(function() {
+        init();
+      }, 200));
+      return {
+        setOptions: setOptions
+      };
+    }
+    $.fn.toc = toc;
+  });
+})();
+/*(function () {
+
+})();*/
+</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageMask = $('.js-page-mask');
+    var $pageRoot = $('.js-page-root');
+    var $sidebarShow = $('.js-sidebar-show');
+    var $sidebarHide = $('.js-sidebar-hide');
+
+    function freeze(e) {
+      if (e.target === $pageMask[0]) {
+        e.preventDefault();
+      }
+    }
+    function stopBodyScrolling(bool) {
+      if (bool === true) {
+        window.addEventListener('touchmove', freeze, { passive: false });
+      } else {
+        window.removeEventListener('touchmove', freeze, { passive: false });
+      }
+    }
+
+    $sidebarShow.on('click', function() {
+      stopBodyScrolling(true); $pageRoot.addClass('show-sidebar');
+    });
+    $sidebarHide.on('click', function() {
+      stopBodyScrolling(false); $pageRoot.removeClass('show-sidebar');
+    });
+  });
+})();
+</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    window.pageAsideAffix = affix;
+  });
+})();
+</script><script>
+  window.Lazyload.js(['https://done.land/assets/js/jquery.js', 'https://done.land/assets/js/chart.4.4.1.js'], function() {
+    var $canvas = null, $this = null, _ctx = null, _text = '';
+    $('.language-chart').each(function(){
+      $this = $(this);
+      $canvas = $('<canvas></canvas>');
+      _text = $this.text();
+      $this.text('').append($canvas);
+      _ctx = $canvas.get(0).getContext('2d');
+      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
+    });
+  });
+</script>
+    </div>
+    <script>(function () {
+  var $root = document.getElementsByClassName('root')[0];
+  if (window.hasEvent('touchstart')) {
+    $root.dataset.isTouch = true;
+    document.addEventListener('touchstart', function(){}, false);
+  }
+})();
+</script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"b15594083dbb460280c1fd000d519f8c","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

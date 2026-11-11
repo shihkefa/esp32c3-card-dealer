@@ -1,0 +1,38 @@
+.manual3d{position:relative;background:#f3f2ed;color:#203b3b;min-width:0;isolation:isolate}
+.manual3d *{box-sizing:border-box}
+.manual3d button,.manual3d select,.manual3d input{font:inherit}
+.manual3d-toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:11px 13px;border-bottom:1px solid #dce3dd;background:#f8faf5;font-size:11px}
+.manual3d-toolbar button,.manual3d-toolbar select,.manual3d-inspect button,.manual3d-inspect select{border:1px solid #ccd9cf;background:white;color:#24645e;border-radius:7px;padding:7px 9px;line-height:1.4;font-size:11px;min-height:31px}
+.manual3d button:hover{background:#eaf2ec}.manual3d button:disabled{opacity:.4;cursor:default}
+.manual3d-mode{max-width:145px}
+.manual3d-toolbar .manual3d-spacer{flex:1;min-width:2px}
+.manual3d-viewport{height:480px;position:relative;overflow:hidden;touch-action:none;outline-offset:-3px}
+.manual3d-viewport canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab;outline:none}
+.manual3d-viewport canvas:active{cursor:grabbing}
+.manual3d-gesture{position:absolute;left:13px;bottom:11px;right:13px;pointer-events:none;display:flex;justify-content:space-between;gap:10px;font-size:10px;color:#61776c;line-height:1.7}
+.manual3d-help{background:#f8faf5e6;padding:3px 7px;border-radius:5px}
+.manual3d-count{background:#f8faf5e6;padding:3px 7px;border-radius:5px;white-space:nowrap;align-self:flex-end}
+.manual3d-options{padding:11px 14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:11px;border-top:1px solid #dce3dd;border-bottom:1px solid #dce3dd;background:#f8faf5}
+.manual3d-explode{display:flex;align-items:center;gap:9px;flex:1;min-width:185px;white-space:nowrap}
+.manual3d-explode input{accent-color:#24645e;min-width:60px;max-width:200px;flex:1;cursor:pointer}
+.manual3d-explode output{min-width:30px;font-variant-numeric:tabular-nums;color:#637674}
+.manual3d-check{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;cursor:pointer;user-select:none}
+.manual3d-check input{accent-color:#24645e;margin:0;width:13px;height:13px}
+.manual3d-inspect{padding:12px 14px;background:#fff;display:grid;gap:9px}
+.manual3d-select-row{display:flex;align-items:center;gap:9px;min-width:0}
+.manual3d-select-row label{font-size:11px;white-space:nowrap;color:#637674}
+.manual3d-select-row select{flex:1;min-width:0;width:100%;text-overflow:ellipsis}
+.manual3d-selection{display:flex;gap:9px;justify-content:space-between;align-items:center;min-height:28px;flex-wrap:wrap}
+.manual3d-selected-label{font-size:11px;line-height:1.7;overflow-wrap:anywhere;flex:1;min-width:140px;color:#4e695c}
+.manual3d-selected-label strong{color:#24645e;font-weight:700}
+.manual3d-inspect-actions{display:flex;gap:6px;flex-wrap:wrap}
+.manual3d-info{font-size:10px;line-height:1.75;color:#748175;margin:0}
+.manual3d-error{padding:38px 22px;color:#7a5b3c;background:#fff7e9;font-size:13px;line-height:1.9;min-height:180px;display:grid;place-content:center;text-align:center}
+.manual3d-status{position:absolute;top:70px;left:12px;right:12px;z-index:2;background:#fff4deeb;color:#81552d;border-radius:7px;padding:8px 11px;font-size:11px;pointer-events:none;line-height:1.7}
+.manual3d-status[hidden]{display:none}
+.manual3d:fullscreen{width:100vw;height:100dvh;display:flex;flex-direction:column;overflow:auto;background:#f3f2ed}
+.manual3d:fullscreen .manual3d-viewport{height:auto;flex:1;min-height:200px}
+.manual3d:fullscreen .manual3d-inspect{flex:none}
+@media(min-width:1600px){.manual3d-viewport{height:540px}}
+@media(max-width:760px){.manual3d-toolbar{padding:9px 10px;gap:5px}.manual3d-toolbar button,.manual3d-toolbar select{padding:7px 8px;font-size:10px;min-height:32px}.manual3d-mode{max-width:125px}.manual3d-viewport{height:350px}.manual3d-options{gap:12px;padding:11px;font-size:10px}.manual3d-explode{min-width:100%;flex-basis:100%}.manual3d-explode input{max-width:none}.manual3d-inspect{padding:11px}.manual3d-selection{gap:9px}.manual3d-selected-label{font-size:11px;min-width:100%}.manual3d-inspect-actions{width:100%}.manual3d-inspect-actions button{flex:1;min-height:34px;font-size:10px}.manual3d-gesture{font-size:9px;left:9px;right:9px;bottom:8px}.manual3d-gesture .desktop-help{display:none}}
+@media print{.manual3d{display:none!important}}

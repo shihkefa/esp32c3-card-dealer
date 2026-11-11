@@ -1,0 +1,69 @@
+{
+  "version": "V1.0.0",
+  "html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+  "passed": true,
+  "checks": [
+    {
+      "name": "22 steps render from a local file while offline",
+      "passed": true
+    },
+    {
+      "name": "All embedded step and detail images decode",
+      "passed": true
+    },
+    {
+      "name": "All 22 navigation targets show instructions and figures",
+      "passed": true
+    },
+    {
+      "name": "Completion persists through reload",
+      "passed": true
+    },
+    {
+      "name": "Reset requires an explicit in-page choice and preserves cancellation",
+      "passed": true
+    },
+    {
+      "name": "Retained image viewer zoom and Escape dismissal work",
+      "passed": true
+    },
+    {
+      "name": "Step search and empty state work",
+      "passed": true
+    },
+    {
+      "name": "Current part index and optional/P05 filters work",
+      "passed": true
+    },
+    {
+      "name": "Displayed per-step hardware totals reconcile to the current catalog",
+      "passed": true
+    },
+    {
+      "name": "Embedded interactive wiring viewer runs offline and filters 97 routes",
+      "passed": true
+    },
+    {
+      "name": "Wiring step opens the readable interactive diagram directly",
+      "passed": true
+    },
+    {
+      "name": "Keyboard previous and next navigation work",
+      "passed": true
+    },
+    {
+      "name": "Responsive layouts at 390, 768, 1280 and 1920 px have no page overflow",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript exceptions or external network requests",
+      "passed": true
+    }
+  ],
+  "embeddedImagesChecked": 39,
+  "offline": true,
+  "externalRequests": [],
+  "pageErrors": [],
+  "browser": "157.0.8103.39",
+  "qaImages": "Internal .build/manual-qa captures, not required by the standalone HTML"
+}

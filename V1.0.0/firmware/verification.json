@@ -1,0 +1,31 @@
+{
+  "version": "V1.0.0",
+  "target_compile": {
+    "passed": true,
+    "warnings": 0,
+    "flash_bytes": 421774,
+    "partition_bytes": 1310720,
+    "static_ram_bytes": 27284,
+    "ram_bytes": 327680,
+    "core": "Arduino-ESP32 3.0.5",
+    "fqbn": "esp32:esp32:esp32c3:CDCOnBoot=cdc,FlashMode=dio"
+  },
+  "core_tests": {
+    "passed": true,
+    "scenarios": 16,
+    "assertions": 494,
+    "previous_result_reused": true,
+    "unchanged_source_sha256": {
+      "DealerCore.cpp": "daf14ad5ec5e70282c04de6a7e7323c9ac40eb4e02eae77c1f2c6bf125fd6c75",
+      "DealerCore.h": "ca16247ed366ec73797c8b5698eca641c555d14e5f97b5bfa0a0991382040b2c",
+      "StepperPlan.h": "16f4100ba48b1507ad7d1b66629e458aaeed0ab9e34b4fbd6c7cdfb299620f8c",
+      "EdgeEvent.h": "1bb125a681b7e95b7192903a1d709fbaa85a22b66be11d22fe4926f16f28b833"
+    },
+    "test_source_sha256": "dbb480aa450a0af3c47f84343709c532c74932bf8fa9908460f5a1e6375124c7",
+    "previous_source_comparison": "SHA-256 after normalizing line endings and optional UTF-8 BOM"
+  },
+  "wifi_ble": "Stopped/deinitialized at boot; no application radio-start path",
+  "hardware_flashed": false,
+  "hardware_tested": false,
+  "power_measured": false
+}

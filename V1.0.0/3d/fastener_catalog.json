@@ -1,0 +1,928 @@
+{
+  "revision": "V1.0.0",
+  "screw_sku_count": 2,
+  "screw_skus": [
+    {
+      "name": "hatchM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2,
+      "qty": 61
+    },
+    {
+      "name": "baseM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2,
+      "qty": 10
+    }
+  ],
+  "nut_qty": 52,
+  "instances": [
+    {
+      "name": "hatchM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hatchM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hatchM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hatchM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "frontM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "frontM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hoodM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hoodM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "oledM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "oledM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "keysM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "keysM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "keysM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "keysM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodJoinM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodJoinM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hoodJoinM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodJoinM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hoodJoinM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodJoinM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hoodJoinM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hoodJoinM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "slipM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "slipM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "slipM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "slipM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "slipM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "slipM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "rotorM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "rotorM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "deckM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "deckM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "deckM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "deckM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "deckM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "deckM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "deckM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "deckM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "pinionM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "pinionM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "pinionJoinM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "pinionJoinM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "pinionJoinM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "pinionJoinM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "stepperM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "stepperM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "stepperM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "stepperM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "baseM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "baseM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "baseM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "baseM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "baseM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "baseM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "baseM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "baseM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "retainerM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "retainerM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "retainerM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "retainerM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "retainerM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "retainerM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hopperM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hopperM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hopperM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hopperM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "adapterM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "adapterM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "adapterM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "adapterM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hopperM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hopperM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "hopperM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "hopperM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "adapterM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "adapterM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "adapterM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "adapterM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "pillowM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "pillowM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "pillowM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "pillowM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "adjustM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "guideM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "pillowM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "pillowM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "pillowM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "pillowM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "adjustM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "guideM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "n20baseM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "motorbaseM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "n20baseM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "motorbaseM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "rfclampM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "motorbaseM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "rfclampM3x25",
+      "sku": "DIN7991 M3x25",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 25,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "motorbaseM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "n20clampM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "n20clampM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "photoM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "photoM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "flagM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "flagM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "homeM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "gateM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "gateM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "gateM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "gateM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "wheelM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "wheelM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "wheelM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "wheelM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "feedM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "feedM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "couplerM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "couplerM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    },
+    {
+      "name": "couplerM3x8",
+      "sku": "DIN7991 M3x8",
+      "kind": "screw",
+      "diameter_mm": 3,
+      "length_mm": 8,
+      "head": "socket countersunk",
+      "hex_key_mm": 2
+    },
+    {
+      "name": "couplerM3nut",
+      "sku": "M3 nut 5.5AF x 2.4",
+      "kind": "nut"
+    }
+  ]
+}

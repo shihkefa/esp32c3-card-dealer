@@ -1,0 +1,716 @@
+{
+  "revision": "V1.0.0",
+  "upper_head_lift_mm": 1.5,
+  "coordinate_frame": "Current assembled world geometry from actors(); no repeated lift transform.",
+  "source_hashes": {
+    "build_cad_py_sha256": "307f468197ff8edaa1b772ce471667d311c9bd8f3524c2bc1201a0d8f2b01c6c",
+    "design_params_json_sha256": "adca2f7b7bc783b4755d79ff24bd42adda861fee32cb455af460165ef82ec1c9",
+    "check_script_sha256": "a12af82378f1b0c6c0d35a726247ad21656285f942692d018fd92cb402c50704"
+  },
+  "screw_skus": {
+    "DIN7991 M3x8": 61,
+    "DIN7991 M3x25": 10
+  },
+  "nut_skus": {
+    "M3 nut 5.5AF x 2.4": 52
+  },
+  "total_screw_qty": 71,
+  "total_nut_qty": 52,
+  "all_passed": true,
+  "checks": [
+    {
+      "nut": "hoodM3nut.1",
+      "screw": "hoodM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "hoodM3nut.2",
+      "screw": "hoodM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "hoodM3nut.3",
+      "screw": "hoodM3x8.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "hoodJoinM3nut.1",
+      "screw": "hoodJoinM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": "hoodJoinM3x8",
+      "passed": true
+    },
+    {
+      "nut": "hoodJoinM3nut.2",
+      "screw": "hoodJoinM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": "hoodJoinM3x8",
+      "passed": true
+    },
+    {
+      "nut": "hoodJoinM3nut.3",
+      "screw": "hoodJoinM3x8.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": "hoodJoinM3x8",
+      "passed": true
+    },
+    {
+      "nut": "hoodJoinM3nut.4",
+      "screw": "hoodJoinM3x8.4",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": "hoodJoinM3x8",
+      "passed": true
+    },
+    {
+      "nut": "slipM3nut.1",
+      "screw": "slipM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "slipM3nut.2",
+      "screw": "slipM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "slipM3nut.3",
+      "screw": "slipM3x8.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "rotorM3nut.1",
+      "screw": "rotorM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "deckM3nut.1",
+      "screw": "deckM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 0.999999,
+      "required_mate_kind": "deckM3x8",
+      "passed": true
+    },
+    {
+      "nut": "deckM3nut.2",
+      "screw": "deckM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 0.999999,
+      "required_mate_kind": "deckM3x8",
+      "passed": true
+    },
+    {
+      "nut": "deckM3nut.3",
+      "screw": "deckM3x8.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 0.999999,
+      "required_mate_kind": "deckM3x8",
+      "passed": true
+    },
+    {
+      "nut": "deckM3nut.4",
+      "screw": "deckM3x8.4",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 0.999999,
+      "required_mate_kind": "deckM3x8",
+      "passed": true
+    },
+    {
+      "nut": "pinionM3nut.1",
+      "screw": "pinionM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "pinionJoinM3nut.1",
+      "screw": "pinionJoinM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "pinionJoinM3nut.2",
+      "screw": "pinionJoinM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "stepperM3nut.1",
+      "screw": "stepperM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "stepperM3nut.2",
+      "screw": "stepperM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "baseM3nut.1",
+      "screw": "baseM3x25.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "baseM3nut.2",
+      "screw": "baseM3x25.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "baseM3nut.3",
+      "screw": "baseM3x25.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "baseM3nut.4",
+      "screw": "baseM3x25.4",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "retainerM3nut.1",
+      "screw": "retainerM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "retainerM3nut.2",
+      "screw": "retainerM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "retainerM3nut.3",
+      "screw": "retainerM3x8.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "hopperM3nut.1",
+      "screw": "hopperM3x25.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": "hopperM3x25",
+      "passed": true
+    },
+    {
+      "nut": "hopperM3nut.2",
+      "screw": "hopperM3x25.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": "hopperM3x25",
+      "passed": true
+    },
+    {
+      "nut": "adapterM3nut.1",
+      "screw": "adapterM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "adapterM3nut.2",
+      "screw": "adapterM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "hopperM3nut.3",
+      "screw": "hopperM3x25.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": "hopperM3x25",
+      "passed": true
+    },
+    {
+      "nut": "hopperM3nut.4",
+      "screw": "hopperM3x25.4",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": "hopperM3x25",
+      "passed": true
+    },
+    {
+      "nut": "adapterM3nut.3",
+      "screw": "adapterM3x8.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "adapterM3nut.4",
+      "screw": "adapterM3x8.4",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "pillowM3nut.1",
+      "screw": "pillowM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "pillowM3nut.2",
+      "screw": "pillowM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "pillowM3nut.3",
+      "screw": "pillowM3x8.3",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "pillowM3nut.4",
+      "screw": "pillowM3x8.4",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "motorbaseM3nut.1",
+      "screw": "n20baseM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "motorbaseM3nut.2",
+      "screw": "n20baseM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "motorbaseM3nut.3",
+      "screw": "rfclampM3x25.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "motorbaseM3nut.4",
+      "screw": "rfclampM3x25.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "photoM3nut.1",
+      "screw": "photoM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "flagM3nut.1",
+      "screw": "flagM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 0.999999,
+      "required_mate_kind": "flagM3x8",
+      "passed": true
+    },
+    {
+      "nut": "gateM3nut.1",
+      "screw": "gateM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "gateM3nut.2",
+      "screw": "gateM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "wheelM3nut.1",
+      "screw": "wheelM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "wheelM3nut.2",
+      "screw": "wheelM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000002,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "feedM3nut.1",
+      "screw": "feedM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.0,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "couplerM3nut.1",
+      "screw": "couplerM3x8.1",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    },
+    {
+      "nut": "couplerM3nut.2",
+      "screw": "couplerM3x8.2",
+      "nominal_nut_thickness_mm": 2.4,
+      "major_diameter_shank_coverage_mm": 2.4,
+      "coverage_ratio": 1.000001,
+      "required_mate_kind": null,
+      "passed": true
+    }
+  ],
+  "world_pose_checks": [
+    {
+      "kind": "deckM3x8",
+      "datum": "max_z",
+      "expected_z_mm": 46.9,
+      "instances": [
+        {
+          "instance": "deckM3x8.1",
+          "actual_z_mm": 46.9,
+          "passed": true
+        },
+        {
+          "instance": "deckM3x8.2",
+          "actual_z_mm": 46.9,
+          "passed": true
+        },
+        {
+          "instance": "deckM3x8.3",
+          "actual_z_mm": 46.9,
+          "passed": true
+        },
+        {
+          "instance": "deckM3x8.4",
+          "actual_z_mm": 46.9,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "deckM3nut",
+      "datum": "min_z",
+      "expected_z_mm": 39.7,
+      "instances": [
+        {
+          "instance": "deckM3nut.1",
+          "actual_z_mm": 39.7,
+          "passed": true
+        },
+        {
+          "instance": "deckM3nut.2",
+          "actual_z_mm": 39.7,
+          "passed": true
+        },
+        {
+          "instance": "deckM3nut.3",
+          "actual_z_mm": 39.7,
+          "passed": true
+        },
+        {
+          "instance": "deckM3nut.4",
+          "actual_z_mm": 39.7,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "flagM3x8",
+      "datum": "min_z",
+      "expected_z_mm": 42.1,
+      "instances": [
+        {
+          "instance": "flagM3x8.1",
+          "actual_z_mm": 42.1,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "flagM3nut",
+      "datum": "min_z",
+      "expected_z_mm": 46.9,
+      "instances": [
+        {
+          "instance": "flagM3nut.1",
+          "actual_z_mm": 46.9,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "retainerM3x8",
+      "datum": "max_z",
+      "expected_z_mm": 35,
+      "instances": [
+        {
+          "instance": "retainerM3x8.1",
+          "actual_z_mm": 35.0,
+          "passed": true
+        },
+        {
+          "instance": "retainerM3x8.2",
+          "actual_z_mm": 35.0,
+          "passed": true
+        },
+        {
+          "instance": "retainerM3x8.3",
+          "actual_z_mm": 35.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "retainerM3nut",
+      "datum": "min_z",
+      "expected_z_mm": 28.1,
+      "instances": [
+        {
+          "instance": "retainerM3nut.1",
+          "actual_z_mm": 28.1,
+          "passed": true
+        },
+        {
+          "instance": "retainerM3nut.2",
+          "actual_z_mm": 28.1,
+          "passed": true
+        },
+        {
+          "instance": "retainerM3nut.3",
+          "actual_z_mm": 28.1,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "rotorM3x8",
+      "datum": "centre_z",
+      "expected_z_mm": 15.5,
+      "instances": [
+        {
+          "instance": "rotorM3x8.1",
+          "actual_z_mm": 15.5,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "rotorM3nut",
+      "datum": "centre_z",
+      "expected_z_mm": 15.5,
+      "instances": [
+        {
+          "instance": "rotorM3nut.1",
+          "actual_z_mm": 15.5,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "pinionM3x8",
+      "datum": "centre_z",
+      "expected_z_mm": 35.4,
+      "instances": [
+        {
+          "instance": "pinionM3x8.1",
+          "actual_z_mm": 35.4,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "pinionJoinM3x8",
+      "datum": "max_z",
+      "expected_z_mm": 40,
+      "instances": [
+        {
+          "instance": "pinionJoinM3x8.1",
+          "actual_z_mm": 40.0,
+          "passed": true
+        },
+        {
+          "instance": "pinionJoinM3x8.2",
+          "actual_z_mm": 40.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "pinionJoinM3nut",
+      "datum": "min_z",
+      "expected_z_mm": 34.1,
+      "instances": [
+        {
+          "instance": "pinionJoinM3nut.1",
+          "actual_z_mm": 34.1,
+          "passed": true
+        },
+        {
+          "instance": "pinionJoinM3nut.2",
+          "actual_z_mm": 34.1,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "P04A",
+      "assembly_pose_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "P04B",
+      "assembly_pose_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "P06",
+      "assembly_pose_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "P26",
+      "assembly_pose_difference_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "scope": "Nominal smooth major-diameter envelopes through full 2.4mm nut thickness and selected assembled datums. Physical threads, preload, strength, friction, screw tolerances, deflection and loosening are not validated."
+}

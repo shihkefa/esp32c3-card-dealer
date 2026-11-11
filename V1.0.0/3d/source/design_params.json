@@ -1,0 +1,110 @@
+{
+  "revision": "V1.0.0",
+  "date": "2026-11-11",
+  "card_inner_width_mm": 61.0,
+  "card_lengths_reference_mm": [
+    87.0,
+    96.0
+  ],
+  "card_widths_reference_mm": [
+    57.0,
+    60.0
+  ],
+  "deck_capacity_cards": 108,
+  "card_thickness_reference_mm": 0.3,
+  "base_width_mm": 164.0,
+  "base_depth_mm": 148.0,
+  "base_cover_top_z_mm": 33.0,
+  "turntable_native_top_z_mm": 45.4,
+  "turntable_top_z_mm": 46.9,
+  "turntable_raise_mm": 1.5,
+  "turntable_to_base_ring_gap_mm": 2.0,
+  "card_floor_z_mm": 64.0,
+  "hopper_rail_height_mm": 44.0,
+  "hopper_tilt_deg": 6.0,
+  "hopper_lift_mm": 10.0,
+  "gravity_feed": true,
+  "closed_base": true,
+  "base_rear_vent_count": 3,
+  "part_id_engraving": true,
+  "upper_housing_wall_mm": 2.2,
+  "upper_housing_body_min_y_mm": -96.0,
+  "upper_housing_body_max_y_mm": 98.2,
+  "upper_housing_assembled_width_mm": 196.4,
+  "upper_housing_seam_y_mm": -55.0,
+  "upper_housing_seam_gap_mm": 0.2,
+  "upper_housing_split": true,
+  "upper_housing_lap_end_y_mm": -61.0,
+  "upper_housing_lap_skin_mm": 1.2,
+  "upper_housing_b_setback_mm": 1.5,
+  "upper_housing_lap_clearance_mm": 0.3,
+  "roller_axis_x_mm": 61.0,
+  "lower_roller_z_mm": 54.2,
+  "upper_roller_z_mm": 74.75,
+  "roller_rubber_od_mm": 20.7,
+  "roller_shaft_d_mm": 3.0,
+  "bearing_6005_od_mm": 47.0,
+  "bearing_6005_id_mm": 25.0,
+  "bearing_6005_height_mm": 12.0,
+  "bearing_623_od_mm": 10.0,
+  "bearing_623_id_mm": 3.0,
+  "bearing_623_height_mm": 4.0,
+  "slip_ring_body_od_max_mm": 22.0,
+  "slip_ring_reference_length_mm": 26.5,
+  "slip_ring_channels": 12,
+  "controls_on_top": true,
+  "button_xy_mm": [
+    [
+      75,
+      4
+    ],
+    [
+      75,
+      17
+    ],
+    [
+      75,
+      30
+    ],
+    [
+      75,
+      43
+    ]
+  ],
+  "screen_center_xy_mm": [
+    75,
+    -24
+  ],
+  "button_test_travel_mm": 0.35,
+  "screw_skus": [
+    "DIN7991 M3x8 socket countersunk",
+    "DIN7991 M3x25 socket countersunk"
+  ],
+  "nut_sku": "M3 0.5 pitch, 5.5 AF, 2.4mm thickness",
+  "gear_module_mm": 1.2,
+  "main_gear_teeth": 60,
+  "pinion_teeth": 30,
+  "gear_backlash_mm": 0.18,
+  "screw_clearance_mm": 3.4,
+  "bearing_radial_clearance_mm": 0.15,
+  "printer_build_mm": [
+    180,
+    180,
+    180
+  ],
+  "pla_density_g_cm3": 1.24,
+  "notes": [
+    "P04B上側齒厚增加1.5mm至7.5mm，上部裝配整體抬升1.5mm；P04A與P02A圓環的名義間隙0.5改為2mm。軸承肩臺、P06、P05及滑環維持位置。P26薄片向下延長1.5mm保留原感測遮光區。只需重印P04B與P26，其餘38種STL沿用。",
+    "P02/P04/P05分件與上殼P32A/P32B內側四組接合均採相同規格；全機M3×8用量61支、M3×25用量10支，標準M3螺母52顆。",
+    "整機螺絲統一M3×8及M3×25內六角沉頭，螺母統一M3。輪芯、聯軸器及小齒輪改夾緊式；P36滑環壓片。",
+    "螢幕與四按鍵移到旋轉上罩頂部；原底盒前方面板孔封閉。P35按鍵與PCF支架。",
+    "滑環改12路，使用10路傳遞5V/GND/3.3V/SDA/SCL/取牌2路/出牌1路/出口感測/旋轉參考，餘2路。尺寸依參考包絡，實物需核對。",
+    "底盒底板與上蓋封閉，後側保留三條散熱縫；束帶改穿內部橋座，不穿透外殼底板。",
+    "只改旋轉上罩P32A/P32B；A以1.2mm厚U形外蓋邊往負Y包至-61，覆蓋原Y=-55的0.2mm隱藏分件縫。B屋頂與兩側退1.5mm，內面同步移位保留2.2mm壁厚，外搭接名義間隙0.3mm。含原P33後Y±98.2、前視總寬196.4，原孔、UI、牌路及四組M3×8不變；A原屋頂128.7及B新屋頂127.2皆可平面貼床。所有列印件有隱藏式凹刻編號。",
+    "牌倉內寬61mm；前後開放，不設長度擋板。送牌位置以87mm及96mm長牌為基準。",
+    "牌倉與取牌、分牌及出牌組共同向出口下傾6度；靠自重落牌，不設壓簧或上方橫樑。P10/P11為可選配重。",
+    "馬達、滑環、OLED、電池盒尚未實測。此版為可列印機構原型，量測實物後核對配合。",
+    "28BYJ-48使用2:1外部齒輪，優先保留扭力。每秒2至4張未經實測，不能承諾。",
+    "單顆18650，USB Type-C，關機充電。電池型號及允許充放電電流待確認。"
+  ]
+}

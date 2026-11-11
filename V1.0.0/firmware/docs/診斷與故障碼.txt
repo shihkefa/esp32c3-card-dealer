@@ -1,0 +1,57 @@
+V1.0.0 USB命令（115200，新行結尾）
+先依接線與供電.txt切開JP-ESP5V。USB只用板上原生USB，20/21不是UART。
+
+help                 列命令
+status               JSON：狀態、錯誤、每人/餘牌、已計數、各玩家計數、半步位置、感測、PWM及無線關閉狀態
+scan                 僅探測BoardConfig中的0x20/0x3C，0=ACK
+preset landlord      鬥地主
+preset guandan       摜蛋
+preset four13        四人13
+preset three13       三人13（52張配置）
+set cards 13         每人張數
+set players 3        3或4人
+set rest 13          餘牌
+set feed 140         取牌PWM40..255
+set eject 120        出牌PWM40..255
+set speed 600        轉向150..800半步/秒
+calibrate            空機四圈校正
+start                開始新局，需已校正與出口透光
+pause / resume       請求邊界暫停/繼續
+abort                立即停止輸出並取消本局
+ack                  故障後重置，沒有自動開始
+jog feed 200         取牌正向200ms，限500ms，僅待機/完成狀態
+jog feed -200        取牌反向200ms，換向有2ms零輸出間隔
+jog eject 200        出牌正向200ms，限500ms
+set steps 8152.25    僅供已有實測圈數者輸入；會標記已校正，不能當成通用固定值
+
+只保存最後一組設定，不保存每局進度，也不為每個自訂配置各建存檔。
+設定總張數最多108，變更無效會拒絕；韌體在運轉中不允許改設定或點動。
+wifi_off=true代表Wi-Fi驅動未初始化；ble_off=true代表藍牙控制器為IDLE（或編譯時未啟用）。
+本版沒有啟用Wi-Fi或藍牙的指令。若任一項為false，請提供status結果以查明韌體/核心差異。
+
+錯誤碼：
+E01 SETTINGS             設定超界
+E02 NEED_CALIBRATION     先校正；開始請求被拒絕，仍留待機
+E03 OUTLET_BLOCKED       開始/恢復/下一張前，出口未持續透光至少20ms
+E04 NO_CARD              取牌超過1200ms，未看到有效遮光
+E05 CARD_STUCK           有牌遮光後超過1400ms仍未透光
+E06 UNEXPECTED_CARD      旋轉/預轉/尾段等非預期狀態出現有效遮光
+E07 HOME_MISSING         一圈參考未出現或遮光保持過久
+E08 HOME_MISMATCH        相鄰參考間距偏離校正值超過24個半步，可能失步/噪聲/卡滯
+E09 I2C_OR_INIT          PCF/OLED通訊或PWM/硬體計時器初始化/輸出異常
+E10 SENSOR_OVERFLOW      出口中斷佇列超量，通常為噪聲或接觸不良
+E11 MOTION               排程/到位/動作時間異常
+E12 CALIBRATION_FAILED   沒有合格參考週期或四圈差異太大
+E13 ABORTED              人工中止
+
+E03/04/05先清牌、查感測狀態與馬達方向，重新排牌後重置，不嘗試續發。
+E07/08/12查參考遮光片、PCF P4、第10路滑環、方向與步進速度；不自動修正已發出去的方向。
+E09斷線時所有驅動停止。待機/故障可嘗試I2C恢復，恢復後仍須按RUN/ack重置，絕不自動續發。
+OLED本身斷線時無法在該螢幕顯示錯誤，改用USB狀態與實際接線檢查。
+E10增加馬達抑噪/接地/導線固定，先排除電氣問題，不單靠放大濾波掩蓋。
+
+計數原則：
+出口直接GPIO中斷保存原始邊緣時間；遮光至少1.5ms、透光至少3ms才認定完整週期。
+看到遮光先停N20取牌，RF300將該張送完；透光後才加1，再有60ms尾段才轉向。
+感測器只能確認脈衝，不能驗證牌實際落在誰面前，也不能量牌厚或分辨完全重疊雙張。
+參考光電每圈一個標記，只作圈數校正與運轉檢查，不是連續位置編碼器。

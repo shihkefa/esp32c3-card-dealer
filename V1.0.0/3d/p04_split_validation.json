@@ -1,0 +1,374 @@
+{
+  "revision": "V1.0.0",
+  "all_passed": true,
+  "upper_head_lift_mm": 1.5,
+  "P04_mating_plane_z_mm": 43.5,
+  "source_hashes": {
+    "build_cad_py_sha256": "307f468197ff8edaa1b772ce471667d311c9bd8f3524c2bc1201a0d8f2b01c6c",
+    "design_params_json_sha256": "adca2f7b7bc783b4755d79ff24bd42adda861fee32cb455af460165ef82ec1c9",
+    "check_script_sha256": "9c853477e61b1f5cba32c9a47182a18c6eae2874e584af7511f0a43f56195129"
+  },
+  "scope": "Nominal CAD/reference-envelope geometry; no physical assembly or slicer test.",
+  "print_contact": [
+    {
+      "part": "P04A",
+      "flat_contact_mm2": 6628.87,
+      "checked_layer_mm": 0.02,
+      "minimum_mm2": 3500,
+      "bed_z_before_translation_mm": -45.4,
+      "passed": true
+    },
+    {
+      "part": "P04B",
+      "flat_contact_mm2": 2343.2,
+      "checked_layer_mm": 0.02,
+      "minimum_mm2": 1500,
+      "bed_z_before_translation_mm": -43.5,
+      "passed": true
+    },
+    {
+      "part": "P06",
+      "flat_contact_mm2": 359.29,
+      "checked_layer_mm": 0.02,
+      "minimum_mm2": 250,
+      "bed_z_before_translation_mm": -19.0,
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "test": "P04A actual flat bed contact",
+      "passed": true,
+      "part": "P04A",
+      "flat_contact_mm2": 6628.87,
+      "checked_layer_mm": 0.02,
+      "minimum_mm2": 3500,
+      "bed_z_before_translation_mm": -45.4
+    },
+    {
+      "test": "P04B actual flat bed contact",
+      "passed": true,
+      "part": "P04B",
+      "flat_contact_mm2": 2343.2,
+      "checked_layer_mm": 0.02,
+      "minimum_mm2": 1500,
+      "bed_z_before_translation_mm": -43.5
+    },
+    {
+      "test": "P06 actual flat bed contact",
+      "passed": true,
+      "part": "P06",
+      "flat_contact_mm2": 359.29,
+      "checked_layer_mm": 0.02,
+      "minimum_mm2": 250,
+      "bed_z_before_translation_mm": -19.0
+    },
+    {
+      "test": "P04A vertical insertion onto P04B",
+      "passed": true,
+      "samples": 61,
+      "maximum_overlap_mm3": 0.0
+    },
+    {
+      "test": "Asymmetric locating tongue exists",
+      "passed": true,
+      "volume_mm3": 57.6
+    },
+    {
+      "test": "Locating tongue 0.2mm nominal side clearance",
+      "passed": true,
+      "samples": [
+        {
+          "axis": "x",
+          "sign": -1,
+          "overlap_at_0_199_mm_mm3": 0.0,
+          "overlap_at_0_25_mm_mm3": 0.48,
+          "passed": true
+        },
+        {
+          "axis": "x",
+          "sign": 1,
+          "overlap_at_0_199_mm_mm3": 0.0,
+          "overlap_at_0_25_mm_mm3": 0.48,
+          "passed": true
+        },
+        {
+          "axis": "y",
+          "sign": -1,
+          "overlap_at_0_199_mm_mm3": 0.0,
+          "overlap_at_0_25_mm_mm3": 0.36,
+          "passed": true
+        },
+        {
+          "axis": "y",
+          "sign": 1,
+          "overlap_at_0_199_mm_mm3": 0.0,
+          "overlap_at_0_25_mm_mm3": 0.36,
+          "passed": true
+        }
+      ],
+      "top_clearance_mm": 0.2
+    },
+    {
+      "test": "Four P04B nuts insert from gear underside",
+      "passed": true,
+      "samples": 256,
+      "final_bottom_z_mm": 39.7,
+      "maximum_overlap_mm3": 0.0,
+      "roof_mm": 1.4
+    },
+    {
+      "test": "Four M3x8 screws cover full 2.4mm nut thickness",
+      "passed": true,
+      "instances": [
+        {
+          "position_mm": [
+            -15,
+            -26
+          ],
+          "coverage_ratio": 1.0,
+          "nominal_nut_thickness_mm": 2.4,
+          "passed": true
+        },
+        {
+          "position_mm": [
+            -15,
+            26
+          ],
+          "coverage_ratio": 1.0,
+          "nominal_nut_thickness_mm": 2.4,
+          "passed": true
+        },
+        {
+          "position_mm": [
+            15,
+            -26
+          ],
+          "coverage_ratio": 1.0,
+          "nominal_nut_thickness_mm": 2.4,
+          "passed": true
+        },
+        {
+          "position_mm": [
+            15,
+            26
+          ],
+          "coverage_ratio": 1.0,
+          "nominal_nut_thickness_mm": 2.4,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "Driver access from above before P31 installation",
+      "passed": true,
+      "instances": [
+        {
+          "position_mm": [
+            -15,
+            -26
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "position_mm": [
+            -15,
+            26
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "position_mm": [
+            15,
+            -26
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "position_mm": [
+            15,
+            26
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "socket_bit_AF_mm": 1.949,
+      "shaft_diameter_mm": 2.6,
+      "holder_diameter_mm": 8,
+      "scope": "P04A/P04B and their four installed nuts/screws only; assemble before P31 and hopper."
+    },
+    {
+      "test": "Raised carrier has requested 2mm rim clearance throughout 360deg",
+      "passed": true,
+      "poses": 360,
+      "angular_step_deg": 1,
+      "nominal_gap_mm": 2.0,
+      "requested_gap_mm": 2.0,
+      "carrier_main_underside_z_mm": 43.5,
+      "fixed_rim_top_z_mm": 41.5,
+      "maximum_nominal_overlap_mm3": 0.0,
+      "maximum_overlap_with_0_01mm_remaining_gap_mm3": 0.0,
+      "minimum_contact_when_lowered_0_02mm_beyond_gap_mm3": 3.324743,
+      "scope": "Nominal main carrier underside over actual circular rim; no load, sag, warp or physical clearance measurement."
+    },
+    {
+      "test": "Gear faces retain original 4mm axial engagement",
+      "passed": true,
+      "large_tooth_z_band_mm": [
+        36.0,
+        43.5
+      ],
+      "small_tooth_z_band_mm": [
+        34.0,
+        40.0
+      ],
+      "axial_face_overlap_mm": 4.0,
+      "scope": "Axial overlap only; complete conjugate meshing/rotation belongs to the full assembly audit."
+    },
+    {
+      "test": "Bearing shoulder lower journal and P06 hole remain at original datums",
+      "passed": true,
+      "reference_difference_mm3": 0.0,
+      "shoulder_contact_z_mm": 31,
+      "journal_start_z_mm": 13,
+      "P06_radial_hole_z_mm": 15.5,
+      "nominal_bearing_overlap_mm3": 0.0,
+      "bearing_overlap_on_0_02mm_downward_challenge_mm3": 5.249316,
+      "nominal_journal_to_bearing_diameter_clearance_mm": 0.2,
+      "warning": "Simplified bearing envelope; no race contact pressure, preload or fit tolerance qualification."
+    },
+    {
+      "test": "Extended P26 preserves original shutter lower edge",
+      "passed": true,
+      "assembled_lower_edge_z_mm": 35.6,
+      "native_lower_edge_z_mm": 34.1,
+      "original_reference_lower_edge_z_mm": 35.6,
+      "nominal_sensor_slot_floor_clearance_mm": 0.3,
+      "overlap_with_fixed_sensor_mm3": 0.0,
+      "warning": "Original geometric shutter depth is preserved; actual optical beam height still requires hardware confirmation."
+    },
+    {
+      "test": "P06 nut inserts from above before collar installation",
+      "passed": true,
+      "samples": 61,
+      "maximum_overlap_mm3": 0.0
+    },
+    {
+      "test": "P06 nut slot stays outside 25.2mm shaft bore",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "nut_pocket_to_shaft_bore_nominal_spacing_mm": 1.2,
+      "scope": "The separate 3.4mm radial screw hole intentionally crosses this spacing."
+    },
+    {
+      "test": "P06 nut-slot floor retains 1.25mm nominal material",
+      "passed": true,
+      "thickness_mm": 1.25,
+      "sampled_solid_ratio": 1.0,
+      "scope": "Central floor sample under nut well; not a whole-part structural minimum."
+    },
+    {
+      "test": "P06 screw housing clearance through 0.6mm adjustment",
+      "passed": true,
+      "samples": [
+        {
+          "inward_shift_mm": 0.0,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 0.0,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.05,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 0.14637,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.1,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 0.465747,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.15,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 0.81767,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.2,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 1.170532,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.25,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 1.523394,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.3,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 1.876255,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.35,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 2.229117,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.4,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 2.581979,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.45,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 2.934841,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.5,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 3.287702,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.55,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 3.640564,
+          "passed_housing_clearance": true
+        },
+        {
+          "inward_shift_mm": 0.6,
+          "maximum_fastener_housing_overlap_mm3": 0.0,
+          "rigid_rotor_overlap_mm3": 3.993426,
+          "passed_housing_clearance": true
+        }
+      ],
+      "nominal_rotor_contact_shift_mm": 0,
+      "warning": "Positive rigid-rotor overlap after nominal contact is NOT permitted or classified as designed interference. Travel describes housing room only; tighten lightly after contact, not until head bottoms."
+    },
+    {
+      "test": "P04B identifier avoids gear teeth and locating tongue",
+      "passed": true,
+      "maximum_identifier_radius_mm": 15.639,
+      "location": "齒輪軸側內圈背面；避開齒面、軸承配合面與螺母槽",
+      "tooth_root_radius_mm": 34.5
+    }
+  ],
+  "limitations": [
+    "Print fit, elephant foot, screw tolerances, friction, preload, strength and loosening require physical testing.",
+    "Local nut-well/locating-slot roofs may need bridge settings or local support; no zero-support claim.",
+    "P06 housing adjustment clearance does not authorize rigid slip-ring penetration or establish allowable clamping force.",
+    "Install P04A/P04B fasteners before P31; load P06 nut before fitting collar beneath bearing."
+  ]
+}

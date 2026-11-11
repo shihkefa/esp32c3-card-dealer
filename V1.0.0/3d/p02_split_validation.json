@@ -1,0 +1,36 @@
+{
+  "revision": "V1.0.0",
+  "all_passed": true,
+  "print_contact": [
+    {
+      "part": "P02A",
+      "flat_contact_mm2": 21422.67,
+      "checked_layer_mm": 0.02,
+      "passed": true
+    },
+    {
+      "part": "P02B",
+      "flat_contact_mm2": 1208.15,
+      "checked_layer_mm": 0.02,
+      "passed": true
+    },
+    {
+      "part": "P03",
+      "flat_contact_mm2": 2655.77,
+      "checked_layer_mm": 0.02,
+      "passed": true
+    }
+  ],
+  "cup_insertion_samples": 41,
+  "cap_insertion_samples": 41,
+  "nut_insertion_samples": 153,
+  "driver_diameter_mm": 2.6,
+  "nut_pocket_AF_mm": 5.802,
+  "nut_roof_mm": 2.2,
+  "lower_clamp_contact_mm2": 103.01,
+  "upper_clamp_contact_mm2": 1046.32,
+  "limitations": [
+    "Nominal geometry only; print fit, bridging, friction, strength and tightening torque require physical testing.",
+    "The 6.7mm nut-well roof may require local bridging settings; no complete slicer support calculation is claimed."
+  ]
+}

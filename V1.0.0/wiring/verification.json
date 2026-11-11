@@ -1,0 +1,43 @@
+{
+  "version": "V1.0.0",
+  "date": "2026-11-08",
+  "firmware": "V1.0.0",
+  "wire_paths": 97,
+  "all_paths_terminate_on_defined_physical_pads": true,
+  "slipring_internal_paths": 10,
+  "firmware_continuity_checks": true,
+  "raw_battery_negative_isolated": true,
+  "usb_branch_isolated_with_JP_open": true,
+  "hardware_tested": false,
+  "mechanical_refit_required": [
+    "PCF8574 long board holder",
+    "X113647 holder"
+  ],
+  "hashes": {
+    "1_電源.png": "b3962682644dae6aa7928984bf101e44203d110512772de2ee24e95abb1dbf3d",
+    "2_步進.png": "c91b8ad7ad1381add191c0ed83429fb6ee5e75e05153d02a69442d0d822cb3f4",
+    "3_直流馬達.png": "6e4644d1d0f2d89691cef092e5f0833cbce1b8e6af986f92ce46bc3bdd81c820",
+    "4_螢幕按鍵.png": "5bca1c3f8fb399c4d18779d2dab9790553b2920ab19d0220bd000df118db61bf",
+    "5_感測器.png": "50aa44b178fba7e092564ae391b2bd165322a936ef632120924204c97d88d61f",
+    "互動圖_瀏覽器驗證.json": "eec0ff4e5363d470a41589111618d8a3fe14b92883ea69a21bfa6ba0e703b846",
+    "先讀_參考板型與接線說明.txt": "667f1cfb960f0e2c6b57725acf5a8f85e8ea419c9f4cf5072189e7c0f78ca712",
+    "實物接線圖_預覽.png": "57260b071cfcb6425f0d8e8a93b2fe7a56215410eb779931f8ec032d6d60b758",
+    "指定板型與觀看方向_A4.pdf": "393b19099f252fe02efa4cafd2560f7c43fb25d30abba6ef1599cfc40be2452c",
+    "板型與焊孔位置.json": "a3b4370bc8c943cae9fc3d5bfaabaf85e6430af7a8b881d5627659246ef41075",
+    "發牌機_實物逐腳接線圖.png": "82202c56ce1f1f66e8f9d3a31b4ec2c4adf30980ea6a306d75c09aa3a64ab60c",
+    "發牌機_實物逐腳接線圖.svg": "7c9528ce8b3f8383b1b4d3baf4fd0f0fc683040fc525c4aeb489710e4ce806fa",
+    "發牌機_實物逐腳接線圖_A1.pdf": "76c7d6499d4d189f0e8ea037f6e241819223077ec2a98636021b2f93732dda90",
+    "逐線接腳清單.csv": "852e9871eb6365979819d367a5d38f21e75ba308282f5c1f9a49c22ef49120eb",
+    "逐線端點與路徑.json": "2e343c1f1c1443af390fea18aa397e7a7cb2d4c8bd015700187ba6a5c78a03f7",
+    "開啟我_互動實物接線圖.html": "c1919ad0de564322ce788e13f35bd8d69f720f18e28b251a0c2abcaad64cd8da"
+  },
+  "pdf_page_counts": {
+    "發牌機_實物逐腳接線圖_A1.pdf": 1,
+    "指定板型與觀看方向_A4.pdf": 4
+  },
+  "browser_tests": {
+    "passed": true,
+    "checks": 10,
+    "previous_result_reused_for_identical_javascript": true
+  }
+}

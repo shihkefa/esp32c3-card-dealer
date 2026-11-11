@@ -1,0 +1,58 @@
+{
+  "all_passed": true,
+  "rows": 74,
+  "printed_types": 40,
+  "standard_printed_instances": 47,
+  "all_printed_instances": 52,
+  "source_links": 21,
+  "owned_items_preserved": true,
+  "unchanged_input_rows_preserved": true,
+  "all_formulas_preserved": true,
+  "styles_views_widths_validation_and_conditional_formats_preserved": true,
+  "expected_changed_ids": [
+    "F01",
+    "P04B",
+    "P26"
+  ],
+  "updated_design": "P04B gear thickness 7.5mm raises the original upper assembly by 1.5mm for a 2mm nominal P04A-to-P02A clearance; P26 flag extends downward 1.5mm to retain the original home sensor beam. Other 38 STL types, P32 shell and all hardware quantities unchanged.",
+  "solid_PLA_mass_g": 779.3,
+  "summary_CNY": {
+    "external": 80.5,
+    "shipping": 9.5,
+    "filament": 34,
+    "total": 124
+  },
+  "screws": {
+    "M3x8": 61,
+    "M3x25": 10,
+    "M3nuts": 52
+  },
+  "recommended_reserves": {
+    "M3x8": 70,
+    "M3x25": 12,
+    "M3nuts": 60
+  },
+  "sha256": "7809b317b519676eff37766ff74c8bbdf0bcdd67b2a1b57c6d15ea3adda738b7",
+  "original_sha256": "32c0e6ab8aa7acf6b7fdab499f5ec344090b615010368532a53b091072a85cfa",
+  "changed_cells": [
+    "BOM!A3",
+    "BOM!A4",
+    "BOM!B48",
+    "BOM!C48",
+    "BOM!P48",
+    "BOM!B71",
+    "BOM!C71",
+    "BOM!P71",
+    "BOM!C83",
+    "設計與列印!A5",
+    "設計與列印!B23",
+    "設計與列印!F23",
+    "設計與列印!G23",
+    "設計與列印!I23",
+    "設計與列印!B46",
+    "設計與列印!F46",
+    "設計與列印!I46"
+  ],
+  "inserted_rows": {},
+  "styles_and_relationships_byte_identical": true
+}

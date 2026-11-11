@@ -1,0 +1,48 @@
+﻿模型名稱,唯一採購規格,模型用量,位置/用途
+hatchM3x8,DIN7991 M3x8,4,側維修蓋
+frontM3x8,DIN7991 M3x8,2,前飾蓋
+hoodM3x8,DIN7991 M3x8,3,上罩底部固定
+hoodM3nut,M3 nut 5.5AF x 2.4,3,上罩底部固定
+oledM3x8,DIN7991 M3x8,2,上方螢幕固定框
+keysM3x8,DIN7991 M3x8,4,上方按鍵支架
+slipM3x8,DIN7991 M3x8,3,滑環壓片；螺絲從底部凹孔向上
+slipM3nut,M3 nut 5.5AF x 2.4,3,滑環壓片；螺絲從底部凹孔向上
+rotorM3x8,DIN7991 M3x8,1,P06螺母穿P04B對孔止退；輕調至滑環接觸
+rotorM3nut,M3 nut 5.5AF x 2.4,1,P06上方插入捕捉槽
+deckM3x8,DIN7991 M3x8,4,P04A與P04B分件連接
+deckM3nut,M3 nut 5.5AF x 2.4,4,P04B四個分件連接螺母槽
+pinionM3x8,DIN7991 M3x8,1,P05B完整沉頭座與閉孔；齒輪外先鎖D軸
+pinionM3nut,M3 nut 5.5AF x 2.4,1,P05B橫向螺母由正Y側裝入
+pinionJoinM3x8,DIN7991 M3x8,2,P05A從上方固定到P05B
+pinionJoinM3nut,M3 nut 5.5AF x 2.4,2,P05B左右側裝入；P05A下裙封入口
+stepperM3x8,DIN7991 M3x8,2,步進馬達
+stepperM3nut,M3 nut 5.5AF x 2.4,2,步進馬達
+baseM3x25,DIN7991 M3x25,4,底盒上蓋
+baseM3nut,M3 nut 5.5AF x 2.4,4,底盒上蓋
+retainerM3x8,DIN7991 M3x8,3,P03穿P02A鎖入P02B捕捉螺母；三件共用
+retainerM3nut,M3 nut 5.5AF x 2.4,3,P02B三個六角深槽，先推至止擋
+hopperM3x25,DIN7991 M3x25,4,牌倉支柱
+hopperM3nut,M3 nut 5.5AF x 2.4,4,牌倉支柱
+adapterM3x8,DIN7991 M3x8,4,傾斜轉接框
+adapterM3nut,M3 nut 5.5AF x 2.4,4,傾斜轉接框
+pillowM3x8,DIN7991 M3x8,4,滾輪座加高底腳
+pillowM3nut,M3 nut 5.5AF x 2.4,4,滾輪座加高底腳
+adjustM3x8,DIN7991 M3x8,2,上滾輪高度調整
+guideM3x8,DIN7991 M3x8,2,出牌導槽
+n20baseM3x8,DIN7991 M3x8,2,取牌馬達底座
+motorbaseM3nut,M3 nut 5.5AF x 2.4,4,兩個馬達底座用螺母
+rfclampM3x25,DIN7991 M3x25,2,壓片/馬達座/轉接框共用長螺絲
+n20clampM3x8,DIN7991 M3x8,2,取牌馬達壓片加厚耳
+photoM3x8,DIN7991 M3x8,1,出口感測座可調長孔
+photoM3nut,M3 nut 5.5AF x 2.4,1,出口感測座可調長孔
+flagM3x8,DIN7991 M3x8,1,參考遮光臂
+flagM3nut,M3 nut 5.5AF x 2.4,1,參考遮光臂
+homeM3x8,DIN7991 M3x8,1,參考感測座
+gateM3x8,DIN7991 M3x8,2,分牌閘；從後側穿入
+gateM3nut,M3 nut 5.5AF x 2.4,2,分牌閘；從後側穿入
+wheelM3x8,DIN7991 M3x8,2,出牌輪芯夾緊
+wheelM3nut,M3 nut 5.5AF x 2.4,2,出牌輪芯夾緊
+feedM3x8,DIN7991 M3x8,1,取牌輪芯夾緊
+feedM3nut,M3 nut 5.5AF x 2.4,1,取牌輪芯夾緊
+couplerM3x8,DIN7991 M3x8,2,聯軸器兩端夾緊
+couplerM3nut,M3 nut 5.5AF x 2.4,2,聯軸器兩端夾緊

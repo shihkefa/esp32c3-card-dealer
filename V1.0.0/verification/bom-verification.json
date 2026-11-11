@@ -1,0 +1,49 @@
+{
+  "summary": [
+    [
+      "預算上限",
+      80,
+      null,
+      "外購材料",
+      80.5,
+      null,
+      "耗材",
+      34,
+      null,
+      "運費預留",
+      9.5,
+      null,
+      "超出預算"
+    ],
+    [
+      "總計",
+      124,
+      null,
+      "預算餘額",
+      -44,
+      null,
+      "外購含運",
+      90,
+      null,
+      "實價合計",
+      "未填實價",
+      null,
+      "人民幣 CNY"
+    ]
+  ],
+  "expectedExternal": 80.5,
+  "expectedWithShipping": 90,
+  "expectedWithFilament": 124,
+  "filamentKg": 0.85,
+  "solid_PLA_mass_g": 779.3,
+  "owned": [
+    "ESP32-C3",
+    "18650 2900mAh",
+    "5V2A充電器",
+    "拓竹A1 mini"
+  ],
+  "printedTypes": 40,
+  "updated_design": "P04B gear thickness 7.5mm raises the original upper assembly by 1.5mm for a 2mm nominal P04A-to-P02A clearance; P26 flag extends downward 1.5mm to retain the original home sensor beam. Other 38 STL types, P32 shell and all hardware quantities unchanged.",
+  "preservation_report": "bom-preservation.json",
+  "native_excel_recalculation_tested": false
+}

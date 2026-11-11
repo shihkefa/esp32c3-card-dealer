@@ -1,0 +1,106 @@
+{
+  "revision": "V1.0.0",
+  "source": "Actual current CAD solids and delivered wiring reference",
+  "scope": "Exploded offsets and context cuts are illustration only; purchased hardware is a reference envelope.",
+  "steps": {
+    "step-01": {
+      "file": "assets/figure01.jpg",
+      "alt": "P30試配片與兩種M3沉頭螺絲"
+    },
+    "step-02": {
+      "file": "assets/figure02.jpg",
+      "alt": "P02A P02B P03與6005軸承爆炸圖"
+    },
+    "step-03": {
+      "file": "assets/figure03.jpg",
+      "alt": "28BYJ馬達由P02A下側安裝"
+    },
+    "step-04": {
+      "file": "assets/figure04.jpg",
+      "alt": "P05B與L型扳手鎖付順序"
+    },
+    "step-05": {
+      "file": "assets/figure05.jpg",
+      "alt": "P05A內腔平口與P05B平口配合"
+    },
+    "step-06": {
+      "file": "assets/figure06.jpg",
+      "alt": "P04A承載盤與加高1.5mm的P04B齒輪軸子組"
+    },
+    "step-07": {
+      "file": "assets/figure07.jpg",
+      "alt": "轉盤子組穿入原高度軸承並從下方套P06，承載盤與P02A頂圈名義間隙2mm"
+    },
+    "step-08": {
+      "file": "assets/figure08.jpg",
+      "alt": "滑環轉子由空心軸下方穿入"
+    },
+    "step-09": {
+      "file": "assets/figure09.jpg",
+      "alt": "固定高度P25光電與向下延長1.5mm的P26遮光片"
+    },
+    "step-10": {
+      "file": "assets/figure10.jpg",
+      "alt": "P31下傾轉接框固定到P04A"
+    },
+    "step-11": {
+      "file": "assets/figure11.jpg",
+      "alt": "兩組輪芯 O圈 鋼軸及623軸承"
+    },
+    "step-12": {
+      "file": "assets/figure12.jpg",
+      "alt": "兩側滾輪座與上滑塊從軸外側裝入"
+    },
+    "step-13": {
+      "file": "assets/figure13.jpg",
+      "alt": "N20減速馬達 底座 壓片與取牌輪"
+    },
+    "step-14": {
+      "file": "assets/figure14.jpg",
+      "alt": "RF300長軸馬達 聯軸器與共用長螺絲"
+    },
+    "step-15": {
+      "file": "assets/figure15.jpg",
+      "alt": "牌倉 四支柱與分牌閘爆炸示意"
+    },
+    "step-16": {
+      "file": "assets/figure16.jpg",
+      "alt": "出牌導槽與可調出口光電座"
+    },
+    "step-17": {
+      "file": "assets/figure17.jpg",
+      "alt": "P32A屋頂局部 OLED 按鍵帽與內側支架"
+    },
+    "step-18": {
+      "file": "assets/figure18.jpg",
+      "alt": "台階包覆P32A P32B及預裝頂部UI後整組罩入"
+    },
+    "step-19": {
+      "file": "assets/figure19.jpg",
+      "alt": "底盒內電子模組與電池盒固定位置"
+    },
+    "step-20": {
+      "file": "assets/figure20.jpg",
+      "alt": "P36壓片 預置螺母與底部向上固定螺絲"
+    },
+    "step-21": {
+      "file": "assets/figure21.jpg",
+      "alt": "完整逐腳接線總覽 詳細接線另開原圖"
+    },
+    "step-22": {
+      "file": "assets/figure22.jpg",
+      "alt": "頂部按鍵操作與最終封蓋成品"
+    }
+  },
+  "details": {
+    "p02Nuts": "assets/detail-p02-nuts.jpg",
+    "p04Nuts": "assets/detail-p04-nuts.jpg",
+    "p06": "assets/detail-p06.jpg",
+    "p05Exploded": "assets/detail-p05-exploded.jpg",
+    "p05Seat": "assets/detail-p05-seat.jpg",
+    "p05Print": "assets/detail-p05-print.jpg"
+  },
+  "overview": "assets/overview.jpg",
+  "cutaway": "assets/cutaway.jpg",
+  "controls": "assets/controls.jpg"
+}

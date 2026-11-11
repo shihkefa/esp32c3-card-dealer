@@ -1,0 +1,1091 @@
+{
+  "revision": "V1.0.0",
+  "all_passed": true,
+  "scope": "Nominal CAD support and sampled bench-subassembly paths; not physical qualification.",
+  "source_hashes": {
+    "build_cad_py_sha256": "307f468197ff8edaa1b772ce471667d311c9bd8f3524c2bc1201a0d8f2b01c6c",
+    "check_script_sha256": "ee486381d60b67c3b7574ebbbf34309642043f222ce3674d9501c10b1088b72d"
+  },
+  "checks": [
+    {
+      "test": "Both split housing parts are closed single bodies within A1 mini safe bounds",
+      "passed": true,
+      "parts": [
+        {
+          "part": "P32A",
+          "watertight_after_STL_roundtrip": true,
+          "connected_bodies": 1,
+          "print_dimensions_mm": [
+            174.0,
+            159.2,
+            85.7
+          ],
+          "passed": true
+        },
+        {
+          "part": "P32B",
+          "watertight_after_STL_roundtrip": true,
+          "connected_bodies": 1,
+          "print_dimensions_mm": [
+            171.0,
+            50.5,
+            84.2
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "Both housing parts print on their own large planar roof faces",
+      "passed": true,
+      "sampled_first_layer_mm": 0.02,
+      "parts": [
+        {
+          "part": "P32A",
+          "contact_area_mm2": 18260.52,
+          "source_bed_z_mm": -128.7,
+          "minimum_mm2": 5000,
+          "passed": true
+        },
+        {
+          "part": "P32B",
+          "contact_area_mm2": 6907.802,
+          "source_bed_z_mm": -127.2,
+          "minimum_mm2": 2500,
+          "passed": true
+        }
+      ],
+      "warning": "Local nut-slot and hole bridging still needs slicing; not a support-free claim."
+    },
+    {
+      "test": "Front-view upper housing envelope is centered on the fixed rotation axis",
+      "passed": true,
+      "assembled_y_interval_mm": [
+        -98.2,
+        98.2
+      ],
+      "assembled_width_mm": 196.4,
+      "center_y_mm": 0.0,
+      "unchanged_X_extent_of_P32_mm": [
+        -73,
+        101
+      ],
+      "scope": "Front-view transverse centering only. Existing X-direction control/outlet projection remains."
+    },
+    {
+      "test": "Housing halves and seated new fasteners have no unintended solid overlap",
+      "passed": true,
+      "halves_overlap_mm3": 0.0,
+      "joints": [
+        {
+          "joint": 1,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "joint": 2,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "joint": 3,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "joint": 4,
+          "maximum_overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "test": "Hidden original split retains 0.2mm clearance under the external cover lip",
+      "passed": true,
+      "seam_y_mm": -55.0,
+      "nominal_gap_mm": 0.2,
+      "samples": [
+        {
+          "x_mm": -35,
+          "gap_overlap_mm3": 0.0
+        },
+        {
+          "x_mm": 0,
+          "gap_overlap_mm3": 0.0
+        },
+        {
+          "x_mm": 40,
+          "gap_overlap_mm3": 0.0
+        },
+        {
+          "x_mm": 80,
+          "gap_overlap_mm3": 0.0
+        }
+      ],
+      "closest_existing_front_cover_mount_y_mm": -44,
+      "retained_housing_mounts_mm": [
+        [
+          -59,
+          0
+        ],
+        [
+          0,
+          57
+        ],
+        [
+          72,
+          49
+        ]
+      ],
+      "retained_oled_mounts_mm": [
+        [
+          57,
+          -24
+        ],
+        [
+          93,
+          -24
+        ]
+      ],
+      "retained_key_mounts_mm": [
+        [
+          62.5,
+          0
+        ],
+        [
+          62.5,
+          47
+        ],
+        [
+          87.5,
+          0
+        ],
+        [
+          87.5,
+          47
+        ]
+      ]
+    },
+    {
+      "test": "A covers the roof and both side faces without growing the outer X envelope",
+      "passed": true,
+      "cover_end_y_mm": -61.0,
+      "cover_length_from_original_edge_mm": 6.1,
+      "nominal_skin_thickness_mm": 1.2,
+      "samples": [
+        {
+          "surface": "roof",
+          "x_mm": -56,
+          "y_mm": -60.7,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -56,
+          "y_mm": -58,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -56,
+          "y_mm": -55.2,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -18,
+          "y_mm": -60.7,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -18,
+          "y_mm": -58,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -18,
+          "y_mm": -55.2,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 20,
+          "y_mm": -60.7,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 20,
+          "y_mm": -58,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 20,
+          "y_mm": -55.2,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 64,
+          "y_mm": -60.7,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 64,
+          "y_mm": -58,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 64,
+          "y_mm": -55.2,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 90,
+          "y_mm": -60.7,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 90,
+          "y_mm": -58,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 90,
+          "y_mm": -55.2,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -60.7,
+          "z_mm": 50,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -60.7,
+          "z_mm": 80,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -60.7,
+          "z_mm": 120,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -58,
+          "z_mm": 50,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -58,
+          "z_mm": 80,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -58,
+          "z_mm": 120,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -55.2,
+          "z_mm": 50,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -55.2,
+          "z_mm": 80,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -72.4,
+          "y_mm": -55.2,
+          "z_mm": 120,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -60.7,
+          "z_mm": 50,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -60.7,
+          "z_mm": 80,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -60.7,
+          "z_mm": 120,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -58,
+          "z_mm": 50,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -58,
+          "z_mm": 80,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -58,
+          "z_mm": 120,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -55.2,
+          "z_mm": 50,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -55.2,
+          "z_mm": 80,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 100.4,
+          "y_mm": -55.2,
+          "z_mm": 120,
+          "solid_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "test": "Covered roof and side rebates retain 0.3mm nominal assembly clearance",
+      "passed": true,
+      "nominal_gap_mm": 0.3,
+      "samples": [
+        {
+          "surface": "roof",
+          "x_mm": -56,
+          "y_mm": -60.7,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -56,
+          "y_mm": -58,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -56,
+          "y_mm": -55.2,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -18,
+          "y_mm": -60.7,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -18,
+          "y_mm": -58,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": -18,
+          "y_mm": -55.2,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 20,
+          "y_mm": -60.7,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 20,
+          "y_mm": -58,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 20,
+          "y_mm": -55.2,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 64,
+          "y_mm": -60.7,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 64,
+          "y_mm": -58,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 64,
+          "y_mm": -55.2,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -60.7,
+          "z_mm": 50,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -60.7,
+          "z_mm": 80,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -60.7,
+          "z_mm": 120,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -58,
+          "z_mm": 50,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -58,
+          "z_mm": 80,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -58,
+          "z_mm": 120,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -55.2,
+          "z_mm": 50,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -55.2,
+          "z_mm": 80,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -71.65,
+          "y_mm": -55.2,
+          "z_mm": 120,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -60.7,
+          "z_mm": 50,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -60.7,
+          "z_mm": 80,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -60.7,
+          "z_mm": 120,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -58,
+          "z_mm": 50,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -58,
+          "z_mm": 80,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -58,
+          "z_mm": 120,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -55.2,
+          "z_mm": 50,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -55.2,
+          "z_mm": 80,
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 99.65,
+          "y_mm": -55.2,
+          "z_mm": 120,
+          "maximum_overlap_mm3": 0.0
+        }
+      ],
+      "warning": "Nominal CAD allowance only; elephant foot and material shrinkage require trial fitting."
+    },
+    {
+      "test": "B retains 2.2mm roof and side walls behind an intentional 1.5mm visible step",
+      "passed": true,
+      "B_roof_outer_mm": 127.19999999999999,
+      "B_roof_inner_mm": 124.99999999999999,
+      "B_side_outer_mm": [
+        -71.5,
+        99.5
+      ],
+      "B_side_inner_mm": [
+        -69.3,
+        97.3
+      ],
+      "nominal_wall_mm": 2.2,
+      "nominal_visible_setback_mm": 1.5,
+      "samples": [
+        {
+          "surface": "side",
+          "x_mm": -70.4,
+          "y_mm": -66,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": -70.4,
+          "y_mm": -72,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 98.4,
+          "y_mm": -66,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "side",
+          "x_mm": 98.4,
+          "y_mm": -72,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 0,
+          "y_mm": -70,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 0,
+          "y_mm": -80,
+          "solid_ratio": 1.0
+        },
+        {
+          "surface": "roof",
+          "x_mm": 40,
+          "y_mm": -70,
+          "solid_ratio": 1.0
+        }
+      ],
+      "external_step_void_overlap_mm3": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "test": "Unchanged P33 side cover seats without interference under the lower B roof",
+      "passed": true,
+      "P33_bbox_mm": [
+        -37.0,
+        -98.2,
+        43.0,
+        77.0,
+        -96.0,
+        126.5
+      ],
+      "entry": {
+        "samples": 81,
+        "maximum_overlap_mm3": 3.59e-06,
+        "first_blocked_offset_mm": null
+      },
+      "scope": "P33 remains outside at Y=-98.2 to -96. Z-height overlap does not imply volume overlap; the complete solids and entry path are checked."
+    },
+    {
+      "test": "Four standard M3 nuts side-load from positive Y into roofed hex cages",
+      "passed": true,
+      "joints": [
+        {
+          "joint": 1,
+          "samples": 81,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 2,
+          "samples": 81,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 3,
+          "samples": 81,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 4,
+          "samples": 81,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        }
+      ],
+      "nominal_nut_z_interval_mm": [
+        123.1,
+        125.5
+      ],
+      "slot_z_interval_mm": [
+        123,
+        125.6
+      ],
+      "scope": "Load the nuts before attaching UI or installing the housing on the machine."
+    },
+    {
+      "test": "Back housing half slides into the main half with preloaded nuts",
+      "passed": true,
+      "samples": 121,
+      "maximum_overlap_mm3": 0.0,
+      "first_blocked_offset_mm": null,
+      "clamp_contact_plane_z_mm": 122.5,
+      "assembly_order": "Preload A nuts, slide B from negative Y, then install four screws from below."
+    },
+    {
+      "test": "M3x8 screws insert axially upward through full countersunk seats",
+      "passed": true,
+      "joints": [
+        {
+          "joint": 1,
+          "samples": 81,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 2,
+          "samples": 81,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 3,
+          "samples": 81,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 4,
+          "samples": 81,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        }
+      ],
+      "head_z_mm": 118.5,
+      "tip_z_mm": 126.5
+    },
+    {
+      "test": "All four new M3 nuts have full nominal 2.4mm screw coverage",
+      "passed": true,
+      "joints": [
+        {
+          "joint": 1,
+          "nominal_shank_coverage_ratio": 1.0
+        },
+        {
+          "joint": 2,
+          "nominal_shank_coverage_ratio": 1.0
+        },
+        {
+          "joint": 3,
+          "nominal_shank_coverage_ratio": 1.0
+        },
+        {
+          "joint": 4,
+          "nominal_shank_coverage_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "test": "Straight 2mm hex tool reaches every joint from inside before installing UI",
+      "passed": true,
+      "joints": [
+        {
+          "joint": 1,
+          "samples": 61,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 2,
+          "samples": 61,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 3,
+          "samples": 61,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        },
+        {
+          "joint": 4,
+          "samples": 61,
+          "maximum_overlap_mm3": 0.0,
+          "first_blocked_offset_mm": null
+        }
+      ],
+      "tool_shank_diameter_mm": 3,
+      "reference_grip_diameter_mm": 12,
+      "scope": "Housing-only bench subassembly, before UI, wiring and machine installation; not a hand-access simulation."
+    },
+    {
+      "test": "Every new screw retains a complete 360 degree countersunk bearing seat",
+      "passed": true,
+      "joints": [
+        {
+          "joint": 1,
+          "minimum_sampled_solid_ratio": 1.0
+        },
+        {
+          "joint": 2,
+          "minimum_sampled_solid_ratio": 1.0
+        },
+        {
+          "joint": 3,
+          "minimum_sampled_solid_ratio": 1.0
+        },
+        {
+          "joint": 4,
+          "minimum_sampled_solid_ratio": 1.0
+        }
+      ],
+      "cone_stations": 3,
+      "angles_per_station": 72
+    },
+    {
+      "test": "Closed screw guide rings remain above the countersinks",
+      "passed": true,
+      "joints": [
+        {
+          "joint": 1,
+          "minimum_sampled_solid_ratio": 1.0
+        },
+        {
+          "joint": 2,
+          "minimum_sampled_solid_ratio": 1.0
+        },
+        {
+          "joint": 3,
+          "minimum_sampled_solid_ratio": 1.0
+        },
+        {
+          "joint": 4,
+          "minimum_sampled_solid_ratio": 1.0
+        }
+      ],
+      "guide_stations": 3,
+      "angles_per_station": 36,
+      "nominal_hole_diameter_mm": 3.4
+    },
+    {
+      "test": "Nut cages are roofed and no new screw hole breaks the cosmetic roof",
+      "passed": true,
+      "joints": [
+        {
+          "joint": 1,
+          "nut_roof_solid_ratio": 1.0,
+          "cosmetic_roof_solid_ratio": 1.0
+        },
+        {
+          "joint": 2,
+          "nut_roof_solid_ratio": 1.0,
+          "cosmetic_roof_solid_ratio": 1.0
+        },
+        {
+          "joint": 3,
+          "nut_roof_solid_ratio": 1.0,
+          "cosmetic_roof_solid_ratio": 1.0
+        },
+        {
+          "joint": 4,
+          "nut_roof_solid_ratio": 1.0,
+          "cosmetic_roof_solid_ratio": 1.0
+        }
+      ],
+      "nominal_nut_roof_mm": 0.9,
+      "outer_roof_mm": 2.2
+    },
+    {
+      "test": "Hex cage walls resist sampled nut rotation despite the side-loading door",
+      "passed": true,
+      "joints": [
+        {
+          "joint": 1,
+          "rotations": [
+            {
+              "degrees": -45,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": -30,
+              "overlap_mm3": 0.772051
+            },
+            {
+              "degrees": -15,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": 15,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": 30,
+              "overlap_mm3": 0.772051
+            },
+            {
+              "degrees": 45,
+              "overlap_mm3": 0.340996
+            }
+          ]
+        },
+        {
+          "joint": 2,
+          "rotations": [
+            {
+              "degrees": -45,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": -30,
+              "overlap_mm3": 0.772051
+            },
+            {
+              "degrees": -15,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": 15,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": 30,
+              "overlap_mm3": 0.772051
+            },
+            {
+              "degrees": 45,
+              "overlap_mm3": 0.340996
+            }
+          ]
+        },
+        {
+          "joint": 3,
+          "rotations": [
+            {
+              "degrees": -45,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": -30,
+              "overlap_mm3": 0.772051
+            },
+            {
+              "degrees": -15,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": 15,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": 30,
+              "overlap_mm3": 0.772051
+            },
+            {
+              "degrees": 45,
+              "overlap_mm3": 0.340996
+            }
+          ]
+        },
+        {
+          "joint": 4,
+          "rotations": [
+            {
+              "degrees": -45,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": -30,
+              "overlap_mm3": 0.772051
+            },
+            {
+              "degrees": -15,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": 15,
+              "overlap_mm3": 0.340996
+            },
+            {
+              "degrees": 30,
+              "overlap_mm3": 0.772051
+            },
+            {
+              "degrees": 45,
+              "overlap_mm3": 0.340996
+            }
+          ]
+        }
+      ],
+      "warning": "Geometric anti-rotation sampling does not measure torque capacity or plastic strength."
+    },
+    {
+      "test": "Extended positive-side support webs connect original mounting feet toward the new wall",
+      "passed": true,
+      "samples": [
+        {
+          "x_mm": 72,
+          "y_mm": 66,
+          "solid_ratio": 1.0
+        },
+        {
+          "x_mm": 72,
+          "y_mm": 76,
+          "solid_ratio": 1.0
+        },
+        {
+          "x_mm": 72,
+          "y_mm": 86,
+          "solid_ratio": 1.0
+        },
+        {
+          "x_mm": 72,
+          "y_mm": 94,
+          "solid_ratio": 1.0
+        },
+        {
+          "x_mm": 0,
+          "y_mm": 66,
+          "solid_ratio": 1.0
+        },
+        {
+          "x_mm": 0,
+          "y_mm": 76,
+          "solid_ratio": 1.0
+        },
+        {
+          "x_mm": 0,
+          "y_mm": 86,
+          "solid_ratio": 1.0
+        },
+        {
+          "x_mm": 0,
+          "y_mm": 94,
+          "solid_ratio": 1.0
+        }
+      ],
+      "new_inner_wall_y_mm": 96,
+      "unchanged_mount_positions_mm": [
+        [
+          -59,
+          0
+        ],
+        [
+          0,
+          57
+        ],
+        [
+          72,
+          49
+        ]
+      ]
+    },
+    {
+      "test": "Only the upper shell is split and four existing-spec fastener sets are added",
+      "passed": true,
+      "print_types": 40,
+      "M3x8": 61,
+      "M3x25": 10,
+      "M3_nuts": 52,
+      "separate_unchanged_part_bytes_check": "Performed by release packaging against the previous complete ZIP."
+    }
+  ],
+  "limitations": [
+    "Physical print tolerance, layer strength, preload, torque, wiring clearance and durability require trial assembly.",
+    "Exploded diagrams are illustrative; sampled nominal paths are not continuous or elastic motion proofs.",
+    "Join the two shell pieces before mounting UI; this check does not claim in-machine tool access.",
+    "The front view is centered. The original X-direction projection and every other printed part remain by design."
+  ]
+}

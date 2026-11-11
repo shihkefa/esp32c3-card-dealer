@@ -1,0 +1,1314 @@
+{
+  "file": "C:\\Chat\\codex\\發牌機\\V1.0.0\\發牌機_整機組裝_V1.0.0.stl",
+  "units": "mm",
+  "purpose": "assembly preview; not a print-in-place design",
+  "printed_instances": 47,
+  "hardware_reference_instances": 168,
+  "excluded": [
+    "cards",
+    "optional P10/P11 weights",
+    "optional P12 narrow-card spacers",
+    "P30 fit coupon"
+  ],
+  "triangles": 197410,
+  "dimensions_mm": [
+    186.2,
+    196.4,
+    132.8
+  ],
+  "all_component_shells_closed": true,
+  "bytes": 9870584,
+  "note": "Individual closed shells can touch; do not fuse or print this as a working mechanism.",
+  "components": [
+    {
+      "id": "P01",
+      "name": "封閉式固定底座",
+      "triangles": 12062,
+      "closed": true
+    },
+    {
+      "id": "P02A",
+      "name": "平底上蓋主板",
+      "triangles": 6450,
+      "closed": true
+    },
+    {
+      "id": "P02B",
+      "name": "分離式軸承座與捕捉螺母槽",
+      "triangles": 3650,
+      "closed": true
+    },
+    {
+      "id": "P03",
+      "name": "轉盤軸承壓環",
+      "triangles": 2308,
+      "closed": true
+    },
+    {
+      "id": "P04A",
+      "name": "分離式旋轉承載盤",
+      "triangles": 10304,
+      "closed": true
+    },
+    {
+      "id": "P04B",
+      "name": "加厚60齒齒輪與空心轉軸",
+      "triangles": 10630,
+      "closed": true
+    },
+    {
+      "id": "P05A",
+      "name": "平口內腔30齒輪與止退裙邊",
+      "triangles": 4072,
+      "closed": true
+    },
+    {
+      "id": "P05B",
+      "name": "平面貼床式閉合D軸夾座",
+      "triangles": 3848,
+      "closed": true
+    },
+    {
+      "id": "P06",
+      "name": "捕捉螺母式空心轉軸止退環",
+      "triangles": 1748,
+      "closed": true
+    },
+    {
+      "id": "P07",
+      "name": "牌倉支柱",
+      "triangles": 908,
+      "closed": true
+    },
+    {
+      "id": "P07",
+      "name": "牌倉支柱",
+      "triangles": 908,
+      "closed": true
+    },
+    {
+      "id": "P07",
+      "name": "牌倉支柱",
+      "triangles": 908,
+      "closed": true
+    },
+    {
+      "id": "P07",
+      "name": "牌倉支柱",
+      "triangles": 908,
+      "closed": true
+    },
+    {
+      "id": "P08",
+      "name": "61mm前後開放牌倉",
+      "triangles": 3788,
+      "closed": true
+    },
+    {
+      "id": "P09",
+      "name": "可調單張分牌閘",
+      "triangles": 780,
+      "closed": true
+    },
+    {
+      "id": "P13",
+      "name": "左出牌滾輪座",
+      "triangles": 3380,
+      "closed": true
+    },
+    {
+      "id": "P14",
+      "name": "右出牌滾輪座",
+      "triangles": 3350,
+      "closed": true
+    },
+    {
+      "id": "P15",
+      "name": "上滾輪調整滑塊",
+      "triangles": 854,
+      "closed": true
+    },
+    {
+      "id": "P15",
+      "name": "上滾輪調整滑塊",
+      "triangles": 854,
+      "closed": true
+    },
+    {
+      "id": "P16",
+      "name": "出牌滾輪輪芯",
+      "triangles": 4704,
+      "closed": true
+    },
+    {
+      "id": "P16",
+      "name": "出牌滾輪輪芯",
+      "triangles": 4704,
+      "closed": true
+    },
+    {
+      "id": "P17",
+      "name": "取牌輪輪芯",
+      "triangles": 3374,
+      "closed": true
+    },
+    {
+      "id": "P18",
+      "name": "N20取牌馬達底座",
+      "triangles": 2054,
+      "closed": true
+    },
+    {
+      "id": "P19",
+      "name": "N20馬達壓片",
+      "triangles": 1998,
+      "closed": true
+    },
+    {
+      "id": "P20",
+      "name": "RF300出牌馬達底座",
+      "triangles": 1262,
+      "closed": true
+    },
+    {
+      "id": "P21",
+      "name": "RF300馬達壓片",
+      "triangles": 1298,
+      "closed": true
+    },
+    {
+      "id": "P22",
+      "name": "2mm至3mm軸聯軸器",
+      "triangles": 3174,
+      "closed": true
+    },
+    {
+      "id": "P23",
+      "name": "出牌導向槽",
+      "triangles": 1706,
+      "closed": true
+    },
+    {
+      "id": "P24",
+      "name": "出口光電感測器可調座",
+      "triangles": 1932,
+      "closed": true
+    },
+    {
+      "id": "P25",
+      "name": "旋轉參考光電座",
+      "triangles": 1908,
+      "closed": true
+    },
+    {
+      "id": "P26",
+      "name": "延長式轉盤光電遮光片",
+      "triangles": 796,
+      "closed": true
+    },
+    {
+      "id": "P27",
+      "name": "頂按式按鍵帽",
+      "triangles": 1038,
+      "closed": true
+    },
+    {
+      "id": "P27",
+      "name": "頂按式按鍵帽",
+      "triangles": 1038,
+      "closed": true
+    },
+    {
+      "id": "P27",
+      "name": "頂按式按鍵帽",
+      "triangles": 1038,
+      "closed": true
+    },
+    {
+      "id": "P27",
+      "name": "頂按式按鍵帽",
+      "triangles": 1038,
+      "closed": true
+    },
+    {
+      "id": "P28",
+      "name": "頂部OLED固定框",
+      "triangles": 1896,
+      "closed": true
+    },
+    {
+      "id": "P29",
+      "name": "18650電池盒束帶壓扣",
+      "triangles": 488,
+      "closed": true
+    },
+    {
+      "id": "P29",
+      "name": "18650電池盒束帶壓扣",
+      "triangles": 488,
+      "closed": true
+    },
+    {
+      "id": "P31",
+      "name": "6度下傾轉接框",
+      "triangles": 6628,
+      "closed": true
+    },
+    {
+      "id": "P32A",
+      "name": "台階包覆式居中上殼主片",
+      "triangles": 10990,
+      "closed": true
+    },
+    {
+      "id": "P32B",
+      "name": "退台式上殼背側接合片",
+      "triangles": 5006,
+      "closed": true
+    },
+    {
+      "id": "P33",
+      "name": "上罩側維修蓋",
+      "triangles": 2008,
+      "closed": true
+    },
+    {
+      "id": "P34",
+      "name": "出牌口下飾蓋",
+      "triangles": 1268,
+      "closed": true
+    },
+    {
+      "id": "P35",
+      "name": "頂部按鍵與PCF支架",
+      "triangles": 3154,
+      "closed": true
+    },
+    {
+      "id": "P36",
+      "name": "滑環法蘭壓片",
+      "triangles": 1358,
+      "closed": true
+    },
+    {
+      "id": "P36",
+      "name": "滑環法蘭壓片",
+      "triangles": 1358,
+      "closed": true
+    },
+    {
+      "id": "P36",
+      "name": "滑環法蘭壓片",
+      "triangles": 1358,
+      "closed": true
+    },
+    {
+      "id": "6005ZZ",
+      "name": "6005ZZ",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "28BYJ-48",
+      "name": "28BYJ-48",
+      "triangles": 818,
+      "closed": true
+    },
+    {
+      "id": "stepper_output",
+      "name": "stepper_output",
+      "triangles": 116,
+      "closed": true
+    },
+    {
+      "id": "lower623",
+      "name": "lower623",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "upper623",
+      "name": "upper623",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "lower623",
+      "name": "lower623",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "upper623",
+      "name": "upper623",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "lower3mmshaft",
+      "name": "lower3mmshaft",
+      "triangles": 252,
+      "closed": true
+    },
+    {
+      "id": "upper3mmshaft",
+      "name": "upper3mmshaft",
+      "triangles": 252,
+      "closed": true
+    },
+    {
+      "id": "N20",
+      "name": "N20",
+      "triangles": 268,
+      "closed": true
+    },
+    {
+      "id": "RF300",
+      "name": "RF300",
+      "triangles": 508,
+      "closed": true
+    },
+    {
+      "id": "slipring_rotor",
+      "name": "slipring_rotor",
+      "triangles": 252,
+      "closed": true
+    },
+    {
+      "id": "slipring_flange",
+      "name": "slipring_flange",
+      "triangles": 1292,
+      "closed": true
+    },
+    {
+      "id": "silicone",
+      "name": "silicone",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "silicone",
+      "name": "silicone",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "silicone",
+      "name": "silicone",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "silicone",
+      "name": "silicone",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "feedrubber",
+      "name": "feedrubber",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "feedrubber",
+      "name": "feedrubber",
+      "triangles": 512,
+      "closed": true
+    },
+    {
+      "id": "batteryholder",
+      "name": "batteryholder",
+      "triangles": 360,
+      "closed": true
+    },
+    {
+      "id": "18650",
+      "name": "18650",
+      "triangles": 188,
+      "closed": true
+    },
+    {
+      "id": "ESP32C3",
+      "name": "ESP32C3",
+      "triangles": 28,
+      "closed": true
+    },
+    {
+      "id": "PCF8574",
+      "name": "PCF8574",
+      "triangles": 28,
+      "closed": true
+    },
+    {
+      "id": "charger",
+      "name": "charger",
+      "triangles": 28,
+      "closed": true
+    },
+    {
+      "id": "TypeC",
+      "name": "TypeC",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "booster",
+      "name": "booster",
+      "triangles": 28,
+      "closed": true
+    },
+    {
+      "id": "protection1S",
+      "name": "protection1S",
+      "triangles": 28,
+      "closed": true
+    },
+    {
+      "id": "ULN2003",
+      "name": "ULN2003",
+      "triangles": 28,
+      "closed": true
+    },
+    {
+      "id": "screenpcb",
+      "name": "screenpcb",
+      "triangles": 28,
+      "closed": true
+    },
+    {
+      "id": "OLEDglass",
+      "name": "OLEDglass",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "screenheader",
+      "name": "screenheader",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "keypcb",
+      "name": "keypcb",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "keybody",
+      "name": "keybody",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "keyplunger",
+      "name": "keyplunger",
+      "triangles": 252,
+      "closed": true
+    },
+    {
+      "id": "keybody",
+      "name": "keybody",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "keyplunger",
+      "name": "keyplunger",
+      "triangles": 252,
+      "closed": true
+    },
+    {
+      "id": "keybody",
+      "name": "keybody",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "keyplunger",
+      "name": "keyplunger",
+      "triangles": 252,
+      "closed": true
+    },
+    {
+      "id": "keybody",
+      "name": "keybody",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "keyplunger",
+      "name": "keyplunger",
+      "triangles": 252,
+      "closed": true
+    },
+    {
+      "id": "powerrocker",
+      "name": "powerrocker",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "home_opto",
+      "name": "home_opto",
+      "triangles": 1052,
+      "closed": true
+    },
+    {
+      "id": "exit_opto",
+      "name": "exit_opto",
+      "triangles": 1052,
+      "closed": true
+    },
+    {
+      "id": "DRV8833",
+      "name": "DRV8833",
+      "triangles": 28,
+      "closed": true
+    },
+    {
+      "id": "hatchM3x8",
+      "name": "hatchM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hatchM3x8",
+      "name": "hatchM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hatchM3x8",
+      "name": "hatchM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hatchM3x8",
+      "name": "hatchM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "frontM3x8",
+      "name": "frontM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "frontM3x8",
+      "name": "frontM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodM3x8",
+      "name": "hoodM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodM3nut",
+      "name": "hoodM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hoodM3x8",
+      "name": "hoodM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodM3nut",
+      "name": "hoodM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hoodM3x8",
+      "name": "hoodM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodM3nut",
+      "name": "hoodM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "oledM3x8",
+      "name": "oledM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "oledM3x8",
+      "name": "oledM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "keysM3x8",
+      "name": "keysM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "keysM3x8",
+      "name": "keysM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "keysM3x8",
+      "name": "keysM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "keysM3x8",
+      "name": "keysM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodJoinM3x8",
+      "name": "hoodJoinM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodJoinM3nut",
+      "name": "hoodJoinM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hoodJoinM3x8",
+      "name": "hoodJoinM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodJoinM3nut",
+      "name": "hoodJoinM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hoodJoinM3x8",
+      "name": "hoodJoinM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodJoinM3nut",
+      "name": "hoodJoinM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hoodJoinM3x8",
+      "name": "hoodJoinM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hoodJoinM3nut",
+      "name": "hoodJoinM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "slipM3x8",
+      "name": "slipM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "slipM3nut",
+      "name": "slipM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "slipM3x8",
+      "name": "slipM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "slipM3nut",
+      "name": "slipM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "slipM3x8",
+      "name": "slipM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "slipM3nut",
+      "name": "slipM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "rotorM3x8",
+      "name": "rotorM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "rotorM3nut",
+      "name": "rotorM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "deckM3x8",
+      "name": "deckM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "deckM3nut",
+      "name": "deckM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "deckM3x8",
+      "name": "deckM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "deckM3nut",
+      "name": "deckM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "deckM3x8",
+      "name": "deckM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "deckM3nut",
+      "name": "deckM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "deckM3x8",
+      "name": "deckM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "deckM3nut",
+      "name": "deckM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "pinionM3x8",
+      "name": "pinionM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "pinionM3nut",
+      "name": "pinionM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "pinionJoinM3x8",
+      "name": "pinionJoinM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "pinionJoinM3nut",
+      "name": "pinionJoinM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "pinionJoinM3x8",
+      "name": "pinionJoinM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "pinionJoinM3nut",
+      "name": "pinionJoinM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "stepperM3x8",
+      "name": "stepperM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "stepperM3nut",
+      "name": "stepperM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "stepperM3x8",
+      "name": "stepperM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "stepperM3nut",
+      "name": "stepperM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "baseM3x25",
+      "name": "baseM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "baseM3nut",
+      "name": "baseM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "baseM3x25",
+      "name": "baseM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "baseM3nut",
+      "name": "baseM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "baseM3x25",
+      "name": "baseM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "baseM3nut",
+      "name": "baseM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "baseM3x25",
+      "name": "baseM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "baseM3nut",
+      "name": "baseM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "retainerM3x8",
+      "name": "retainerM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "retainerM3nut",
+      "name": "retainerM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "retainerM3x8",
+      "name": "retainerM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "retainerM3nut",
+      "name": "retainerM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "retainerM3x8",
+      "name": "retainerM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "retainerM3nut",
+      "name": "retainerM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hopperM3x25",
+      "name": "hopperM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hopperM3nut",
+      "name": "hopperM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hopperM3x25",
+      "name": "hopperM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hopperM3nut",
+      "name": "hopperM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "adapterM3x8",
+      "name": "adapterM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "adapterM3nut",
+      "name": "adapterM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "adapterM3x8",
+      "name": "adapterM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "adapterM3nut",
+      "name": "adapterM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hopperM3x25",
+      "name": "hopperM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hopperM3nut",
+      "name": "hopperM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "hopperM3x25",
+      "name": "hopperM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "hopperM3nut",
+      "name": "hopperM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "adapterM3x8",
+      "name": "adapterM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "adapterM3nut",
+      "name": "adapterM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "adapterM3x8",
+      "name": "adapterM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "adapterM3nut",
+      "name": "adapterM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "pillowM3x8",
+      "name": "pillowM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "pillowM3nut",
+      "name": "pillowM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "pillowM3x8",
+      "name": "pillowM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "pillowM3nut",
+      "name": "pillowM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "adjustM3x8",
+      "name": "adjustM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "guideM3x8",
+      "name": "guideM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "pillowM3x8",
+      "name": "pillowM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "pillowM3nut",
+      "name": "pillowM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "pillowM3x8",
+      "name": "pillowM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "pillowM3nut",
+      "name": "pillowM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "adjustM3x8",
+      "name": "adjustM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "guideM3x8",
+      "name": "guideM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "n20baseM3x8",
+      "name": "n20baseM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "motorbaseM3nut",
+      "name": "motorbaseM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "n20baseM3x8",
+      "name": "n20baseM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "motorbaseM3nut",
+      "name": "motorbaseM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "rfclampM3x25",
+      "name": "rfclampM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "motorbaseM3nut",
+      "name": "motorbaseM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "rfclampM3x25",
+      "name": "rfclampM3x25",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "motorbaseM3nut",
+      "name": "motorbaseM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "n20clampM3x8",
+      "name": "n20clampM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "n20clampM3x8",
+      "name": "n20clampM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "photoM3x8",
+      "name": "photoM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "photoM3nut",
+      "name": "photoM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "flagM3x8",
+      "name": "flagM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "flagM3nut",
+      "name": "flagM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "homeM3x8",
+      "name": "homeM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "gateM3x8",
+      "name": "gateM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "gateM3nut",
+      "name": "gateM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "gateM3x8",
+      "name": "gateM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "gateM3nut",
+      "name": "gateM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "wheelM3x8",
+      "name": "wheelM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "wheelM3nut",
+      "name": "wheelM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "wheelM3x8",
+      "name": "wheelM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "wheelM3nut",
+      "name": "wheelM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "feedM3x8",
+      "name": "feedM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "feedM3nut",
+      "name": "feedM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "separatorpad",
+      "name": "separatorpad",
+      "triangles": 12,
+      "closed": true
+    },
+    {
+      "id": "couplerM3x8",
+      "name": "couplerM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "couplerM3nut",
+      "name": "couplerM3nut",
+      "triangles": 280,
+      "closed": true
+    },
+    {
+      "id": "couplerM3x8",
+      "name": "couplerM3x8",
+      "triangles": 404,
+      "closed": true
+    },
+    {
+      "id": "couplerM3nut",
+      "name": "couplerM3nut",
+      "triangles": 280,
+      "closed": true
+    }
+  ]
+}

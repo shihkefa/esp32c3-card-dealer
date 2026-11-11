@@ -1,0 +1,22 @@
+V1.0.0 BIN燒錄說明
+
+第一次燒錄：
+使用專案根目錄的「發牌機_V1.0.0_整合燒錄.bin」，或bin/CardDealer.ino.merged.bin。
+兩個檔案內容相同，包含bootloader、分區表、啟動資料與主程式。
+設定ESP32-C3、DIO、4MB Flash，從0x0000寫入，完成後按RESET。
+整合檔涵蓋全部4MB，也會清除NVS設定、圈數校正及既有檔案分區。
+
+bin內另外三個檔案：
+CardDealer.ino.bootloader.bin：bootloader，位址0x0000。
+CardDealer.ino.partitions.bin：分區表，位址0x8000。
+CardDealer.ino.bin：主程式，app0位址0x10000。
+單獨主程式不可當成整合檔寫到0x0000。
+首次安裝請用整合檔，因為以上三個檔案沒有單列otadata初始化映像。
+只有已使用本套相同分區表且從app0啟動的裝置，才適用直接在0x10000更新主程式。
+主程式單獨更新且不抹除NVS時，可以沿用相同格式的設定；完整整合檔則會重置。
+
+USB與供電：
+用SuperMini原生USB口及資料線，接電腦前先拔JP-ESP5V，GND共地。
+這不是機殼上的TP4056充電口；只關總開關不能取代拔除5V分支。
+若需要同時測馬達，馬達由電池升壓獨立供電，JP保持拔除。
+測完先拔USB，再裝回JP跳帽。首次上電先空牌倉，依使用與首次測試.txt測試及校正。

@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>PCF8574 I/O Expansion Module | Open ImpulseOpen Impulse</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="https://www.openimpulse.com/blog/wp-content/themes/twentyeleven-child/style.css" />
+<link rel="pingback" href="https://www.openimpulse.com/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://www.openimpulse.com/blog/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.3.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.openimpulse.com/blog/products-page/product-category/pcf8574-io-expansion-module/" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Open Impulse &raquo; Feed" href="https://www.openimpulse.com/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Open Impulse &raquo; Comments Feed" href="https://www.openimpulse.com/blog/comments/feed/" />
+<link rel='stylesheet' id='ad-gallery-style-css'  href='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce-dynamic-gallery/assets/js/mygallery/jquery.ad-gallery.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce_fancybox_styles-css'  href='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce-dynamic-gallery/assets/js/fancybox/fancybox.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ajax-wpsc-autocomplete-style-css'  href='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce-predictive-search/assets/js/ajax-autocomplete/jquery.autocomplete.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpsc-thickbox-css'  href='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce/wpsc-core/js/thickbox.css?ver=3.8.14.1.6720b163bc' type='text/css' media='all' />
+<link rel='stylesheet' id='wpsc-theme-css-css'  href='https://www.openimpulse.com/blog/wp-content/themes/twentyeleven-child/wpsc-default.css?ver=3.8.14.1.6720b163bc' type='text/css' media='all' />
+<style type='text/css'>
+
+		/*
+		* Default View Styling
+		*/
+		div.default_product_display div.textcol{
+			margin-left: 179px !important;
+			min-height: 169px;
+			_height: 169px;
+		}
+
+		div.default_product_display  div.textcol div.imagecol{
+			position:absolute;
+			top:0px;
+			left: 0px;
+			margin-left: -179px !important;
+		}
+
+		div.default_product_display  div.textcol div.imagecol a img {
+			width: 169px;
+			height: 169px;
+		}
+
+		.wpsc_category_grid_item  {
+			display:block;
+			float:left;
+			width: 169px;
+			height: 169px;
+		}
+		.wpsc_category_grid_item  span{
+			position:relative;
+			top:18.555555555556px;
+		}
+		div.default_product_display div.item_no_image a  {
+			width: 167px;
+		}
+
+		div.default_product_display .imagecol img.no-image, #content div.default_product_display .imagecol img.no-image {
+			width: 169px;
+			height: 169px;
+        }
+
+		
+		/*
+		* Single View Styling
+		*/
+
+		div.single_product_display div.item_no_image  {
+			width: 298px;
+			height: 298px;
+		}
+		div.single_product_display div.item_no_image a  {
+			width: 298px;
+		}
+
+		div.single_product_display div.textcol{
+			margin-left: 310px !important;
+			min-height: 300px;
+			_height: 300px;
+		}
+
+
+		div.single_product_display  div.textcol div.imagecol{
+			position:absolute;
+
+			margin-left: -310px !important;
+		}
+
+		div.single_product_display  div.textcol div.imagecol a img {
+			width: 300px;
+			height: 300px;
+		}
+
+	div#categorydisplay{
+		display: block;
+	}
+
+	div#branddisplay{
+		display: none;
+	}
+
+</style>
+<link rel='stylesheet' id='wpsc-theme-css-compatibility-css'  href='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce/wpsc-components/theme-engine-v1/templates/compatibility.css?ver=3.8.14.1.6720b163bc' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-subscriptions-css'  href='https://www.openimpulse.com/blog/wp-content/plugins/jetpack/modules/subscriptions/subscriptions.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-widgets-css'  href='https://www.openimpulse.com/blog/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003' type='text/css' media='all' />
+<link rel='stylesheet' id='easy_table_style-css'  href='https://www.openimpulse.com/blog/wp-content/plugins/easy-table/themes/default/style.css?ver=1.4' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpsc_vars = {"wpsc_ajax":{"ajaxurl":"\/blog\/wp-admin\/admin-ajax.php","spinner":"https:\/\/www.openimpulse.com\/blog\/wp-admin\/images\/spinner.gif","no_quotes":"It appears that there are no shipping quotes for the shipping information provided.  Please check the information and try again.","ajax_get_cart_error":"There was a problem getting the current contents of the shopping cart.","slide_to_shipping_error":true},"base_url":"https:\/\/www.openimpulse.com\/blog","WPSC_URL":"https:\/\/www.openimpulse.com\/blog\/wp-content\/plugins\/wp-e-commerce","WPSC_IMAGE_URL":"https:\/\/www.openimpulse.com\/blog\/wp-content\/uploads\/wpsc\/product_images\/","WPSC_CORE_IMAGES_URL":"https:\/\/www.openimpulse.com\/blog\/wp-content\/plugins\/wp-e-commerce\/wpsc-core\/images","fileThickboxLoadingImage":"https:\/\/www.openimpulse.com\/blog\/wp-content\/plugins\/wp-e-commerce\/wpsc-core\/images\/loadingAnimation.gif","msg_shipping_need_recalc":"Please click the <em>Calculate<\/em> button to refresh your shipping quotes, as your shipping information has been modified.","no_country_selected":"Please select a country","no_region_selected_format":"Please select a %s","no_region_label":"State\/Province","base_country":"DE","wpsc_country_CA_regions":{"1":"Alberta","2":"British Columbia","3":"Manitoba","4":"New Brunswick","5":"Newfoundland and Labrador","6":"Northwest Territories","7":"Nova Scotia","8":"Nunavut","9":"Ontario","10":"Prince Edward Island","11":"Quebec","12":"Saskatchewan","13":"Yukon"},"wpsc_country_CA_region_label":"Province","wpsc_country_US_regions":{"14":"Alabama","15":"Alaska","16":"Arizona","17":"Arkansas","18":"California","19":"Colorado","20":"Connecticut","21":"Delaware","22":"Florida","23":"Georgia","24":"Hawaii","25":"Idaho","26":"Illinois","27":"Indiana","28":"Iowa","29":"Kansas","30":"Kentucky","31":"Louisiana","32":"Maine","33":"Maryland","34":"Massachusetts","35":"Michigan","36":"Minnesota","37":"Mississippi","38":"Missouri","39":"Montana","40":"Nebraska","41":"Nevada","42":"New Hampshire","43":"New Jersey","44":"New Mexico","45":"New York","46":"North Carolina","47":"North Dakota","48":"Ohio","49":"Oklahoma","50":"Oregon","51":"Pennsylvania","52":"Rhode Island","53":"South Carolina","54":"South Dakota","55":"Tennessee","56":"Texas","57":"Utah","58":"Vermont","59":"Virginia","60":"Washington","61":"Washington DC","62":"West Virginia","63":"Wisconsin","64":"Wyoming"},"wpsc_country_US_region_label":"State","wpsc_country_GB_region_label":"County","wpsc_countries":{"AF":"Afghanistan","AX":"Aland Islands","AL":"Albania","DZ":"Algeria","AS":"American Samoa","AD":"Andorra","AO":"Angola","AI":"Anguilla","AQ":"Antarctica","AG":"Antigua and Barbuda","AR":"Argentina","AM":"Armenia","AW":"Aruba","AU":"Australia","AT":"Austria","AZ":"Azerbaijan","BS":"Bahamas","BH":"Bahrain","BD":"Bangladesh","BB":"Barbados","BY":"Belarus","BE":"Belgium","BZ":"Belize","BJ":"Benin","BM":"Bermuda","BT":"Bhutan","BO":"Bolivia","BA":"Bosnia-Herzegovina","BW":"Botswana","BV":"Bouvet Island","BR":"Brazil","IO":"British Indian Ocean Territory","BN":"Brunei Darussalam","BG":"Bulgaria","BF":"Burkina Faso","BI":"Burundi","KH":"Cambodia","CM":"Cameroon","CA":"Canada","CV":"Cape Verde","KY":"Cayman Islands","CF":"Central African Republic","TD":"Chad","CL":"Chile","CN":"China","CX":"Christmas Island","CC":"Cocos (Keeling) Islands","CO":"Colombia","KM":"Comoros","CG":"Congo","CK":"Cook Islands","CR":"Costa Rica","HR":"Croatia","CU":"Cuba","CY":"Cyprus","CZ":"Czech Rep.","CD":"Democratic Republic of Congo","DK":"Denmark","DJ":"Djibouti","DM":"Dominica","DO":"Dominican Republic","EC":"Ecuador","EG":"Egypt","SV":"El Salvador","GQ":"Equatorial Guinea","ER":"Eritrea","EE":"Estonia","ET":"Ethiopia","FK":"Falkland Islands","FO":"Faroe Islands","FJ":"Fiji","FI":"Finland","FR":"France","TF":"French Southern Territories","GA":"Gabon","GM":"Gambia","GE":"Georgia","DE":"Germany","GH":"Ghana","GI":"Gibraltar","GR":"Greece","GL":"Greenland","GD":"Grenada","GP":"Guadeloupe (French)","GU":"Guam (USA)","GT":"Guatemala","GF":"Guernsey","GN":"Guinea","GW":"Guinea Bissau","GY":"Guyana","HT":"Haiti","HM":"Heard Island and McDonald Islands","HN":"Honduras","HK":"Hong Kong","HU":"Hungary","IS":"Iceland","IN":"India","ID":"Indonesia","IR":"Iran","IQ":"Iraq","IE":"Ireland","IM":"Isle of Man","IL":"Israel","IT":"Italy","CI":"Ivory Coast","JM":"Jamaica","JP":"Japan","JE":"Jersey","JO":"Jordan","KZ":"Kazakhstan","KE":"Kenya","KI":"Kiribati","KP":"Korea, North","KR":"Korea, South","KW":"Kuwait","KG":"Kyrgyzstan","LA":"Laos","LV":"Latvia","LB":"Lebanon","LS":"Lesotho","LR":"Liberia","LY":"Libya","LI":"Liechtenstein","LT":"Lithuania","LU":"Luxembourg","MO":"Macau","MK":"Macedonia","MG":"Madagascar","MW":"Malawi","MY":"Malaysia","MV":"Maldives","ML":"Mali","MT":"Malta","MH":"Marshall Islands","MQ":"Martinique (French)","MR":"Mauritania","MU":"Mauritius","YT":"Mayotte","MX":"Mexico","FM":"Micronesia","MD":"Moldova","MC":"Monaco","MN":"Mongolia","ME":"Montenegro","MS":"Montserrat","MA":"Morocco","MZ":"Mozambique","MM":"Myanmar","NA":"Namibia","NR":"Nauru","NP":"Nepal","NL":"Netherlands","NC":"New Caledonia (French)","NZ":"New Zealand","NI":"Nicaragua","NE":"Niger","NG":"Nigeria","NU":"Niue","NF":"Norfolk Island","MP":"Northern Mariana Islands","NO":"Norway","OM":"Oman","PK":"Pakistan","PW":"Palau","PA":"Panama","PG":"Papua New Guinea","PY":"Paraguay","PE":"Peru","PH":"Philippines","PN":"Pitcairn Island","PL":"Poland","PF":"Polynesia (French)","PT":"Portugal","PR":"Puerto Rico","QA":"Qatar","RE":"Reunion (French)","RO":"Romania","RU":"Russia","RW":"Rwanda","SH":"Saint Helena","KN":"Saint Kitts & Nevis Anguilla","LC":"Saint Lucia","PM":"Saint Pierre and Miquelon","VC":"Saint Vincent & Grenadines","WS":"Samoa","SM":"San Marino","ST":"Sao Tome and Principe","SA":"Saudi Arabia","SN":"Senegal","RS":"Serbia","SC":"Seychelles","SL":"Sierra Leone","SG":"Singapore","SK":"Slovakia","SI":"Slovenia","SB":"Solomon Islands","SO":"Somalia","ZA":"South Africa","GS":"South Georgia & South Sandwich Islands","ES":"Spain","LK":"Sri Lanka","SD":"Sudan","SR":"Suriname","SJ":"Svalbard and Jan Mayen Islands","SZ":"Swaziland","SE":"Sweden","CH":"Switzerland","SY":"Syria","TW":"Taiwan","TJ":"Tajikistan","TZ":"Tanzania","TH":"Thailand","TG":"Togo","TK":"Tokelau","TO":"Tonga","TT":"Trinidad and Tobago","TN":"Tunisia","TR":"Turkey","TM":"Turkmenistan","TC":"Turks and Caicos Islands","TV":"Tuvalu","US":"USA","UM":"USA Minor Outlying Islands","UG":"Uganda","UA":"Ukraine","AE":"United Arab Emirates","GB":"United Kingdom","UY":"Uruguay","UZ":"Uzbekistan","VU":"Vanuatu","VA":"Vatican","VE":"Venezuela","VN":"Vietnam","VG":"Virgin Islands (British)","VI":"Virgin Islands (USA)","WF":"Wallis and Futuna Islands","EH":"Western Sahara","YE":"Yemen","ZM":"Zambia","ZW":"Zimbabwe"},"wpsc_checkout_unique_name_to_form_id_map":{"your-billingcontact-details":"wpsc_checkout_form_1","billingfirstname":"wpsc_checkout_form_2","billinglastname":"wpsc_checkout_form_3","billingaddress":"wpsc_checkout_form_4","billingcity":"wpsc_checkout_form_5","billingstate":"wpsc_checkout_form_6","billingcountry":"wpsc_checkout_form_7","billingpostcode":"wpsc_checkout_form_8","billingphone":"wpsc_checkout_form_18","billingemail":"wpsc_checkout_form_9","delivertoafriend":"wpsc_checkout_form_10","shippingfirstname":"wpsc_checkout_form_11","shippinglastname":"wpsc_checkout_form_12","shippingaddress":"wpsc_checkout_form_13","shippingcity":"wpsc_checkout_form_14","shippingstate":"wpsc_checkout_form_15","shippingcountry":"wpsc_checkout_form_16","shippingpostcode":"wpsc_checkout_form_17"},"wpsc_checkout_item_active":{"your-billingcontact-details":true,"billingfirstname":true,"billinglastname":true,"billingaddress":true,"billingcity":true,"billingstate":true,"billingcountry":true,"billingpostcode":true,"billingphone":true,"billingemail":true,"delivertoafriend":true,"shippingfirstname":true,"shippinglastname":true,"shippingaddress":true,"shippingcity":true,"shippingstate":true,"shippingcountry":true,"shippingpostcode":true},"wpsc_checkout_item_required":{"your-billingcontact-details":false,"billingfirstname":true,"billinglastname":true,"billingaddress":true,"billingcity":true,"billingstate":false,"billingcountry":true,"billingpostcode":false,"billingphone":true,"billingemail":true,"delivertoafriend":false,"shippingfirstname":false,"shippinglastname":false,"shippingaddress":false,"shippingcity":false,"shippingstate":false,"shippingcountry":false,"shippingpostcode":false},"store_uses_shipping":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce/wpsc-core/js/wp-e-commerce.js?ver=3.8.14.1.6720b163bc'></script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce/wpsc-admin/js/jquery.livequery.js?ver=1.0.3'></script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce/wpsc-core/js/user.js?ver=3.8.14.16720b163bc'></script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce/wpsc-core/js/thickbox.js?ver=Instinct_e-commerce'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.openimpulse.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.openimpulse.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='shortlink' href='https://www.openimpulse.com/blog/?p=12683' />
+<!-- Tracking code easily added by NK Google Analytics -->
+<script> 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+ga('create', 'UA-30315340-1', 'openimpulse.com'); 
+ga('require', 'displayfeatures'); 
+ga('send', 'pageview'); 
+</script> 
+<link rel='alternate' type='application/rss+xml' title='Open Impulse Product List RSS' href='https://www.openimpulse.com/blog?wpsc_action=rss'/>        <style>
+            .wpec-related-wrap{margin: 20px 0; padding: 0; display: inline-block;}
+            .wpec-related-product{float: left; padding: 0 3px; width: 110px;}
+            .wpec-related-title{margin:0 !important;}
+        </style>
+                    
+	<style type="text/css" id="twentyeleven-header-css">
+			#site-title,
+		#site-description {
+			position: absolute !important;
+			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+	<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '195296210949374'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=195296210949374&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+</head>
+
+<body class="single single-wpsc-product postid-12683 two-column right-sidebar">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="https://www.openimpulse.com/blog/" rel="home">Open Impulse</a></span></h1>
+				<h2 id="site-description">Arduino, Electronic modules and Robotics</h2>
+			</hgroup>
+
+						<a href="https://www.openimpulse.com/blog/">
+									<img src="https://www.openimpulse.com/blog/wp-content/uploads/2013/01/header21.jpg" width="1000" height="100" alt="" />
+							</a>
+			
+							<div class="only-search with-image">
+					<form method="get" id="searchform" action="https://www.openimpulse.com/blog/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+				</div>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu"><ul><li ><a href="https://www.openimpulse.com/blog/">Home</a></li><li class="page_item page-item-179"><a href="https://www.openimpulse.com/blog/shipping-delivery/">Shipping &#038; Delivery</a></li><li class="page_item page-item-8451"><a href="https://www.openimpulse.com/blog/refund-policy/">Refunds</a></li><li class="page_item page-item-8455"><a href="https://www.openimpulse.com/blog/privacy-policy/">Privacy</a></li><li class="page_item page-item-2097"><a href="https://www.openimpulse.com/blog/about-us/">About Us</a></li><li class="page_item page-item-113"><a href="https://www.openimpulse.com/blog/contact/">Contact</a></li><li class="page_item page-item-355"><a href="https://www.openimpulse.com/blog/products-page/products/">Products</a></li><li class="page_item page-item-5"><a href="https://www.openimpulse.com/blog/products-page/checkout/">Checkout</a></li><li class="page_item page-item-6"><a href="https://www.openimpulse.com/blog/products-page/transaction-results/">Transaction Results</a></li><li class="page_item page-item-7"><a href="https://www.openimpulse.com/blog/products-page/your-account/">Your Account</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+				
+<article id="post-12683" class="post-12683 wpsc-product type-wpsc-product status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">PCF8574 I/O Expansion Module</h1>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<div id="single_product_page_container">
+	
+	<div class="wpsc-breadcrumbs"><a class="wpsc-crumb" id="wpsc-crumb-4" href="https://www.openimpulse.com/blog/products-page/">Hello Customers, we would like to inform everyone that we will not be accepting orders until we fix the issue of disappearing shipping cost from your orders. We are still investigating and fixing the settings so that the correct shipping cost will be displayed in every order. Thank you very much for understanding</a> &raquo; <a class="wpsc-crumb" id="wpsc-crumb-product-category" href="https://www.openimpulse.com/blog/products-page/product-category/">All Products</a> &raquo; <span class="wpsc-crumb" id="wpsc-crumb-pcf8574-io-expansion-module">PCF8574 I/O Expansion Module</span></div>	
+	<div class="single_product_display group">
+			<table width="100%" cellpadding="0" cellspacing="0" style="border-top: 0; border-bottom: 0; padding: 0; margin: 0;">
+			<tr>
+				<td width="100%" style="border-top: 0; border-bottom: 0; padding: 0; margin: 0;">
+					<div class="imagecol" style="margin-bottom: 10px;">
+														<a rel="PCF8574 I/O Expansion Module" class="thickbox preview_link" href="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-1.jpg">
+									<img class="product_image" id="product_image_12683" alt="PCF8574 I/O Expansion Module" title="PCF8574 I/O Expansion Module" src="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-1-300x300.jpg"/>
+								</a>
+								<div class="images">
+          <div class="product_gallery"><style>
+				.single_product_display .imagecol { max-width:100%; }
+				.single_product_display .imagecol > a { display: none !important;position: absolute;z-index: -1;left:-1000em;}
+				#TB_window{width:auto !important;}
+                .ad-gallery {
+                        width: 296px;
+						position:relative;
+                }
+                .ad-gallery .ad-image-wrapper {
+					background:#FFFFFF;
+                    width: 294px;
+                    height: 294px;
+                    margin: 0px;
+                    position: relative;
+                    overflow: hidden !important;
+                    padding:0;
+                    border:1px solid ##CCCCCC;
+					z-index:8 !important;
+                }
+				.ad-gallery .ad-image-wrapper .ad-image{width:100% !important;text-align:center;}
+                .ad-image img{
+                    max-width:296px !important;
+                }
+                .ad-gallery .ad-thumbs li{
+                    padding-right: 2px !important;
+                }
+                .ad-gallery .ad-thumbs li.last_item{
+                    padding-right: 15px !important;
+                }
+                .ad-gallery .ad-thumbs li div{
+                    height: 75px !important;
+                    width: 105px !important;
+                }
+                .ad-gallery .ad-thumbs li a {
+                    width: 105px !important;
+                    height: 75px !important;	
+                }
+                * html .ad-gallery .ad-forward, .ad-gallery .ad-back{
+                    height:	75px !important;
+                }
+				
+				/*Gallery*/
+				.ad-image-wrapper{
+					overflow:inherit !important;
+				}
+				
+				.ad-gallery .ad-controls {
+					background: #FFFFFF !important;
+					border:1px solid #FFFFFF;
+					color: #FFFFFF;
+					font-size: 12px;
+					height: 22px;
+					margin-top: 20px !important;
+					padding: 8px 2% !important;
+					position: relative;
+					width: 95.8%;
+					-khtml-border-radius:5px;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border-radius: 5px;display:none;
+				}
+				
+				.ad-gallery .ad-info {
+					float: right;
+					font-size: 14px;
+					position: relative;
+					right: 8px;
+					text-shadow: 1px 1px 1px #000000 !important;
+					top: 1px !important;
+				}
+				.ad-gallery .ad-nav .ad-thumbs{
+					margin:7px 4% 0 !important;
+				}
+				.ad-gallery .ad-thumbs .ad-thumb-list {
+					margin-top: 0px !important;
+				}
+				.ad-thumb-list{
+				}
+				.ad-thumb-list li{
+					background:none !important;
+					padding-bottom:0 !important;
+					padding-left:0 !important;
+					padding-top:0 !important;
+				}
+				.ad-gallery .ad-image-wrapper .ad-image-description {
+					background: rgba(0,0,0,0.5);
+					filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr="#88000000", EndColorStr="#88000000");
+
+					margin: 0 0 25px !important;font:normal 12px Arial, sans-serif !important; color:#FFFFFF !important;
+					left: 0;
+					line-height: 1.4em;
+					padding:2% 2% 2% !important;
+					position: absolute;
+					text-align: left;
+					width: 96.1% !important;
+					z-index: 10;
+					font-weight:normal;
+				}
+				.product_gallery .ad-gallery .ad-image-wrapper {
+					background: none repeat scroll 0 0 #FFFFFF;
+					border: 1px solid #CCCCCC !important;
+					padding-bottom:25px;
+				}
+				.product_gallery .slide-ctrl, .product_gallery .icon_zoom {
+					display:block !important;;
+					height: 9px !important;
+					line-height: 9px !important;font:normal 12px Arial, sans-serif !important; color:#000000 !important;
+				}.ad-gallery .lazy-load{
+						background:#000000 !important;
+						top:305px !important;
+						opacity:1 !important;
+						margin-top:25px !important;
+					}
+				.product_gallery .icon_zoom {
+					background: #FFFFFF;
+					border-right: 1px solid #FFFFFF;
+					border-top: 1px solid #CCCCCC;
+				}
+				.product_gallery .slide-ctrl {
+					background:#FFFFFF;
+					border-left: 1px solid #CCCCCC;
+					border-top: 1px solid #CCCCCC;
+				}
+				.product_gallery .slide-ctrl .ad-slideshow-stop-slide,.product_gallery .slide-ctrl .ad-slideshow-start-slide,.product_gallery .icon_zoom{
+					line-height: 9px !important;font:normal 12px Arial, sans-serif !important; color:#000000 !important;
+				}
+				.product_gallery .ad-gallery .ad-thumbs li a {
+					border:1px solid #CCCCCC !important;
+				}
+				.ad-gallery .ad-thumbs li a.ad-active {
+					border: 1px solid #000000 !important;
+				}
+            </style><script type="text/javascript">
+                jQuery(function() {
+                    var settings_defaults_12683_8192 = { loader_image: "https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce-dynamic-gallery/assets/js/mygallery/loader.gif",
+                        start_at_index: 0,
+                        gallery_ID: "12683_8192",
+						lightbox_class: "lightbox",
+                        description_wrapper: false,
+                        thumb_opacity: 0.5,
+                        animate_first_image: false,
+                        animation_speed: 2000,
+                        width: false,
+                        height: false,
+                        display_next_and_prev: true,
+                        display_back_and_forward: true,
+                        scroll_jump: 0,
+                        slideshow: {
+                            enable: true,
+                            autostart: true,
+                            speed: 4000,
+                            start_label: "START SLIDESHOW",
+                            stop_label: "STOP SLIDESHOW",
+							zoom_label: "ZOOM +",
+                            stop_on_scroll: true,
+                            countdown_prefix: "(",
+                            countdown_sufix: ")",
+                            onStart: false,
+                            onStop: false
+                        },
+                        effect: "slide-vert", 
+                        enable_keyboard_move: true,
+                        cycle: true,
+                        callbacks: {
+                        init: false,
+                        afterImageVisible: false,
+                        beforeImageVisible: false
+                    }
+                };
+                jQuery("#gallery_12683_8192").adGallery(settings_defaults_12683_8192);
+            });
+            </script><div id="gallery_12683_8192" class="ad-gallery" style="width: 296px;">
+                <div class="ad-image-wrapper"></div>
+                <div class="ad-controls"> </div>
+                  <div class="ad-nav">
+                    <div class="ad-thumbs">
+                      <ul class="ad-thumb-list"><li class="first_item"><a alt="" class="gallery_product_12683_8192 gallery_product_12683_8192_0"  title="" rel="gallery_product_12683_8192" href="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-1.jpg"><div><img idx="0" style="width:75px !important;height:75px !important" src="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-1-75x75.jpg" alt="" class="image0" width="75" height="75"></div></a></li><li class=""><a alt="" class="gallery_product_12683_8192 gallery_product_12683_8192_1"  title="" rel="gallery_product_12683_8192" href="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-2.jpg"><div><img idx="1" style="width:75px !important;height:75px !important" src="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-2-75x75.jpg" alt="" class="image1" width="75" height="75"></div></a></li><li class=""><a alt="" class="gallery_product_12683_8192 gallery_product_12683_8192_2"  title="" rel="gallery_product_12683_8192" href="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-3.jpg"><div><img idx="2" style="width:75px !important;height:75px !important" src="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-3-75x75.jpg" alt="" class="image2" width="75" height="75"></div></a></li><li class="last_item"><a alt="" class="gallery_product_12683_8192 gallery_product_12683_8192_3"  title="" rel="gallery_product_12683_8192" href="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-4.jpg"><div><img idx="3" style="width:75px !important;height:75px !important" src="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-4-75x75.jpg" alt="" class="image3" width="75" height="75"></div></a></li><script type="text/javascript">(function($){$(function(){$(document).on("click", ".ad-gallery .lightbox", function(ev) { if( $(this).attr("rel") == "gallery_12683_8192") {
+									var idx = $("#gallery_12683_8192 .ad-image img").attr("idx");$.fancybox([{href:"https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-1.jpg",title:""},{href:"https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-2.jpg",title:""},{href:"https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-3.jpg",title:""},{href:"https://www.openimpulse.com/blog/wp-content/uploads/2017/01/PCF8574-IO-Expansion-Module-4.jpg",title:""}],{
+										 'index': idx
+      								});} });});})(jQuery);</script></ul>
+                        </div>
+                      </div>
+                    </div>
+          		</div>
+        </div>											</div><!--close imagecol-->
+				
+					<!-- optimal height: 120 px without gallery; 134 px with gallery; 118 px with gallery and sku display -->
+					<div style="line-height: 1.2em; padding: 0; vertical-align: middle; display: table-cell; height: 118px;">
+                                		This is a PCF8574 IO expansion module suitable for MCU I/O expansion.					</div>
+					<hr/>
+<p class="sku">SKU: SLI521771091493,WUM542346790115</p>
+					<div style="margin-right: 10px;">
+						<form class="product_form" enctype="multipart/form-data" action="https://www.openimpulse.com/blog/products-page/product-category/pcf8574-io-expansion-module/" method="post" name="1" id="product_12683">
+							<div class="wpsc_product_price" style="line-height: 1.2em;">
+																	<p class="pricedisplay 12683">Price: <span id='product_price_12683' class="currentprice pricedisplay">2.34 $</span></p>
+																			<p class="pricedisplay 12683">Old Price: <span class="oldprice" id="old_product_price_12683">3.17 $</span></p>
+									<!--
+																			<p class="pricedisplay product_12683">You save: <span class="yousave" id="yousave_12683"><span class='pricedisplay'>0.83 &#036;</span>! (26.31%)</span></p>
+									-->
+									    <!-- multi currency code -->
+																									
+																																			<div id="stock_display_12683" class="in_stock">Product in stock</div>
+																								</div><!--close wpsc_product_price-->
+<div style="float:right; margin-top: 6px; margin-right: 8px;">
+<!--
+    <div style="float: right;">
+	<div id="avgthreatlabs_safetybadge_small"><noscript><a href="http://www.avgthreatlabs.com?utm_source=H&utm_medium=NA&utm_campaign=SSBW" target="_blank">AVG Threatlabs</a></noscript></div><script language="javascript" src="https://api.avgthreatlabs.com/static/js/security_s.js"></script>
+    </div>
+    <br/>
+-->
+
+    <div style="float: right;">
+	<img style="border: 0;" src="https://www.openimpulse.com/blog/wp-content/themes/twentyeleven-child/images/comodo_secure_100x85_white.png"></img><br/>
+	<span style="font-weight:bold;font-size:12px; padding-left:8px; color:#77BAE4;">SSL Certificate</span>
+    </div>
+
+<!--
+   <div style="float: right;">
+	<img style="border: 0;" src="https://www.alphassl.com/images/alpha-ssl-site-seal.gif"></img>
+-->
+<!--- Secure Site Seal - DO NOT EDIT --->
+<!--
+<span id="ss_img_wrapper_115-55_image_en"><a href="http://www.alphassl.com/ssl-certificates/wildcard-ssl.html" target="_blank" title="SSL Certificates"><img alt="Wildcard SSL Certificates" border=0 id="ss_img" src="//seal.alphassl.com/SiteSeal/images/alpha_noscript_115-55_en.gif" title="SSL Certificate"></a></span><script type="text/javascript" src="//seal.alphassl.com/SiteSeal/alpha_image_115-55_en.js"></script>
+-->
+<!--- Secure Site Seal - DO NOT EDIT --->
+<!--
+	<script type="text/javascript" src="https://www.startssl.com/validation.js"></script>
+    </div>
+-->
+</div>
+																					    <fieldset><legend>Quantity</legend>
+											    <div class="wpsc_quantity_update">
+											    <input type="text" id="wpsc_quantity_update_12683" name="wpsc_quantity_update" size="2" value="1" />
+											    <input type="hidden" name="key" value="-1"/>
+											    <input type="hidden" name="wpsc_update_quantity" value="true" />
+							    </div><!--close wpsc_quantity_update-->
+							    </fieldset>
+							
+							
+																				
+								
+																		
+							
+							<!--sharethis-->
+														<!--end sharethis-->
+							<input type="hidden" value="add_to_cart" name="wpsc_ajax_action" />
+							<input type="hidden" value="12683" name="product_id" />					
+												
+							
+																								<div class="wpsc_buy_button_container">
+																					<input type="submit" value="Add To Cart" name="Buy" class="wpsc_buy_button" onclick="buyButtonClickHandler()" id="product_12683_submit_button"/>
+																					<div class="wpsc_loading_animation">
+											<img title="Loading" alt="Loading" src="https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce/wpsc-components/theme-engine-v1/templates/wpsc-images/indicator.gif" />
+											Updating cart...										</div><!--close wpsc_loading_animation-->
+									</div><!--close wpsc_buy_button_container-->
+																												</form><!--close product_form-->
+					
+											</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 0; border-bottom: 0;">
+					<div class="productcol">
+						
+
+												<div class="product_description">
+							<h1>Overview</h1>
+<p>This is a PCF8574 IO expansion module suitable for MCU I/O expansion. It supports two types of <span style="font-weight: normal; color: #404040;">access to the target board interface: pin or row of seats.</span></p>
+<p>It can connect up to 8 PCF8574 IO expansion board to the I2C bus, providing up to 64 I/O ports. This is applicable in projects that needs control of LEDs.</p>
+<h1><span style="color: #000000; font-weight: bold;">Specifications</span></h1>
+<ul>
+<li>Voltage: 2.5 V to 6 V</li>
+<li>Current consumption: 25 mA</li>
+<li>Communication I2C at maximum frequency of 100 kHz</li>
+<li>I2C 3 pins can be selected so that it can bind up to 8 modules on the same bus</li>
+<li>Standby current: 10 mA (maximum)</li>
+</ul>
+						</div><!--close product_description -->
+						<!--		
+													<div class="single_additional_description">
+								<p>This is a PCF8574 IO expansion module suitable for MCU I/O expansion.</p>
+							</div>
+								-->
+<!-- Florin start -->
+						<h2>Downloads</h2><ul><li style="list-style-type: none;"><img height="32" style="vertical-align: middle;" src="https://www.openimpulse.com/blog/wp-content/themes/twentyeleven/images/page_white_pdf.png" 
+						alt="application/pdf">&nbsp;<a style="vertical-align: middle;" href="https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/PCF8574-Datasheet.pdf">PCF8574 Datasheet.pdf</a></li><li style="list-style-type: none;"><img height="32" style="vertical-align: middle;" src="https://www.openimpulse.com/blog/wp-content/themes/twentyeleven/images/page_white_pdf.png" 
+						alt="application/pdf">&nbsp;<a style="vertical-align: middle;" href="https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/PCF8574-IO-Expansion-Module-Schematic.pdf">PCF8574 IO Expansion Module Schematic.pdf</a></li><li style="list-style-type: none;"><img height="32" style="vertical-align: middle;" src="https://www.openimpulse.com/blog/wp-content/themes/twentyeleven/images/page_white_zip.png"
+                                                alt="application/zip">&nbsp;<a style="vertical-align: middle;" href="https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/AVR-PCF8574-IO-Expansion-Module-Example.zip">AVR PCF8574 IO Expansion Module Example.zip</a></li><li style="list-style-type: none;"><img height="32" style="vertical-align: middle;" src="https://www.openimpulse.com/blog/wp-content/themes/twentyeleven/images/page_white_zip.png"
+                                                alt="application/zip">&nbsp;<a style="vertical-align: middle;" href="https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/C8051-PCF8574-IO-Expansion-Module-Example.zip">C8051 PCF8574 IO Expansion Module Example.zip</a></li><li style="list-style-type: none;"><img height="32" style="vertical-align: middle;" src="https://www.openimpulse.com/blog/wp-content/themes/twentyeleven/images/page_white_zip.png"
+                                                alt="application/zip">&nbsp;<a style="vertical-align: middle;" href="https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/STM8-PCF8574-IO-Expansion-Module-Example.zip">STM8 PCF8574 IO Expansion Module Example.zip</a></li></ul><!--
+<div style="float:left;margin-top: 6px;">
+<a target='_blank' href='http://www.endmalware.com/sites/check/2be025211a3650fe44af6a947'><img src='http://www.endmalware.com/sites/image/2be025211a3650fe44af6a947' /></a>
+
+<a href="http://www.verifymysite.net/stats/openimpulse.com" title="Reputation for openimpulse.com" target="_blank"><img src="http://www.verifymysite.net/reputation/img/badges/v4/medium/90.png" style="border:none;" alt="Rating for openimpulse.com"/></a>
+
+<script type="text/javascript" src="https://www.validsafe.com/seal-ivs.php?cid=31505&amp;domain=openimpulse.com&amp;size=1"></script>
+</div>
+-->
+
+<!-- Begin ScanVerify Seal Code -->
+<!--
+<script src=https://scanverify.com/javascript.js> </script>
+<a href=javascript:popitup('https://scanverify.com/siteverify.php?site=openimpulse.com')>
+<img src=https://scanverify.com/seal/seal.php?site=openimpulse.com border=0 ALT='ScanVerify.com Trust Seal' ></a>
+-->
+<!-- End ScanVerify Seal Code -->
+
+<!-- Florin end -->
+						<div class='wpec-related-wrap'><h2>Related Products</h2>
+                    <div class="wpec-related-product product-7909 product-category">
+
+                                                    <div class="wpec-related-image" id="related-pro-7909">
+                                    <a href="https://www.openimpulse.com/blog/products-page/product-category/ds3231-i2c-precision-clock-at24c32-memory/">
+
+                                                                                            <img class="product_image" id="product_image_7909" alt="DS3231 I2C Precision Clock with AT24C32 Memory" title="DS3231 I2C Precision Clock with AT24C32 Memory" src="https://www.openimpulse.com/blog/wp-content/uploads/2014/10/DS3231-I2C-Precision-Clock-with-AT24C32-Memory-1-100x100.jpg"/>
+                                                                            </a>
+                            </div><!--close imagecol-->
+                        <!-- florin start -->
+                            <h2 class="wpec-related-title">
+                                     
+                                            <a class="wpec-related-product-title" href="https://www.openimpulse.com/blog/products-page/product-category/ds3231-i2c-precision-clock-at24c32-memory/">DS3231 I2C Precision Clock with AT24C32 Memory</a>
+                                                                </h2>
+<!-- florin end -->
+
+                        
+                    </div><!-- close default_product_display -->
+
+
+                    <div class="wpec-related-product product-16662 product-category">
+
+                                                    <div class="wpec-related-image" id="related-pro-16662">
+                                    <a href="https://www.openimpulse.com/blog/products-page/product-category/yellow-push-button-module-module/">
+
+                                                                                            <img class="product_image" id="product_image_16662" alt="Yellow Push Button Module" title="Yellow Push Button Module" src="https://www.openimpulse.com/blog/wp-content/uploads/2017/02/Yellow-Push-Button-Module-3-100x100.jpg"/>
+                                                                            </a>
+                            </div><!--close imagecol-->
+                        <!-- florin start -->
+                            <h2 class="wpec-related-title">
+                                     
+                                            <a class="wpec-related-product-title" href="https://www.openimpulse.com/blog/products-page/product-category/yellow-push-button-module-module/">Yellow Push Button Module</a>
+                                                                </h2>
+<!-- florin end -->
+
+                        
+                    </div><!-- close default_product_display -->
+
+
+                    <div class="wpec-related-product product-13683 product-category">
+
+                                                    <div class="wpec-related-image" id="related-pro-13683">
+                                    <a href="https://www.openimpulse.com/blog/products-page/product-category/3010-fan-mounting-bracket-e3d-v6-3d-printer-head/">
+
+                                                                                            <img class="product_image" id="product_image_13683" alt="3010 Fan and Mounting Bracket for the E3D v6 3D Printer Head" title="3010 Fan and Mounting Bracket for the E3D v6 3D Printer Head" src="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/3010-Fan-and-Mounting-Bracket-for-the-E3D-v6-3D-Printer-Head-1-100x100.jpg"/>
+                                                                            </a>
+                            </div><!--close imagecol-->
+                        <!-- florin start -->
+                            <h2 class="wpec-related-title">
+                                     
+                                            <a class="wpec-related-product-title" href="https://www.openimpulse.com/blog/products-page/product-category/3010-fan-mounting-bracket-e3d-v6-3d-printer-head/">3010 Fan and Mounting Bracket for the E3D v6 3D Printer Head</a>
+                                                                </h2>
+<!-- florin end -->
+
+                        
+                    </div><!-- close default_product_display -->
+
+
+                    <div class="wpec-related-product product-5162 product-category">
+
+                                                    <div class="wpec-related-image" id="related-pro-5162">
+                                    <a href="https://www.openimpulse.com/blog/products-page/product-category/cp2102-usb-uart-converter-module/">
+
+                                                                                            <img class="product_image" id="product_image_5162" alt="CP2102 USB to UART Converter Module" title="CP2102 USB to UART Converter Module" src="https://www.openimpulse.com/blog/wp-content/uploads/2014/05/CP2102-USB-to-UART-Converter-Module-1-100x100.jpg"/>
+                                                                            </a>
+                            </div><!--close imagecol-->
+                        <!-- florin start -->
+                            <h2 class="wpec-related-title">
+                                     
+                                            <a class="wpec-related-product-title" href="https://www.openimpulse.com/blog/products-page/product-category/cp2102-usb-uart-converter-module/">CP2102 USB to UART Converter Module</a>
+                                                                </h2>
+<!-- florin end -->
+
+                        
+                    </div><!-- close default_product_display -->
+
+
+                    <div class="wpec-related-product product-12950 product-category">
+
+                                                    <div class="wpec-related-image" id="related-pro-12950">
+                                    <a href="https://www.openimpulse.com/blog/products-page/product-category/10pcs-26-2-5a-plastic-gear/">
+
+                                                                                            <img class="product_image" id="product_image_12950" alt="10pcs 26-2.5A Plastic Gear" title="10pcs 26-2.5A Plastic Gear" src="https://www.openimpulse.com/blog/wp-content/uploads/2017/01/26-2.5A-Plastic-Gear-100x100.jpg"/>
+                                                                            </a>
+                            </div><!--close imagecol-->
+                        <!-- florin start -->
+                            <h2 class="wpec-related-title">
+                                     
+                                            <a class="wpec-related-product-title" href="https://www.openimpulse.com/blog/products-page/product-category/10pcs-26-2-5a-plastic-gear/">10pcs 26-2.5A Plastic Gear</a>
+                                                                </h2>
+<!-- florin end -->
+
+                        
+                    </div><!-- close default_product_display -->
+
+</div><div class='clear'></div>
+						                        												
+					</div><!--close productcol-->
+		</td>
+		</tr>
+		</table>
+					<form onsubmit="submitform(this);return false;" action="https://www.openimpulse.com/blog/products-page/product-category/pcf8574-io-expansion-module/" method="post" name="product_12683" id="product_extra_12683">
+						<input type="hidden" value="12683" name="prodid"/>
+						<input type="hidden" value="12683" name="item"/>
+					</form>
+		</div><!--close single_product_display-->
+		
+		
+ 	
+
+</div><!--close single_product_page_container-->
+
+<script>
+fbq('track', 'ViewContent', {
+content_ids: ['12683'],
+content_type: 'product',
+value: 2.34,
+currency: 'USD'
+});
+</script>
+
+<script>
+var fbOnAddToCart = function() {
+var price = 2.34;
+var quantity = document.getElementsByName('wpsc_quantity_update')[0].value;
+
+fbq('track', 'AddToCart', {
+content_ids: ['12683'],
+content_type: 'product',
+value: price * quantity,
+currency: 'USD'
+});
+}
+
+//var originalClickHandler = document.getElementsByName('Buy')[0].click;
+
+buyButtonClickHandler = function(){
+        fbOnAddToCart();
+//        originalClickHandler();
+}
+
+//document.getElementsByName('Buy')[0].click = buyButtonClickHandler;
+
+</script>
+			</div><!-- .entry-content -->
+	<footer class="entry-meta">
+			</footer><!-- .entry-meta -->
+</article><!-- #post-12683 -->
+
+					<div id="comments">
+	
+	
+	
+			
+</div><!-- #comments -->
+
+			</div><!-- #content -->
+		</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="products_predictive_search-2" class="widget widget_products_predictive_search"><h3 class="widget-title">Product Search</h3><script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery(document).on("click", "#bt_pp_search_2", function(){
+		if (jQuery("#pp_course_2").val() != '' && jQuery("#pp_course_2").val() != '') {
+			var pp_search_url_2 = 'https://www.openimpulse.com/blog/ecommerce-search/keyword/'+ jQuery("#pp_course_2").val().replace('(', '%28').replace(')', '%29');
+						window.location = pp_search_url_2;
+				}
+	});
+	jQuery("#fr_pp_search_widget_2").bind("keypress", function(e) {
+		if (e.keyCode == 13) {
+			if (jQuery("#pp_course_2").val() != '' && jQuery("#pp_course_2").val() != '') {
+				var pp_search_url_2 = 'https://www.openimpulse.com/blog/ecommerce-search/keyword/'+ jQuery("#pp_course_2").val().replace('(', '%28').replace(')', '%29');
+								window.location = pp_search_url_2;
+								return false;
+			} else {
+				return false;
+			}
+		}
+	});
+	var ul_width = jQuery("#pp_search_container_2").find('.ctr_search').innerWidth();
+	var ul_height = jQuery("#pp_search_container_2").height();
+	var urls = '/blog/wp-admin/admin-ajax.php'+'?action=wpscps_get_result_popup';
+	jQuery("#pp_course_2").autocomplete(urls, {
+		/*width: ul_width,*/
+		scrollHeight: 2000,
+		max: 7,
+		extraParams: {'row':'5', 'text_lenght':'100', 'security':'052b3f3cbb'  , 'show_price':'1' },
+		inputClass: "ac_input_2",
+		resultsClass: "ac_results_2",
+		loadingClass: "predictive_loading",
+		highlight : false
+	});
+	jQuery("#pp_course_2").result(function(event, data, formatted) {
+		if(data[2] != ''){
+			jQuery("#pp_course_2").val(data[2]);
+		}
+		window.location.href(data[1]);
+	});
+});
+</script>
+        <div class="pp_search_container" id="pp_search_container_2" style="  ">
+        <div style="display:none" class="chrome_xp"></div>
+		<form autocomplete="off" action="https://www.openimpulse.com/blog/ecommerce-search/" method="get" class="fr_search_widget" id="fr_pp_search_widget_2">
+        				<div class="ctr_search">
+            <input type="text" id="pp_course_2" onblur="if (this.value == '') {this.value = '';}" onfocus="if (this.value == '') {this.value = '';}" value="" name="rs" class="txt_livesearch" /><span class="bt_search" id="bt_pp_search_2"></span>
+            </div>
+            		</form>
+        </div>
+                <div style="clear:both;"></div>
+		    	</aside><aside id="wpsc_shopping_cart-2" class="widget widget_wpsc_shopping_cart"><h3 class="widget-title">Shopping Cart</h3><div id="sliding_cart" class="shopping-cart-wrapper" >
+	<p class="empty">
+		Your shopping cart is empty<br />
+		<a target="_parent" href="https://www.openimpulse.com/blog/products-page/" class="visitshop" title="Visit Shop">Visit the shop</a>	
+	</p>
+
+
+</div></aside><aside id="wpsc_categorisation-2" class="widget widget_wpsc_categorisation"><h3 class="widget-title">Product Categories</h3>		<div class="wpsc_categorisation_group" id="categorisation_group_78">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_78">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/accesories/">Accesories</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_614">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_614">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/audio/">Audio</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_540">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_540">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/batteries/">Batteries</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_396">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_396">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/connectors/">Connectors</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_109">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_109">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/development-boards/">Development Boards</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+							<li class="wpsc_category_11598">
+								<a href="https://www.openimpulse.com/blog/products-page/prototype-breadboard/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/prototype-breadboard/" class="wpsc_category_link">
+
+									Prototype breadboard
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_728">
+								<a href="https://www.openimpulse.com/blog/products-page/arduino-compatible-boards/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/arduino-compatible-boards/" class="wpsc_category_link">
+
+									Arduino Compatible Boards
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_729">
+								<a href="https://www.openimpulse.com/blog/products-page/fpga-and-cpld-boards/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/fpga-and-cpld-boards/" class="wpsc_category_link">
+
+									FPGA and CPLD Boards
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_730">
+								<a href="https://www.openimpulse.com/blog/products-page/microcontroller-boards/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/microcontroller-boards/" class="wpsc_category_link">
+
+									Microcontroller Boards
+									
+								</a>
+
+								
+							</li>
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_951">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_951">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/electronic-components/">Electronic Components</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+							<li class="wpsc_category_954">
+								<a href="https://www.openimpulse.com/blog/products-page/switches/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/switches/" class="wpsc_category_link">
+
+									Switches
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_982">
+								<a href="https://www.openimpulse.com/blog/products-page/resistors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/resistors/" class="wpsc_category_link">
+
+									Resistors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_955">
+								<a href="https://www.openimpulse.com/blog/products-page/potentiometers/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/potentiometers/" class="wpsc_category_link">
+
+									Potentiometers
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_956">
+								<a href="https://www.openimpulse.com/blog/products-page/other-electronic-components/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/other-electronic-components/" class="wpsc_category_link">
+
+									Others
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_983">
+								<a href="https://www.openimpulse.com/blog/products-page/capacitors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/capacitors/" class="wpsc_category_link">
+
+									Capacitors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_953">
+								<a href="https://www.openimpulse.com/blog/products-page/crystals-and-oscillators/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/crystals-and-oscillators/" class="wpsc_category_link">
+
+									Crystals and Oscillators
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_952">
+								<a href="https://www.openimpulse.com/blog/products-page/integrated-circuits/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/integrated-circuits/" class="wpsc_category_link">
+
+									Integrated Circuits
+									
+								</a>
+
+								
+							</li>
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_441">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_441">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/robotics/">Robotics</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_722">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_722">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/stepper-motors/">Stepper Motors</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_680">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_680">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/dc-gearmotors/">Gearmotors</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+							<li class="wpsc_category_958">
+								<a href="https://www.openimpulse.com/blog/products-page/gearmotor-accessories/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/gearmotor-accessories/" class="wpsc_category_link">
+
+									Accessories
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_936">
+								<a href="https://www.openimpulse.com/blog/products-page/37d-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/37d-gearmotors/" class="wpsc_category_link">
+
+									37D Gearmotors
+									
+								</a>
+
+								<ul>
+							<li class="wpsc_category_937">
+								<a href="https://www.openimpulse.com/blog/products-page/37d-520-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/37d-520-gearmotors/" class="wpsc_category_link">
+
+									37D-520 Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_938">
+								<a href="https://www.openimpulse.com/blog/products-page/37d-545-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/37d-545-gearmotors/" class="wpsc_category_link">
+
+									37D-545 Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_940">
+								<a href="https://www.openimpulse.com/blog/products-page/37d-550-hp-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/37d-550-hp-gearmotors/" class="wpsc_category_link">
+
+									37D-550 HP Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_939">
+								<a href="https://www.openimpulse.com/blog/products-page/37d-3530-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/37d-3530-gearmotors/" class="wpsc_category_link">
+
+									37D-3530 Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						</ul>
+							</li>
+
+						
+							<li class="wpsc_category_930">
+								<a href="https://www.openimpulse.com/blog/products-page/n30-micro-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/n30-micro-gearmotors/" class="wpsc_category_link">
+
+									N30 Micro Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_929">
+								<a href="https://www.openimpulse.com/blog/products-page/n20-micro-gearmotors-dc-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/n20-micro-gearmotors-dc-gearmotors/" class="wpsc_category_link">
+
+									N20 Micro Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_941">
+								<a href="https://www.openimpulse.com/blog/products-page/20d-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/20d-gearmotors/" class="wpsc_category_link">
+
+									20D Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_931">
+								<a href="https://www.openimpulse.com/blog/products-page/25d-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/25d-gearmotors/" class="wpsc_category_link">
+
+									25D Gearmotors
+									
+								</a>
+
+								<ul>
+							<li class="wpsc_category_934">
+								<a href="https://www.openimpulse.com/blog/products-page/25d-310-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/25d-310-gearmotors/" class="wpsc_category_link">
+
+									25D-310 Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_935">
+								<a href="https://www.openimpulse.com/blog/products-page/25d-370rc-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/25d-370rc-gearmotors/" class="wpsc_category_link">
+
+									25D-370RC Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_932">
+								<a href="https://www.openimpulse.com/blog/products-page/25d-370-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/25d-370-gearmotors/" class="wpsc_category_link">
+
+									25D-370 Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_933">
+								<a href="https://www.openimpulse.com/blog/products-page/25d-371-gearmotors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/25d-371-gearmotors/" class="wpsc_category_link">
+
+									25D-371 Gearmotors
+									
+								</a>
+
+								
+							</li>
+
+						</ul>
+							</li>
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_60">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_60">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/wireless/">Wireless</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_467">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_467">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/wires-2/">Wires</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_278">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_278">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/other/">Other</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_54">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_54">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/power-modules/">Power Modules</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+							<li class="wpsc_category_744">
+								<a href="https://www.openimpulse.com/blog/products-page/battery-chargers/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/battery-chargers/" class="wpsc_category_link">
+
+									Battery Chargers
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_741">
+								<a href="https://www.openimpulse.com/blog/products-page/linear-voltage-regulators/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/linear-voltage-regulators/" class="wpsc_category_link">
+
+									Linear Voltage Regulators
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_743">
+								<a href="https://www.openimpulse.com/blog/products-page/motor-drivers/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/motor-drivers/" class="wpsc_category_link">
+
+									Motor Drivers
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_742">
+								<a href="https://www.openimpulse.com/blog/products-page/switching-voltage-regulators/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/switching-voltage-regulators/" class="wpsc_category_link">
+
+									Switching Voltage Regulators
+									
+								</a>
+
+								
+							</li>
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_59">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_59">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/programmers/">Programmers</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_537">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_537">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/gps/">GPS</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_248">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_248">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/interface/">Interface</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_257">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_257">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/optoelectronics/">Optoelectronics</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+							<li class="wpsc_category_463">
+								<a href="https://www.openimpulse.com/blog/products-page/power-leds/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/power-leds/" class="wpsc_category_link">
+
+									Power LEDs
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_464">
+								<a href="https://www.openimpulse.com/blog/products-page/others/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/others/" class="wpsc_category_link">
+
+									Others
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_957">
+								<a href="https://www.openimpulse.com/blog/products-page/leds/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/leds/" class="wpsc_category_link">
+
+									LEDs
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_462">
+								<a href="https://www.openimpulse.com/blog/products-page/led-matrices/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/led-matrices/" class="wpsc_category_link">
+
+									LED Matrices
+									
+								</a>
+
+								
+							</li>
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_1778">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_1778">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/pcb-service/">PCB Service</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_207">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_207">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/prototyping/">Prototyping</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_675">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_675">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/relay-modules/">Relay Modules</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_55">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_55">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/sensors/">Sensors</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+							<li class="wpsc_category_11469">
+								<a href="https://www.openimpulse.com/blog/products-page/cable-sensor/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/cable-sensor/" class="wpsc_category_link">
+
+									Cable Sensor
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_610">
+								<a href="https://www.openimpulse.com/blog/products-page/weather-sensors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/weather-sensors/" class="wpsc_category_link">
+
+									Weather Sensors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_611">
+								<a href="https://www.openimpulse.com/blog/products-page/other-sensors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/other-sensors/" class="wpsc_category_link">
+
+									Other Sensors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_612">
+								<a href="https://www.openimpulse.com/blog/products-page/optical-sensors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/optical-sensors/" class="wpsc_category_link">
+
+									Optical Sensors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_609">
+								<a href="https://www.openimpulse.com/blog/products-page/inertial-sensors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/inertial-sensors/" class="wpsc_category_link">
+
+									Inertial Sensors
+									
+								</a>
+
+								
+							</li>
+
+						
+							<li class="wpsc_category_613">
+								<a href="https://www.openimpulse.com/blog/products-page/current-sensors/" class="wpsc_category_image_link">
+
+									
+								</a>
+
+								<a href="https://www.openimpulse.com/blog/products-page/current-sensors/" class="wpsc_category_link">
+
+									Current Sensors
+									
+								</a>
+
+								
+							</li>
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+		<div class="wpsc_categorisation_group" id="categorisation_group_3677">
+			<ul class="wpsc_categories wpsc_top_level_categories">
+				<li class="wpsc_category_3677">
+										
+					<a href="https://www.openimpulse.com/blog/products-page/vibration-motors/">Vibration Motors</a>
+
+					<ul class="wpsc_categories wpsc_second_level_categories">
+
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="clear_category_group"></div>
+		</div>
+
+</aside><aside id="text-9" class="widget widget_text">			<div class="textwidget"><!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img width="260px" src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark"></a></td></tr></table><!-- PayPal Logo --></div>
+		</aside><aside id="linkcat-2" class="widget widget_links"><h3 class="widget-title">Blogroll</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.eeweb.com/toolbox/" target="_blank">EEWeb Toolbox</a></li>
+
+	</ul>
+</aside>
+<aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Article Categories</h3>		<ul>
+	<li class="cat-item cat-item-96"><a href="https://www.openimpulse.com/blog/category/educational/" title="View all posts filed under Educational">Educational</a>
+</li>
+	<li class="cat-item cat-item-108"><a href="https://www.openimpulse.com/blog/category/highlight/" title="View all posts filed under Highlight">Highlight</a>
+</li>
+	<li class="cat-item cat-item-88"><a href="https://www.openimpulse.com/blog/category/news/" title="View all posts filed under News">News</a>
+</li>
+	<li class="cat-item cat-item-464"><a href="https://www.openimpulse.com/blog/category/others/" title="View all posts filed under Others">Others</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.openimpulse.com/blog/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a>
+</li>
+		</ul>
+</aside>    
+<!-- 
+	Plugin: Custom Meta Widget	Plugin URL: http://shinraholdings.com/plugins/custom-meta-widget/-->
+
+
+	<aside id="custommetawidget-2" class="widget customMetaWidget">	<h3 class="widget-title">Meta</h3>	<ul>
+	
+	
+    <li><a rel="nofollow" href="https://www.openimpulse.com/blog/wp-login.php?action=register">Register</a></li><li><a rel="nofollow" href="https://www.openimpulse.com/blog/wp-login.php">Log in</a></li><li><a href="https://www.openimpulse.com/blog/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li><li><a href="https://www.openimpulse.com/blog/comments/feed/" title="Syndicate this site using RSS 2.0">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>	
+	</ul>
+    
+	</aside><aside id="wpsc_product_tags-2" class="widget widget_wpsc_product_tags"><h3 class="widget-title">Product Tags</h3><div id='product_tag_wrap'><a href='https://www.openimpulse.com/blog/tagged/3d-printer-2/' class='tag-link-6475' title='27 topics' rel="tag" style='font-size: 8.8387096774194pt;'>3d&nbsp;printer</a>
+<a href='https://www.openimpulse.com/blog/tagged/3d-printer-head/' class='tag-link-7801' title='33 topics' rel="tag" style='font-size: 9.2258064516129pt;'>3d&nbsp;printer&nbsp;head</a>
+<a href='https://www.openimpulse.com/blog/tagged/adapter/' class='tag-link-6257' title='14 topics' rel="tag" style='font-size: 8pt;'>adapter</a>
+<a href='https://www.openimpulse.com/blog/tagged/arduino/' class='tag-link-129' title='16 topics' rel="tag" style='font-size: 8.1290322580645pt;'>arduino</a>
+<a href='https://www.openimpulse.com/blog/tagged/audio-amplifier-module/' class='tag-link-633' title='14 topics' rel="tag" style='font-size: 8pt;'>audio&nbsp;amplifier&nbsp;module</a>
+<a href='https://www.openimpulse.com/blog/tagged/battery-holder/' class='tag-link-1115' title='15 topics' rel="tag" style='font-size: 8.0645161290323pt;'>battery&nbsp;holder</a>
+<a href='https://www.openimpulse.com/blog/tagged/brushed-motor/' class='tag-link-685' title='33 topics' rel="tag" style='font-size: 9.2258064516129pt;'>brushed&nbsp;motor</a>
+<a href='https://www.openimpulse.com/blog/tagged/connector/' class='tag-link-4764' title='25 topics' rel="tag" style='font-size: 8.7096774193548pt;'>connector</a>
+<a href='https://www.openimpulse.com/blog/tagged/crystal-clock/' class='tag-link-1391' title='14 topics' rel="tag" style='font-size: 8pt;'>crystal&nbsp;clock</a>
+<a href='https://www.openimpulse.com/blog/tagged/crystal-clock-oscillator/' class='tag-link-1392' title='14 topics' rel="tag" style='font-size: 8pt;'>crystal&nbsp;clock&nbsp;oscillator</a>
+<a href='https://www.openimpulse.com/blog/tagged/crystal-oscillator/' class='tag-link-1182' title='31 topics' rel="tag" style='font-size: 9.0967741935484pt;'>crystal&nbsp;oscillator</a>
+<a href='https://www.openimpulse.com/blog/tagged/development-board/' class='tag-link-120' title='17 topics' rel="tag" style='font-size: 8.1935483870968pt;'>development&nbsp;board</a>
+<a href='https://www.openimpulse.com/blog/tagged/e3d-v5/' class='tag-link-8474' title='16 topics' rel="tag" style='font-size: 8.1290322580645pt;'>E3D&nbsp;v5</a>
+<a href='https://www.openimpulse.com/blog/tagged/gear/' class='tag-link-682' title='209 topics' rel="tag" style='font-size: 20.58064516129pt;'>gear</a>
+<a href='https://www.openimpulse.com/blog/tagged/gearmotor/' class='tag-link-681' title='208 topics' rel="tag" style='font-size: 20.516129032258pt;'>gearmotor</a>
+<a href='https://www.openimpulse.com/blog/tagged/header/' class='tag-link-4748' title='14 topics' rel="tag" style='font-size: 8pt;'>header</a>
+<a href='https://www.openimpulse.com/blog/tagged/hotend/' class='tag-link-8492' title='20 topics' rel="tag" style='font-size: 8.3870967741935pt;'>hotend</a>
+<a href='https://www.openimpulse.com/blog/tagged/ja12-n20/' class='tag-link-777' title='21 topics' rel="tag" style='font-size: 8.4516129032258pt;'>JA12-N20</a>
+<a href='https://www.openimpulse.com/blog/tagged/ja12-n20-dc-gearmotor/' class='tag-link-776' title='21 topics' rel="tag" style='font-size: 8.4516129032258pt;'>JA12-N20&nbsp;DC&nbsp;Gearmotor</a>
+<a href='https://www.openimpulse.com/blog/tagged/jga25-310-dc-gearmotor/' class='tag-link-855' title='22 topics' rel="tag" style='font-size: 8.5161290322581pt;'>JGA25-310&nbsp;DC&nbsp;Gearmotor</a>
+<a href='https://www.openimpulse.com/blog/tagged/jga25-370/' class='tag-link-684' title='32 topics' rel="tag" style='font-size: 9.1612903225806pt;'>JGA25-370</a>
+<a href='https://www.openimpulse.com/blog/tagged/jga25-370-dc-gearmotor/' class='tag-link-683' title='33 topics' rel="tag" style='font-size: 9.2258064516129pt;'>JGA25-370&nbsp;DC&nbsp;Gearmotor</a>
+<a href='https://www.openimpulse.com/blog/tagged/jga25-370rc-dc-gearmotor-with-extended-axis/' class='tag-link-876' title='14 topics' rel="tag" style='font-size: 8pt;'>JGA25-370RC&nbsp;DC&nbsp;Gearmotor&nbsp;with&nbsp;Extended&nbsp;Axis</a>
+<a href='https://www.openimpulse.com/blog/tagged/jgb37-520/' class='tag-link-813' title='32 topics' rel="tag" style='font-size: 9.1612903225806pt;'>JGB37-520</a>
+<a href='https://www.openimpulse.com/blog/tagged/jgb37-520-dc-gearmotor/' class='tag-link-812' title='32 topics' rel="tag" style='font-size: 9.1612903225806pt;'>JGB37-520&nbsp;DC&nbsp;Gearmotor</a>
+<a href='https://www.openimpulse.com/blog/tagged/jgb37-3530-dc-gearmotor/' class='tag-link-893' title='23 topics' rel="tag" style='font-size: 8.5806451612903pt;'>JGB37-3530&nbsp;DC&nbsp;Gearmotor</a>
+<a href='https://www.openimpulse.com/blog/tagged/led/' class='tag-link-258' title='57 topics' rel="tag" style='font-size: 10.774193548387pt;'>LED</a>
+<a href='https://www.openimpulse.com/blog/tagged/module/' class='tag-link-948' title='28 topics' rel="tag" style='font-size: 8.9032258064516pt;'>module</a>
+<a href='https://www.openimpulse.com/blog/tagged/motor/' class='tag-link-402' title='231 topics' rel="tag" style='font-size: 22pt;'>motor</a>
+<a href='https://www.openimpulse.com/blog/tagged/oscillator/' class='tag-link-1184' title='31 topics' rel="tag" style='font-size: 9.0967741935484pt;'>oscillator</a>
+<a href='https://www.openimpulse.com/blog/tagged/power-supply/' class='tag-link-97' title='26 topics' rel="tag" style='font-size: 8.7741935483871pt;'>power&nbsp;supply</a>
+<a href='https://www.openimpulse.com/blog/tagged/power-supply-module/' class='tag-link-5236' title='14 topics' rel="tag" style='font-size: 8pt;'>power&nbsp;supply&nbsp;module</a>
+<a href='https://www.openimpulse.com/blog/tagged/prototyping-board/' class='tag-link-215' title='14 topics' rel="tag" style='font-size: 8pt;'>prototyping&nbsp;board</a>
+<a href='https://www.openimpulse.com/blog/tagged/quartz-crystal/' class='tag-link-1179' title='31 topics' rel="tag" style='font-size: 9.0967741935484pt;'>quartz&nbsp;crystal</a>
+<a href='https://www.openimpulse.com/blog/tagged/quartz-crystal-49s/' class='tag-link-1180' title='14 topics' rel="tag" style='font-size: 8pt;'>quartz&nbsp;crystal&nbsp;(49s)</a>
+<a href='https://www.openimpulse.com/blog/tagged/quartz-watch-crystal/' class='tag-link-1394' title='14 topics' rel="tag" style='font-size: 8pt;'>quartz&nbsp;watch&nbsp;crystal</a>
+<a href='https://www.openimpulse.com/blog/tagged/quartz-watch-oscillator/' class='tag-link-1395' title='14 topics' rel="tag" style='font-size: 8pt;'>quartz&nbsp;watch&nbsp;oscillator</a>
+<a href='https://www.openimpulse.com/blog/tagged/relay-module/' class='tag-link-34' title='20 topics' rel="tag" style='font-size: 8.3870967741935pt;'>relay&nbsp;module</a>
+<a href='https://www.openimpulse.com/blog/tagged/reprap/' class='tag-link-140' title='19 topics' rel="tag" style='font-size: 8.3225806451613pt;'>reprap</a>
+<a href='https://www.openimpulse.com/blog/tagged/sensor/' class='tag-link-325' title='48 topics' rel="tag" style='font-size: 10.193548387097pt;'>sensor</a>
+<a href='https://www.openimpulse.com/blog/tagged/shaft/' class='tag-link-6873' title='23 topics' rel="tag" style='font-size: 8.5806451612903pt;'>Shaft</a>
+<a href='https://www.openimpulse.com/blog/tagged/socket-connector/' class='tag-link-4756' title='19 topics' rel="tag" style='font-size: 8.3225806451613pt;'>socket&nbsp;connector</a>
+<a href='https://www.openimpulse.com/blog/tagged/stepper-motor/' class='tag-link-442' title='15 topics' rel="tag" style='font-size: 8.0645161290323pt;'>stepper&nbsp;motor</a>
+<a href='https://www.openimpulse.com/blog/tagged/vibration-motor/' class='tag-link-1039' title='14 topics' rel="tag" style='font-size: 8pt;'>vibration&nbsp;motor</a>
+<a href='https://www.openimpulse.com/blog/tagged/watch-crystal/' class='tag-link-1393' title='14 topics' rel="tag" style='font-size: 8pt;'>watch&nbsp;crystal</a></div></aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="rss_links-2" class="widget widget_rss_links"><h3 class="widget-title">RSS Feed</h3><p><a href="https://www.openimpulse.com/blog/feed/" title="Subscribe to Posts"><img src="https://www.openimpulse.com/blog/wp-content/plugins/jetpack/_inc/images/rss/red-small.png" alt="RSS Feed" /></a>&nbsp;<a href="https://www.openimpulse.com/blog/feed/" title="Subscribe to Posts">RSS - Posts</a></p><p><a href="https://www.openimpulse.com/blog/comments/feed/" title="Subscribe to Comments"><img src="https://www.openimpulse.com/blog/wp-content/plugins/jetpack/_inc/images/rss/red-small.png" alt="RSS Feed" /></a>&nbsp;<a href="https://www.openimpulse.com/blog/comments/feed/" title="Subscribe to Comments">RSS - Comments</a></p>
+</aside>	</div><!-- #first .widget-area -->
+	
+		<div id="second" class="widget-area" role="complementary">
+		<aside id="text-8" class="widget widget_text">			<div class="textwidget"><script type="text/javascript">
+  (function() {
+    var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+    sa.src = ('https:' == document.location.protocol ? 'https://cdn' : 'http://cdn') + '.ywxi.net/js/1.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sa, s);
+  })();
+</script>
+<!-- McAfee Secure Trustmark for www.openimpulse.com -->
+<a target="_blank" href="https://www.mcafeesecure.com/verify?host=www.openimpulse.com"><img class="mfes-trustmark" border="0" src="//cdn.ywxi.net/meter/www.openimpulse.com/101.gif" width="125" height="55" title="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a>
+<!-- End McAfee Secure Trustmark --></div>
+		</aside>	</div><!-- #second .widget-area -->
+	
+	</div><!-- #supplementary -->
+			<div id="site-generator">
+								<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- MathJax Latex Plugin installed: Disabled as no shortcodes on this page --><script type='text/javascript' src='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce-dynamic-gallery/assets/js/mygallery/jquery.ad-gallery.js?ver=3.9.2'></script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce-dynamic-gallery/assets/js/fancybox/fancybox.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-includes/js/comment-reply.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=202645'></script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce-dynamic-gallery/assets/js/filter_gallery.js?ver=3.9.2'></script>
+<script type='text/javascript' src='https://www.openimpulse.com/blog/wp-content/plugins/wp-e-commerce-predictive-search/assets/js/ajax-autocomplete/jquery.autocomplete.js?ver=3.9.2'></script>
+
+<script language="javascript">
+jQuery(function()
+{
+    jQuery("ul.wpsc_categories li ul").hide();
+
+    if(jQuery("li.wpsc-current-cat").parent().parent().parent().hasClass("wpsc_second_level_categories"))
+    {
+	jQuery("li.wpsc-current-cat").parent().parent().parent().show();
+        jQuery("li.wpsc-current-cat").parent().show();
+        jQuery("li.wpsc-current-cat > ul").show();
+        jQuery("li.wpsc-current-cat a:nth-child(2)").first().css("font-weight", "bold");
+    }
+    else if(jQuery("li.wpsc-current-cat").parent().hasClass("wpsc_second_level_categories"))
+    {
+	jQuery("li.wpsc-current-cat").parent().show();
+	jQuery("li.wpsc-current-cat > ul").show();
+	jQuery("li.wpsc-current-cat a:nth-child(2)").first().css("font-weight", "bold");
+    }
+    else
+    {
+	jQuery("li.wpsc-current-cat > ul").show();
+	jQuery("li.wpsc-current-cat").children().first().css("font-weight", "bold");
+    }
+/*
+    // When the current category is a subcategory, we don't want
+    // it's parent to close when hovered on then off
+    if(!jQuery("ul.wpsc_categories li ul").hasClass("wpsc-current-cat"))
+    {
+	// When a list item that contains an unordered list
+	// is hovered on
+	jQuery("ul.wpsc_categories").has("li").hover(
+	    function()
+	    {
+		//Add a class of current and fade in the sub-menu
+		jQuery(this).children("li").slideDown('slow');
+	    }, 
+	    function()
+	    {
+		// On mouse off remove the class of current
+		// Stop any sub-menu animation and set its display to none
+		jQuery(this).children("li").stop(true, true).slideUp('slow');
+	    });
+    };*/
+});
+
+</script>
+</body>
+</html>

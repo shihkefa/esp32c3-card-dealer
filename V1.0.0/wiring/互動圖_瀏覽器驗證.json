@@ -1,0 +1,49 @@
+{
+  "browser": "Chrome headless",
+  "checks": [
+    {
+      "name": "97 complete selectable paths",
+      "passed": true
+    },
+    {
+      "name": "SDA selection reaches OLED through slipring",
+      "passed": true
+    },
+    {
+      "name": "SDA selection reaches PCF through slipring",
+      "passed": true
+    },
+    {
+      "name": "selected path includes slipring internal conductor",
+      "passed": true
+    },
+    {
+      "name": "group filter",
+      "passed": true
+    },
+    {
+      "name": "wire click activates selection",
+      "passed": true
+    },
+    {
+      "name": "clear selection",
+      "passed": true
+    },
+    {
+      "name": "zoom",
+      "passed": true
+    },
+    {
+      "name": "fit reset",
+      "passed": true
+    },
+    {
+      "name": "endpoint search",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "previous_result_reused": true,
+  "reuse_basis": "Identical complete viewer JavaScript; version heading only changed.",
+  "viewer_javascript_sha256": "9b49206a8b3a45282b5c6d985066e6b801524e70bb3aca79bc741897e4bbddd0"
+}

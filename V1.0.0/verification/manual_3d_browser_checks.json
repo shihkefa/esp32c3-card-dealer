@@ -1,0 +1,121 @@
+{
+  "version": "V1.0.0",
+  "html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Offline local HTML initializes an actual 3D viewer",
+      "passed": true
+    },
+    {
+      "name": "Trial-layout step disables the unnecessary exploded-view slider",
+      "passed": true
+    },
+    {
+      "name": "Every mechanical step has rendered triangle meshes; wiring step remains a readable diagram",
+      "passed": true,
+      "mechanicalSteps": 21
+    },
+    {
+      "name": "Pointer picking identifies visible model geometry",
+      "passed": true
+    },
+    {
+      "name": "Mouse drag rotates the actual camera and changes rendered pixels",
+      "passed": true
+    },
+    {
+      "name": "Mouse wheel zoom changes viewing distance",
+      "passed": true
+    },
+    {
+      "name": "Exploded view moves individual parts and fasteners rather than only the percentage label",
+      "passed": true
+    },
+    {
+      "name": "Hardware filter hides actual screw and nut meshes",
+      "passed": true
+    },
+    {
+      "name": "Small screws can be selected, identified, isolated, focused and restored",
+      "passed": true
+    },
+    {
+      "name": "Top, bottom and isometric camera controls point in their stated directions",
+      "passed": true
+    },
+    {
+      "name": "Complete assembly matches the current independently visible component count and shell filtering reveals internals",
+      "passed": true
+    },
+    {
+      "name": "Overview explosion moves the intended components and returning to the step resets its view",
+      "passed": true,
+      "movedComponents": 47
+    },
+    {
+      "name": "Step illustration and interactive 3D modes can be switched without losing the step",
+      "passed": true
+    },
+    {
+      "name": "Enlarged model dialog restores the live 3D view to the step on closing",
+      "passed": true
+    },
+    {
+      "name": "Mobile one-finger gesture rotates the 3D view",
+      "passed": true
+    },
+    {
+      "name": "Mobile two-finger pinch zoom changes camera distance",
+      "passed": true
+    },
+    {
+      "name": "Mobile controls and part selector fit within a 390px viewport",
+      "passed": true
+    },
+    {
+      "name": "Unavailable WebGL automatically retains the diagram and functioning assembly navigation",
+      "passed": true
+    },
+    {
+      "name": "All tested contexts run offline without external requests or uncaught script exceptions",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "observations": {
+    "initial": {
+      "ready": true,
+      "sceneKey": "step-08",
+      "meshCount": 7,
+      "visibleCount": 7,
+      "selectedId": null,
+      "isolated": false,
+      "explodeAmount": 0,
+      "explode": 0,
+      "renderCount": 2,
+      "renderedTriangles": 15118,
+      "cameraPosition": [
+        -103.36328352558094,
+        -118.12946688637817,
+        63.2985500823918
+      ],
+      "target": [
+        0,
+        0,
+        19
+      ],
+      "distance": 163.09782606598938,
+      "geometryCacheSize": 7
+    },
+    "rendering": {
+      "type": "WebGL2RenderingContext",
+      "triangles": 15118,
+      "width": 638,
+      "height": 480
+    }
+  },
+  "browser": "157.0.8103.39",
+  "offline": true,
+  "scope": "Interactive 3D viewing and responsive/offline behavior; not physical assembly validation."
+}

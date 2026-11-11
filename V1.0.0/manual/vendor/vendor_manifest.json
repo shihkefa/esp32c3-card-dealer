@@ -1,0 +1,19 @@
+{
+  "three": {
+    "version": "0.180.0",
+    "source": "https://registry.npmjs.org/three/-/three-0.180.0.tgz",
+    "license": "MIT",
+    "tar_sha256": "ad66d724565ee29a2467277fa84daa5ed0211d6b8d446e9ef29f6bae0cd14144"
+  },
+  "buildTool": {
+    "name": "esbuild-wasm",
+    "version": "0.25.10",
+    "source": "https://registry.npmjs.org/esbuild-wasm/-/esbuild-wasm-0.25.10.tgz",
+    "temporary": true
+  },
+  "bundle": {
+    "file": "three-orbit.min.js",
+    "sha256": "f01ed9ece933bb1d254f929fb6963e71cdf3c673d87ce1b3103ae8b5e0d68ea8"
+  },
+  "runtimeNetworkRequired": false
+}
