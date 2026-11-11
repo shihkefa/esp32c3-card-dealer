@@ -1,8 +1,8 @@
 {
   "passed": true,
   "url": "https://shihkefa.github.io/esp32c3-card-dealer/",
-  "html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
-  "expected_html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+  "html_sha256": "136d51f8a77157e9b89cf181f977196a9148e8c5cce04e98378c140e6e3a3b65",
+  "expected_html_sha256": "136d51f8a77157e9b89cf181f977196a9148e8c5cce04e98378c140e6e3a3b65",
   "checks": [
     {
       "name": "HTTPS responds with HTTP 200 and the exact deployed HTML bytes",
@@ -41,12 +41,12 @@
   "externalRequests": [],
   "observations": {
     "url": "https://shihkefa.github.io/esp32c3-card-dealer/",
-    "expected_html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
-    "live_html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+    "expected_html_sha256": "136d51f8a77157e9b89cf181f977196a9148e8c5cce04e98378c140e6e3a3b65",
+    "live_html_sha256": "136d51f8a77157e9b89cf181f977196a9148e8c5cce04e98378c140e6e3a3b65",
     "http_status": 200,
     "rendering": {
       "context": "WebGL2RenderingContext",
-      "triangles": 15118,
+      "triangles": 12588,
       "scene": "step-08"
     }
   },
