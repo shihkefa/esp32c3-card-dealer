@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "url": "https://shihkefa.github.io/esp32c3-card-dealer/",
+  "html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+  "expected_html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+  "checks": [
+    {
+      "name": "HTTPS responds with HTTP 200 and the exact deployed HTML bytes",
+      "passed": true
+    },
+    {
+      "name": "The live manual shows 22 steps and renders actual WebGL geometry",
+      "passed": true
+    },
+    {
+      "name": "Dragging rotates the model view and the mouse wheel zooms",
+      "passed": true
+    },
+    {
+      "name": "Step changes, explosion, hardware filtering and screw inspection work online",
+      "passed": true
+    },
+    {
+      "name": "The reference illustration and the interactive model can be switched",
+      "passed": true
+    },
+    {
+      "name": "The embedded wiring viewer loads and filters its 97 wire routes",
+      "passed": true
+    },
+    {
+      "name": "The 390px mobile layout fits and touch rotation changes the live view",
+      "passed": true
+    },
+    {
+      "name": "No uncaught script errors or off-origin runtime requests occur",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "observations": {
+    "url": "https://shihkefa.github.io/esp32c3-card-dealer/",
+    "expected_html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+    "live_html_sha256": "efa063f58199e654e5428e29f53557608bc37742e529d57f8b703d64c592fc62",
+    "http_status": 200,
+    "rendering": {
+      "context": "WebGL2RenderingContext",
+      "triangles": 15118,
+      "scene": "step-08"
+    }
+  },
+  "browser": "157.0.8103.39",
+  "scope": "Published Pages smoke/integration test; the full offline 3D suite remains in V1.0.0/verification."
+}

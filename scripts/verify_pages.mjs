@@ -50,7 +50,11 @@ try{
  const response=await page.goto(opening.href,{waitUntil:'domcontentloaded',timeout:60000});
  assert(response,'The navigation must return an HTTP response');assert.equal(response.status(),200);
  assert.equal(new URL(page.url()).protocol,'https:');assert.equal(new URL(page.url()).origin,target.origin);
- const liveSha=digest(await response.body());assert.equal(liveSha,expectedSha,'Published HTML differs from the current docs/index.html');
+ // The standalone file exceeds Chromium's inspector response-cache limit.
+ // Hash an anonymous HTTP fetch instead of requesting its evicted CDP body.
+ const published=await fetch(target.href,{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(30000)});
+ assert.equal(published.status,200);assert.equal(new URL(published.url).origin,target.origin);
+ const liveSha=digest(Buffer.from(await published.arrayBuffer()));assert.equal(liveSha,expectedSha,'Published HTML differs from the current docs/index.html');
  observations.live_html_sha256=liveSha;observations.http_status=response.status();
  pass('HTTPS responds with HTTP 200 and the exact deployed HTML bytes');
 
