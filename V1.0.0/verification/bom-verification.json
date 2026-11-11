@@ -35,7 +35,7 @@
   "expectedWithShipping": 90,
   "expectedWithFilament": 124,
   "filamentKg": 0.85,
-  "solid_PLA_mass_g": 779.3,
+  "solid_PLA_mass_g": 816,
   "owned": [
     "ESP32-C3",
     "18650 2900mAh",
@@ -43,7 +43,7 @@
     "拓竹A1 mini"
   ],
   "printedTypes": 40,
-  "updated_design": "P04B independently rebuilt to remove legacy carrier-nut cuts from all 60 teeth across the full 7.5mm thickness. Original 2mm nominal turntable gap, mating dimensions and fasteners retained. Only P04B needs reprinting; extended P26 and all other 39 STL types retained.",
+  "updated_design": "P08 has a continuous floor with only the pickup-roller window and mounting holes, solid raised sidewalls level with the upper loading opening, 61mm clear width and open ends. P12 spacers are adapted to the taller walls. Other 38 STL types, the upper shell, mounting positions and hardware quantities retained.",
   "preservation_report": "bom-preservation.json",
   "native_excel_recalculation_tested": false
 }

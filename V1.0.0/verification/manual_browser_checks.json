@@ -1,6 +1,6 @@
 {
   "version": "V1.0.0",
-  "html_sha256": "136d51f8a77157e9b89cf181f977196a9148e8c5cce04e98378c140e6e3a3b65",
+  "html_sha256": "8daa87d33912fb23473b2205855068cddaa8394b1307c8d1998f8e55a5016fe1",
   "passed": true,
   "checks": [
     {
@@ -60,7 +60,7 @@
       "passed": true
     }
   ],
-  "embeddedImagesChecked": 40,
+  "embeddedImagesChecked": 43,
   "offline": true,
   "externalRequests": [],
   "pageErrors": [],

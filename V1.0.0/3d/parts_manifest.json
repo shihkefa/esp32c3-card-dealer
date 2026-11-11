@@ -486,15 +486,15 @@
     },
     {
       "id": "P08",
-      "name": "61mm前後開放牌倉",
+      "name": "61mm封底高側板開放式牌倉",
       "qty": 1,
       "file": "STL/P08.stl",
       "dimensions_mm": [
         106.0,
         83.0,
-        46.4
+        61.85
       ],
-      "volume_cm3": 14.299,
+      "volume_cm3": 43.129,
       "watertight": true,
       "connected_components": 1,
       "print_rotation": [
@@ -502,13 +502,13 @@
         0,
         0
       ],
-      "supports": "建議無支撐；待切片",
+      "supports": "底板大平面貼床；兩個底部盲避讓槽及滾輪孔局部橋接待切片",
       "material": "PLA / PETG",
-      "note": "內寬61mm。前後無擋板，87/96mm長牌可用，其他長度需試送。 編號P08：牌倉底面橫肋；避開牌路與支柱，凹刻0.3mm。",
+      "note": "連續2.4mm底板，兩側2.4mm實心擋板加高，組裝後頂緣與上蓋Z130.2齊平；前上角削邊避讓上蓋開口。內寬61mm、前後開放不限長，原23×12mm取牌輪開口及四個沉頭固定孔沿用。底面兩個Ø9.2盲槽避讓P19螺絲頭，上方仍留1.4mm實心層；先裝P19再裝牌倉。57mm牌配新版中央掛鉤P12。 編號P08：牌倉底板背面；避開牌路、盲槽與支柱，凹刻0.3mm。",
       "engraving": {
         "text": "P08",
         "type": "planar",
-        "location": "牌倉底面橫肋；避開牌路與支柱",
+        "location": "牌倉底板背面；避開牌路、盲槽與支柱",
         "height_mm": 3,
         "depth_mm": 0.3,
         "removed_mm3": 3.7473,
@@ -690,15 +690,15 @@
     },
     {
       "id": "P12",
-      "name": "57mm窄牌側墊",
+      "name": "57mm中央掛鉤窄牌側墊",
       "qty": 2,
       "file": "STL/P12.stl",
       "dimensions_mm": [
-        85.0,
-        46.0,
+        82.0,
+        57.67,
         5.9
       ],
-      "volume_cm3": 5.615,
+      "volume_cm3": 5.973,
       "watertight": true,
       "connected_components": 1,
       "print_rotation": [
@@ -706,21 +706,21 @@
         0,
         0
       ],
-      "supports": "卡鉤需要局部支撐",
+      "supports": "平側面貼床；中央掛鉤需要局部支撐",
       "material": "PLA / PETG",
-      "note": "57mm牌左右各一片，內寬約58mm；卡鉤跨在側柱頂，60mm牌取下。左右件以Z軸轉180度裝配。 編號P12：卡鉤外側；避開牌面與側柱卡合區，凹刻0.25mm。",
+      "note": "配新版高側板P08；57mm牌左右各一片，內寬約58mm，60mm牌取下。底邊坐在牌倉底板，中央15mm掛鉤跨過高側板，兩側相同STL，另一片以Z軸轉180度後X移-8mm。掛鉤位於上方開口內，約高出上蓋3mm；不限制前後牌長。 編號P12：中央掛鉤外側下段；位於上蓋開口下方，避開牌面與側板卡合區，凹刻0.25mm。",
       "engraving": {
         "text": "P12",
         "type": "planar",
-        "location": "卡鉤外側；避開牌面與側柱卡合區",
+        "location": "中央掛鉤外側下段；位於上蓋開口下方，避開牌面與側板卡合區",
         "height_mm": 2,
         "depth_mm": 0.25,
         "removed_mm3": 1.1735,
         "coverage_ratio": 1.0,
         "origin_mm": [
-          36,
+          -4,
           34.9,
-          106.5
+          117.1691677155542
         ],
         "normal": [
           0,
@@ -2016,9 +2016,9 @@
       }
     }
   ],
-  "solid_volume_total_cm3": 628.49,
-  "solid_PLA_mass_g": 779.3,
-  "optional_solid_mass_g": 55.6,
+  "solid_volume_total_cm3": 658.04,
+  "solid_PLA_mass_g": 816.0,
+  "optional_solid_mass_g": 56.5,
   "status": "幾何原型，未經實物試裝",
   "parameters": {
     "revision": "V1.0.0",
@@ -2042,7 +2042,8 @@
     "turntable_raise_mm": 1.5,
     "turntable_to_base_ring_gap_mm": 2.0,
     "card_floor_z_mm": 64.0,
-    "hopper_rail_height_mm": 44.0,
+    "hopper_floor_thickness_mm": 2.4,
+    "upper_housing_roof_top_native_z_mm": 128.7,
     "hopper_tilt_deg": 6.0,
     "hopper_lift_mm": 10.0,
     "gravity_feed": true,
@@ -2116,7 +2117,8 @@
     ],
     "pla_density_g_cm3": 1.24,
     "notes": [
-      "P04B上側齒厚增加1.5mm至7.5mm，上部裝配整體抬升1.5mm；P04A與P02A圓環的名義間隙0.5改為2mm。軸承肩臺、P06、P05及滑環維持位置。P26薄片向下延長1.5mm保留原感測遮光區。只需重印P04B與P26，其餘38種STL沿用。",
+      "目前P08改連續2.4mm底板與兩側實心高擋板，頂緣按6度傾角補償，組裝後與上蓋頂面Z130.2齊平；前上角削邊避讓裝牌開口。原取牌輪開口、61mm淨寬及前後開放不變。P12改中央對稱掛鉤；57mm牌左右用相同檔案。此次重印P08，使用57mm牌另換兩片P12，其餘38種STL沿用。",
+      "先前P04B上側齒厚增加1.5mm至7.5mm，上部裝配整體抬升1.5mm；P04A與P02A圓環的名義間隙0.5改為2mm。軸承肩臺、P06、P05及滑環維持位置。P26薄片向下延長1.5mm保留原感測遮光區。P04B後續已修復承載盤孔槽誤切，保留完整60齒。",
       "P02/P04/P05分件與上殼P32A/P32B內側四組接合均採相同規格；全機M3×8用量61支、M3×25用量10支，標準M3螺母52顆。",
       "整機螺絲統一M3×8及M3×25內六角沉頭，螺母統一M3。輪芯、聯軸器及小齒輪改夾緊式；P36滑環壓片。",
       "螢幕與四按鍵移到旋轉上罩頂部；原底盒前方面板孔封閉。P35按鍵與PCF支架。",

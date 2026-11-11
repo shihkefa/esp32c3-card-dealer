@@ -182,7 +182,7 @@
         67.78219582446582,
         50.72061666378194,
         41.5,
-        124.17180116978373
+        130.20000000345743
       ]
     },
     {
@@ -23623,7 +23623,7 @@
       "a": "P07.3",
       "b": "P08.1",
       "candidate": true,
-      "volume_mm3": -0.0,
+      "volume_mm3": 0.0,
       "classification": "clear",
       "reason": null,
       "intersection_bounds_mm": null
@@ -25450,7 +25450,7 @@
       "a": "P07.4",
       "b": "P08.1",
       "candidate": true,
-      "volume_mm3": -0.0,
+      "volume_mm3": 0.0,
       "classification": "clear",
       "reason": null,
       "intersection_bounds_mm": null
@@ -27340,7 +27340,7 @@
       "a": "P08.1",
       "b": "P17.1",
       "candidate": true,
-      "volume_mm3": -0.0,
+      "volume_mm3": 0.0,
       "classification": "clear",
       "reason": null,
       "intersection_bounds_mm": null
@@ -27943,7 +27943,7 @@
       "a": "P08.1",
       "b": "cards.1",
       "candidate": true,
-      "volume_mm3": 0.0,
+      "volume_mm3": -0.0,
       "classification": "clear",
       "reason": null,
       "intersection_bounds_mm": null
@@ -212078,7 +212078,7 @@
       "notes": "57x87 with two P12 spacers and exit sensor shifted inward 1.5mm; 60x96 without spacers. Weight positions for 1/13/54/108 cards at reference thickness 0.30mm.",
       "poses": 132,
       "classified_pairs": 10348,
-      "exact_candidates": 332,
+      "exact_candidates": 324,
       "unexpected": [],
       "intended": [
         {
@@ -212226,7 +212226,7 @@
       "notes": "UI/PCF/DRV and cover panels preinstalled, three bottom mounting screws fitted afterwards. Shroud lowered vertically from +80mm in 2mm steps. Deck is unloaded and optional weights absent.",
       "poses": 41,
       "classified_pairs": 317955,
-      "exact_candidates": 1303,
+      "exact_candidates": 1304,
       "unexpected": [],
       "intended": [],
       "passed": true
@@ -212396,9 +212396,9 @@
     "static_unexpected": [],
     "motion_pose_checks": 1563,
     "motion_classified_pairs": 4246780,
-    "motion_exact_candidates": 32048,
+    "motion_exact_candidates": 32041,
     "motion_unexpected": [],
     "all_passed": true,
-    "elapsed_s": 35.5
+    "elapsed_s": 57.5
   }
 }

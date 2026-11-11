@@ -49,6 +49,10 @@ assert load(root/'3d/fastener_validation.json')['all_passed']
 assert load(root/'3d/fastener_validation.json')['total_nut_qty']==52
 assert load(root/'3d/fastener_validation.json')['screw_skus']=={'DIN7991 M3x8':61,'DIN7991 M3x25':10}
 assert load(root/'3d/virtual_assembly_report.json')['summary']['all_passed']
+p08=load(root/'3d/p08_hopper_validation.json')
+assert p08['all_passed'] and len(p08['checks'])>=16 and all(c['passed'] for c in p08['checks'])
+for image in ('P08_封底高側板與上蓋齊平.png','P08_底面盲槽與滾輪開口.png','P08_P12中央掛架配合.png'):
+    assert (root/'3d'/image).is_file()
 assert load(root/'3d/p02_split_validation.json')['all_passed']
 assert load(root/'3d/p04_split_validation.json')['all_passed']
 assert (root/'3d/P04B_抬高與2mm間隙.png').is_file()
@@ -61,6 +65,7 @@ for required_tooth_check in (
     'Negative control rejects the legacy N20 pocket at tooth index35 angle210deg'):
     assert p04_checks[required_tooth_check]['passed']
 for report_name,script_name in [('p04_split_validation.json','check_p04_split.py'),
+                                ('p08_hopper_validation.json','check_p08_hopper.py'),
                                 ('fastener_validation.json','check_fasteners.py')]:
     checked_sources=load(root/'3d'/report_name)['source_hashes']
     assert checked_sources['build_cad_py_sha256']==sha(root/'3d/source/build_cad.py')
@@ -89,6 +94,9 @@ assert manual_browser['passed'] and not manual_browser['externalRequests'] and n
 manual_3d=load(root/'verification/manual_3d_browser_checks.json')
 assert manual_data['interactive_3d_steps']==21 and manual_data['interactive_3d_overview_instances']==215
 assert manual_data['interactive_3d_data_sha256']==sha(root/'manual/assets/assembly_3d.json')
+manual_3d_sources=load(root/'manual/assets/assembly_3d.json')['sourceHashes']
+assert manual_3d_sources['buildCad']==sha(root/'3d/source/build_cad.py')
+assert manual_3d_sources['exportScript']==sha(root/'source/manual/export_manual_3d.py')
 assert manual_data['viewer3d_source_sha256']==sha(root/'source/manual/viewer3d.js')
 assert manual_data['three_vendor_sha256']==sha(root/'manual/vendor/three-orbit.min.js')
 assert manual_3d['passed'] and manual_3d['html_sha256']==sha(manual)
@@ -184,6 +192,7 @@ summary_report={'version':version,'generated_at':datetime.now().astimezone().iso
         'p04_split_checks':load(root/'3d/p04_split_validation.json'),
         'p05_fastener_checks':load(root/'3d/p05_fastener_validation.json'),
         'p32_split_checks':load(root/'3d/p32_split_validation.json'),
+        'p08_hopper_checks':load(root/'3d/p08_hopper_validation.json'),
         'mechanical_refit_required':migration['mechanical_refit_required']},
     'wiring':{'complete_paths':97,'pdf_pages':pdfs,'viewer_javascript_unchanged':True},
     'bom':{'sheets':3,'formulas':formula_count,'native_links':21,'external_materials':summary['E6'],'with_shipping':summary['H7'],'with_filament':summary['B7']},

@@ -10,14 +10,14 @@
     "optional P12 narrow-card spacers",
     "P30 fit coupon"
   ],
-  "triangles": 194880,
+  "triangles": 195232,
   "dimensions_mm": [
     186.2,
     196.4,
     132.8
   ],
   "all_component_shells_closed": true,
-  "bytes": 9744084,
+  "bytes": 9761684,
   "note": "Individual closed shells can touch; do not fuse or print this as a working mechanism.",
   "components": [
     {
@@ -100,8 +100,8 @@
     },
     {
       "id": "P08",
-      "name": "61mm前後開放牌倉",
-      "triangles": 3788,
+      "name": "61mm封底高側板開放式牌倉",
+      "triangles": 4140,
       "closed": true
     },
     {

@@ -22,17 +22,22 @@ const expectedCash=expectedExternal+expectedShipping;
 const expectedTotal=Math.round((expectedCash+filamentKg*40)*100)/100;
 await fs.mkdir(out, { recursive: true });
 const file = path.join(out, '發牌機_BOM_V1.0.0.xlsx');
-if (['--refresh-turntable-gap','--inspect-turntable-gap','--refresh-tooth-fix','--inspect-tooth-fix'].some(flag=>process.argv.includes(flag))) {
+if (['--refresh-turntable-gap','--inspect-turntable-gap','--refresh-tooth-fix','--inspect-tooth-fix','--refresh-hopper','--inspect-hopper'].some(flag=>process.argv.includes(flag))) {
   const toothFix=['--refresh-tooth-fix','--inspect-tooth-fix'].some(flag=>process.argv.includes(flag));
+  const hopper=['--refresh-hopper','--inspect-hopper'].some(flag=>process.argv.includes(flag));
+  const mode=hopper?'hopper':toothFix?'tooth-fix':'turntable-gap';
   const original=path.join(root,'發牌機_BOM_V1.0.0.xlsx');
   const originalSha=crypto.createHash('sha256').update(await fs.readFile(original)).digest('hex');
   const workbook=await SpreadsheetFile.importXlsx(await FileBlob.load(original));
   const bom=workbook.worksheets.getItem('BOM'),printing=workbook.worksheets.getItem('設計與列印'),screws=workbook.worksheets.getItem('螺絲規格');
   const before=[bom,printing,screws].map(sheet=>({name:sheet.name,values:sheet.getRange('A1:S100').values,formulas:sheet.getRange('A1:S100').formulas}));
-  const parts=(toothFix?['P04B']:['P04B','P26']).map(id=>manifest.parts.find(p=>p.id===id));
-  assert(parts.every(Boolean)&&manifest.parts.length===40,'Export the thickened turntable and extended flag manifest first');
+  const parts=(hopper?['P08','P12']:toothFix?['P04B']:['P04B','P26']).map(id=>manifest.parts.find(p=>p.id===id));
+  assert(parts.every(Boolean)&&manifest.parts.length===40,'Export the current mechanical manifest first');
   assert.deepEqual([shortQty,longQty,fasteners.nut_qty],[61,10,52]);
-  assert.deepEqual(parts.map(p=>p.dimensions_mm),toothFix?[[74.4,74.4,30.5]]:[[74.4,74.4,30.5],[25,10,7.9]]);
+  if(hopper){
+    assert(parts[0].dimensions_mm[0]===106&&parts[0].dimensions_mm[1]===83&&parts[0].dimensions_mm[2]>50,'Export the raised solid-wall P08 first');
+    assert(parts[1].dimensions_mm.some(n=>n>45),'Export the taller-wall P12 spacers first');
+  }else assert.deepEqual(parts.map(p=>p.dimensions_mm),toothFix?[[74.4,74.4,30.5]]:[[74.4,74.4,30.5],[25,10,7.9]]);
   if(toothFix)assert.equal(parts[0].name,'完整齒形60齒齒輪與空心轉軸','Export the independent full-tooth P04B manifest first');
   const findRow=(sheet,id,start,end)=>{
     const index=sheet.getRange(`A${start}:A${end}`).values.findIndex(r=>r[0]===id);
@@ -41,22 +46,32 @@ if (['--refresh-turntable-gap','--inspect-turntable-gap','--refresh-tooth-fix','
   const rows=parts.map(p=>({p,bom:findRow(bom,p.id,11,100),printing:findRow(printing,p.id,18,70)}));
   const filamentRow=findRow(bom,'F01',11,100),lastBomRow=findRow(bom,'F02',11,100);
   assert.equal(lastBomRow-10,74);
-  const retainedFilamentKg=Number(bom.getRange(`D${filamentRow}`).values[0][0]);
-  assert(Number.isFinite(retainedFilamentKg)&&retainedFilamentKg>=0,'Keep a valid existing filament allocation');
-  const dir=path.join(root,toothFix?'.build/bom-tooth-fix':'.build/bom-turntable-gap');await fs.mkdir(dir,{recursive:true});
+  const originalFilamentKg=Number(bom.getRange(`D${filamentRow}`).values[0][0]);
+  assert(Number.isFinite(originalFilamentKg)&&originalFilamentKg>=0,'Keep a valid existing filament allocation');
+  const retainedFilamentKg=hopper?Math.max(originalFilamentKg,filamentKg):originalFilamentKg;
+  const dir=path.join(root,`.build/bom-${mode}`);await fs.mkdir(dir,{recursive:true});
   for(const item of rows){
     const image=await workbook.render({sheetName:'設計與列印',range:`A${item.printing-1}:K${item.printing+1}`,scale:1.25,format:'png'});
     await fs.writeFile(path.join(dir,`before-${item.p.id}.png`),new Uint8Array(await image.arrayBuffer()));
     console.log((await workbook.inspect({kind:'region',sheetId:'設計與列印',range:`A${item.printing}:K${item.printing}`,maxChars:1700})).ndjson);
   }
-  if(process.argv.includes('--inspect-turntable-gap')||process.argv.includes('--inspect-tooth-fix'))process.exit(0);
+  if(process.argv.includes('--inspect-turntable-gap')||process.argv.includes('--inspect-tooth-fix')||process.argv.includes('--inspect-hopper'))process.exit(0);
   const allowed=new Map([['BOM',new Set()],['設計與列印',new Set()],['螺絲規格',new Set()]]);
   const set=(sheet,address,value)=>{sheet.getRange(address).values=[[value]];allowed.get(sheet.name).add(address);};
   const notes={
     P04B:toothFix?'修復承載盤螺母槽誤切齒面，B獨立建模，完整60齒貫穿7.5mm厚度。接合面Z43.5、對P02A名義間隙2mm及原M3×8沿用。本次只需重印P04B，P04A、已延長P26及其他零件沿用。齒輪大平面朝下、空心軸朝上。':'齒寬7.5mm，上接合面Z43.5；齒底與軸承肩臺不變。原P04A及其上機構抬升1.5mm，對P02A名義間隙由0.5增至2mm。原M3×8沿用，配延長P26。齒輪大平面朝下、空心軸朝上。',
     P26:'配P04B抬升1.5mm，遮光薄片向下延長1.5mm；組裝後下緣仍為Z35.6，原感測器光路與槽底0.3mm名義間隙保留。安裝孔及支臂沿用，依STL平面貼床。',
+    P08:parts.find(p=>p.id==='P08')?.note,
+    P12:parts.find(p=>p.id==='P12')?.note,
   };
-  if(!toothFix){
+  const bomNotes={
+    P08:'2.4mm連續底板，兩側板加高至上蓋齊平。內寬61mm、前後開放。保留23×12mm滾輪孔及固定孔；底面盲槽避讓P19。57mm牌配新版P12。',
+    P12:'配新版高側板P08，57mm牌左右各一片、內寬約58mm；60mm牌取下。底邊坐底板，中央掛鉤約高出上蓋3mm。另一片轉180°後X移-8mm。',
+  };
+  if(hopper){
+    set(bom,'A3','V1.0.0　封底加高牌倉　P32台階上殼　兩規格螺絲　Type-C');
+    set(bom,'A4','2026-11-11更新。P08底板與側板封實，側板上緣與上蓋齊平；P12配合新高度。其他38種STL及五金數量沿用。');
+  }else if(!toothFix){
     set(bom,'A3','V1.0.0　轉盤間隙2mm　P32A覆蓋P32B台階上殼　兩規格螺絲　Type-C');
     set(bom,'A4','2026-11-11更新。P04B齒寬增至7.5mm，上部抬升1.5mm，配P26延長遮光片。其他38種STL及五金用量沿用。');
   }
@@ -64,16 +79,20 @@ if (['--refresh-turntable-gap','--inspect-turntable-gap','--refresh-tooth-fix','
     const {p}=item,mass=(p.volume_cm3*1.24).toFixed(1);
     set(bom,`B${item.bom}`,p.name);
     set(bom,`C${item.bom}`,`${p.dimensions_mm.join(' × ')} mm；${p.material}；PLA實心換算約${mass}g`);
-    set(bom,`P${item.bom}`,notes[p.id]+' 成本併入耗材。');
+    set(bom,`P${item.bom}`,(hopper?bomNotes[p.id]:notes[p.id])+' 成本併入耗材。');
     set(printing,`B${item.printing}`,p.name);
     if(!toothFix)for(let i=0;i<3;i++)set(printing,`${'DEF'[i]}${item.printing}`,p.dimensions_mm[i]);
     set(printing,`G${item.printing}`,p.supports);
     set(printing,`I${item.printing}`,notes[p.id]+` PLA實心換算約${mass}g${toothFix?`（模型體積${p.volume_cm3}cm³）`:''}；實際依切片。`);
   }
   set(bom,`C${filamentRow}`,`暫留${retainedFilamentKg.toFixed(2)}kg；全部模型實心換算約${manifest.solid_PLA_mass_g}g（含上罩與選配）。`);
-  if(!toothFix)set(printing,'A5','P04B使上部抬升1.5mm，P04A對P02A名義間隙2mm；P26向下延長1.5mm以沿用原參考感測器。P32A／B台階上殼沿用。');
+  if(hopper){
+    set(bom,`D${filamentRow}`,retainedFilamentKg);
+    set(printing,'A5','P08連續底板與兩側板加高至上蓋開口，保留61mm內寬與前後開放；P12卡扣配套修改。上蓋、原孔位及五金沿用。');
+  }else if(!toothFix)set(printing,'A5','P04B使上部抬升1.5mm，P04A對P02A名義間隙2mm；P26向下延長1.5mm以沿用原參考感測器。P32A／B台階上殼沿用。');
   workbook.recalculate();
-  const changes=[];
+  const changes=[],formulaCaches=[];
+  const cacheAllowed=new Set(['E6','H6','K6','M6','B7','E7','H7','K7',`F${filamentRow}`,`I${filamentRow}`,`K${filamentRow}`]);
   function columnName(n){let v='';for(n++;n;n=Math.floor((n-1)/26))v=String.fromCharCode(65+(n-1)%26)+v;return v;}
   for(const snapshot of before){
     const current=workbook.worksheets.getItem(snapshot.name).getRange('A1:S100'),values=current.values,formulas=current.formulas;
@@ -82,23 +101,25 @@ if (['--refresh-turntable-gap','--inspect-turntable-gap','--refresh-tooth-fix','
       assert.deepEqual(formulas[r]?.[c]??null,oldFormula,`${snapshot.name}!${address}: formula changed`);
       if(JSON.stringify(values[r]?.[c]??null)===JSON.stringify(snapshot.values[r][c]??null))continue;
       if(oldFormula&&[null,''].includes(snapshot.values[r][c]??null)&&[null,''].includes(values[r]?.[c]??null))continue;
-      assert(!oldFormula&&allowed.get(snapshot.name).has(address),`${snapshot.name}!${address}: unexpected input or formula result change`);
-      changes.push(`${snapshot.name}!${address}`);
+      if(oldFormula){assert(hopper&&snapshot.name==='BOM'&&cacheAllowed.has(address),`${snapshot.name}!${address}: unexpected formula result change`);formulaCaches.push(`${snapshot.name}!${address}`);}
+      else{assert(allowed.get(snapshot.name).has(address),`${snapshot.name}!${address}: unexpected input change`);changes.push(`${snapshot.name}!${address}`);}
     }
   }
   const errors=await workbook.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:50},maxChars:1800});
   for(const sheet of [bom,printing,screws])for(const row of sheet.getRange('A1:S100').values)for(const value of row)assert(!(typeof value==='string'&&/^#(REF!|DIV\/0!|VALUE!|NAME\?|N\/A|NUM!|NULL!|SPILL!|CALC!)/.test(value)),`${sheet.name}: ${value}`);
-  const previews=toothFix
+  const previews=hopper
+    ?[['BOM','A1:M9','bom-summary-preview.png'],['BOM','A1:M26','bom-preview.png'],['BOM',`A41:M${lastBomRow}`,'bom-lower-preview.png'],['設計與列印','A1:K35','printing-preview.png'],['設計與列印','A27:K33','hopper-printing-preview.png']]
+    :toothFix
     ?[['BOM',`A41:M${lastBomRow}`,'bom-lower-preview.png'],['設計與列印','A1:K30','printing-preview.png'],['設計與列印','A23:K25','p05-printing-preview.png'],['BOM',`A${rows[0].bom-1}:M${rows[0].bom+1}`,'tooth-P04B-bom-preview.png']]
     :[['BOM','A1:M9','bom-summary-preview.png'],['BOM','A1:M26','bom-preview.png'],['BOM',`A41:M${lastBomRow}`,'bom-lower-preview.png'],['設計與列印','A1:K30','printing-preview.png']];
-  for(const item of rows){previews.push(['設計與列印',`A${item.printing-1}:K${item.printing+1}`,`turntable-${item.p.id}-printing-preview.png`],['BOM',`O${item.bom}:P${item.bom}`,`turntable-${item.p.id}-note-preview.png`]);}
+  for(const item of rows){previews.push(['設計與列印',`A${item.printing-1}:K${item.printing+1}`,`${hopper?'hopper':'turntable'}-${item.p.id}-printing-preview.png`],['BOM',`O${item.bom}:P${item.bom}`,`${hopper?'hopper':'turntable'}-${item.p.id}-note-preview.png`]);}
   for(const [sheetName,range,name] of previews){const image=await workbook.render({sheetName,range,scale:1.25,format:'png'});await fs.writeFile(path.join(dir,name),new Uint8Array(await image.arrayBuffer()));}
   const candidate=path.join(dir,'candidate.xlsx');await(await SpreadsheetFile.exportXlsx(workbook)).save(candidate);
-  const summary={mode:toothFix?'tooth-fix':'turntable-gap',original,candidate,originalSha,changes,formulaCaches:[],
+  const summary={mode,original,candidate,originalSha,changes,formulaCaches,
     solidPLAMassG:manifest.solid_PLA_mass_g,filamentKg:retainedFilamentKg,suggestedFilamentKg:filamentKg,
     shortQty,longQty,nutQty:fasteners.nut_qty,summary:bom.getRange('A6:M7').values,formulaErrors:errors.ndjson,
-    printedTypes:manifest.parts.length,bomRows:lastBomRow-10,changedIds:toothFix?(changes.includes(`BOM!C${filamentRow}`)?['P04B','F01']:['P04B']):['F01','P04B','P26'],
-    design:toothFix?'P04B independently rebuilt to remove legacy carrier-nut cuts from all 60 teeth across the full 7.5mm thickness. Original 2mm nominal turntable gap, mating dimensions and fasteners retained. Only P04B needs reprinting; extended P26 and all other 39 STL types retained.':'P04B gear thickness 7.5mm raises the original upper assembly by 1.5mm for a 2mm nominal P04A-to-P02A clearance; P26 flag extends downward 1.5mm to retain the original home sensor beam. Other 38 STL types, P32 shell and all hardware quantities unchanged.',
+    printedTypes:manifest.parts.length,bomRows:lastBomRow-10,changedIds:hopper?['F01','P08','P12']:toothFix?(changes.includes(`BOM!C${filamentRow}`)?['P04B','F01']:['P04B']):['F01','P04B','P26'],
+    design:hopper?'P08 has a continuous floor with only the pickup-roller window and mounting holes, solid raised sidewalls level with the upper loading opening, 61mm clear width and open ends. P12 spacers are adapted to the taller walls. Other 38 STL types, the upper shell, mounting positions and hardware quantities retained.':toothFix?'P04B independently rebuilt to remove legacy carrier-nut cuts from all 60 teeth across the full 7.5mm thickness. Original 2mm nominal turntable gap, mating dimensions and fasteners retained. Only P04B needs reprinting; extended P26 and all other 39 STL types retained.':'P04B gear thickness 7.5mm raises the original upper assembly by 1.5mm for a 2mm nominal P04A-to-P02A clearance; P26 flag extends downward 1.5mm to retain the original home sensor beam. Other 38 STL types, P32 shell and all hardware quantities unchanged.',
     previews:previews.map(r=>r[2])};
   await fs.writeFile(path.join(dir,'edit-summary.json'),JSON.stringify(summary,null,2));
   const python=process.env.CARD_DEALER_PYTHON||'C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1110-778-0_26.1110.778.0_x64__3k8sg7r9htsxt/dependencies/python/python.exe';

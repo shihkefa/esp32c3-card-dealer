@@ -1,0 +1,440 @@
+{
+  "revision": "V1.0.0",
+  "all_passed": true,
+  "source_hashes": {
+    "build_cad_py_sha256": "3cc4090fb0c19c693c98c5ecf8c48a00a6b261dc3b2907c07d23055d427a92ef",
+    "design_params_json_sha256": "caf1580317990d2ef0b5dc4cebb989314e7e9f012dc4c09a2879e691328c08ff",
+    "check_script_sha256": "70b2f1520911845edfe546cc5bbec0a765a63ae57f6db6e5ddd32ab9ea2fd917"
+  },
+  "checks": [
+    {
+      "test": "P08 and P12 are single closed bodies and their delivered STL files match",
+      "passed": true,
+      "parts": [
+        {
+          "part": "P08",
+          "dimensions_mm": [
+            106.0,
+            83.0,
+            61.84721
+          ],
+          "single_closed_body": true,
+          "actual_STL_sha256": "e441a35fc569d6d94efb53226e0a7a9f21a3246177711d73d0b8d64d959c5d99",
+          "reexport_from_current_source_sha256": "e441a35fc569d6d94efb53226e0a7a9f21a3246177711d73d0b8d64d959c5d99",
+          "actual_STL_matches_current_source": true
+        },
+        {
+          "part": "P12",
+          "dimensions_mm": [
+            82.0,
+            57.66917,
+            5.9
+          ],
+          "single_closed_body": true,
+          "actual_STL_sha256": "2d7d3ee0049075986734d00715b52fc3806ba3b8ca9e17742846f388e7d811a9",
+          "reexport_from_current_source_sha256": "2d7d3ee0049075986734d00715b52fc3806ba3b8ca9e17742846f388e7d811a9",
+          "actual_STL_matches_current_source": true
+        }
+      ],
+      "safe_build_bounds_mm": [
+        175,
+        175,
+        180
+      ]
+    },
+    {
+      "test": "Both revised parts have a substantial planar print-bed face",
+      "passed": true,
+      "parts": [
+        {
+          "part": "P08",
+          "contact_area_mm2": 7080.034,
+          "minimum_mm2": 6000,
+          "passed": true
+        },
+        {
+          "part": "P12",
+          "contact_area_mm2": 3819.738,
+          "minimum_mm2": 3000,
+          "passed": true
+        }
+      ],
+      "layer_mm": 0.02,
+      "limitation": "Blind-pocket and hook bridging/support still require slicing."
+    },
+    {
+      "test": "The floor top is continuous except the roller aperture and original four countersinks",
+      "passed": true,
+      "missing_volume_mm3": 0.0,
+      "floor_native_interval_mm": [
+        61.6,
+        64
+      ],
+      "checked_top_skin_mm": [
+        63,
+        64
+      ],
+      "roller_window_mm": {
+        "center": [
+          -22,
+          7
+        ],
+        "size": [
+          23,
+          12
+        ]
+      }
+    },
+    {
+      "test": "P19 clamp bosses have blind underside clearance with a closed upper floor",
+      "passed": true,
+      "pockets": [
+        {
+          "center_xy_mm": [
+            -30.4,
+            -11
+          ],
+          "expanded_boss_overlap_mm3": 0.0,
+          "missing_top_skin_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "center_xy_mm": [
+            -13.6,
+            -11
+          ],
+          "expanded_boss_overlap_mm3": 0.0,
+          "missing_top_skin_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "pocket_diameter_mm": 9.2,
+      "pocket_top_z_mm": 62.6,
+      "nominal_remaining_skin_mm": 1.4
+    },
+    {
+      "test": "Both lateral walls are filled from the deck to the raised rim",
+      "passed": true,
+      "sides": [
+        {
+          "side": -1,
+          "missing_sampled_solid_mm3": 0.0
+        },
+        {
+          "side": 1,
+          "missing_sampled_solid_mm3": 0.0
+        }
+      ],
+      "longitudinal_probe_columns_per_side": 47,
+      "wall_thickness_mm": 2.4
+    },
+    {
+      "test": "The card channel retains 61mm nominal clear width",
+      "passed": true,
+      "interior_probe_width_mm": 60.8,
+      "obstruction_mm3": 0.0
+    },
+    {
+      "test": "Front and rear ends remain open without a longitudinal stop",
+      "passed": true,
+      "ends": [
+        {
+          "x_mm": -54.8,
+          "obstruction_mm3": 0.0
+        },
+        {
+          "x_mm": 50.8,
+          "obstruction_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "test": "Both installed wall rims are level and flush with the exterior roof",
+      "passed": true,
+      "assembled_roof_top_z_mm": 130.2,
+      "material_above_roof_mm3": 0.0,
+      "probes": [
+        {
+          "native_x_mm": -50,
+          "side": -1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": -50,
+          "side": 1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": -25,
+          "side": -1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": -25,
+          "side": 1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": 0,
+          "side": -1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": 0,
+          "side": 1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": 25,
+          "side": -1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": 25,
+          "side": 1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": 42,
+          "side": -1,
+          "missing_rim_mm3": 0.0
+        },
+        {
+          "native_x_mm": 42,
+          "side": 1,
+          "missing_rim_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "test": "Raised walls and both central hangers fit the unchanged loading aperture",
+      "passed": true,
+      "opening_mm": {
+        "center_xy": [
+          -15,
+          0
+        ],
+        "size": [
+          130,
+          72
+        ],
+        "corner_radius": 6
+      },
+      "components": [
+        {
+          "part": "P08",
+          "minimum_XY_clearance_mm": 0.828223,
+          "roof_band_vertices_checked": 16
+        },
+        {
+          "part": "P12.1",
+          "minimum_XY_clearance_mm": 1.099998,
+          "roof_band_vertices_checked": 183
+        },
+        {
+          "part": "P12.2",
+          "minimum_XY_clearance_mm": 1.099998,
+          "roof_band_vertices_checked": 181
+        }
+      ],
+      "minimum_required_mm": 0.5
+    },
+    {
+      "test": "The complete feed-wheel rotational envelope clears the closed floor",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "reference": "OD18.4 core plus OD19 clamp/fastener radial envelope and two OD20.7 rubber rings"
+    },
+    {
+      "test": "Actual feed wheel and its screws nuts and rings clear P08 over a sampled full turn",
+      "passed": true,
+      "angles": 360,
+      "increment_deg": 1,
+      "members": 5,
+      "maximum_overlap_mm3": 0.0,
+      "scope": "Sampled source geometry; continuous envelope checked separately."
+    },
+    {
+      "test": "Revised P08 clears its installed surrounding components and retained fasteners",
+      "passed": true,
+      "components": [
+        {
+          "instance": "牌倉支柱",
+          "part": "P07",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "牌倉支柱",
+          "part": "P07",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "牌倉支柱",
+          "part": "P07",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "牌倉支柱",
+          "part": "P07",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "可調單張分牌閘",
+          "part": "P09",
+          "overlap_mm3": -0.0
+        },
+        {
+          "instance": "左出牌滾輪座",
+          "part": "P13",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "右出牌滾輪座",
+          "part": "P14",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "N20取牌馬達底座",
+          "part": "P18",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "N20馬達壓片",
+          "part": "P19",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "出牌導向槽",
+          "part": "P23",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "6度下傾轉接框",
+          "part": "P31",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "台階包覆式居中上殼主片",
+          "part": "P32A",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "退台式上殼背側接合片",
+          "part": "P32B",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "N20",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "hopperM3x25",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "hopperM3x25",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "hopperM3x25",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "hopperM3x25",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "n20clampM3x8",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "n20clampM3x8",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "gateM3x8",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "gateM3nut",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "gateM3x8",
+          "overlap_mm3": 0.0
+        },
+        {
+          "instance": "gateM3nut",
+          "overlap_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "test": "The same centered-hanger P12 fits and drops in from above on both sides",
+      "passed": true,
+      "shims": [
+        {
+          "instance": 1,
+          "seated_overlap_mm3": 0.0,
+          "minimum_vertical_bridge_clearance_mm": 0.298352,
+          "vertical_drop_samples": 61,
+          "insertion_overlap_mm3": 0.0
+        },
+        {
+          "instance": 2,
+          "seated_overlap_mm3": 0.0,
+          "minimum_vertical_bridge_clearance_mm": 0.298352,
+          "vertical_drop_samples": 61,
+          "insertion_overlap_mm3": 0.0
+        }
+      ],
+      "nominal_local_wall_to_hanger_clearance_mm": 0.3
+    },
+    {
+      "test": "Installed narrow-card shims retain 58mm nominal card width",
+      "passed": true,
+      "interior_probe_width_mm": 57.8,
+      "obstruction_mm3": 0.0
+    },
+    {
+      "test": "Both card sizes and descending gravity weights clear the new walls and shims",
+      "passed": true,
+      "card_cases": [
+        {
+          "card_mm": [
+            57,
+            87
+          ],
+          "maximum_overlap_mm3": 0.0
+        },
+        {
+          "card_mm": [
+            60,
+            96
+          ],
+          "maximum_overlap_mm3": 0.0
+        }
+      ],
+      "deck_counts": [
+        1,
+        13,
+        54,
+        108
+      ],
+      "card_reference_thickness_mm": 0.3
+    },
+    {
+      "test": "The upper cover can be lowered over the raised hopper and optional shims",
+      "passed": true,
+      "vertical_samples": 81,
+      "maximum_overlap_mm3": 0.0,
+      "scope": "Housing halves and revised hopper/shims only; full UI/hardware path checked in global assembly report."
+    }
+  ],
+  "scope": "Nominal source solids, delivered P08/P12 meshes, continuous wheel references and sampled assembly paths.",
+  "limitations": [
+    "No physical printing, slicer/support, impact, friction, card feeding or deflection test.",
+    "Small clearances and hanger retention require actual print-fit confirmation.",
+    "P19 is installed before the closed-floor P08; underside screw access is not a through hole."
+  ]
+}

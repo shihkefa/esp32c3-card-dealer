@@ -27,6 +27,21 @@ UPPER_LIFT = float(P.get('turntable_raise_mm', 0))
 P04_MATE_Z = 42.0 + UPPER_LIFT
 P04_GEAR_BOTTOM_Z = 36.0
 P04_GEAR_HEIGHT = 6.0 + UPPER_LIFT
+UPPER_ROOF_TOP_Z = P['upper_housing_roof_top_native_z_mm']
+P08_FLOOR_TOP_Z = P['card_floor_z_mm']
+P08_FLOOR_BOTTOM_Z = P08_FLOOR_TOP_Z-P['hopper_floor_thickness_mm']
+P08_ROLLER_WINDOW = (-22.0, 7.0, 23.0, 12.0)
+
+def hopper_roof_local_z(x):
+    """Native height whose inclined assembly top is level with the roof."""
+    angle = math.radians(P['hopper_tilt_deg'])
+    floor = P['card_floor_z_mm']
+    return floor + (UPPER_ROOF_TOP_Z-floor-P['hopper_lift_mm']
+                    + x*math.sin(angle))/math.cos(angle)
+
+# A centered, symmetric hanger fits either side with the existing 180deg pose.
+# Its flat underside clears both signs of the inclined rim across its 15mm span.
+P12_HOOK_BASE_Z = hopper_roof_local_z(-4) + 7.5*math.tan(math.radians(P['hopper_tilt_deg'])) + .3
 RAISED_PRINT_PARTS = {f'P{i:02}' for i in range(7,25)} | {
     'P04A','P26','P27','P28','P31','P32A','P32B','P33','P34','P35'}
 
@@ -351,14 +366,22 @@ add("P06","捕捉螺母式空心轉軸止退環",collar,color=ORANGE,rot=(180,0,
 spacer=cyl(9,16.2,z0=45.4)-cyl(3.4,18,z0=44.5)
 add("P07","牌倉支柱",spacer,qty=4,color=LIGHT,note="四支位於(-45/31, ±26)，使用M3沉頭長螺絲。")
 
-# P08 open-ended width-only hopper. No rear wall, no longitudinal stop.
-tray=box(106,4.5,2.4,-2,-32.25,61.6)+box(106,4.5,2.4,-2,32.25,61.6)+box(106,4,2.4,-2,0,61.6)
+# P08: a continuous card floor and two solid sides, still open at both ends.
+# The floor keeps its old datum and existing roller opening/mount interfaces.
+tray=box(106,69,P['hopper_floor_thickness_mm'],-2,0,P08_FLOOR_BOTTOM_Z)
 for xx in [-45,-22,31]: tray=tray+box(8,77,2.4,xx,0,61.6)
-tray=tray-slotz(-22,7,60,23,12,6)
+tray=tray-slotz(P08_ROLLER_WINDOW[0],P08_ROLLER_WINDOW[1],60,
+                P08_ROLLER_WINDOW[2],P08_ROLLER_WINDOW[3],6)
+# P19 bosses and their screw heads rise above the underside datum. Blind
+# pockets clear them by 0.4mm while leaving a continuous 1.4mm top skin.
+for xx in [-30.4,-13.6]: tray=tray-cyl(9.2,1.1,xx,-11,61.5)
 for side in [-1,1]:
     y=side*(61/2+1.2)
-    tray=tray+box(94,2.4,7,-4,y,63.9)
-    for x in [-44,26,38]: tray=tray+box(6,2.4,P["hopper_rail_height_mm"],x,y,64)
+    # Level in the assembled 6deg pose. A tiny upper-front bevel gives the
+    # rounded roof loading aperture clearance without altering gate ears.
+    wall=[(-51,63.9),(43,63.9),(43,hopper_roof_local_z(43)-8),
+          (42.3,hopper_roof_local_z(42.3)),(-51,hopper_roof_local_z(-51))]
+    tray=tray+poly(wall,2.4).rot(x=90).move(y=y+1.2)
     # Gate slide attachment ears, outside the card channel.
     tray=tray+box(6,9,16,40,side*37,63.9)
     tray=tray-cylx(3.4,18,35,side*37.5,72)
@@ -368,7 +391,9 @@ for x in [-45,31]:
     for y in [-26,26]:
         tray=tray-hole(x,y,60,7)
         tray=tray-cyl(3.4,2,x,y,62,d2=6.4)
-add("P08","61mm前後開放牌倉",tray,color=LIGHT,note="內寬61mm。前後無擋板，87/96mm長牌可用，其他長度需試送。")
+add("P08","61mm封底高側板開放式牌倉",tray,color=LIGHT,
+    support="底板大平面貼床；兩個底部盲避讓槽及滾輪孔局部橋接待切片",
+    note="連續2.4mm底板，兩側2.4mm實心擋板加高，組裝後頂緣與上蓋Z130.2齊平；前上角削邊避讓上蓋開口。內寬61mm、前後開放不限長，原23×12mm取牌輪開口及四個沉頭固定孔沿用。底面兩個Ø9.2盲槽避讓P19螺絲頭，上方仍留1.4mm實心層；先裝P19再裝牌倉。57mm牌配新版中央掛鉤P12。")
 
 # Separation gate moves vertically. Its lower edge is shimmed from the deck floor.
 gate=box(6,66,11,47.5,0,64.45)+box(7.5,10,14,46.75,-37.5,64.45)+box(7.5,10,14,46.75,37.5,64.45)
@@ -388,11 +413,14 @@ add("P10","選配重力壓牌滑板",follower,color=ORANGE,note="選配；直接
 weight=rr(35,39,2,20,-22,0,98.6)
 add("P11","選配列印配重塊",weight,color=ORANGE,note="選配；壓力不足才放在P10上。可改列印高度或填充率調重量；100%實心約33g。需實秤。")
 
-# Narrow-card spacers only occupy the width, leaving both ends open.
+# Narrow-card spacers remain floor-seated. The centered symmetric hanger
+# replaces the two obsolete low-rim clips; the same STL fits both sides.
 shim=box(82,1.5,44.1,-4,29.75,64)
-for xx in [-44,36]:
-    shim=shim+box(5,5.9,2,xx,31.95,108)+box(5,1.5,7,xx,34.15,103)
-add("P12","57mm窄牌側墊",shim,qty=2,color=ORANGE,rot=(90,0,0),support="卡鉤需要局部支撐",note="57mm牌左右各一片，內寬約58mm；卡鉤跨在側柱頂，60mm牌取下。左右件以Z軸轉180度裝配。")
+shim=shim+box(15,1.5,P12_HOOK_BASE_Z+0.1-64,-4,29.75,64)
+shim=shim+box(15,5.9,2,-4,31.95,P12_HOOK_BASE_Z)
+shim=shim+box(15,1.5,7,-4,34.15,P12_HOOK_BASE_Z-5)
+add("P12","57mm中央掛鉤窄牌側墊",shim,qty=2,color=ORANGE,rot=(90,0,0),support="平側面貼床；中央掛鉤需要局部支撐",
+    note="配新版高側板P08；57mm牌左右各一片，內寬約58mm，60mm牌取下。底邊坐在牌倉底板，中央15mm掛鉤跨過高側板，兩側相同STL，另一片以Z軸轉180度後X移-8mm。掛鉤位於上方開口內，約高出上蓋3mm；不限制前後牌長。")
 
 # Roller bearing pedestals. Two 623ZZ lower and two 623ZZ upper.
 def pillow(side):
@@ -666,7 +694,7 @@ P32_LAP_END_Y=P['upper_housing_lap_end_y_mm']
 P32_LAP_SKIN=P['upper_housing_lap_skin_mm']
 P32_B_SETBACK=P['upper_housing_b_setback_mm']
 P32_LAP_CLEARANCE=P['upper_housing_lap_clearance_mm']
-P32_A_ROOF_TOP_Z=128.7
+P32_A_ROOF_TOP_Z=UPPER_ROOF_TOP_Z
 P32_A_LAP_ROOF_BOTTOM_Z=P32_A_ROOF_TOP_Z-P32_LAP_SKIN
 P32_B_ROOF_TOP_Z=P32_A_ROOF_TOP_Z-P32_B_SETBACK
 P32_B_ROOF_INNER_Z=P32_B_ROOF_TOP_Z-2.2
@@ -955,11 +983,11 @@ mark_flat('P05A',(54,-10.5,40),*TOP,2.5,.3,'齒輪內部平坦腹板；避開齒
 mark_flat('P05B',(54,-10.5,35.5),*BACK,2.4,.25,'背側新增貼床平面；避開D軸孔、側載槽與承壓面')
 mark_flat('P06',(17,0,15.5),*RIGHT,2.4,.25,'止退環隱藏小平臺；避開徑向固定孔及軸承接觸面')
 mark_cylinder('P07',(0,0,53.5),4.5)
-mark_flat('P08',(31,-8,61.6),*SIDEWAYS_BOTTOM,3,.3,'牌倉底面橫肋；避開牌路與支柱')
+mark_flat('P08',(31,-8,61.6),*SIDEWAYS_BOTTOM,3,.3,'牌倉底板背面；避開牌路、盲槽與支柱')
 mark_flat('P09',(46.75,42.5,74.5),(-1,0,0),(0,0,1),(0,1,0),2.5,.3,'分牌閘固定耳外側；不接觸牌面')
 mark_flat('P10',(-47.5,0,98.5),*LEFT,2,.25,'壓牌滑板後側薄邊；避開牌面與配重槽')
 mark_flat('P11',(-22,0,98.6),*BOTTOM,3.5,.35,'配重塊底面中央隱藏區')
-mark_flat('P12',(36,34.9,106.5),(-1,0,0),(0,0,1),(0,1,0),2,.25,'卡鉤外側；避開牌面與側柱卡合區')
+mark_flat('P12',(-4,34.9,P12_HOOK_BASE_Z-2.5),(-1,0,0),(0,0,1),(0,1,0),2,.25,'中央掛鉤外側下段；位於上蓋開口下方，避開牌面與側板卡合區')
 for pid,y in [('P13',-35),('P14',35)]: mark_flat(pid,(51,y,64),*LEFT,2.5,.3,'滾輪座後側實心區；避開軸承孔和導槽')
 mark_flat('P15',(61,-38.25,78.5),*BACK,2.5,.3,'滑塊背面；避開軸孔、軸承座和上方調整接觸點')
 mark_flat('P16',(61,-27,59.7),*BACK,2.5,.3,'輪芯端面空白區；避開輪槽、軸孔及摩擦圓周')

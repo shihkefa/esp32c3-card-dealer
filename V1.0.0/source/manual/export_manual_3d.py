@@ -277,7 +277,8 @@ scene('step-15',['P31','P07','P08','P09','separatorpad','hopperM3x25','hopperM3n
       explode={'P08':[0,0,23],'P09':[15,0,23],'separatorpad':[15,0,23],
                'hopperM3x25':[0,0,44],'hopperM3nut':[0,0,-13],
                'gateM3x8':[-12,0,23],'gateM3nut':[30,0,23]},
-      focus=(0,0,87),view_radius=95)
+      focus=(0,0,87),view_radius=95,
+      caption='P08底板與兩側擋板封實，保留61mm內寬、前後開放及約23×12mm取牌輪開口。側板頂緣組裝後水平並切齊上殼屋頂外表面，上殼開口邊留至少0.5mm設計間隙。')
 scene('step-16',['P13','P14','P15','P16','silicone','lower3mmshaft','upper3mmshaft','P23','P24','exit_opto','guideM3x8','photoM3x8','photoM3nut'],
       new=['P23','P24','exit_opto','guideM3x8','photoM3x8','photoM3nut'],
       explode={'P23':[15,0,0],'P24':[15,12,0],'exit_opto':[15,12,8],
@@ -324,7 +325,7 @@ scene('overview',list(standard_ids),new=[],explode=overview_explode,camera=(1.2,
 scene('optional',['P31','P07','P08','P09','P10','P11','P12'],new=['P10','P11','P12'],
       explode={'P10':[0,0,25],'P11':[0,0,45],'P12':lambda e:[0,-14 if e['position'][1]<0 else 14,8]},
       focus=(0,0,90),view_radius=95,
-      caption=f'P10/P11僅在少牌壓力不足時加；57mm牌左右各用一片P12。選配件不計入標準空機{len(standard_ids)}件。')
+      caption=f'P10/P11僅在少牌壓力不足時加；57mm牌左右各用一片配套P12，第二片轉180度。44.1mm導牌本體仍落在底板，中央15mm對稱掛架跨過高側板並約高出3mm；原低側板版本不可直接混用。選配件不計入標準空機{len(standard_ids)}件。')
 
 assert len(scenes['overview']['meshes'])==len(standard_ids)
 assert len(scenes['step-22']['meshes'])==len(standard_ids)

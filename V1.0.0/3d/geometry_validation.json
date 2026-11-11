@@ -131,7 +131,7 @@
       "dimensions_mm": [
         106.0,
         83.0,
-        46.4
+        61.847
       ],
       "label": "P08"
     },
@@ -177,8 +177,8 @@
       "connected_components": 1,
       "matches_current_source": true,
       "dimensions_mm": [
-        85.0,
-        46.0,
+        82.0,
+        57.669,
         5.9
       ],
       "label": "P12"
@@ -496,18 +496,18 @@
     "static_unexpected": [],
     "motion_pose_checks": 1563,
     "motion_classified_pairs": 4246780,
-    "motion_exact_candidates": 32048,
+    "motion_exact_candidates": 32041,
     "motion_unexpected": [],
     "all_passed": true,
-    "elapsed_s": 35.5
+    "elapsed_s": 57.5
   },
   "fastener_summary": {
     "revision": "V1.0.0",
     "upper_head_lift_mm": 1.5,
     "coordinate_frame": "Current assembled world geometry from actors(); no repeated lift transform.",
     "source_hashes": {
-      "build_cad_py_sha256": "ca08ed01fc6e8b6289d8ddd1879cfc32828b26102003e9c85a9c692e4e774549",
-      "design_params_json_sha256": "adca2f7b7bc783b4755d79ff24bd42adda861fee32cb455af460165ef82ec1c9",
+      "build_cad_py_sha256": "3cc4090fb0c19c693c98c5ecf8c48a00a6b261dc3b2907c07d23055d427a92ef",
+      "design_params_json_sha256": "caf1580317990d2ef0b5dc4cebb989314e7e9f012dc4c09a2879e691328c08ff",
       "check_script_sha256": "a12af82378f1b0c6c0d35a726247ad21656285f942692d018fd92cb402c50704"
     },
     "screw_skus": {

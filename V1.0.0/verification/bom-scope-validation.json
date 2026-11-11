@@ -10,10 +10,12 @@
   "all_formulas_preserved": true,
   "styles_views_widths_validation_and_conditional_formats_preserved": true,
   "expected_changed_ids": [
-    "P04B"
+    "F01",
+    "P08",
+    "P12"
   ],
-  "updated_design": "P04B independently rebuilt to remove legacy carrier-nut cuts from all 60 teeth across the full 7.5mm thickness. Original 2mm nominal turntable gap, mating dimensions and fasteners retained. Only P04B needs reprinting; extended P26 and all other 39 STL types retained.",
-  "solid_PLA_mass_g": 779.3,
+  "updated_design": "P08 has a continuous floor with only the pickup-roller window and mounting holes, solid raised sidewalls level with the upper loading opening, 61mm clear width and open ends. P12 spacers are adapted to the taller walls. Other 38 STL types, the upper shell, mounting positions and hardware quantities retained.",
+  "solid_PLA_mass_g": 816,
   "summary_CNY": {
     "external": 80.5,
     "shipping": 9.5,
@@ -30,13 +32,28 @@
     "M3x25": 12,
     "M3nuts": 60
   },
-  "sha256": "d561ee55140180c26e2c86cbaaaedef4e22ab2bc1ad29e565c80988c8c454bce",
-  "original_sha256": "7809b317b519676eff37766ff74c8bbdf0bcdd67b2a1b57c6d15ea3adda738b7",
+  "sha256": "95f465d38a18bef46d9a87c61a45706458aff468d2fc6e0e1ba42c35fe25f6d5",
+  "original_sha256": "d561ee55140180c26e2c86cbaaaedef4e22ab2bc1ad29e565c80988c8c454bce",
   "changed_cells": [
-    "BOM!B48",
-    "BOM!P48",
-    "設計與列印!B23",
-    "設計與列印!I23"
+    "BOM!A3",
+    "BOM!A4",
+    "BOM!B53",
+    "BOM!C53",
+    "BOM!P53",
+    "BOM!B57",
+    "BOM!C57",
+    "BOM!P57",
+    "BOM!C83",
+    "設計與列印!A5",
+    "設計與列印!B28",
+    "設計與列印!F28",
+    "設計與列印!G28",
+    "設計與列印!I28",
+    "設計與列印!B32",
+    "設計與列印!D32",
+    "設計與列印!E32",
+    "設計與列印!G32",
+    "設計與列印!I32"
   ],
   "inserted_rows": {},
   "styles_and_relationships_byte_identical": true

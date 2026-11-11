@@ -3,7 +3,7 @@
   "design": "Independent closed D-clamp hub plus removable positively retaining gear",
   "all_passed": true,
   "source_hashes": {
-    "build_cad_py_sha256": "ca08ed01fc6e8b6289d8ddd1879cfc32828b26102003e9c85a9c692e4e774549",
+    "build_cad_py_sha256": "3cc4090fb0c19c693c98c5ecf8c48a00a6b261dc3b2907c07d23055d427a92ef",
     "check_script_sha256": "36c68c1988c1820c6ec63bbaf879d8b24e80f23e492baa083c42af2de96f850e"
   },
   "scope": "Nominal CAD contact, material support and sampled insertion/escape constraints, not physical qualification.",
