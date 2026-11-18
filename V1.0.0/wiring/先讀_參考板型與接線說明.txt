@@ -1,0 +1,68 @@
+﻿發牌機實物接線圖 V1.0.0 - 對應V1.0.0
+
+先開「開啟我_互動實物接線圖.html」。不需網路、不需安裝軟體。
+每條線都從一個實體焊孔畫到另一個焊孔；沒有以兩個同名線號代替連線。
+按導線或右側清單，可顯示兩端與同網路分支；下拉選單可單獨顯示電源、步進、直流馬達、UI或光電。
+滾輪縮放、空白處拖曳；全圖按鈕復位。PDF與PNG同樣是完整走線。
+滑環以放大剖面顯示其內部導通，並非20腳連接器；不要再加線直接跨越固定與旋轉兩邊。
+滑環每對線先斷電量通斷，按圖中01-12配對，再套熱縮標號；原廠沒有通用線色。
+
+觀看方向（很重要）：
+ESP32-C3 SuperMini：元件面朝上、USB向上；左右8孔依廠商接腳圖。
+TP4056 HW-387：元件面，USB向左，右上BAT+、右下BAT-，左IN+/IN-不外接。
+TPS61088：黑色四角焊孔、5/9/12/ADJ焊盤款，VIN左上、GND左下、VOUT右上、GND右下。
+1S保護板：指定35×7.4mm長條DW01/三8205A款，焊接面朝上。B-最左、B+最右；P-中右上、P+中右下。
+ULN2003：X113647/ZC-A0591七輸入款，元件面。底排IN1-IN7由左向右，用前四孔；右側電源下兩孔為+和-，上兩孔原跳帽保留。
+DRV8833：HW-627十二腳黑板，焊接面，J2在上。左列IN4/IN3/GND/VCC/IN2/IN1；右列EEP/OUT1/OUT2/OUT3/OUT4/ULT。
+PCF8574T：Waveshare式長條9孔IO款，畫的是焊接面！IO排由左到右P0/P1/P2/P3/P4/P5/P6/P7/INT；右側四孔由上到下VCC/GND/SDA/SCL。
+OLED：選正面排針由左到右GND/VCC/SCL/SDA的SSD1306 128x64四孔板，排針在上。地址0x3C。
+Q1/Q2：Everlight ITR9608-F，底視圖，發光端在左；左上2=K、左下1=A、右上3=C、右下4=E。
+按鍵：指定兩腳6×6常開型；不按斷路、按下導通，兩腳沒有極性。四腳版不能照兩腳位置套接。
+
+指定板型的接法與適配：
+HW-627的EEP是nSLEEP，圖中一條線把它接同一塊板的VCC=5V，保持喚醒。
+這是DRV8833允許的接法，與本板J2是否已接VM不衝突；不要把EEP再接3V3或ESP GPIO。
+本指定PCF板內建SDA/SCL上拉，因此不額外安裝選配R8/R9。若所購版不同，先核對總等效上拉與3.3V邏輯；不是所有板都同阻值。
+地址跳帽在PCF另一面，A0/A1/A2均跨中間A與標示「-」的GND側，7bit地址0x20。
+PCF模組上的兩顆I2C上拉與OLED可能並聯，須核對實物；匯流排以100kHz、3.3V運作。
+R1/R2=150Ω/1/4W，各供一顆IR LED；R3=10kΩ出口上拉；R4=47kΩ參考上拉；R5/R6/R7各10kΩ輸入下拉。
+C1/C2=470-1000µF/10V電解；C3/C4=100nF陶瓷，分別接在兩顆直流馬達兩端。
+PCF與OLED保留模組原有旁路電容。若實購模組沒有，另補100nF在VCC-GND附近。
+所有GPIO、玩家角度及發牌邏輯沒有改變；不需重燒另一套接腳韌體。
+
+供電：
+TP4056的BAT+/BAT-都接保護板P端，不接原始B-；系統GND為P-。
+SW1串在P+到升壓VIN；充電時SW1關閉。充電走TP4056 Type-C，電流先設0.5A。
+升壓先量5.00V才接ESP與馬達；EEP上的5V不是可接ESP GPIO的邏輯輸出。
+ESP 5V分支經JP-ESP5V：兩針排針加可拔短路帽，帽跨兩針時導通，取下時斷開5V。
+接電腦USB前先拔JP跳帽，GND固定共地。普通電池工作時開發板USB不接電腦。
+
+機構適配界限：
+本次把「可核對孔序」的參考板型固定下來，沒有更改原CAD或聲稱實物已組裝。
+原CAD只按參考尺寸建模；本指定PCF長條板與X113647驅動板，外形可能大於原29×20等假定包絡。
+購買前核對所選板的實際長寬與目前固定座，這兩處支架須重新試配／調整，不能以接線圖作孔距或機構已通過的證明。
+配線圖各零件採不同放大倍率，不按畫面距離裁導線。線材預留拆裝餘量並固定，避免捲入齒輪。
+
+參考來源（用於腳位／板型核對，不是即時價格或保證庫存）：
+SuperMini官方接腳圖：
+https://www.nologo.tech/product/esp32/esp32c3/esp32c3supermini/esp32C3SuperMini.html
+TP4056 HW-387 Type-C無保護板產品實照：
+https://easyelecmodule.com/product/tp4056-type-c-interface-no-protection/
+TPS61088四角黑板實照：
+https://www.orwintech.com/TechnologyDetail/tps61088-boost-converter-step-up-board-power-supply-module
+PCF8574T長條板正反面及原理圖：
+https://www.openimpulse.com/blog/products-page/product-category/pcf8574-io-expansion-module/
+https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/PCF8574-IO-Expansion-Module-Schematic.pdf
+HW-627焊接面腳序產品圖：
+https://www.orwintech.com/TechnologyDetail/drv8833-dual-h-bridge-motor-driver-module-complete-guide
+DRV8833電氣限制（nSLEEP、VM、3.3V控制）：
+https://www.ti.com/lit/ds/symlink/drv8833.pdf
+1S 5A長條保護板實物焊接面與B/P端：
+https://done.land/components/power/powersupplies/battery/bms/1s/5a/
+ULN2003 X113647實照：ELEGOO Mega2560 Starter Kit Tutorial，PDF第210頁。
+https://images-na.ssl-images-amazon.com/images/I/D1oC-c3G5TS.pdf
+ITR9608-F原廠腳位：
+https://media.digikey.com/pdf/data%20sheets/everlight%20pdfs/itr9608-f.pdf
+
+本圖為依上述板型資料繪製的實物風格插圖，沒有使用AI生成文字或隨機導線。
+已核對每條連線兩端與V1.0.0 GPIO，並檢查10路滑環後的導通；尚未實物通電、送牌或電源雜訊驗證。

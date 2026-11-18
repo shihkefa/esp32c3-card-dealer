@@ -1,0 +1,37 @@
+YAW 2048 halfsteps: previous=2805700us, 2400/4000=1424400us, 3600/6000=1147900us (simulation)
+YAW_PROFILE 2048 600 300 5092500us
+YAW_PROFILE 2048 1200 1200 2622800us
+YAW_PROFILE 2048 3600 300 4901800us
+YAW_PROFILE 2048 3600 600 3530800us
+YAW_PROFILE 2048 3600 1200 2530400us
+YAW_PROFILE 2048 3600 6000 1147900us
+YAW_PROFILE 2048 3600 8000 1002500us
+YAW_PROFILE 2048 4800 12000 812200us
+YAW_PROFILE 2048 7200 24000 573900us
+YAW_LOADED_PROFILE 2048 rates=3600,7200 accel=800 time=3074500us peak=1280320_milli_halfsteps_per_s
+YAW_LOADED_PROFILE 2048 rates=3600,7200 accel=1000 time=2761700us peak=1431300_milli_halfsteps_per_s
+YAW 2731 halfsteps: previous=3377100us, 2400/4000=1712200us, 3600/6000=1336500us (simulation)
+YAW_PROFILE 2731 600 300 6231200us
+YAW_PROFILE 2731 1200 1200 3194300us
+YAW_PROFILE 2731 3600 300 5710500us
+YAW_PROFILE 2731 3600 600 4101700us
+YAW_PROFILE 2731 3600 1200 2934700us
+YAW_PROFILE 2731 3600 6000 1336500us
+YAW_PROFILE 2731 3600 8000 1191100us
+YAW_PROFILE 2731 4800 12000 955100us
+YAW_PROFILE 2731 7200 24000 670300us
+YAW_LOADED_PROFILE 2731 rates=3600,7200 accel=800 time=3571900us peak=1478720_milli_halfsteps_per_s
+YAW_LOADED_PROFILE 2731 rates=3600,7200 accel=1000 time=3202500us peak=1653100_milli_halfsteps_per_s
+FIXED_TURN q16=536838144
+YAW_PERCENT max=100 peak_halfsteps_per_s=10000 consecutive_cruise_ticks=13942
+YAW_DIRECTION cw_ccw_settings_and_phase=pass players=3,4 modes=stop,sweep remainder=midpoint
+CONTINUOUS_YAW players=3 rate=1600 accel=800 cruise_interval_ms=1706 cards=54
+CONTINUOUS_YAW players=4 rate=1600 accel=800 cruise_interval_ms=1281 cards=108
+CONTINUOUS_YAW players=4 rate=1600 accel=800 cruise_interval_ms=1281 cards=52
+CONTINUOUS_YAW players=3 rate=1600 accel=800 cruise_interval_ms=1706 cards=52
+LANDING_PHASE telemetry_only
+E06 telemetry_only
+PASS 86 scenarios, 2512 assertions; actual DealerCore.cpp and StepperPlan.h executed
+PASS exit qualifier: 9 cases, 13986 checks
+PASS exit pipeline: 14 cases, 2347 checks
+PASS flight log: 21 cases, 19358 checks

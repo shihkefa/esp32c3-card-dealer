@@ -1,0 +1,221 @@
+{
+  "BAT_RAW+": [
+    "電池盒.+",
+    "1S保護板.B+"
+  ],
+  "BAT_RAW-": [
+    "電池盒.-",
+    "1S保護板.B-"
+  ],
+  "PACK+": [
+    "1S保護板.P+",
+    "TP4056.BAT+/B+",
+    "SW1.1"
+  ],
+  "PACK_SW+": [
+    "SW1.2",
+    "TPS61088.IN+"
+  ],
+  "GND_FIXED": [
+    "1S保護板.P-",
+    "TP4056.BAT-/B-",
+    "TPS61088.IN-",
+    "TPS61088.OUT-",
+    "ESP.GND",
+    "ULN2003.GND",
+    "Q1.2=K",
+    "Q1.4=E",
+    "C1.-",
+    "SR02.F"
+  ],
+  "+5V_M_FIXED": [
+    "TPS61088.OUT+",
+    "JP-ESP5V.1",
+    "ULN2003.+/VCC",
+    "R1.1",
+    "C1.+",
+    "SR01.F"
+  ],
+  "+5V_ESP": [
+    "JP-ESP5V.2",
+    "ESP.5V"
+  ],
+  "+3V3_FIXED": [
+    "ESP.3V3",
+    "R3.1",
+    "SR03.F"
+  ],
+  "ULN_IN1": [
+    "ESP.GPIO0",
+    "ULN2003.IN1"
+  ],
+  "ULN_IN2": [
+    "ESP.GPIO1",
+    "ULN2003.IN2"
+  ],
+  "ULN_IN3": [
+    "ESP.GPIO3",
+    "ULN2003.IN3"
+  ],
+  "ULN_IN4": [
+    "ESP.GPIO4",
+    "ULN2003.IN4"
+  ],
+  "SDA_FIXED": [
+    "ESP.GPIO21",
+    "SR04.F"
+  ],
+  "SCL_FIXED": [
+    "ESP.GPIO20",
+    "SR05.F"
+  ],
+  "AIN1_FIXED": [
+    "ESP.GPIO5",
+    "SR06.F"
+  ],
+  "AIN2_FIXED": [
+    "ESP.GPIO6",
+    "SR07.F"
+  ],
+  "BIN1_FIXED": [
+    "ESP.GPIO7",
+    "SR08.F"
+  ],
+  "EXIT_FIXED": [
+    "ESP.GPIO10",
+    "R3.2",
+    "SR09.F"
+  ],
+  "HOME_FIXED": [
+    "Q1.3=C",
+    "SR10.F"
+  ],
+  "Q1_LED": [
+    "R1.2",
+    "Q1.1=A"
+  ],
+  "+5V_M_ROT": [
+    "SR01.R",
+    "DRV8833.VCC",
+    "R2.1",
+    "C2.+",
+    "DRV8833.EEP"
+  ],
+  "GND_ROT": [
+    "SR02.R",
+    "DRV8833.GND",
+    "DRV8833.IN4",
+    "R5.2",
+    "R6.2",
+    "R7.2",
+    "C2.-",
+    "OLED.GND",
+    "PCF.GND",
+    "SW2.2",
+    "SW3.2",
+    "SW4.2",
+    "SW5.2",
+    "Q2.2=K",
+    "Q2.4=E"
+  ],
+  "+3V3_ROT": [
+    "SR03.R",
+    "OLED.VCC",
+    "PCF.VCC",
+    "R4.1"
+  ],
+  "SDA_ROT": [
+    "SR04.R",
+    "OLED.SDA",
+    "PCF.SDA"
+  ],
+  "SCL_ROT": [
+    "SR05.R",
+    "OLED.SCL",
+    "PCF.SCL"
+  ],
+  "AIN1_ROT": [
+    "SR06.R",
+    "DRV8833.IN1",
+    "R5.1"
+  ],
+  "AIN2_ROT": [
+    "SR07.R",
+    "DRV8833.IN2",
+    "R6.1"
+  ],
+  "BIN1_ROT": [
+    "SR08.R",
+    "DRV8833.IN3",
+    "R7.1"
+  ],
+  "EXIT_ROT": [
+    "SR09.R",
+    "Q2.3=C"
+  ],
+  "HOME_ROT": [
+    "SR10.R",
+    "PCF.P4",
+    "R4.2"
+  ],
+  "Q2_LED": [
+    "R2.2",
+    "Q2.1=A"
+  ],
+  "KEY_SET": [
+    "PCF.P0",
+    "SW2.1"
+  ],
+  "KEY_MINUS": [
+    "PCF.P1",
+    "SW3.1"
+  ],
+  "KEY_PLUS": [
+    "PCF.P2",
+    "SW4.1"
+  ],
+  "KEY_RUN": [
+    "PCF.P3",
+    "SW5.1"
+  ],
+  "M2_A": [
+    "DRV8833.OUT1",
+    "N20.端子1",
+    "C3.1"
+  ],
+  "M2_B": [
+    "DRV8833.OUT2",
+    "N20.端子2",
+    "C3.2"
+  ],
+  "M3_A": [
+    "DRV8833.OUT3",
+    "RF300.端子1",
+    "C4.1"
+  ],
+  "M3_B": [
+    "DRV8833.OUT4",
+    "RF300.端子2",
+    "C4.2"
+  ],
+  "M1_HARNESS_1": [
+    "ULN2003.M1",
+    "28BYJ.M1"
+  ],
+  "M1_HARNESS_2": [
+    "ULN2003.M2",
+    "28BYJ.M2"
+  ],
+  "M1_HARNESS_3": [
+    "ULN2003.M3",
+    "28BYJ.M3"
+  ],
+  "M1_HARNESS_4": [
+    "ULN2003.M4",
+    "28BYJ.M4"
+  ],
+  "M1_HARNESS_5": [
+    "ULN2003.M5",
+    "28BYJ.M5"
+  ]
+}

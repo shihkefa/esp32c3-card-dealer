@@ -1,0 +1,47 @@
+{
+  "revision": "V1.0.0",
+  "scope": "Optional P10 central wheel axle only. Side clips/pivots are fully printed; standard fastener_catalog.json is unchanged.",
+  "screw_sku_count": 1,
+  "screw_skus": [
+    {
+      "sku": "DIN7991 M3x25",
+      "length_mm": 25,
+      "qty": 1
+    }
+  ],
+  "nut_qty": 1,
+  "washer_qty": 0,
+  "instances": [
+    {
+      "name": "P10wheelM3x25",
+      "key": "P10wheelM3x25.1",
+      "kind": "screw",
+      "sku": "DIN7991 M3x25",
+      "length_mm": 25,
+      "diameter_mm": 3,
+      "head": "socket countersunk",
+      "hex_key_mm": 2,
+      "head_mm": [
+        -3.0028341384882826,
+        -3.1,
+        105.64866026313658
+      ],
+      "tip_mm": [
+        -3.0028341384882826,
+        21.9,
+        105.64866026313658
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "P10wheelM3nut",
+      "key": "P10wheelM3nut.1",
+      "kind": "nut",
+      "sku": "M3 nut 5.5AF x 2.4"
+    }
+  ]
+}

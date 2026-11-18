@@ -1,0 +1,58 @@
+{
+  "version": "V1.0.0",
+  "revision": "selectable_yaw_direction",
+  "settings_schema": "CDR8",
+  "yaw_direction": {
+    "default": "cw",
+    "options": [
+      "cw",
+      "ccw"
+    ],
+    "view": "from above",
+    "migrated_default_CDR1_to_CDR7": "cw",
+    "fixed_halfsteps_per_turn": 8191.5,
+    "simulated_modes": [
+      "stop",
+      "continuous"
+    ],
+    "simulated_players": [
+      3,
+      4
+    ],
+    "hardware_direction_tested": false
+  },
+  "fixed_halfsteps_per_turn": 8191.5,
+  "unexpected_card": {
+    "stops_dealing": false,
+    "counts_as_card": false,
+    "usb_fields": [
+      "e06_count",
+      "e06_last_stage"
+    ]
+  },
+  "target_compile": {
+    "passed": true,
+    "warnings": 0,
+    "flash_bytes": 487064,
+    "partition_bytes": 1310720,
+    "static_ram_bytes": 36852,
+    "ram_bytes": 327680,
+    "core": "Arduino-ESP32 3.0.5",
+    "fqbn": "esp32:esp32:esp32c3:CDCOnBoot=cdc,FlashMode=dio"
+  },
+  "total_tests": {
+    "scenarios": 130,
+    "assertions": 38203
+  },
+  "usb_reader_mock_cases": 9,
+  "iram_audit_passed": true,
+  "binary_sha256": {
+    "CardDealer.ino.bin": "ff4c3639af61f5709314cfdb3ee221a537533b42d63e6bb758ede644938b98ec",
+    "CardDealer.ino.bootloader.bin": "ddf573e2231b00a5bfdcb7161a7d7c77e8ee48d7587a31885878ca59095c5dfc",
+    "CardDealer.ino.merged.bin": "b7d36b1bbe6a2b1783993eaf70f3da182ea4a7298cedc9cb596196295935967b",
+    "CardDealer.ino.partitions.bin": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1"
+  },
+  "compiled_sources": "docs/compiled-source.json",
+  "native_test_results": "docs/native-tests.log",
+  "module_app0_readback_verified": false
+}

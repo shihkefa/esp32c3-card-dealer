@@ -1,0 +1,73 @@
+V1.0.0 接線與供電 — ESP32-C3 SuperMini 原生USB版
+所有GPIO數字均是晶片GPIO編號，不是商家自訂D0/D1標號。
+
+固定底盒內：
+GPIO0 → ULN2003 IN1
+GPIO1 → ULN2003 IN2
+GPIO3 → ULN2003 IN3
+GPIO4 → ULN2003 IN4
+ULN2003的馬達供電接穩定5V，GND共地；28BYJ-48用5V版本。
+
+GPIO5 → DRV8833 AIN1，取牌正向PWM
+GPIO6 → DRV8833 AIN2，取牌反向PWM（僅點動診斷使用）
+GPIO7 → DRV8833 BIN1，出牌PWM；BIN2永久接GND
+以上三路輸入各用10kΩ下拉至GND，讓開機/復位時驅動輸入維持低。
+指定DRV8833 HW-627板的VCC接5V，GND共地；EEP=nSLEEP接同板VCC 5V保持喚醒。
+此板EEP不要再接3V3或ESP GPIO；EEP上的5V不代表GPIO可以承受5V。
+本板IN1/IN2對應AIN1/AIN2，IN3/IN4對應BIN1/BIN2；OUT1/2為取牌，OUT3/4為出牌。
+N20接AOUT1/AOUT2；RF300接BOUT1/BOUT2。方向不對時交換相應馬達兩根線。
+DRV8833與馬達在旋轉頭上；控制訊號經滑環。
+
+GPIO21（常標TX）→ SDA
+GPIO20（常標RX）→ SCL
+SDA/SCL接OLED和PCF8574，兩者VCC都接3.3V，不接5V邏輯上拉。
+總線100kHz；指定PCF長條板內建SDA/SCL上拉至3.3V，不再加裝R8/R9。
+若OLED也內建上拉，核對並聯後的等效阻值；換用其他板型再按實物決定。
+這兩腳不再用UART0，序列監看經板上原生USB。GPIO18/19留給USB，2/8/9未使用。
+PCF8574T A0/A1/A2接GND，地址0x20；OLED為SSD1306 128×64、地址0x3C。
+若模組是PCF8574A或OLED地址不同，先依實物核對並改BoardConfig.h；地址不得互撞。
+
+四顆常開按鍵：每顆一端GND，另一端接PCF P0/P1/P2/P3，依次SET/−/+/RUN。
+PCF P4接旋轉參考感測訊號；P5/P6/P7與INT暫不使用。
+PCF所有位元在初始化寫成1，以準雙向輸入使用，不把輸入腳寫0。
+
+兩顆裸ITR9608-F：
+請按原廠圖確認A/K/C/E，不能只照腳位朝向猜。此處使用電極名稱，不假設商家編號。
+IR發光LED：5V → 150Ω/1/4W → A；K → GND。每顆各一顆電阻，典型約25mA。
+光電接收：E → GND；C是訊號點，與發光LED的5V電路分開。
+出口C → GPIO10，並用10kΩ上拉到3.3V。
+旋轉參考C → 第10路滑環 → PCF P4，並用47kΩ上拉到3.3V。
+沒有遮光時接收管導通、訊號低；牌/遮光片擋住時訊號高。因此程式預設「遮光=高」。
+若用帶比較器模組而非裸ITR，須另核對輸出電壓與極性；不能將5V推挽輸出直接接GPIO。
+
+12路滑環已用10路，逐路對應見滑環12路接線.csv。
+線色由製造商決定，先量通斷，不把顏色當作通用腳序。
+5V/GND/3.3V、I2C、兩取牌PWM、一出牌PWM、出口回傳、參考到PCF，共10路。
+旋轉參考感測器在固定底盒，PCF在旋轉上罩，所以參考訊號需要經第10路送到PCF。
+
+電池/充電延用機構設計：
+單節充滿4.2V的18650 → 1S保護板B端。
+TP4056電池端與負載都接保護板P端；P+經總開關到升壓板，升壓輸出先量5.0V。
+TP4056 Type-C是機殼充電口，關機充電；不是ESP燒錄/USB資料口。
+程式不控制充電、不量測電池電壓，也不取代電芯/保護板/升壓板的電流與散熱驗證。
+
+開發板USB與5V分支：
+本接線按SuperMini的5V腳與USB VBUS可能相通規劃，將「升壓5V→ESP5V」做成可拔分支JP-ESP5V。
+GND另外固定共地，不能靠這條可拔5V分支作唯一接地。
+電池獨立工作：JP-ESP5V接通，開發板USB不接電腦。
+USB燒錄/診斷：先拔開JP-ESP5V，再接開發板USB；ESP及3.3V邏輯由USB供電。
+需要邊看USB邊測馬達時，馬達5V由電池升壓獨立供電，JP-ESP5V仍拔開，GND仍共地。
+測完先拔USB，再恢復JP-ESP5V。不要讓整機馬達透過開發板USB/5V細線取電。
+僅關閉電池總開關，不能代替切開ESP的5V分支，因為USB仍可能反灌到同一5V母線。
+JP分支可使用原BOM已有的可拆接頭/排針材料，不需改動3D列印件。
+
+電阻需求補充：
+150Ω/1/4W×2（IR LED）；10kΩ×4（出口上拉1、三路馬達控制下拉3）；47kΩ×1（參考上拉）。
+4.7kΩ×2只作其他板型的選配I2C上拉；本指定PCF板已有上拉，不重複安裝。
+另有TP4056充電設定及Type-C CC的電阻，仍依所購充電板資料；本程式不更改充電電流。
+
+資料來源：
+ESP32-C3：https://documentation.espressif.com/esp32-c3_datasheet_en.html
+PCF8574：https://www.ti.com/lit/ds/symlink/pcf8574.pdf
+DRV8833：https://www.ti.com/lit/ds/symlink/drv8833.pdf
+ITR9608-F：https://media.digikey.com/pdf/data%20sheets/everlight%20pdfs/itr9608-f.pdf

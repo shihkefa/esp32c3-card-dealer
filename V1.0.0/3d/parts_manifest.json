@@ -1,0 +1,2795 @@
+{
+  "revision": "V1.0.0",
+  "units": "mm",
+  "parts": [
+    {
+      "id": "P01",
+      "name": "單件高底盒與WX22固定柱",
+      "qty": 1,
+      "file": "STL/P01.stl",
+      "dimensions_mm": [
+        164.0,
+        148.0,
+        50.1
+      ],
+      "volume_cm3": 132.667,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "原底面朝下；開關/Type-C局部橋接待切片",
+      "material": "PLA / PETG",
+      "note": "164×148×50.1mm中空底盒，原2.2mm底板、三根23mm滑環柱、螺母止擋及R4下線路保持。開關孔9×14.8mm、中心Y−1/Z14.75；Type-C孔11×5mm底Z6.7。原孔實購小板僅露插口上半部，CAD模組/插頭高度未校準，新孔待實測。P02底面以柱頂Z50.1定位，上部組件整體降低2.1mm；本件STL與前版完全相同。",
+      "engraving": {
+        "text": "P01",
+        "type": "planar",
+        "location": "盒內底板空白區",
+        "height_mm": 3.5,
+        "depth_mm": 0.35,
+        "removed_mm3": 5.4293,
+        "coverage_ratio": 1.0793,
+        "origin_mm": [
+          -30,
+          14,
+          2.2
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P02A",
+      "name": "平底上蓋主板・徑向光電位置",
+      "qty": 1,
+      "file": "STL/P02A.stl",
+      "dimensions_mm": [
+        164.0,
+        164.0,
+        11.5
+      ],
+      "volume_cm3": 73.516,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "原生Z30大平面貼床；新光電孔槽逐層檢查",
+      "material": "PLA / PETG",
+      "note": "保留軸承、馬達及底盒安裝介面。舊光電孔槽填回，歸零光電中心改至R77.5/155°，光軸沿335°徑向指向P02A圓心；P25及原M3×8旋轉平移到新孔位，P25原STL沿用。光電外殼13×6×10mm，內部槽形與光束使用條件式ITR9608-F參考，實物歸零仍待驗證。",
+      "engraving": {
+        "text": "P02A",
+        "type": "planar",
+        "location": "上蓋內面；避開軸承座與定位孔",
+        "height_mm": 3.5,
+        "depth_mm": 0.35,
+        "removed_mm3": 7.3699,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -54,
+          -26,
+          30
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P02B",
+      "name": "分離式軸承座與捕捉螺母槽",
+      "qty": 1,
+      "file": "STL/P02B.stl",
+      "dimensions_mm": [
+        63.36,
+        64.5,
+        14.8
+      ],
+      "volume_cm3": 14.49,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "環形底面朝下；六角槽頂部局部橋接待切片",
+      "material": "PLA / PETG",
+      "note": "底部環形平面朝下。三處原小孔改5.8對邊六角深槽，先放M3螺母並推至上止擋；螺絲孔3.4。可暫用既有M3×25拉入螺母，再換M3×8。三個下凸緣夾在P02A底面；不在轉軸或軸承工作面刻號。 編號P02B：軸承座外側空白弧面；避開軸承孔與螺母槽，凹刻0.3mm。",
+      "engraving": {
+        "text": "P02B",
+        "type": "cylindrical",
+        "location": "軸承座外側空白弧面；避開軸承孔與螺母槽",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 3.0896,
+        "coverage_ratio": 0.9214,
+        "center_mm": [
+          0,
+          0,
+          22
+        ],
+        "radius_mm": 29
+      }
+    },
+    {
+      "id": "P03",
+      "name": "轉盤軸承壓環",
+      "qty": 1,
+      "file": "STL/P03.stl",
+      "dimensions_mm": [
+        69.0,
+        70.0,
+        4.0
+      ],
+      "volume_cm3": 6.7,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "大平面朝下；沉頭孔局部橋接待切片",
+      "material": "PLA / PETG",
+      "note": "配合P02A/P02B，最大外徑70，馬達側削平避讓；內孔與三孔位置不變，大平面朝下列印。三顆M3×8同時固定壓環、主板與軸承座，分次均勻鎖緊。 編號P03：壓環上方空白環帶；避開孔與軸承接觸面，凹刻0.3mm。",
+      "engraving": {
+        "text": "P03",
+        "type": "planar",
+        "location": "壓環上方空白環帶；避開孔與軸承接觸面",
+        "height_mm": 3,
+        "depth_mm": 0.3,
+        "removed_mm3": 3.5319,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          0,
+          24,
+          35
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P04A",
+      "name": "平底一體式旋轉承載架",
+      "qty": 1,
+      "file": "STL/P04A.stl",
+      "dimensions_mm": [
+        145.0,
+        149.9,
+        18.83
+      ],
+      "volume_cm3": 76.828,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "原生Z42大平底貼床；六個底入螺母井採局部支撐屏蔽，剩餘孔槽逐層檢查",
+      "material": "PLA / PETG",
+      "note": "P31已併入；原底部方形定位榫刪除，連續斜面梁銜接原6°牌路，四組原M3接合軸保持。四顆牌倉及兩顆N20底座螺母從底部放入；N20底座孔Y−17.5，馬達/軸心不移動。",
+      "engraving": {
+        "text": "P04A",
+        "type": "planar",
+        "location": "旋轉承載架原底部支臂隱藏面；避開四組M3接合孔",
+        "height_mm": 3,
+        "depth_mm": 0.3,
+        "removed_mm3": 4.4499,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -45,
+          -36,
+          42
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          0,
+          1,
+          0
+        ],
+        "v": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P04B",
+      "name": "11.2mm完整60齒齒輪與空心轉軸",
+      "qty": 1,
+      "file": "STL/P04B.stl",
+      "dimensions_mm": [
+        74.4,
+        74.4,
+        34.2
+      ],
+      "volume_cm3": 28.374,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "上側Z47.2齒輪平面貼床；局部徑向孔待切片",
+      "material": "PLA / PETG",
+      "note": "齒厚由8.5增加2.7mm至11.2，只向上加厚；原生齒底Z36、接合面Z47.2。60齒、軸承肩臺Z31、−X徑向pin孔及管底負Y寬9mm/Z13..15.4後橋槽保持。四組M3×8接合螺母上止擋隨頂面上移2.7mm以保留完整咬合。前次徑向及圓弧P26改版已使用本件並將上部裝配抬高2.7mm；本次重力擺輪改版沿用本件及P02A/P25/P04A，歸零功能待實物驗證。",
+      "engraving": {
+        "text": "P04B",
+        "type": "planar",
+        "location": "齒輪軸側內圈背面；避開齒面、軸承配合面與螺母槽",
+        "height_mm": 2.4,
+        "depth_mm": 0.25,
+        "removed_mm3": 2.4084,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -14,
+          0,
+          36
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          0,
+          1,
+          0
+        ],
+        "v": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P05A",
+      "name": "55.0mm中心距補償30齒輪與止退裙邊",
+      "qty": 1,
+      "file": "STL/P05A.stl",
+      "dimensions_mm": [
+        39.86,
+        40.0,
+        6.7
+      ],
+      "volume_cm3": 3.727,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "上方大平面朝下；依 STL 原方向平放。A1 mini／PLA 切片無支撐。",
+      "material": "PLA / PETG",
+      "note": "依 55.0 mm 大小齒輪軸心距修正外齒，齒根半徑 17.5 mm、齒頂半徑 20 mm。30 齒對 P04B 的 60 齒、齒寬 6 mm；沿用原 D 形平口、固定孔及 P05B_D5_1。兩接合平口名義側隙 0.2 mm，先鎖夾座再套齒輪。自製馬達支架位置及整機帶載須實測。 編號P05A：齒輪內部平坦腹板；避開齒面、異形孔與沉頭座，凹刻0.3mm。",
+      "engraving": {
+        "text": "P05A",
+        "type": "planar",
+        "location": "齒輪內部平坦腹板；避開齒面、異形孔與沉頭座",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 3.2823,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          54,
+          -10.5,
+          40
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P05B",
+      "name": "D5.1平面貼床式閉合D軸夾座",
+      "qty": 1,
+      "file": "STL/P05B.stl",
+      "dimensions_mm": [
+        30.4,
+        9.5,
+        25.67
+      ],
+      "volume_cm3": 2.847,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "負Y側平面貼床；建議3至5mm brim，孔頂與螺母槽局部橋接待切片",
+      "material": "PLA / PETG",
+      "note": "正式採用使用者2026-11-13試裝通過的P05B_D5_1；D孔5.1×3.1mm對應實測4.9×2.9mm軸，夾縫受力段0.8mm、外端漸寬至1.2mm。外形平口、貼床平面、45度削角、完整沉頭座、兩接孔及M3×8五金沿用。先裝螺母及橫螺絲、套軸鎖緊，再裝P05A及兩支垂直M3×8。使用者確認此孔徑及夾縫試裝OK，並未量測額定扭矩、夾持力或耐久。 編號P05B：背側新增貼床平面；避開D軸孔、側載槽與承壓面，凹刻0.25mm。",
+      "engraving": {
+        "text": "P05B",
+        "type": "planar",
+        "location": "背側新增貼床平面；避開D軸孔、側載槽與承壓面",
+        "height_mm": 2.4,
+        "depth_mm": 0.25,
+        "removed_mm3": 2.5308,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          54,
+          -10.5,
+          35.5
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P06",
+      "name": "WX22轉子夾持與空心軸連接環",
+      "qty": 1,
+      "file": "STL/P06.stl",
+      "dimensions_mm": [
+        36.75,
+        33.0,
+        10.1
+      ],
+      "volume_cm3": 3.523,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "外環原生Z11貼床；內夾套與後橋高2.1mm，需檢查局部支撐",
+      "material": "PLA / PETG",
+      "note": "外環原生11..19及外側pin15.5保持；內夾套、夾緊螺絲及後橋抬高2.1mm，保留固定滑環頸部位置。P04B負Y底槽對齊後橋、外pin先退2mm再由上套入。仍用兩組M3×8及M3螺母；內套/後橋底部懸空需局部支撐，夾持力待實測。",
+      "engraving": {
+        "text": "P06",
+        "height_mm": 2.4,
+        "depth_mm": 0.25,
+        "location": "正X外側隱藏平台；避開軸承及軸配合面",
+        "type": "planar",
+        "origin_mm": [
+          17,
+          0,
+          15.5
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "u": [
+          0,
+          1,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ],
+        "removed_mm3": 1.9656,
+        "coverage_ratio": 0.9446
+      }
+    },
+    {
+      "id": "P07",
+      "name": "牌倉支柱",
+      "qty": 4,
+      "file": "STL/P07.stl",
+      "dimensions_mm": [
+        9.0,
+        9.0,
+        16.2
+      ],
+      "volume_cm3": 0.88,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "四支位於(-45/31, ±26)，四支M3×25由牌倉上方往下鎖入P04A的底入螺母井；先放入四顆M3螺母。 編號P07：支柱外側中央；避開端面與螺絲孔，凹刻0.3mm。",
+      "engraving": {
+        "text": "P07",
+        "type": "cylindrical",
+        "location": "支柱外側中央；避開端面與螺絲孔",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 2.1446,
+        "coverage_ratio": 0.9753,
+        "center_mm": [
+          0,
+          0,
+          53.5
+        ],
+        "radius_mm": 4.5
+      }
+    },
+    {
+      "id": "P08",
+      "name": "61mm封底高側板牌倉・恢復原螺絲孔",
+      "qty": 1,
+      "file": "STL/P08.stl",
+      "dimensions_mm": [
+        106.0,
+        83.0,
+        61.85
+      ],
+      "volume_cm3": 43.129,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "底板大平面貼床；原側耳螺絲頭孔、底部盲槽及滾輪孔逐層檢查",
+      "material": "PLA / PETG",
+      "note": "只將兩處分牌閘孔恢復原螺絲頭圓孔及錐孔；軸Y±37.5/Z72、Ø3.4通孔、Ø6.4螺絲頭入口、原固定耳外形、61mm牌道、底板、側板、滾輪開口及支柱孔全部保持。螺絲由原−X方向放入，P09原螺母槽及所有組裝五金位置不動；先前P08六角螺母孔已撤回。",
+      "engraving": {
+        "text": "P08",
+        "type": "planar",
+        "location": "牌倉底板背面；避開牌路、盲槽與支柱",
+        "height_mm": 3,
+        "depth_mm": 0.3,
+        "removed_mm3": 3.7473,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          31,
+          -8,
+          61.6
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          0,
+          1,
+          0
+        ],
+        "v": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P09",
+      "name": "固定耳齊平與滿寬直貼膠分牌閘",
+      "qty": 1,
+      "file": "STL/P09.stl",
+      "dimensions_mm": [
+        56.47,
+        85.0,
+        7.5
+      ],
+      "volume_cm3": 16.753,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        -90,
+        0
+      ],
+      "supports": "中央迎牌面與兩固定耳的共平面朝下躺印，清除局部支撐後試裝",
+      "material": "PLA / PETG",
+      "note": "中央大面補至固定耳前緣，並補實接耳窄帶。寬61mm的30°背襯沿面長6.425mm，中央直貼55×4×1mm橡膠，左右各露3mm塑膠。膠下緣比新迎牌面內退2mm，與底板間隙0.45mm起調。上端比P08外緣低3mm，距上蓋內面0.8mm。",
+      "engraving": {
+        "text": "P09",
+        "type": "planar",
+        "location": "分牌閘固定耳外側；不接觸牌面",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 2.553,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          46.75,
+          42.5,
+          74.5
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "u": [
+          -1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P12",
+      "name": "57mm中央掛鉤窄牌側墊",
+      "qty": 2,
+      "file": "STL/P12.stl",
+      "dimensions_mm": [
+        82.0,
+        57.67,
+        5.9
+      ],
+      "volume_cm3": 5.973,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "平側面貼床；中央掛鉤需要局部支撐",
+      "material": "PLA / PETG",
+      "note": "配新版高側板P08；57mm牌左右各一片，內寬約58mm，60mm牌取下。底邊坐在牌倉底板，中央15mm掛鉤跨過高側板，兩側相同STL，另一片以Z軸轉180度後X移-8mm。掛鉤位於上方開口內，約高出上蓋3mm；不限制前後牌長。 編號P12：中央掛鉤外側下段；位於上蓋開口下方，避開牌面與側板卡合區，凹刻0.25mm。",
+      "engraving": {
+        "text": "P12",
+        "type": "planar",
+        "location": "中央掛鉤外側下段；位於上蓋開口下方，避開牌面與側板卡合區",
+        "height_mm": 2,
+        "depth_mm": 0.25,
+        "removed_mm3": 1.1735,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -4,
+          34.9,
+          117.1691677155542
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "u": [
+          -1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P13",
+      "name": "平背出牌軸承座A・反向螺絲",
+      "qty": 1,
+      "file": "STL/P13.stl",
+      "dimensions_mm": [
+        25.0,
+        41.6,
+        12.0
+      ],
+      "volume_cm3": 5.646,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "原生負Y外側大平背貼床（X轉+90°）；軸承口朝上，局部螺母槽/橫孔逐層檢查",
+      "material": "PLA / PETG",
+      "note": "主體、導軌、頂梁及兩個腳座向外補平至Y−41；完整上滑塊窗口保持開放。列印底面25×41.6、高12mm；軸承孔、通軸孔、調整及導向位置不動。兩支M3×8由P04A下方向上鎖，M3螺母仍由X外側放入、承壓底層3.5mm。頂部調整孔新增實口Ø6.4、90°沉頭，接Ø2.7預孔；保留原調整螺絲姿態，螺絲頭高度仍取決於調整位置。",
+      "engraving": {
+        "text": "P13",
+        "type": "planar",
+        "location": "滾輪座後側實心區；避開軸承孔和導槽",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 2.165,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          51,
+          -35,
+          64
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "u": [
+          0,
+          -1,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P14",
+      "name": "平背出牌軸承座B・反向螺絲",
+      "qty": 1,
+      "file": "STL/P14.stl",
+      "dimensions_mm": [
+        25.0,
+        41.6,
+        12.0
+      ],
+      "volume_cm3": 5.647,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        -90,
+        0,
+        0
+      ],
+      "supports": "原生正Y外側大平背貼床（X轉−90°）；軸承口朝上，局部螺母槽/橫孔逐層檢查",
+      "material": "PLA / PETG",
+      "note": "主體、導軌、頂梁及兩個腳座向外補平至Y+41；完整上滑塊窗口保持開放。列印底面25×41.6、高12mm；軸承孔、通軸孔、調整及導向位置不動。兩支M3×8由P04A下方向上鎖，M3螺母仍由X外側放入、承壓底層3.5mm。頂部調整孔新增實口Ø6.4、90°沉頭，接Ø2.7預孔；保留原調整螺絲姿態，螺絲頭高度仍取決於調整位置。",
+      "engraving": {
+        "text": "P14",
+        "type": "planar",
+        "location": "滾輪座後側實心區；避開軸承孔和導槽",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 2.006,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          51,
+          35,
+          64
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "u": [
+          0,
+          -1,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P15",
+      "name": "上滾輪調整滑塊",
+      "qty": 2,
+      "file": "STL/P15.stl",
+      "dimensions_mm": [
+        13.3,
+        12.0,
+        9.25
+      ],
+      "volume_cm3": 1.087,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "新背面貼床（原X轉90°）；Ø3.5軸孔朝上，局部字槽待切片",
+      "material": "PLA / PETG",
+      "note": "僅背面向外補2.75mm至原生Y−41，Ø3.5通軸孔延長；原軸承座、正面、主軸與調整頂面不動。配P31 U罩限制向滾輪及外側滑出，保留原−0.3..+0.8mm上下調整。兩顆同件鏡像裝入；原隱藏編號移至新背面，舊內部字洞已填平。上鋼軸及軸承仍自由轉，不得點膠或鎖死內圈。",
+      "engraving": {
+        "text": "P15",
+        "type": "planar",
+        "location": "加背後滑塊外背隱藏面；避開軸孔、軸承座及調整頂面",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 2.165,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          61,
+          -41,
+          78.5
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P16",
+      "name": "出牌滾輪輪芯",
+      "qty": 2,
+      "file": "STL/P16.stl",
+      "dimensions_mm": [
+        18.99,
+        19.0,
+        53.0
+      ],
+      "volume_cm3": 9.398,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "新端面貼床（原X轉90°）；O圈槽及夾縫逐層檢查",
+      "material": "PLA / PETG",
+      "note": "沿鋼軸總長54→53mm，兩端各裁0.5mm至原生Y±26.5；中心、Ø3.15軸孔、中央輪轂夾縫及原M3×8螺絲螺母不動。兩槽及四個O圈由原Y±24各向中間移3mm至±21；槽寬2.3、根徑16.8、外端平料4.35mm。原±21環形減重腔保持，槽底外殼名義徑向壁1.9mm。原隱藏字移至新Y−26.5，舊字洞已填平。上下輪同STL各一件；所有緊固件與其它硬體不動，實印偏擺及摩擦待試。",
+      "engraving": {
+        "text": "P16",
+        "type": "planar",
+        "location": "縮短後輪芯負Y隱藏端面；避開O圈槽及軸孔",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 2.2398,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          61,
+          -26.5,
+          59.7
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P17",
+      "name": "取牌輪輪芯",
+      "qty": 1,
+      "file": "STL/P17.stl",
+      "dimensions_mm": [
+        18.99,
+        19.0,
+        10.0
+      ],
+      "volume_cm3": 2.046,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "N20的3mm D軸；M3×8沉頭＋M3螺母夾緊，O型圈×2，取消止付。 編號P17：取牌輪端面；避開O圈槽、軸孔與接觸圓周，凹刻0.25mm。",
+      "engraving": {
+        "text": "P17",
+        "type": "planar",
+        "location": "取牌輪端面；避開O圈槽、軸孔與接觸圓周",
+        "height_mm": 2.5,
+        "depth_mm": 0.25,
+        "removed_mm3": 1.543,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -22,
+          3,
+          59.5
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P18",
+      "name": "N20底座・底入螺母配套",
+      "qty": 1,
+      "file": "STL/P18.stl",
+      "dimensions_mm": [
+        28.0,
+        30.5,
+        13.6
+      ],
+      "volume_cm3": 4.739,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "依既有平面貼床；兩個開放工具通道待切片",
+      "material": "PLA / PETG",
+      "note": "安裝孔由Y−19移至Y−17.5以對齊P04A封閉承壓螺母井；孔周Ø6.8工具通道向內開放。N20本體、軸心及上夾座定位均不移動。",
+      "engraving": {
+        "text": "P18",
+        "type": "planar",
+        "location": "馬達座底面空白區",
+        "height_mm": 3,
+        "depth_mm": 0.3,
+        "removed_mm3": 3.2994,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -22,
+          -8,
+          45.4
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P19",
+      "name": "N20馬達壓片",
+      "qty": 1,
+      "file": "STL/P19.stl",
+      "dimensions_mm": [
+        25.2,
+        8.4,
+        3.2
+      ],
+      "volume_cm3": 0.456,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": " 編號P19：壓片上面中央；位於牌倉下方，凹刻0.25mm。",
+      "engraving": {
+        "text": "P19",
+        "type": "planar",
+        "location": "壓片上面中央；位於牌倉下方",
+        "height_mm": 2.5,
+        "depth_mm": 0.25,
+        "removed_mm3": 1.8665,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -22,
+          -11,
+          61.2
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P20",
+      "name": "RF300出牌馬達底座",
+      "qty": 1,
+      "file": "STL/P20.stl",
+      "dimensions_mm": [
+        36.0,
+        27.0,
+        19.8
+      ],
+      "volume_cm3": 5.631,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "RF300約24.4mm、長軸約18mm。兩支M3×25由P04A一體承載架下方向上穿過馬達座，鎖入P21頂入螺母；同時固定承載架、馬達座及上夾板。 編號P20：底座下方側翼；避開馬達弧座及螺絲孔，凹刻0.25mm。",
+      "engraving": {
+        "text": "P20",
+        "type": "planar",
+        "location": "底座下方側翼；避開馬達弧座及螺絲孔",
+        "height_mm": 2.5,
+        "depth_mm": 0.25,
+        "removed_mm3": 2.0652,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          46.5,
+          -68,
+          45.4
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P21",
+      "name": "RF300上夾板・反向長螺絲",
+      "qty": 1,
+      "file": "STL/P21.stl",
+      "dimensions_mm": [
+        38.5,
+        9.5,
+        4.0
+      ],
+      "volume_cm3": 0.793,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "依既有平面貼床；頂入螺母槽待切片",
+      "material": "PLA / PETG",
+      "note": "兩支M3×25由P04A下方向上鎖，上部兩個Ø9.5承壓耳座頂入M3螺母、底層1.2mm；原P20、馬達避讓及隱藏編號保持。",
+      "engraving": {
+        "text": "P21",
+        "type": "planar",
+        "location": "壓片上方中央；避開馬達弧面",
+        "height_mm": 2.5,
+        "depth_mm": 0.25,
+        "removed_mm3": 1.8042,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          61,
+          -74.3,
+          68.2
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P22",
+      "name": "2mm至3mm軸聯軸器",
+      "qty": 1,
+      "file": "STL/P22.stl",
+      "dimensions_mm": [
+        18.0,
+        18.0,
+        17.0
+      ],
+      "volume_cm3": 3.446,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "原軸向端面貼床；夾縫、頭部孔及螺母槽局部檢查",
+      "material": "PLA / PETG",
+      "note": "外徑19→18mm、軸向長18→17mm，兩端各縮0.5mm。主軸X61/Z54.2及Ø2.15/Ø3.15軸孔位置、深度保持。兩組夾孔X66→65.5，滾輪側Y−44.8→−45.3，馬達側Y−55.3保持；原兩組M3×8及螺母隨孔移，頭部及螺母座規格不變。隱藏編號移至新馬達端面Y−58.8。其它37印件及其它五金不移；夾持及實物間隙待試裝。",
+      "engraving": {
+        "text": "P22",
+        "type": "planar",
+        "location": "縮短後馬達側端面環帶；避開軸孔及夾孔",
+        "height_mm": 2,
+        "depth_mm": 0.25,
+        "removed_mm3": 1.3025,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          61,
+          -58.8,
+          57.8
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P23",
+      "name": "出牌導向槽",
+      "qty": 1,
+      "file": "STL/P23.stl",
+      "dimensions_mm": [
+        33.5,
+        80.0,
+        12.9
+      ],
+      "volume_cm3": 2.126,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "需要局部支撐",
+      "material": "PLA / PETG",
+      "note": "原生X81/Y27垂直沉頭孔實際上口改為Ø7.0mm、90°，接Ø3.4mm通孔；頂面Z63.7、錐底Z61.9，原3mm固定耳底層仍1.2mm。原開邊缺口、兩側水平孔、牌路及隱藏編號保持。實購螺絲頭尺寸仍需試放確認。",
+      "engraving": {
+        "text": "P23",
+        "type": "planar",
+        "location": "出牌導槽下方前緣；不在牌路表面",
+        "height_mm": 2.5,
+        "depth_mm": 0.25,
+        "removed_mm3": 2.003,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          71.5,
+          0,
+          61.9
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          0,
+          1,
+          0
+        ],
+        "v": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P24",
+      "name": "出口光電感測器開放式可調座",
+      "qty": 1,
+      "file": "STL/P24.stl",
+      "dimensions_mm": [
+        21.5,
+        14.5,
+        18.4
+      ],
+      "volume_cm3": 0.898,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "原生底面貼床；主長孔懸空耳底需局部支撐，原四孔及束帶槽架接待切片",
+      "material": "PLA / PETG",
+      "note": "配使用者確認本體13×6×10mm（寬13、厚6、高10，不含腳）。只刪除第二長孔側及前方突出bar；保留(81,27)主M3長孔、完整承壓邊、原M3×8及螺母介面。原背板、四個Ø1.2接腳孔及孔位、原束帶槽與隱藏P24編號全部保持原幾何。60mm牌整座與光電向外移Y+1.5mm，57mm牌回Y0；固定螺絲軸不移。U槽寬5、槽底高4.1及光軸高6.8mm仍為條件式ITR9608-F參考。實際腳位對孔、固定、實印、觸發與出牌待試裝。",
+      "engraving": {
+        "text": "P24",
+        "type": "planar",
+        "location": "出口座背板外側；避開接腳與束帶孔",
+        "height_mm": 2.2,
+        "depth_mm": 0.25,
+        "removed_mm3": 1.4613,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          91,
+          36,
+          64.3
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "u": [
+          -1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P25",
+      "name": "旋轉參考光電座",
+      "qty": 1,
+      "file": "STL/P25.stl",
+      "dimensions_mm": [
+        22.5,
+        13.0,
+        13.0
+      ],
+      "volume_cm3": 0.947,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "用於每圈參考標記。螺絲長孔可校正位置。 編號P25：參考感測座底面；避開固定孔與接腳孔，凹刻0.25mm。 本件STL沿用；與原M3×8及光電一起移到R77.5/155°，光軸沿335°指向P02A圓心。",
+      "engraving": {
+        "text": "P25",
+        "type": "planar",
+        "location": "參考感測座底面；避開固定孔與接腳孔",
+        "height_mm": 2,
+        "depth_mm": 0.25,
+        "removed_mm3": 1.3025,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -69.5,
+          6.5,
+          27
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P26",
+      "name": "同心圓弧歸零光電遮光片",
+      "qty": 1,
+      "file": "STL/P26.stl",
+      "dimensions_mm": [
+        22.24,
+        32.75,
+        8.9
+      ],
+      "volume_cm3": 0.494,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "原上方完整平面貼床；圓弧薄片、螺絲孔及字槽逐層檢查",
+      "material": "PLA / PETG",
+      "note": "本件為前次完成的圓弧P26；本次重力擺輪改版沿用。薄片以P02A圓心為中心：內R77、外R78、中線R77.5弧長7mm，中心155°、夾角約5.1751°。原斜臂、固定孔(-58,10)、下緣原生Z33.1及隱藏編號保持，世界下緣Z58.4；所有裝配及五金位置不移動。55.0 mm 軸距的 P05A 最外徑向包絡 R75，名義間隙 2 mm；外側掃掠較直片減少約0.0785mm，並非大幅增加間隙。條件式ITR9608-F槽底57.5/光軸60.2、名義底隙0.9及上臂距2.5mm保持，實際槽形與歸零觸發待試。",
+      "engraving": {
+        "text": "P26",
+        "type": "planar",
+        "height_mm": 2.5,
+        "depth_mm": 0.25,
+        "origin_mm": [
+          -64.11942674767019,
+          21.376457642452106,
+          40.6
+        ],
+        "u": [
+          -0.47371821273868453,
+          0.8806764757387734,
+          0
+        ],
+        "v": [
+          0.8806764757387734,
+          0.47371821273868453,
+          0
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "removed_mm3": 2.0652,
+        "coverage_ratio": 0.9487,
+        "location": "新斜臂隱藏底面；避開光電遮光片、螺絲座及P04A接觸面"
+      }
+    },
+    {
+      "id": "P27",
+      "name": "頂按式按鍵帽",
+      "qty": 4,
+      "file": "STL/P27.stl",
+      "dimensions_mm": [
+        9.0,
+        9.0,
+        6.35
+      ],
+      "volume_cm3": 0.213,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "自上方按壓；6×6×9.5mm輕觸鍵。帽底至屋頂0.6mm，檢查0至0.35mm行程。 編號27：頂按鍵帽凸緣背面環帶；按壓面無編號，凹刻0.22mm。",
+      "engraving": {
+        "text": "27",
+        "type": "annular",
+        "location": "頂按鍵帽凸緣背面環帶；按壓面無編號",
+        "height_mm": 1.4,
+        "depth_mm": 0.22,
+        "removed_mm3": 0.3521,
+        "coverage_ratio": 1.0,
+        "canonical_id": "P27",
+        "origin_mm": [
+          75,
+          7.65,
+          129.3
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          -1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P28",
+      "name": "90度固定式OLED邊緣彈性壓板",
+      "qty": 1,
+      "file": "STL/P28.stl",
+      "dimensions_mm": [
+        31.0,
+        44.0,
+        5.9
+      ],
+      "volume_cm3": 1.218,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "底部原生Z119.5完整平面貼床；PETG；四個45度壓舌及局部孔槽依切片檢查",
+      "material": "PETG",
+      "note": "兩固定耳繞OLED中心轉90度至(75,-42)/(75,-6)，仍用兩支原M3×8由下方鎖入P32A。基座及螺絲頭Z119.5、耳頂Z123保持；四個PETG壓舌頂125.4，對PCB背面125.3名義預壓0.1mm，較舊接觸面提高2.4mm。只壓PCB兩端非玻璃邊緣，中央避讓背面元件，+X留低矮焊線出口；實購元件腳位、壓力、蠕變與固定效果待試裝，不可硬壓玻璃。",
+      "engraving": {
+        "text": "P28",
+        "type": "planar",
+        "height_mm": 2.2,
+        "depth_mm": 0.25,
+        "location": "固定框負X側底面隱藏實心邊；避開PCB接觸、彈舌及螺絲孔",
+        "origin_mm": [
+          60.9,
+          -24,
+          119.5
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "u": [
+          0,
+          1,
+          0
+        ],
+        "v": [
+          1,
+          0,
+          0
+        ],
+        "removed_mm3": 1.661,
+        "coverage_ratio": 1.0
+      }
+    },
+    {
+      "id": "P29",
+      "name": "18650電池盒束帶壓扣",
+      "qty": 2,
+      "file": "STL/P29.stl",
+      "dimensions_mm": [
+        6.0,
+        31.0,
+        8.6
+      ],
+      "volume_cm3": 0.748,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "弧形避讓電芯，側翼壓在電池盒邊緣；束帶穿內部橋座固定，不壓電芯凸起處。 編號P29：束帶壓扣支腳外側；避開電芯避讓弧面，凹刻0.25mm。",
+      "engraving": {
+        "text": "P29",
+        "type": "planar",
+        "location": "束帶壓扣支腳外側；避開電芯避讓弧面",
+        "height_mm": 2,
+        "depth_mm": 0.25,
+        "removed_mm3": 1.3422,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -23,
+          41,
+          20.2
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "u": [
+          0,
+          0,
+          1
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P30",
+      "name": "孔徑試配片",
+      "qty": 1,
+      "file": "STL/P30.stl",
+      "dimensions_mm": [
+        58.0,
+        23.0,
+        6.9
+      ],
+      "volume_cm3": 5.239,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "3.0／3.2／3.4／5.0／5.2mm，先調整擠出量及孔補償。此件不裝入成品。 編號P30：試配片孔列旁的工具標示區，凹刻0.3mm。",
+      "engraving": {
+        "text": "P30",
+        "type": "planar",
+        "location": "試配片孔列旁的工具標示區",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 2.4783,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          8,
+          -8,
+          4
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P32A",
+      "name": "OLED修正式台階包覆居中上殼主片",
+      "qty": 1,
+      "file": "STL/P32A.stl",
+      "dimensions_mm": [
+        174.0,
+        159.2,
+        85.7
+      ],
+      "volume_cm3": 139.493,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "原屋頂Z128.7大平面貼床；OLED凹槽上方保留0.4mm外皮，局部支撐依切片檢查",
+      "material": "PLA / PETG",
+      "note": "只修改OLED局部：原兩柱移除，兩新柱轉90度至(75,-42)/(75,-6)，沿用兩M3×8與Ø2.7預孔。依使用者尺寸圖及安裝照片，PCB27.8X×27.3Y×1.2、排針朝+X，中心(75,-24)不動；顯示區10.86X×21.74Y朝排針偏2.1mm，視窗14×24中心(77.1,-24)。玻璃凹槽19.86×27.3、頂Z128.3，+X另留低矮焊點空間。PCB正面邊緣貼屋頂內面126.5，玻璃不作壓合止擋；參考總厚上限2.9mm時玻璃頂128.2尚留0.1mm名義隙。原上殼外形、搭接、按鍵、其它孔位及隱藏P32A編號沿用，實印與點亮顯示待試裝。",
+      "engraving": {
+        "text": "P32A",
+        "type": "planar",
+        "location": "新正側內壁下方；避開裝牌口、固定孔與接合面",
+        "height_mm": 4,
+        "depth_mm": 0.35,
+        "removed_mm3": 9.347,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -30,
+          96,
+          55
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P32B",
+      "name": "退台式上殼背側接合片",
+      "qty": 1,
+      "file": "STL/P32B.stl",
+      "dimensions_mm": [
+        171.0,
+        50.5,
+        84.2
+      ],
+      "volume_cm3": 47.779,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "退台後127.2mm屋頂大平面貼床；封閉沉頭孔與接合凸臺局部橋接待切片",
+      "material": "PLA / PETG",
+      "note": "B屋頂外面降1.5mm至Z127.2、內面Z125.0；兩側X外緣收至-71.5及99.5，內面同步內移，壁厚保留2.2mm。由負Y滑入A屋頂與側邊罩檐下，名義間隙0.3mm；負Y的P33側蓋、原孔與DRV固定區保持位置。原四處L搭接及螺絲承壓座沿用，先接合兩片再預裝UI。 編號P32B：原背側內壁空白區；避開P33開口、柱位與接合面，凹刻0.35mm。",
+      "engraving": {
+        "text": "P32B",
+        "type": "planar",
+        "location": "原背側內壁空白區；避開P33開口、柱位與接合面",
+        "height_mm": 3,
+        "depth_mm": 0.35,
+        "removed_mm3": 5.3364,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          -50,
+          -93.8,
+          60
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "u": [
+          -1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P33",
+      "name": "上罩側維修蓋",
+      "qty": 1,
+      "file": "STL/P33.stl",
+      "dimensions_mm": [
+        114.0,
+        83.5,
+        2.2
+      ],
+      "volume_cm3": 20.775,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "四顆M3×8沉頭螺絲固定；下緣43mm。可拆後調整馬達、分牌閘及清除卡牌。 編號P33：側維修蓋內面；外觀面無字，凹刻0.35mm。",
+      "engraving": {
+        "text": "P33",
+        "type": "planar",
+        "location": "側維修蓋內面；外觀面無字",
+        "height_mm": 4,
+        "depth_mm": 0.35,
+        "removed_mm3": 7.0062,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          20,
+          -96,
+          80.5
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "u": [
+          -1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P34",
+      "name": "出牌口下飾蓋",
+      "qty": 1,
+      "file": "STL/P34.stl",
+      "dimensions_mm": [
+        16.5,
+        98.0,
+        2.2
+      ],
+      "volume_cm3": 3.459,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        90,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "兩顆M3×8沉頭螺絲固定；安裝後保留約74×15mm出牌口。內面刻號，正面保持平整。 編號P34：出牌口下飾蓋內面；外觀面無字，凹刻0.35mm。",
+      "engraving": {
+        "text": "P34",
+        "type": "planar",
+        "location": "出牌口下飾蓋內面；外觀面無字",
+        "height_mm": 3.5,
+        "depth_mm": 0.35,
+        "removed_mm3": 5.0378,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          101,
+          0,
+          51
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "u": [
+          0,
+          -1,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "P35",
+      "name": "頂部按鍵與PCF支架",
+      "qty": 1,
+      "file": "STL/P35.stl",
+      "dimensions_mm": [
+        33.0,
+        55.0,
+        24.4
+      ],
+      "volume_cm3": 3.996,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "建議無支撐；待切片",
+      "material": "PLA / PETG",
+      "note": "14×51mm按鍵板；四顆M3×8沉頭由內側鎖上罩，PCF板焊線低矮裝配。 編號P35：按鍵支架後側直立框；避開電路板及束帶孔，凹刻0.3mm。",
+      "engraving": {
+        "text": "P35",
+        "type": "planar",
+        "location": "按鍵支架後側直立框；避開電路板及束帶孔",
+        "height_mm": 2.5,
+        "depth_mm": 0.3,
+        "removed_mm3": 2.4035,
+        "coverage_ratio": 1.0,
+        "origin_mm": [
+          84,
+          10,
+          103
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "u": [
+          0,
+          0,
+          1
+        ],
+        "v": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "P31",
+      "name": "上滾輪滑塊U型防脫罩",
+      "qty": 2,
+      "file": "STL/P31.stl",
+      "dimensions_mm": [
+        20.4,
+        12.6,
+        16.2
+      ],
+      "volume_cm3": 0.907,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        180,
+        0,
+        0
+      ],
+      "supports": "上方完整大平面貼床；平直背板及字槽逐層檢查",
+      "material": "PETG",
+      "note": "配加背P15，P13/P14及P15本體沿用。外背內外均為整片平直板（原生內Y−41.5、外Y−42.7、底Z72.45），兩端扣勾已取消。82mm上軸保持居中±41，閉面止擋±41.5，各端0.5mm、總1mm名義游隙。先鬆上輪夾螺絲居中鋼軸但保持輪芯位置，再鎖回。裝卸先卸原調整螺絲，罩子直接上下套入或取出，不需張腿；回裝原Ø3.4/Ø6.4沉頭調整螺絲作高度調整及頭部防脫，不得鎖到底夾罩。P15前後名義隙0.45/0.5mm，上下−0.3..+0.8mm調整保持；罩可在框頂與螺絲頭之間浮動。軸端平常不碰止擋，推到邊界才端面限位，不夾鋼軸或軸承內圈；實物配合、偏擺與端推摩擦待試，不新增五金。",
+      "engraving": {
+        "text": "P31",
+        "type": "planar",
+        "height_mm": 1.8,
+        "depth_mm": 0.22,
+        "origin_mm": [
+          61,
+          -42.7,
+          80.1
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ],
+        "removed_mm3": 0.8439,
+        "coverage_ratio": 0.934,
+        "location": "罩內隱藏外背面；避開內側軸端止擋、頂梁承壓及滑塊限位面"
+      }
+    },
+    {
+      "id": "P10A",
+      "name": "重力擺輪架",
+      "qty": 1,
+      "file": "STL/P10A.stl",
+      "dimensions_mm": [
+        77.44,
+        54.6,
+        9.6
+      ],
+      "volume_cm3": 5.026,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        90,
+        0
+      ],
+      "supports": "原生X+5.6完整平面貼床，C鉤開口在上層；輪軸橫孔/螺母槽局部支撐待切片",
+      "material": "PETG",
+      "note": "選配重力擺架，空倉Ø12輪直接貼底板，單張起便抬升。正X+5.6完整平面貼床，C鉤口在上層；活動耳2mm、純打印固定肩長2.4mm，每端0.2mm名義軸向隙。帶頭肩軸由local−X開口側滑入，不硬擠軸頭穿孔；正常重力使其坐向封閉弧，不是抗拉鎖扣。無下擺限位，不可拉擺架搬整機；舊P11配重不適用。",
+      "engraving": {
+        "text": "P10A",
+        "type": "planar",
+        "height_mm": 1.8,
+        "depth_mm": 0.2,
+        "origin_mm": [
+          -4,
+          0,
+          -54.835039462844634
+        ],
+        "u": [
+          0,
+          1,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "removed_mm3": 1.07802,
+        "coverage_ratio": 1.0,
+        "location": "內側橫梁反面，避開貼床平面及接觸面"
+      }
+    },
+    {
+      "id": "P10B",
+      "name": "自由壓牌輪",
+      "qty": 1,
+      "file": "STL/P10B.stl",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        16.0
+      ],
+      "volume_cm3": 1.44,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "輪軸垂直列印；小底面可加brim",
+      "material": "PETG",
+      "note": "Ø12×16mm自由輪，Y0..16對準P17膠環區；Ø5.4孔套在Ø5隔套上。空倉後緣X−9.65，與P17橡膠前緣投影間隙2mm；最低點Z64接底板。端面凹字避開外圓及孔，摩擦/壓力與取牌效果待試。",
+      "engraving": {
+        "text": "P10B",
+        "type": "planar",
+        "height_mm": 1.8,
+        "depth_mm": 0.2,
+        "origin_mm": [
+          0,
+          0,
+          -62.835039462844634
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "removed_mm3": 1.08,
+        "coverage_ratio": 1.0,
+        "location": "端面凹字區，避開外圓壓牌與內孔"
+      }
+    },
+    {
+      "id": "P10C",
+      "name": "輪軸隔套含編號耳",
+      "qty": 1,
+      "file": "STL/P10C.stl",
+      "dimensions_mm": [
+        13.5,
+        5.0,
+        17.4
+      ],
+      "volume_cm3": 0.203,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        90,
+        0,
+        0
+      ],
+      "supports": "軸向垂直列印，編號耳朝床；建議brim",
+      "material": "PETG",
+      "note": "隔套穿輪與M3×25螺絲；兩耳之間有效距16.6mm、輪寬16mm，每端0.3mm軸向隙。近端伸入鍵槽0.8mm，整個套身17.4mm；編號外延耳避開轉動圓周及承壓端面。螺絲鎖到底壓住隔套，不壓自由輪。",
+      "engraving": {
+        "text": "P10C",
+        "type": "planar",
+        "height_mm": 1.8,
+        "depth_mm": 0.2,
+        "origin_mm": [
+          8,
+          -1.1,
+          -66.83503946284463
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "removed_mm3": 1.04796,
+        "coverage_ratio": 1.0,
+        "location": "外延標記耳，避開轉動外圓/軸孔/端面承壓"
+      }
+    },
+    {
+      "id": "P10D",
+      "name": "純打印邊牆夾與帶頭樞軸",
+      "qty": 2,
+      "file": "STL/P10D.stl",
+      "dimensions_mm": [
+        15.33,
+        10.6,
+        8.6
+      ],
+      "volume_cm3": 0.605,
+      "watertight": true,
+      "connected_components": 1,
+      "print_rotation": [
+        0,
+        -90,
+        0
+      ],
+      "supports": "X背面貼床，U夾彎曲在層內；肩軸局部橋接待切片；用PETG試印",
+      "material": "PETG",
+      "note": "PETG純打印U夾與一體帶頭肩軸；兩側完全不用螺絲、螺母或墊圈。相同件×2，第二件Z轉180°/移X−96。6mm夾腳在名義樞軸X−48時，後緣對齊P08後緣X−51；可兩側等量向前移0..6mm並沿牆頂6°斜率定位，不得單邊歪斜。名義位置新輪對P17投影隙2mm，移動後不再固定2mm。U夾深4mm、槽淨寬2.6，局部接觸肋鬆態2.2mm夾2.4mm牆，每側名義彈開0.1mm；實際夾力、蠕變與公差未驗。先預裝兩肩軸到C鉤，再從上方夾牆；下擺無限位，輪靠底板停止。X背面側躺印，夾臂彎曲盡量在層內。",
+      "engraving": {
+        "text": "P10D",
+        "type": "planar",
+        "height_mm": 1.8,
+        "depth_mm": 0.2,
+        "origin_mm": [
+          -48,
+          32.3,
+          121.8
+        ],
+        "u": [
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "removed_mm3": 1.07802,
+        "coverage_ratio": 1.0,
+        "location": "肩座外端隱藏面，避開壁槽/承軸/滑動面"
+      }
+    }
+  ],
+  "solid_volume_total_cm3": 700.62,
+  "solid_PLA_mass_g": 868.8,
+  "optional_solid_mass_g": 24.6,
+  "status": "P05A 55.0 mm 待實物試配，P05B D5.1 夾軸經使用者試配；整機旋轉待驗證",
+  "parameters": {
+    "revision": "V1.0.0",
+    "date": "2026-11-18",
+    "card_inner_width_mm": 61.0,
+    "card_lengths_reference_mm": [
+      87.0,
+      96.0
+    ],
+    "card_widths_reference_mm": [
+      57.0,
+      60.0
+    ],
+    "deck_capacity_cards": 108,
+    "card_thickness_reference_mm": 0.3,
+    "base_width_mm": 164.0,
+    "base_depth_mm": 148.0,
+    "base_cover_top_z_mm": 53.1,
+    "turntable_native_top_z_mm": 45.4,
+    "turntable_top_z_mm": 70.7,
+    "turntable_raise_mm": 5.2,
+    "turntable_to_base_ring_gap_mm": 5.7,
+    "card_floor_z_mm": 64.0,
+    "hopper_floor_thickness_mm": 2.4,
+    "P09_tall_full_width_sloped_gate": {
+      "changed_print_ids": [
+        "P09"
+      ],
+      "nominal_top_world_Z_mm": 151.0,
+      "original_incoming_plane_native_X_mm": 44.5,
+      "ear_aligned_incoming_plane_native_X_mm": 43.0,
+      "drop_below_hopper_rim_mm": 3.0,
+      "lower_slanted_face_width_mm": 61.0,
+      "rubber_width_mm": 55.0,
+      "same_slope_plastic_width_each_side_mm": 3.0,
+      "upper_gate_width_mm": 60.4,
+      "slant_angle_from_vertical_deg": 30.0,
+      "rubber_along_surface_dimensions_mm": [
+        55.0,
+        4.0,
+        1.0
+      ],
+      "backing_adhesive_thickness_normal_mm": 0.05,
+      "nominal_lower_outer_edge_native_XZ_mm": [
+        45.0,
+        64.45
+      ],
+      "upper_panel_thickness_mm": 4.0,
+      "rear_shoulder_native_Z_mm": 76.0,
+      "rear_base_native_X_mm": 50.0,
+      "upper_face_angle_relative_to_floor_normal_deg": 0,
+      "lower_slant_length_along_face_mm": 4.0,
+      "nominal_throat_mm": 0.45,
+      "original_mounting_ears_slots_nuts_and_screw_poses_retained": true,
+      "unfed_card_reference_shift_native_X_mm": -4.0,
+      "physical_feeding_and_glue_thickness_tested": false
+    },
+    "upper_housing_roof_top_native_z_mm": 128.7,
+    "hopper_tilt_deg": 6.0,
+    "hopper_lift_mm": 10.0,
+    "gravity_feed": true,
+    "closed_base": true,
+    "base_rear_vent_count": 1,
+    "part_id_engraving": true,
+    "upper_housing_wall_mm": 2.2,
+    "upper_housing_body_min_y_mm": -96.0,
+    "upper_housing_body_max_y_mm": 98.2,
+    "upper_housing_assembled_width_mm": 196.4,
+    "upper_housing_seam_y_mm": -55.0,
+    "upper_housing_seam_gap_mm": 0.2,
+    "upper_housing_split": true,
+    "upper_housing_lap_end_y_mm": -61.0,
+    "upper_housing_lap_skin_mm": 1.2,
+    "upper_housing_b_setback_mm": 1.5,
+    "upper_housing_lap_clearance_mm": 0.3,
+    "roller_axis_x_mm": 61.0,
+    "lower_roller_z_mm": 54.2,
+    "upper_roller_z_mm": 74.75,
+    "roller_rubber_od_mm": 20.7,
+    "roller_shaft_d_mm": 3.0,
+    "bearing_6005_od_mm": 47.0,
+    "bearing_6005_id_mm": 25.0,
+    "bearing_6005_height_mm": 12.0,
+    "bearing_623_od_mm": 10.0,
+    "bearing_623_id_mm": 3.0,
+    "bearing_623_height_mm": 4.0,
+    "slip_ring_body_od_max_mm": 22.0,
+    "slip_ring_reference_length_mm": 24.5,
+    "slip_ring_channels": 12,
+    "controls_on_top": true,
+    "button_xy_mm": [
+      [
+        75,
+        4
+      ],
+      [
+        75,
+        17
+      ],
+      [
+        75,
+        30
+      ],
+      [
+        75,
+        43
+      ]
+    ],
+    "screen_center_xy_mm": [
+      75,
+      -24
+    ],
+    "button_test_travel_mm": 0.35,
+    "screw_skus": [
+      "DIN7991 M3x8 socket countersunk",
+      "DIN7991 M3x25 socket countersunk"
+    ],
+    "nut_sku": "M3 0.5 pitch, 5.5 AF, 2.4mm thickness",
+    "gear_module_mm": 1.2,
+    "main_gear_teeth": 60,
+    "pinion_teeth": 30,
+    "pinion_native_axis_x_mm": 54.0,
+    "pinion_assembly_axis_x_mm": 55.0,
+    "pinion_operating_center_distance_mm": 55.0,
+    "P05_P26_installed_full_rotation_tested": false,
+    "P05_shaft_measured_section_mm": [
+      4.9,
+      2.9
+    ],
+    "P05B_bore_section_mm": [
+      5.1,
+      3.1
+    ],
+    "P05_full_reference_scene_all_clear": false,
+    "gear_backlash_mm": 0.18,
+    "screw_clearance_mm": 3.4,
+    "bearing_radial_clearance_mm": 0.15,
+    "printer_build_mm": [
+      180,
+      180,
+      180
+    ],
+    "pla_density_g_cm3": 1.24,
+    "notes": [
+      "正式列印檔直接放3d/STL；舊P31承載架已併入P04A，P31現為上滾輪U罩×2。P10平移板/P11鬆放配重退役，改選配P10A擺架、P10B自由輪、P10C隔套、P10D共用夾座×2。現有41種印件，一般成品45件，含擺輪、窄牌件及試片共53件；P36保持取消。",
+      "P01維持當前2934版本，164×148×50.1、開關9×14.8與Type-C底Z6.7均不改；三根23mm滑環柱、R4下線及四根柱頂50.1保持。P02與其上部裝配以柱頂定位，從原底52.2下降2.1至50.1直接接觸；原0.1名義間隙一併消除。",
+      "WX22定子下緣Z8.2、法蘭Z25.2..27.7、轉子出線Z41.5；12根Ø0.85導線向底部分兩排走線。P06外環接P04B，內夾套夾Ø7.8轉子頸，兩組M3×8預裝；導線不承受機械扭矩。線束位置、彎曲半徑及夾持力仍待實物核對。",
+      "P04A與原P31承載架一體化，連續梁銜接原6度斜面，底部方形定位榫刪除，原生Z42平底貼床；保留四組M3對位。四顆牌倉及兩顆N20底座螺母從底部裝入。N20底座孔Y−17.5，馬達本體/軸心不移動；六井採局部支撐屏蔽並檢查剩餘孔槽。",
+      "前次圓弧修訂僅重印P26；本次沿用該完成檔。遮光薄片以P02A圓心為圓心，內R77、外R78、中線R77.5弧長7mm，中心155°、夾角約5.1751°；原斜臂、固定孔(-58,10)、下緣原生33.1/世界58.4及編號不變。含已完成的徑向P02A、11.2mm P04B、P25及P04A在內的當時其餘38印件沿用，所有五金與裝配位置不移動。P05名義徑向間隙仍1mm；圓弧僅將直片外側最大掃掠縮小約0.0785mm。條件式ITR9608-F槽底57.5/光軸60.2、底隙0.9及上臂距2.5mm保持，實際槽形及觸發效果待實測。",
+      "P13/P14各兩組M3×8從P04A下方往上鎖、螺母側入；P21兩組M3×25由下向上、螺母頂入。標準機五金為M3×8共56支、M3×25共10支、標準M3螺母47顆、M3墊片3片；自製28BYJ-48支架五金另計。 選配P10僅中央輪軸另用M3×25一支及M3螺母一顆；兩側掛耳/牆夾/樞軸全部純打印，無額外M3×8或墊圈。標準66支螺絲與原五金目錄保持。",
+      "正式 P05A 的設計軸距為 55.0 mm，保留 30 齒、2:1 傳動、6 mm 齒寬與 P05B 連接面。原生 CAD 軸 X54，組裝參考軸 X55。P05B 沿用試裝通過的 D5.1×3.1 夾座。先前的 55.5 mm 齒輪實測紀錄屬於歷史版本；55.0 mm 版仍待實機試裝。",
+      "P08採連續2.4mm底板與實心高側擋板，頂緣依6度傾角補償；組裝後與上蓋頂面Z154.0齊平。原滾輪開口、61mm牌倉淨寬及前後開放保持。57mm牌使用兩片相同P12限寬件，60mm牌不裝。",
+      "螢幕與四按鍵置於旋轉上罩頂部；P32A/B原外形與搭接、按鍵孔及四組接合M3×8沿用。OLED依實購27.3×27.8×1.2mm板修改P28/P32A局部；兩固定耳/螺絲柱轉90度至(75,-42)/(75,-6)，沿用兩M3×8。玻璃與顯示區長邊沿Y，排針朝+X；顯示中心向排針偏2.1mm，視窗14×24中心(77.1,-24)。P28採四PETG壓舌，PCB邊緣背面125.3、壓舌自由頂125.4，名義預壓0.1mm；玻璃不作壓合止擋，實印壓力與顯示仍待試。",
+      "牌倉內寬61mm、前後開放限寬不限長，參考57×87及60×96mm牌；牌路向出口下傾6度。選配重力擺輪P10A/B/C/D，空倉貼底板，單張起自抬升。兩側PETG夾座和帶頭軸全部打印，無螺絲五金；不做下擺限位。兩夾座可等量沿牆移，名義樞軸X−48時對P17投影隙2mm，前移後間隙改變；已驗證安全前移0..6mm。不得單側錯位，舊P11不得鬆放在擺架。夾力、蠕變、摩擦與實物取牌待試。",
+      "馬達、滑環、OLED及電池盒尺寸屬名義參考；小開關本體/卡扣、自製馬達支架、列印後強度/夾持力、線束疲勞與實際發牌速度尚未實測。28BYJ-48維持2:1齒輪傳動，每秒2至4張仍待驗證。",
+      "單顆18650、USB Type-C、關機充電。電池允許充放電電流待核對；韌體平時關閉Wi-Fi與藍牙省電。",
+      "P13/P14外側主體、導軌、頂梁及腳座補平至原底座外緣Y±41，完整保留上滑塊窗口；負Y/正Y外側大平背分別以X+90°/−90°貼床，底面25×41.6、高12mm。兩零件軸承、通軸孔、調整、導向及底部反向螺絲/側入螺母介面保持；實際首層接觸面積及局部孔槽列印依檢查報告。",
+      "P08兩處分牌閘孔已恢復原螺絲頭圓孔及錐孔：軸Y±37.5/Z72、Ø3.4通孔、Ø6.4頭部入口；固定耳、61mm牌道、封底高側板及其它37印件不動。螺絲由原−X方向放入，P09原螺母槽及所有當前五金姿態保持，先前P08六角孔已撤回。",
+      "P13/P14只將頂部(61,±35)調整螺絲孔原小倒角改為實口Ø6.4、90°、深1.85mm沉頭錐，接原Ø2.7預孔，頂橋內保留2.15mm圓柱預孔。內側頂面最薄邊0.3mm、外側至平背2.8mm；未擴外形、未移動調整螺絲、P15或滾輪。原頭Z88.75、端Z80.75保持，螺絲頭是否下沉取決於調整位置，不代表每個位置都齊平。",
+      "P01的Type-C面板開孔相較原底Z8.7下移2mm至Z6.7，11×5mm、X−81/Y−36.5不變；模組與插頭參考不移動，原孔實購小板僅露插口上半部；CAD模組/插頭高度未校準，保留nominal干涉記錄但不判定實機必碰，新孔待實測。P01高50.1及開關9×14.8保持，其餘37印件與機構座標不動。",
+      "P02就位修訂：僅重印P06/P04B。P06外環仍原生11..19，內夾套/後橋/內夾螺絲原生+2.1以保留固定滑環接口；P04B負Y管底開9mm寬、Z13..15.4進入槽，橋頂及左右各0.5間隙。外pin先退2mm，槽對齊後橋再垂直套入；內套/橋高出P06貼床面2.1，需局部支撐切片。其餘36印件STL完全保持，底部電子件/滑環不動，上部裝配整體下降2.1。"
+    ],
+    "base_shell_height_mm": 50.1,
+    "legacy_head_construction_lift_mm": 1.5,
+    "lower_stack_assembly_lift_mm": 20.1,
+    "upper_head_total_lift_mm": 25.3,
+    "main_gear_height_mm": 11.2,
+    "main_gear_bottom_native_z_mm": 36.0,
+    "slip_ring_model": "WX22-12PS",
+    "slip_ring_flange_od_mm": 44.0,
+    "slip_ring_flange_thickness_mm": 2.5,
+    "slip_ring_flange_hole_pcd_mm": 35.0,
+    "slip_ring_flange_hole_mm": 5.5,
+    "slip_ring_fixed_post_height_mm": 23.0,
+    "slip_ring_flange_bottom_z_mm": 25.2,
+    "slip_ring_rotor_wire_exit_z_mm": 41.5,
+    "switch_aperture_yz_mm": [
+      9.0,
+      14.8
+    ],
+    "n20_base_mount_y_mm": -17.5,
+    "printed_part_types": 41,
+    "retired_print_ids": {
+      "P36": "WX22法蘭改直接鎖在P01固定柱",
+      "P10": "原平移式壓牌板改為P10A/B/C/D重力自由擺輪",
+      "P11": "舊鬆放配重不適用重力擺架，不再提供正式列印檔"
+    },
+    "screw_qty": {
+      "M3x8": 56,
+      "M3x25": 10
+    },
+    "nut_qty": 47,
+    "washer_qty": 3,
+    "stepper_mount": "28BYJ-48固定在不旋轉的P02或其上部自製支架；支架與固定五金未建模",
+    "full_machine_reference_all_clear": false,
+    "P13_P14_flat_back": {
+      "back_extension_mm": 2.5,
+      "outboard_native_Y_mm": {
+        "P13": -41,
+        "P14": 41
+      },
+      "print_rotation_X_deg": {
+        "P13": 90,
+        "P14": -90
+      },
+      "print_envelope_mm": [
+        25,
+        41.6,
+        12
+      ],
+      "first_layer_geometric_contact_mm2": 623.1982799841506,
+      "full_P15_guide_window_retained": true,
+      "working_interfaces_moved": false
+    },
+    "P13_P14_top_adjustment_countersink": {
+      "axes_XY_mm": [
+        [
+          61,
+          -35
+        ],
+        [
+          61,
+          35
+        ]
+      ],
+      "physical_top_Z_mm": 87,
+      "mouth_diameter_mm": 6.4,
+      "pilot_diameter_mm": 2.7,
+      "included_angle_deg": 90,
+      "cone_depth_mm": 1.85,
+      "cone_bottom_Z_mm": 85.15,
+      "remaining_cylindrical_pilot_in_top_bridge_mm": 2.15,
+      "minimum_inboard_top_lip_mm": 0.3,
+      "outboard_top_lip_to_flat_back_mm": 2.8,
+      "original_head_Z_mm": 88.75,
+      "original_tip_Z_mm": 80.75,
+      "adjustment_hardware_moved": false,
+      "recessed_flush_head_at_every_adjustment_setting_claimed": false
+    },
+    "switch_aperture_center_yz_mm": [
+      -1.0,
+      14.75
+    ],
+    "P01_outer_wall_top_z_mm": 50.1,
+    "P01_cover_post_top_z_mm": 50.1,
+    "P01_outer_wall_primitive_bottom_z_mm": 2.1,
+    "P01_outer_wall_primitive_height_mm": 48.0,
+    "P01_P02_fixed_bottom_z_mm": 50.1,
+    "P01_cover_post_to_P02_gap_mm": 0.0,
+    "P01_upper_assembly_axial_support_qualified": false,
+    "P01_other_mechanism_frames_moved": true,
+    "TypeC_aperture_yz_mm": [
+      11.0,
+      5.0
+    ],
+    "TypeC_aperture_bottom_z_mm": 6.7,
+    "TypeC_aperture_center_yz_mm": [
+      -36.5,
+      9.2
+    ],
+    "TypeC_aperture_shift_z_mm": -2.0,
+    "TypeC_reference_hardware_moved": false,
+    "reference_USB_fit": false,
+    "user_baseline_physical_observation": "原P01開孔放置實購小板後，Type-C插口只能露出上半部，因此使用者要求將孔往下移2mm；實購小板固定位置不變。",
+    "new_aperture_physically_tested": false,
+    "USBreferenceheight_uncalibrated": true,
+    "reference_USB_fit_is_nominal_only": true,
+    "P01_P02_geometric_seating_confirmed": true,
+    "P01_P02_physical_load_tested": false,
+    "P02_seating_revision": {
+      "P01_post_top_Z_mm": 50.1,
+      "P02_bottom_Z_mm": 50.1,
+      "post_to_plate_gap_mm": 0,
+      "assembly_shift_Z_mm": -2.1,
+      "lower_frame_mm": 20.1,
+      "head_frame_mm": 22.6,
+      "P01_slip_construction_frame_mm": 22.2,
+      "slip_ring_posts_height_mm": 23,
+      "fixed_rotor_wire_exit_Z_mm": 41.5,
+      "P06_inner_and_bridge_native_raise_mm": 2.1,
+      "P04B_rear_slot_width_mm": 9,
+      "P04B_rear_slot_bottom_Z_mm": 13,
+      "P04B_rear_slot_top_Z_mm": 15.4,
+      "bridge_top_clearance_mm": 0.5,
+      "bridge_side_clearance_each_mm": 0.5,
+      "other_printed_parts_geometry_changed": false,
+      "P01_P02_geometric_contact_confirmed": true,
+      "physical_strength_and_clamp_tested": false
+    },
+    "P23_vertical_countersink": {
+      "axis_native_XY_mm": [
+        81,
+        27
+      ],
+      "pad_top_Z_mm": 63.7,
+      "actual_mouth_diameter_mm": 7.0,
+      "included_angle_deg": 90,
+      "throat_diameter_mm": 3.4,
+      "cone_bottom_Z_mm": 61.9,
+      "remaining_pad_below_cone_mm": 1.2,
+      "side_holes_and_hardware_poses_unchanged": true,
+      "purchased_head_fit_physically_tested": false
+    },
+    "P08_original_gate_screw_holes_restored": {
+      "scope": "Only restore original P08 head bore and conical transition; P09 and all hardware poses unchanged",
+      "axes_Y_mm": [
+        -37.5,
+        37.5
+      ],
+      "axis_Z_mm": 72,
+      "through_bore_diameter_mm": 3.4,
+      "head_bore_diameter_mm": 6.4,
+      "head_bore_X_range_mm": [
+        35,
+        39.6
+      ],
+      "original_cone_X_range_mm": [
+        39.4,
+        41.1
+      ],
+      "original_cone_diameters_mm": [
+        6.4,
+        3.4
+      ],
+      "former_P08_hex_nut_pockets_active": false,
+      "physical_fit_validated": false
+    },
+    "P22_size_revision": {
+      "outer_diameter_mm": 18,
+      "axial_length_mm": 17,
+      "axis_native_XZ_mm": [
+        61,
+        54.2
+      ],
+      "axial_native_Y_mm": [
+        -58.8,
+        -41.8
+      ],
+      "bore_diameters_mm": [
+        2.15,
+        3.15
+      ],
+      "bore_depths_and_positions_unchanged": true,
+      "clamp_axes_native_XY_mm": [
+        [
+          65.5,
+          -55.3
+        ],
+        [
+          65.5,
+          -45.3
+        ]
+      ],
+      "clamp_screw_head_Z_mm": 57.4,
+      "clamp_nut_bottom_Z_mm": 49.7,
+      "hidden_label_native_origin_mm": [
+        61,
+        -58.8,
+        57.8
+      ],
+      "other_prints_and_hardware_unchanged": true,
+      "only_two_screws_and_two_nuts_reposed": true,
+      "physical_fit_tested": false
+    },
+    "P31_retainer_addition": {
+      "qty": 2,
+      "dimensions_native_mm": [
+        20.4,
+        12.6,
+        16.2
+      ],
+      "P15_rear_extension_mm": 2.75,
+      "P15_new_back_native_Y_mm": -41,
+      "P15_bore_diameter_mm": 3.5,
+      "top_adjustment_shaft_hole_mm": 3.4,
+      "top_adjustment_countersink_mouth_mm": 6.4,
+      "hooks_present": false,
+      "outer_wall_planar": true,
+      "nominal_slider_front_rear_play_mm": [
+        0.45,
+        0.5
+      ],
+      "slider_vertical_travel_mm": [
+        -0.3,
+        0.8
+      ],
+      "assembly": "Remove original adjuster; lower cover straight down; reinstall/adjust screw without clamping cover. Remove screw before lifting cover.",
+      "recommended_material": "PETG",
+      "new_hardware_qty": 0,
+      "original_large_P13_P14_and_P15_unchanged": true,
+      "physical_fit_end_thrust_friction_tested": false
+    },
+    "P16_width_revision": {
+      "old_axial_length_mm": 54,
+      "new_axial_length_mm": 53,
+      "trim_each_end_mm": 0.5,
+      "new_native_Y_mm": [
+        -26.5,
+        26.5
+      ],
+      "axis_XZ_mm": [
+        61,
+        54.2
+      ],
+      "shaft_bore_diameter_mm": 3.15,
+      "O_ring_groove_centers_Y_mm": [
+        -21,
+        21
+      ],
+      "O_ring_groove_width_mm": 2.3,
+      "O_ring_groove_root_diameter_mm": 16.8,
+      "groove_to_end_land_mm": 4.35,
+      "hidden_label_origin_mm": [
+        61,
+        -26.5,
+        59.7
+      ],
+      "hub_clamp_hardware_positions_unchanged": true,
+      "physical_fit_tested": false,
+      "old_O_ring_groove_centers_Y_mm": [
+        -24,
+        24
+      ],
+      "O_ring_inward_shift_mm_each": 3,
+      "original_annular_lightening_cavity_unchanged": true,
+      "nominal_groove_to_cavity_outer_wall_mm": 1.9,
+      "only_four_silicone_references_reposed": true
+    },
+    "P31_axial_revision": {
+      "reference_upper_shaft_length_mm": 82,
+      "upper_shaft_native_Y_mm": [
+        -41,
+        41
+      ],
+      "upper_shaft_centering_translation_Y_mm": -1,
+      "shaft_stop_inner_Y_mm": [
+        -41.5,
+        41.5
+      ],
+      "nominal_axial_gap_each_mm": 0.5,
+      "nominal_total_endplay_mm": 1,
+      "cap_dimensions_native_mm": [
+        20.4,
+        12.6,
+        16.2
+      ],
+      "cap_bottom_native_Z_mm": 72.45,
+      "upper_retainer_and_P15_geometry_unchanged": true,
+      "all_fastener_positions_unchanged": true,
+      "physical_fit_friction_load_tested": false,
+      "hooks_present": false,
+      "outer_wall_planar": true,
+      "straight_installation_without_spreading": true,
+      "rear_inner_Y_mm": -41.5,
+      "rear_outer_Y_mm": -42.7,
+      "cap_float_min_relative_Z_mm": -0.15,
+      "cap_float_max_relative_Z_mm_formula": ".3 + slider_dz",
+      "nominal_slider_front_rear_play_mm": [
+        0.45,
+        0.5
+      ],
+      "hidden_label_origin_mm": [
+        61,
+        -42.7,
+        80.1
+      ]
+    },
+    "P04B_gear_rise_mm": 2.7,
+    "P04B_gear_rise_revision": {
+      "previous_gear_thickness_mm": 8.5,
+      "current_gear_thickness_mm": 11.2,
+      "rise_mm": 2.7,
+      "gear_bottom_native_Z_mm": 36,
+      "gear_top_native_Z_mm": 47.2,
+      "lower_frame_mm": 20.1,
+      "previous_head_frame_mm": 22.6,
+      "current_head_frame_mm": 25.3,
+      "P04A_bottom_world_Z_mm": 67.3,
+      "P26_geometry_unchanged": false,
+      "P26_bottom_world_Z_mm": 58.4,
+      "home_sensor_slot_floor_world_Z_mm": 57.5,
+      "nominal_slot_bottom_clearance_mm": 0.9,
+      "nominal_blade_insertion_depth_mm": 5.0,
+      "home_optical_detection_tested": false,
+      "P26_upper_arm_bottom_world_Z_mm": 65.9,
+      "home_sensor_body_top_world_Z_mm": 63.4,
+      "nominal_arm_to_sensor_body_clearance_mm": 2.5,
+      "sensor_slot_geometry_unmeasured": true,
+      "combined_changed_print_ids": [
+        "P02A",
+        "P04B",
+        "P26"
+      ]
+    },
+    "home_opto_reference_revision": {
+      "body_dimensions_XYZ_mm": [
+        13,
+        6,
+        10
+      ],
+      "body_dimensions_user_confirmed": true,
+      "mounting_datum_world_XYZ_mm": [
+        -70.23885349534036,
+        32.75291528490421,
+        53.4
+      ],
+      "estimated_slot_width_mm": 5,
+      "estimated_slot_floor_height_mm": 4.1,
+      "estimated_open_slot_to_full_body_top": true,
+      "slot_dimensions_measured": false,
+      "optical_axis_measured": false,
+      "estimated_pin_positions_unchanged": true,
+      "exit_opto_reference_changed": false,
+      "physical_fit_and_homing_detection_tested": false,
+      "conditional_datasheet_slot_floor_height_mm": 4.1,
+      "conditional_datasheet_optical_axis_height_mm": 6.8,
+      "radial_axis_azimuth_deg": 335,
+      "optical_axis_world_Z_mm": 60.2,
+      "actual_sensor_model_confirmed": false,
+      "slot_and_optical_dimensions_conditional_on_ITR9608_F": true
+    },
+    "home_radial_layout": {
+      "radius_mm": 77.5,
+      "azimuth_deg": 155,
+      "home_center_XY_mm": [
+        -70.23885349534036,
+        32.75291528490421
+      ],
+      "radial_inward_angle_deg": 335,
+      "P25_original_STL_reused": true,
+      "P04A_flag_anchor_native_XY_mm": [
+        -58,
+        10
+      ],
+      "blade_radial_thickness_mm": 1,
+      "blade_tangential_width_mm": 7.042766717300575,
+      "minimum_P05_radial_clearance_mm": 1,
+      "P02A_original_home_features_filled": true,
+      "conditional_ITR9608_F_reference": true,
+      "actual_sensor_model_confirmed": false,
+      "physical_fit_and_homing_detection_tested": false,
+      "blade_shape": "concentric_arc",
+      "blade_inner_radius_mm": 77.0,
+      "blade_outer_radius_mm": 78.0,
+      "blade_midline_arc_length_mm": 7.0,
+      "blade_arc_span_deg": 5.175102665697758
+    },
+    "P26_arc_revision": {
+      "scope": "Only P26 shutter blade changes; reuse all38 other current print files.",
+      "inner_radius_mm": 77.0,
+      "outer_radius_mm": 78.0,
+      "mid_radius_mm": 77.5,
+      "midline_arc_length_mm": 7.0,
+      "angular_center_deg": 155.0,
+      "arc_span_rad": 0.09032258064516129,
+      "arc_span_deg": 5.175102665697758,
+      "arc_segment_count": 64,
+      "native_Z_mm": [
+        33.1,
+        42.0
+      ],
+      "world_bottom_Z_mm": 58.4,
+      "arm_mount_hole_engraving_and_all_assembly_poses_unchanged": true,
+      "nominal_P05_radial_clearance_mm": 1.0,
+      "physical_fit_and_homing_detection_tested": false
+    },
+    "P10_gravity_revision": {
+      "scope": "Only optional P10 follower changes; reuse all37 retained print files and unchanged standard209 actors/66 screws.",
+      "retired_print_ids": [
+        "P10",
+        "P11"
+      ],
+      "new_print_ids": [
+        "P10A",
+        "P10B",
+        "P10C",
+        "P10D"
+      ],
+      "new_print_quantities": {
+        "P10A": 1,
+        "P10B": 1,
+        "P10C": 1,
+        "P10D": 2
+      },
+      "floor_native_Z_mm": 64,
+      "P17_rubber_outer_diameter_mm": 20.7,
+      "P17_axis_native_XZ_mm": [
+        -22,
+        54
+      ],
+      "empty_roller_center_native_XZ_mm": [
+        -3.65,
+        70
+      ],
+      "roller_diameter_mm": 12,
+      "roller_width_mm": 16,
+      "roller_native_Y_mm": [
+        0,
+        16
+      ],
+      "pivot_native_XZ_mm": [
+        -48,
+        120
+      ],
+      "empty_projected_P17_outer_edge_gap_mm": 2,
+      "empty_floor_normal_gap_mm": 0,
+      "maximum_stack_cards": 108,
+      "reference_card_thickness_mm": 0.3,
+      "gravity_only": true,
+      "P11_loose_weight_permitted": false,
+      "standard_hardware_catalog_unchanged": true,
+      "optional_hardware_catalog": "P10_optional_fastener_catalog.json",
+      "physical_fit_clamp_grip_force_friction_and_feed_tested": false,
+      "side_clips_and_pivots_fully_printed": true,
+      "side_hardware_qty": 0,
+      "lower_swing_stop_present": false,
+      "pure_printed_hinge_opening_direction_frame_local": [
+        -1,
+        0,
+        0
+      ],
+      "recommended_clip_material": "PETG",
+      "clamp_relaxed_throat_mm": 2.2,
+      "P08_wall_thickness_mm": 2.4,
+      "nominal_clip_elastic_preload_each_side_mm": 0.1,
+      "safe_equal_forward_adjustment_mm": [
+        0,
+        6
+      ],
+      "safe_pivot_native_X_mm": [
+        -48,
+        -42
+      ],
+      "nominal_2mm_gap_changes_after_manual_adjustment": true,
+      "optional_hardware": {
+        "DIN7991 M3x25": 1,
+        "M3 nut": 1
+      }
+    },
+    "exit_opto_reference_revision": {
+      "body_dimensions_XYZ_mm": [
+        13,
+        6,
+        10
+      ],
+      "body_dimensions_user_confirmed": true,
+      "dimensions_exclude_pins": true,
+      "actual_sensor_model_confirmed": false,
+      "conditional_slot_width_mm": 5.0,
+      "conditional_slot_floor_height_mm": 4.1,
+      "conditional_optical_axis_height_mm": 6.8,
+      "slot_dimensions_measured": false,
+      "pin_positions_measured": false,
+      "main_mount_axis_native_XY_mm": [
+        81,
+        27
+      ],
+      "standard_60mm_seat_Y_shift_mm": 1.5,
+      "narrow_57mm_seat_Y_shift_mm": 0.0,
+      "redundant_second_slot_and_front_bar_removed": true,
+      "physical_fit_and_feeding_tested": false,
+      "original_backplate_geometry_preserved": true,
+      "pin_hole_diameter_mm": 1.2,
+      "pin_hole_centers_native_XZ_mm": [
+        [
+          89.73,
+          59.3
+        ],
+        [
+          89.73,
+          69.3
+        ],
+        [
+          92.27,
+          59.3
+        ],
+        [
+          92.27,
+          69.3
+        ]
+      ],
+      "original_strap_slots_preserved": true,
+      "original_ID_preserved": true
+    },
+    "oled_actual_module_revision": {
+      "PCB_drawing_width_height_thickness_mm": [
+        27.3,
+        27.8,
+        1.2
+      ],
+      "header_direction_in_current_model": "+X",
+      "mounts_native_XY_mm": [
+        [
+          75,
+          -42
+        ],
+        [
+          75,
+          -6
+        ]
+      ],
+      "AA_native_center_XY_mm": [
+        77.1,
+        -24
+      ],
+      "window_dimensions_XY_mm": [
+        14,
+        24
+      ],
+      "glass_recess_dimensions_XY_mm": [
+        19.86,
+        27.3
+      ],
+      "PCB_native_Z_mm": [
+        125.3,
+        126.5
+      ],
+      "clamp_contact_free_Z_mm": 125.4,
+      "nominal_PETG_contact_preload_mm": 0.1,
+      "physical_fit_tested": false
+    }
+  }
+}

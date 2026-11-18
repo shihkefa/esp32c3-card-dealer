@@ -1,0 +1,721 @@
+{
+  "revision": "V1.0.0",
+  "date": "2026-11-18",
+  "card_inner_width_mm": 61.0,
+  "card_lengths_reference_mm": [
+    87.0,
+    96.0
+  ],
+  "card_widths_reference_mm": [
+    57.0,
+    60.0
+  ],
+  "deck_capacity_cards": 108,
+  "card_thickness_reference_mm": 0.3,
+  "base_width_mm": 164.0,
+  "base_depth_mm": 148.0,
+  "base_cover_top_z_mm": 53.1,
+  "turntable_native_top_z_mm": 45.4,
+  "turntable_top_z_mm": 70.7,
+  "turntable_raise_mm": 5.2,
+  "turntable_to_base_ring_gap_mm": 5.7,
+  "card_floor_z_mm": 64.0,
+  "hopper_floor_thickness_mm": 2.4,
+  "P09_tall_full_width_sloped_gate": {
+    "changed_print_ids": [
+      "P09"
+    ],
+    "nominal_top_world_Z_mm": 151.0,
+    "original_incoming_plane_native_X_mm": 44.5,
+    "ear_aligned_incoming_plane_native_X_mm": 43.0,
+    "drop_below_hopper_rim_mm": 3.0,
+    "lower_slanted_face_width_mm": 61.0,
+    "rubber_width_mm": 55.0,
+    "same_slope_plastic_width_each_side_mm": 3.0,
+    "upper_gate_width_mm": 60.4,
+    "slant_angle_from_vertical_deg": 30.0,
+    "rubber_along_surface_dimensions_mm": [
+      55.0,
+      4.0,
+      1.0
+    ],
+    "backing_adhesive_thickness_normal_mm": 0.05,
+    "nominal_lower_outer_edge_native_XZ_mm": [
+      45.0,
+      64.45
+    ],
+    "upper_panel_thickness_mm": 4.0,
+    "rear_shoulder_native_Z_mm": 76.0,
+    "rear_base_native_X_mm": 50.0,
+    "upper_face_angle_relative_to_floor_normal_deg": 0,
+    "lower_slant_length_along_face_mm": 4.0,
+    "nominal_throat_mm": 0.45,
+    "original_mounting_ears_slots_nuts_and_screw_poses_retained": true,
+    "unfed_card_reference_shift_native_X_mm": -4.0,
+    "physical_feeding_and_glue_thickness_tested": false
+  },
+  "upper_housing_roof_top_native_z_mm": 128.7,
+  "hopper_tilt_deg": 6.0,
+  "hopper_lift_mm": 10.0,
+  "gravity_feed": true,
+  "closed_base": true,
+  "base_rear_vent_count": 1,
+  "part_id_engraving": true,
+  "upper_housing_wall_mm": 2.2,
+  "upper_housing_body_min_y_mm": -96.0,
+  "upper_housing_body_max_y_mm": 98.2,
+  "upper_housing_assembled_width_mm": 196.4,
+  "upper_housing_seam_y_mm": -55.0,
+  "upper_housing_seam_gap_mm": 0.2,
+  "upper_housing_split": true,
+  "upper_housing_lap_end_y_mm": -61.0,
+  "upper_housing_lap_skin_mm": 1.2,
+  "upper_housing_b_setback_mm": 1.5,
+  "upper_housing_lap_clearance_mm": 0.3,
+  "roller_axis_x_mm": 61.0,
+  "lower_roller_z_mm": 54.2,
+  "upper_roller_z_mm": 74.75,
+  "roller_rubber_od_mm": 20.7,
+  "roller_shaft_d_mm": 3.0,
+  "bearing_6005_od_mm": 47.0,
+  "bearing_6005_id_mm": 25.0,
+  "bearing_6005_height_mm": 12.0,
+  "bearing_623_od_mm": 10.0,
+  "bearing_623_id_mm": 3.0,
+  "bearing_623_height_mm": 4.0,
+  "slip_ring_body_od_max_mm": 22.0,
+  "slip_ring_reference_length_mm": 24.5,
+  "slip_ring_channels": 12,
+  "controls_on_top": true,
+  "button_xy_mm": [
+    [
+      75,
+      4
+    ],
+    [
+      75,
+      17
+    ],
+    [
+      75,
+      30
+    ],
+    [
+      75,
+      43
+    ]
+  ],
+  "screen_center_xy_mm": [
+    75,
+    -24
+  ],
+  "button_test_travel_mm": 0.35,
+  "screw_skus": [
+    "DIN7991 M3x8 socket countersunk",
+    "DIN7991 M3x25 socket countersunk"
+  ],
+  "nut_sku": "M3 0.5 pitch, 5.5 AF, 2.4mm thickness",
+  "gear_module_mm": 1.2,
+  "main_gear_teeth": 60,
+  "pinion_teeth": 30,
+  "pinion_native_axis_x_mm": 54.0,
+  "pinion_assembly_axis_x_mm": 55.0,
+  "pinion_operating_center_distance_mm": 55.0,
+  "P05_P26_installed_full_rotation_tested": false,
+  "P05_shaft_measured_section_mm": [
+    4.9,
+    2.9
+  ],
+  "P05B_bore_section_mm": [
+    5.1,
+    3.1
+  ],
+  "P05_full_reference_scene_all_clear": false,
+  "gear_backlash_mm": 0.18,
+  "screw_clearance_mm": 3.4,
+  "bearing_radial_clearance_mm": 0.15,
+  "printer_build_mm": [
+    180,
+    180,
+    180
+  ],
+  "pla_density_g_cm3": 1.24,
+  "notes": [
+    "正式列印檔直接放3d/STL；舊P31承載架已併入P04A，P31現為上滾輪U罩×2。P10平移板/P11鬆放配重退役，改選配P10A擺架、P10B自由輪、P10C隔套、P10D共用夾座×2。現有41種印件，一般成品45件，含擺輪、窄牌件及試片共53件；P36保持取消。",
+    "P01維持當前2934版本，164×148×50.1、開關9×14.8與Type-C底Z6.7均不改；三根23mm滑環柱、R4下線及四根柱頂50.1保持。P02與其上部裝配以柱頂定位，從原底52.2下降2.1至50.1直接接觸；原0.1名義間隙一併消除。",
+    "WX22定子下緣Z8.2、法蘭Z25.2..27.7、轉子出線Z41.5；12根Ø0.85導線向底部分兩排走線。P06外環接P04B，內夾套夾Ø7.8轉子頸，兩組M3×8預裝；導線不承受機械扭矩。線束位置、彎曲半徑及夾持力仍待實物核對。",
+    "P04A與原P31承載架一體化，連續梁銜接原6度斜面，底部方形定位榫刪除，原生Z42平底貼床；保留四組M3對位。四顆牌倉及兩顆N20底座螺母從底部裝入。N20底座孔Y−17.5，馬達本體/軸心不移動；六井採局部支撐屏蔽並檢查剩餘孔槽。",
+    "前次圓弧修訂僅重印P26；本次沿用該完成檔。遮光薄片以P02A圓心為圓心，內R77、外R78、中線R77.5弧長7mm，中心155°、夾角約5.1751°；原斜臂、固定孔(-58,10)、下緣原生33.1/世界58.4及編號不變。含已完成的徑向P02A、11.2mm P04B、P25及P04A在內的當時其餘38印件沿用，所有五金與裝配位置不移動。P05名義徑向間隙仍1mm；圓弧僅將直片外側最大掃掠縮小約0.0785mm。條件式ITR9608-F槽底57.5/光軸60.2、底隙0.9及上臂距2.5mm保持，實際槽形及觸發效果待實測。",
+    "P13/P14各兩組M3×8從P04A下方往上鎖、螺母側入；P21兩組M3×25由下向上、螺母頂入。標準機五金為M3×8共56支、M3×25共10支、標準M3螺母47顆、M3墊片3片；自製28BYJ-48支架五金另計。 選配P10僅中央輪軸另用M3×25一支及M3螺母一顆；兩側掛耳/牆夾/樞軸全部純打印，無額外M3×8或墊圈。標準66支螺絲與原五金目錄保持。",
+    "正式 P05A 的設計軸距為 55.0 mm，保留 30 齒、2:1 傳動、6 mm 齒寬與 P05B 連接面。原生 CAD 軸 X54，組裝參考軸 X55。P05B 沿用試裝通過的 D5.1×3.1 夾座。先前的 55.5 mm 齒輪實測紀錄屬於歷史版本；55.0 mm 版仍待實機試裝。",
+    "P08採連續2.4mm底板與實心高側擋板，頂緣依6度傾角補償；組裝後與上蓋頂面Z154.0齊平。原滾輪開口、61mm牌倉淨寬及前後開放保持。57mm牌使用兩片相同P12限寬件，60mm牌不裝。",
+    "螢幕與四按鍵置於旋轉上罩頂部；P32A/B原外形與搭接、按鍵孔及四組接合M3×8沿用。OLED依實購27.3×27.8×1.2mm板修改P28/P32A局部；兩固定耳/螺絲柱轉90度至(75,-42)/(75,-6)，沿用兩M3×8。玻璃與顯示區長邊沿Y，排針朝+X；顯示中心向排針偏2.1mm，視窗14×24中心(77.1,-24)。P28採四PETG壓舌，PCB邊緣背面125.3、壓舌自由頂125.4，名義預壓0.1mm；玻璃不作壓合止擋，實印壓力與顯示仍待試。",
+    "牌倉內寬61mm、前後開放限寬不限長，參考57×87及60×96mm牌；牌路向出口下傾6度。選配重力擺輪P10A/B/C/D，空倉貼底板，單張起自抬升。兩側PETG夾座和帶頭軸全部打印，無螺絲五金；不做下擺限位。兩夾座可等量沿牆移，名義樞軸X−48時對P17投影隙2mm，前移後間隙改變；已驗證安全前移0..6mm。不得單側錯位，舊P11不得鬆放在擺架。夾力、蠕變、摩擦與實物取牌待試。",
+    "馬達、滑環、OLED及電池盒尺寸屬名義參考；小開關本體/卡扣、自製馬達支架、列印後強度/夾持力、線束疲勞與實際發牌速度尚未實測。28BYJ-48維持2:1齒輪傳動，每秒2至4張仍待驗證。",
+    "單顆18650、USB Type-C、關機充電。電池允許充放電電流待核對；韌體平時關閉Wi-Fi與藍牙省電。",
+    "P13/P14外側主體、導軌、頂梁及腳座補平至原底座外緣Y±41，完整保留上滑塊窗口；負Y/正Y外側大平背分別以X+90°/−90°貼床，底面25×41.6、高12mm。兩零件軸承、通軸孔、調整、導向及底部反向螺絲/側入螺母介面保持；實際首層接觸面積及局部孔槽列印依檢查報告。",
+    "P08兩處分牌閘孔已恢復原螺絲頭圓孔及錐孔：軸Y±37.5/Z72、Ø3.4通孔、Ø6.4頭部入口；固定耳、61mm牌道、封底高側板及其它37印件不動。螺絲由原−X方向放入，P09原螺母槽及所有當前五金姿態保持，先前P08六角孔已撤回。",
+    "P13/P14只將頂部(61,±35)調整螺絲孔原小倒角改為實口Ø6.4、90°、深1.85mm沉頭錐，接原Ø2.7預孔，頂橋內保留2.15mm圓柱預孔。內側頂面最薄邊0.3mm、外側至平背2.8mm；未擴外形、未移動調整螺絲、P15或滾輪。原頭Z88.75、端Z80.75保持，螺絲頭是否下沉取決於調整位置，不代表每個位置都齊平。",
+    "P01的Type-C面板開孔相較原底Z8.7下移2mm至Z6.7，11×5mm、X−81/Y−36.5不變；模組與插頭參考不移動，原孔實購小板僅露插口上半部；CAD模組/插頭高度未校準，保留nominal干涉記錄但不判定實機必碰，新孔待實測。P01高50.1及開關9×14.8保持，其餘37印件與機構座標不動。",
+    "P02就位修訂：僅重印P06/P04B。P06外環仍原生11..19，內夾套/後橋/內夾螺絲原生+2.1以保留固定滑環接口；P04B負Y管底開9mm寬、Z13..15.4進入槽，橋頂及左右各0.5間隙。外pin先退2mm，槽對齊後橋再垂直套入；內套/橋高出P06貼床面2.1，需局部支撐切片。其餘36印件STL完全保持，底部電子件/滑環不動，上部裝配整體下降2.1。"
+  ],
+  "base_shell_height_mm": 50.1,
+  "legacy_head_construction_lift_mm": 1.5,
+  "lower_stack_assembly_lift_mm": 20.1,
+  "upper_head_total_lift_mm": 25.3,
+  "main_gear_height_mm": 11.2,
+  "main_gear_bottom_native_z_mm": 36.0,
+  "slip_ring_model": "WX22-12PS",
+  "slip_ring_flange_od_mm": 44.0,
+  "slip_ring_flange_thickness_mm": 2.5,
+  "slip_ring_flange_hole_pcd_mm": 35.0,
+  "slip_ring_flange_hole_mm": 5.5,
+  "slip_ring_fixed_post_height_mm": 23.0,
+  "slip_ring_flange_bottom_z_mm": 25.2,
+  "slip_ring_rotor_wire_exit_z_mm": 41.5,
+  "switch_aperture_yz_mm": [
+    9.0,
+    14.8
+  ],
+  "n20_base_mount_y_mm": -17.5,
+  "printed_part_types": 41,
+  "retired_print_ids": {
+    "P36": "WX22法蘭改直接鎖在P01固定柱",
+    "P10": "原平移式壓牌板改為P10A/B/C/D重力自由擺輪",
+    "P11": "舊鬆放配重不適用重力擺架，不再提供正式列印檔"
+  },
+  "screw_qty": {
+    "M3x8": 56,
+    "M3x25": 10
+  },
+  "nut_qty": 47,
+  "washer_qty": 3,
+  "stepper_mount": "28BYJ-48固定在不旋轉的P02或其上部自製支架；支架與固定五金未建模",
+  "full_machine_reference_all_clear": false,
+  "P13_P14_flat_back": {
+    "back_extension_mm": 2.5,
+    "outboard_native_Y_mm": {
+      "P13": -41,
+      "P14": 41
+    },
+    "print_rotation_X_deg": {
+      "P13": 90,
+      "P14": -90
+    },
+    "print_envelope_mm": [
+      25,
+      41.6,
+      12
+    ],
+    "first_layer_geometric_contact_mm2": 623.1982799841506,
+    "full_P15_guide_window_retained": true,
+    "working_interfaces_moved": false
+  },
+  "P13_P14_top_adjustment_countersink": {
+    "axes_XY_mm": [
+      [
+        61,
+        -35
+      ],
+      [
+        61,
+        35
+      ]
+    ],
+    "physical_top_Z_mm": 87,
+    "mouth_diameter_mm": 6.4,
+    "pilot_diameter_mm": 2.7,
+    "included_angle_deg": 90,
+    "cone_depth_mm": 1.85,
+    "cone_bottom_Z_mm": 85.15,
+    "remaining_cylindrical_pilot_in_top_bridge_mm": 2.15,
+    "minimum_inboard_top_lip_mm": 0.3,
+    "outboard_top_lip_to_flat_back_mm": 2.8,
+    "original_head_Z_mm": 88.75,
+    "original_tip_Z_mm": 80.75,
+    "adjustment_hardware_moved": false,
+    "recessed_flush_head_at_every_adjustment_setting_claimed": false
+  },
+  "switch_aperture_center_yz_mm": [
+    -1.0,
+    14.75
+  ],
+  "P01_outer_wall_top_z_mm": 50.1,
+  "P01_cover_post_top_z_mm": 50.1,
+  "P01_outer_wall_primitive_bottom_z_mm": 2.1,
+  "P01_outer_wall_primitive_height_mm": 48.0,
+  "P01_P02_fixed_bottom_z_mm": 50.1,
+  "P01_cover_post_to_P02_gap_mm": 0.0,
+  "P01_upper_assembly_axial_support_qualified": false,
+  "P01_other_mechanism_frames_moved": true,
+  "TypeC_aperture_yz_mm": [
+    11.0,
+    5.0
+  ],
+  "TypeC_aperture_bottom_z_mm": 6.7,
+  "TypeC_aperture_center_yz_mm": [
+    -36.5,
+    9.2
+  ],
+  "TypeC_aperture_shift_z_mm": -2.0,
+  "TypeC_reference_hardware_moved": false,
+  "reference_USB_fit": false,
+  "user_baseline_physical_observation": "原P01開孔放置實購小板後，Type-C插口只能露出上半部，因此使用者要求將孔往下移2mm；實購小板固定位置不變。",
+  "new_aperture_physically_tested": false,
+  "USBreferenceheight_uncalibrated": true,
+  "reference_USB_fit_is_nominal_only": true,
+  "P01_P02_geometric_seating_confirmed": true,
+  "P01_P02_physical_load_tested": false,
+  "P02_seating_revision": {
+    "P01_post_top_Z_mm": 50.1,
+    "P02_bottom_Z_mm": 50.1,
+    "post_to_plate_gap_mm": 0,
+    "assembly_shift_Z_mm": -2.1,
+    "lower_frame_mm": 20.1,
+    "head_frame_mm": 22.6,
+    "P01_slip_construction_frame_mm": 22.2,
+    "slip_ring_posts_height_mm": 23,
+    "fixed_rotor_wire_exit_Z_mm": 41.5,
+    "P06_inner_and_bridge_native_raise_mm": 2.1,
+    "P04B_rear_slot_width_mm": 9,
+    "P04B_rear_slot_bottom_Z_mm": 13,
+    "P04B_rear_slot_top_Z_mm": 15.4,
+    "bridge_top_clearance_mm": 0.5,
+    "bridge_side_clearance_each_mm": 0.5,
+    "other_printed_parts_geometry_changed": false,
+    "P01_P02_geometric_contact_confirmed": true,
+    "physical_strength_and_clamp_tested": false
+  },
+  "P23_vertical_countersink": {
+    "axis_native_XY_mm": [
+      81,
+      27
+    ],
+    "pad_top_Z_mm": 63.7,
+    "actual_mouth_diameter_mm": 7.0,
+    "included_angle_deg": 90,
+    "throat_diameter_mm": 3.4,
+    "cone_bottom_Z_mm": 61.9,
+    "remaining_pad_below_cone_mm": 1.2,
+    "side_holes_and_hardware_poses_unchanged": true,
+    "purchased_head_fit_physically_tested": false
+  },
+  "P08_original_gate_screw_holes_restored": {
+    "scope": "Only restore original P08 head bore and conical transition; P09 and all hardware poses unchanged",
+    "axes_Y_mm": [
+      -37.5,
+      37.5
+    ],
+    "axis_Z_mm": 72,
+    "through_bore_diameter_mm": 3.4,
+    "head_bore_diameter_mm": 6.4,
+    "head_bore_X_range_mm": [
+      35,
+      39.6
+    ],
+    "original_cone_X_range_mm": [
+      39.4,
+      41.1
+    ],
+    "original_cone_diameters_mm": [
+      6.4,
+      3.4
+    ],
+    "former_P08_hex_nut_pockets_active": false,
+    "physical_fit_validated": false
+  },
+  "P22_size_revision": {
+    "outer_diameter_mm": 18,
+    "axial_length_mm": 17,
+    "axis_native_XZ_mm": [
+      61,
+      54.2
+    ],
+    "axial_native_Y_mm": [
+      -58.8,
+      -41.8
+    ],
+    "bore_diameters_mm": [
+      2.15,
+      3.15
+    ],
+    "bore_depths_and_positions_unchanged": true,
+    "clamp_axes_native_XY_mm": [
+      [
+        65.5,
+        -55.3
+      ],
+      [
+        65.5,
+        -45.3
+      ]
+    ],
+    "clamp_screw_head_Z_mm": 57.4,
+    "clamp_nut_bottom_Z_mm": 49.7,
+    "hidden_label_native_origin_mm": [
+      61,
+      -58.8,
+      57.8
+    ],
+    "other_prints_and_hardware_unchanged": true,
+    "only_two_screws_and_two_nuts_reposed": true,
+    "physical_fit_tested": false
+  },
+  "P31_retainer_addition": {
+    "qty": 2,
+    "dimensions_native_mm": [
+      20.4,
+      12.6,
+      16.2
+    ],
+    "P15_rear_extension_mm": 2.75,
+    "P15_new_back_native_Y_mm": -41,
+    "P15_bore_diameter_mm": 3.5,
+    "top_adjustment_shaft_hole_mm": 3.4,
+    "top_adjustment_countersink_mouth_mm": 6.4,
+    "hooks_present": false,
+    "outer_wall_planar": true,
+    "nominal_slider_front_rear_play_mm": [
+      0.45,
+      0.5
+    ],
+    "slider_vertical_travel_mm": [
+      -0.3,
+      0.8
+    ],
+    "assembly": "Remove original adjuster; lower cover straight down; reinstall/adjust screw without clamping cover. Remove screw before lifting cover.",
+    "recommended_material": "PETG",
+    "new_hardware_qty": 0,
+    "original_large_P13_P14_and_P15_unchanged": true,
+    "physical_fit_end_thrust_friction_tested": false
+  },
+  "P16_width_revision": {
+    "old_axial_length_mm": 54,
+    "new_axial_length_mm": 53,
+    "trim_each_end_mm": 0.5,
+    "new_native_Y_mm": [
+      -26.5,
+      26.5
+    ],
+    "axis_XZ_mm": [
+      61,
+      54.2
+    ],
+    "shaft_bore_diameter_mm": 3.15,
+    "O_ring_groove_centers_Y_mm": [
+      -21,
+      21
+    ],
+    "O_ring_groove_width_mm": 2.3,
+    "O_ring_groove_root_diameter_mm": 16.8,
+    "groove_to_end_land_mm": 4.35,
+    "hidden_label_origin_mm": [
+      61,
+      -26.5,
+      59.7
+    ],
+    "hub_clamp_hardware_positions_unchanged": true,
+    "physical_fit_tested": false,
+    "old_O_ring_groove_centers_Y_mm": [
+      -24,
+      24
+    ],
+    "O_ring_inward_shift_mm_each": 3,
+    "original_annular_lightening_cavity_unchanged": true,
+    "nominal_groove_to_cavity_outer_wall_mm": 1.9,
+    "only_four_silicone_references_reposed": true
+  },
+  "P31_axial_revision": {
+    "reference_upper_shaft_length_mm": 82,
+    "upper_shaft_native_Y_mm": [
+      -41,
+      41
+    ],
+    "upper_shaft_centering_translation_Y_mm": -1,
+    "shaft_stop_inner_Y_mm": [
+      -41.5,
+      41.5
+    ],
+    "nominal_axial_gap_each_mm": 0.5,
+    "nominal_total_endplay_mm": 1,
+    "cap_dimensions_native_mm": [
+      20.4,
+      12.6,
+      16.2
+    ],
+    "cap_bottom_native_Z_mm": 72.45,
+    "upper_retainer_and_P15_geometry_unchanged": true,
+    "all_fastener_positions_unchanged": true,
+    "physical_fit_friction_load_tested": false,
+    "hooks_present": false,
+    "outer_wall_planar": true,
+    "straight_installation_without_spreading": true,
+    "rear_inner_Y_mm": -41.5,
+    "rear_outer_Y_mm": -42.7,
+    "cap_float_min_relative_Z_mm": -0.15,
+    "cap_float_max_relative_Z_mm_formula": ".3 + slider_dz",
+    "nominal_slider_front_rear_play_mm": [
+      0.45,
+      0.5
+    ],
+    "hidden_label_origin_mm": [
+      61,
+      -42.7,
+      80.1
+    ]
+  },
+  "P04B_gear_rise_mm": 2.7,
+  "P04B_gear_rise_revision": {
+    "previous_gear_thickness_mm": 8.5,
+    "current_gear_thickness_mm": 11.2,
+    "rise_mm": 2.7,
+    "gear_bottom_native_Z_mm": 36,
+    "gear_top_native_Z_mm": 47.2,
+    "lower_frame_mm": 20.1,
+    "previous_head_frame_mm": 22.6,
+    "current_head_frame_mm": 25.3,
+    "P04A_bottom_world_Z_mm": 67.3,
+    "P26_geometry_unchanged": false,
+    "P26_bottom_world_Z_mm": 58.4,
+    "home_sensor_slot_floor_world_Z_mm": 57.5,
+    "nominal_slot_bottom_clearance_mm": 0.9,
+    "nominal_blade_insertion_depth_mm": 5.0,
+    "home_optical_detection_tested": false,
+    "P26_upper_arm_bottom_world_Z_mm": 65.9,
+    "home_sensor_body_top_world_Z_mm": 63.4,
+    "nominal_arm_to_sensor_body_clearance_mm": 2.5,
+    "sensor_slot_geometry_unmeasured": true,
+    "combined_changed_print_ids": [
+      "P02A",
+      "P04B",
+      "P26"
+    ]
+  },
+  "home_opto_reference_revision": {
+    "body_dimensions_XYZ_mm": [
+      13,
+      6,
+      10
+    ],
+    "body_dimensions_user_confirmed": true,
+    "mounting_datum_world_XYZ_mm": [
+      -70.23885349534036,
+      32.75291528490421,
+      53.4
+    ],
+    "estimated_slot_width_mm": 5,
+    "estimated_slot_floor_height_mm": 4.1,
+    "estimated_open_slot_to_full_body_top": true,
+    "slot_dimensions_measured": false,
+    "optical_axis_measured": false,
+    "estimated_pin_positions_unchanged": true,
+    "exit_opto_reference_changed": false,
+    "physical_fit_and_homing_detection_tested": false,
+    "conditional_datasheet_slot_floor_height_mm": 4.1,
+    "conditional_datasheet_optical_axis_height_mm": 6.8,
+    "radial_axis_azimuth_deg": 335,
+    "optical_axis_world_Z_mm": 60.2,
+    "actual_sensor_model_confirmed": false,
+    "slot_and_optical_dimensions_conditional_on_ITR9608_F": true
+  },
+  "home_radial_layout": {
+    "radius_mm": 77.5,
+    "azimuth_deg": 155,
+    "home_center_XY_mm": [
+      -70.23885349534036,
+      32.75291528490421
+    ],
+    "radial_inward_angle_deg": 335,
+    "P25_original_STL_reused": true,
+    "P04A_flag_anchor_native_XY_mm": [
+      -58,
+      10
+    ],
+    "blade_radial_thickness_mm": 1,
+    "blade_tangential_width_mm": 7.042766717300575,
+    "minimum_P05_radial_clearance_mm": 1,
+    "P02A_original_home_features_filled": true,
+    "conditional_ITR9608_F_reference": true,
+    "actual_sensor_model_confirmed": false,
+    "physical_fit_and_homing_detection_tested": false,
+    "blade_shape": "concentric_arc",
+    "blade_inner_radius_mm": 77.0,
+    "blade_outer_radius_mm": 78.0,
+    "blade_midline_arc_length_mm": 7.0,
+    "blade_arc_span_deg": 5.175102665697758
+  },
+  "P26_arc_revision": {
+    "scope": "Only P26 shutter blade changes; reuse all38 other current print files.",
+    "inner_radius_mm": 77.0,
+    "outer_radius_mm": 78.0,
+    "mid_radius_mm": 77.5,
+    "midline_arc_length_mm": 7.0,
+    "angular_center_deg": 155.0,
+    "arc_span_rad": 0.09032258064516129,
+    "arc_span_deg": 5.175102665697758,
+    "arc_segment_count": 64,
+    "native_Z_mm": [
+      33.1,
+      42.0
+    ],
+    "world_bottom_Z_mm": 58.4,
+    "arm_mount_hole_engraving_and_all_assembly_poses_unchanged": true,
+    "nominal_P05_radial_clearance_mm": 1.0,
+    "physical_fit_and_homing_detection_tested": false
+  },
+  "P10_gravity_revision": {
+    "scope": "Only optional P10 follower changes; reuse all37 retained print files and unchanged standard209 actors/66 screws.",
+    "retired_print_ids": [
+      "P10",
+      "P11"
+    ],
+    "new_print_ids": [
+      "P10A",
+      "P10B",
+      "P10C",
+      "P10D"
+    ],
+    "new_print_quantities": {
+      "P10A": 1,
+      "P10B": 1,
+      "P10C": 1,
+      "P10D": 2
+    },
+    "floor_native_Z_mm": 64,
+    "P17_rubber_outer_diameter_mm": 20.7,
+    "P17_axis_native_XZ_mm": [
+      -22,
+      54
+    ],
+    "empty_roller_center_native_XZ_mm": [
+      -3.65,
+      70
+    ],
+    "roller_diameter_mm": 12,
+    "roller_width_mm": 16,
+    "roller_native_Y_mm": [
+      0,
+      16
+    ],
+    "pivot_native_XZ_mm": [
+      -48,
+      120
+    ],
+    "empty_projected_P17_outer_edge_gap_mm": 2,
+    "empty_floor_normal_gap_mm": 0,
+    "maximum_stack_cards": 108,
+    "reference_card_thickness_mm": 0.3,
+    "gravity_only": true,
+    "P11_loose_weight_permitted": false,
+    "standard_hardware_catalog_unchanged": true,
+    "optional_hardware_catalog": "P10_optional_fastener_catalog.json",
+    "physical_fit_clamp_grip_force_friction_and_feed_tested": false,
+    "side_clips_and_pivots_fully_printed": true,
+    "side_hardware_qty": 0,
+    "lower_swing_stop_present": false,
+    "pure_printed_hinge_opening_direction_frame_local": [
+      -1,
+      0,
+      0
+    ],
+    "recommended_clip_material": "PETG",
+    "clamp_relaxed_throat_mm": 2.2,
+    "P08_wall_thickness_mm": 2.4,
+    "nominal_clip_elastic_preload_each_side_mm": 0.1,
+    "safe_equal_forward_adjustment_mm": [
+      0,
+      6
+    ],
+    "safe_pivot_native_X_mm": [
+      -48,
+      -42
+    ],
+    "nominal_2mm_gap_changes_after_manual_adjustment": true,
+    "optional_hardware": {
+      "DIN7991 M3x25": 1,
+      "M3 nut": 1
+    }
+  },
+  "exit_opto_reference_revision": {
+    "body_dimensions_XYZ_mm": [
+      13,
+      6,
+      10
+    ],
+    "body_dimensions_user_confirmed": true,
+    "dimensions_exclude_pins": true,
+    "actual_sensor_model_confirmed": false,
+    "conditional_slot_width_mm": 5.0,
+    "conditional_slot_floor_height_mm": 4.1,
+    "conditional_optical_axis_height_mm": 6.8,
+    "slot_dimensions_measured": false,
+    "pin_positions_measured": false,
+    "main_mount_axis_native_XY_mm": [
+      81,
+      27
+    ],
+    "standard_60mm_seat_Y_shift_mm": 1.5,
+    "narrow_57mm_seat_Y_shift_mm": 0.0,
+    "redundant_second_slot_and_front_bar_removed": true,
+    "physical_fit_and_feeding_tested": false,
+    "original_backplate_geometry_preserved": true,
+    "pin_hole_diameter_mm": 1.2,
+    "pin_hole_centers_native_XZ_mm": [
+      [
+        89.73,
+        59.3
+      ],
+      [
+        89.73,
+        69.3
+      ],
+      [
+        92.27,
+        59.3
+      ],
+      [
+        92.27,
+        69.3
+      ]
+    ],
+    "original_strap_slots_preserved": true,
+    "original_ID_preserved": true
+  },
+  "oled_actual_module_revision": {
+    "PCB_drawing_width_height_thickness_mm": [
+      27.3,
+      27.8,
+      1.2
+    ],
+    "header_direction_in_current_model": "+X",
+    "mounts_native_XY_mm": [
+      [
+        75,
+        -42
+      ],
+      [
+        75,
+        -6
+      ]
+    ],
+    "AA_native_center_XY_mm": [
+      77.1,
+      -24
+    ],
+    "window_dimensions_XY_mm": [
+      14,
+      24
+    ],
+    "glass_recess_dimensions_XY_mm": [
+      19.86,
+      27.3
+    ],
+    "PCB_native_Z_mm": [
+      125.3,
+      126.5
+    ],
+    "clamp_contact_free_Z_mm": 125.4,
+    "nominal_PETG_contact_preload_mm": 0.1,
+    "physical_fit_tested": false
+  }
+}

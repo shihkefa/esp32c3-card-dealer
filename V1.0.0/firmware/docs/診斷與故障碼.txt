@@ -1,0 +1,111 @@
+V1.0.0 USB命令（115200，新行結尾）
+先依接線與供電.txt切開JP-ESP5V。USB只用板上原生USB，20/21不是UART。
+
+help                 列命令
+status               JSON：狀態、錯誤、每人/餘牌、已計數、各玩家計數、半步位置、感測、PWM及無線關閉狀態
+scan                 僅探測BoardConfig中的0x20/0x3C，0=ACK
+preset landlord      鬥地主
+preset guandan       摜蛋
+preset four13        四人13
+preset three13       三人13（52張配置）
+set cards 13         每人張數
+set players 3        3或4人
+set rest 13          餘牌
+set feed 175         取牌PWM40..255
+set eject1 255       出牌一檔 PWM，範圍 40 至 255
+set eject_start_ms 95  一檔維持 95 ms。USB 可設 0 至 500 的整數毫秒，預設 100 ms。設 0 直接進二檔
+set eject2 200       出牌二檔 PWM，範圍 40 至 255。一檔時間到即切換，持續到該張收尾
+set eject 200        相容舊指令，等同set eject2
+set reverse 175      出口遮光後取牌反轉PWM；0停用，否則40..255
+set reverse_ms 50    一次倒轉限時；0停用，否則10..300ms
+set speed_pct 12     轉向速度 1 至 100 的整數百分比，兩種模式共用。每 1% 對應每秒 100 指令半步。新機預設 6%。
+set speed 600        舊指令以半步/秒設定同一個速度，100 至 10000 可用
+set accel 300        轉向加速度 100..24000 半步/秒²，300 為新機預設
+set yaw_direction ccw  從機頭上方看選逆時針；set yaw_direction cw 選順時針。status、log export 與 cal export 顯示 yaw_direction。
+set continuous 1     啟用連轉發牌，設 0 選回停穩發牌
+set continuous_rate 1200   舊指令的相容名稱，同樣設定共用速度
+set release_trim_ms 10     提早 10 ms 啟動取牌。接受 −150 至 +150，以 10 ms 遞增
+log status           查看本機儲存狀態與可讀局數
+log export           匯出最近一局，或使用 log export 2 至 log export 4 讀取較早紀錄
+calibrate            空機四圈校正，固定以每秒 400 半步、加速 200 半步/秒² 量測
+cal status           查詢獨立校正檔可用筆數和 RAM 狀態
+cal export 1         匯出最新校正的五次原點讀數與四段圈距，2 至 4 為較早紀錄
+start                以固定的每圈 8191.5 半步開始一局，出口須透光
+pause / resume       請求邊界暫停/繼續
+abort                立即停止輸出並取消本局
+ack                  故障後重置，沒有自動開始
+jog feed 200         取牌正向200ms，限500ms，僅待機/完成狀態
+jog feed -200        取牌反向200ms，換向有2ms零輸出間隔
+jog eject 200        以出牌一檔正向200ms，限500ms（點動不自動切二檔）
+set steps            此機的圈步已固定，修改圈步的指令會被拒絕
+
+只保存最後一組設定，不保存每局進度，也不為每個自訂配置各建存檔。
+設定總張數最多108，變更無效會拒絕；韌體在運轉中不允許改設定或點動。
+wifi_off=true代表Wi-Fi驅動未初始化；ble_off=true代表藍牙控制器為IDLE（或編譯時未啟用）。
+本版沒有啟用Wi-Fi或藍牙的指令。若任一項為false，請提供status結果以查明韌體/核心差異。
+
+韌體共定義 14 個代碼。固定圈步版會記錄 E06 並繼續發牌。E02、E08、E14 保留供比對舊版紀錄。
+E01 SETTINGS             設定超界
+E02 NEED_CALIBRATION     舊版紀錄可能出現。本版初次開機即可對準首位開始。
+E03 OUTLET_BLOCKED       開始/恢復/下一張前，出口未持續透光至少20ms
+E04 NO_CARD              取牌超過1200ms，未看到有效遮光
+E05 CARD_STUCK           有牌遮光後超過1400ms仍未透光
+E06 UNEXPECTED_CARD      旋轉、預轉、收尾等預期送牌時段以外發生有效遮光。只記錄，繼續發牌，已發張數維持原值
+E07 HOME_MISSING         MISS 表示未看到下一次歸零遮光，BLOCKED 表示遮光持續超過 1/8 圈指令步距
+E08 HOME_MISMATCH        舊版紀錄中的圈距不符。固定圈步模式在發牌中不因原點間距偏差停機。
+E09 I2C_OR_INIT          PCF/OLED通訊或PWM/硬體計時器初始化/輸出異常
+E10 SENSOR_OVERFLOW      已確認穩定的出口邊緣佇列超量，立即停止；不可直接忽略或續發
+E11 MOTION               排程/到位/動作時間異常
+E12 CALIBRATION_FAILED   手動圈數校正時，沒有合格參考週期或四圈差異太大
+E13 ABORTED              人工中止
+E14 RELEASE_WINDOW       舊版紀錄中的落點超差。本版保留紙牌離開的角度與時間，發牌流程不因超差停機。
+
+連轉診斷
+固定圈步與校正紀錄
+日常發牌固定每圈 8191.5 半步。這個值取自本機第二次成功校正的四圈（8191、8194、8191、8190 半步）。前一次平均為 8191.25。可選的校正只量測和存檔，不改動固定圈步。cal export 會列出參考位置、時間、各圈步數、平均值及極差，中途停止也會保存已取得的資料。usable=1 表示取得四個合格圈距。
+
+每局第一張量測 N20 啟動至 P24 牌尾離開的時間，之後持續調整取牌提前量。status 提供 measured_release_ms、phase_error_steps 和 turn_fixed。將指令半步差 × 360 ÷ 8191.5 可換算為方向偏差，正值代表轉盤已越過目標。落點偏差僅供診斷，紀錄中的角度不含馬達失步或桌面滑行。
+
+把紀錄交給電腦
+完成一局、校正、故障或中止後，模組保留最近四筆紀錄。正常存妥會顯示 LOG SAVED；故障時 OLED 優先顯示 E 碼。USB 可用 log status 看 storage=ready 和 stored 的筆數。顯示 ram_latest=1 或 LOG RAM ONLY 時，請在關機或下一局前匯出最新一筆。若在發牌途中直接斷電，只能讀回之前已存妥的紀錄。
+以 USB 資料線接 SuperMini，可交由電腦工具讀取。工具使用 Python 3 與 pyserial，可於專案根目錄執行下列指令。序列監看視窗若已占用同一埠，請先關閉。
+  python V1.0.0/firmware/tools/read_deal_log.py --status
+  python V1.0.0/firmware/tools/read_deal_log.py --rank 1 --output deal.csv
+如果連了多塊開發板，加上 --port COM5（依實際埠號替換）。軟體僅在收到完整結尾及通過列數檢查後才輸出。也可直接在序列監看輸入 log export，直到收到 # END LOG。
+表頭保存本局模式、速度、加速、兩檔 PWM、出口原始與合格邊緣數、歸零脈衝與故障資訊。每張牌一列，player_0_remainder=0 表示餘牌。spin_ms 和 feed_ms 是出牌輪與取牌命令時間；blocked_ms 和 clear_ms 是最後通過穩定性檢查的遮光與透光邊緣，採當時的時間與指令位置；count_ms 是韌體確認計數的時間。各時間從本局開始算起，未發生的時間填 −1。實際牌飛多遠、偏向哪一位，請另記張次和觀察位置。
+
+E03/04/05先清牌、查感測狀態與馬達方向，重新排牌後重置，不嘗試續發。
+遇到 E07 或手動校正時的 E12，可查參考遮光片、PCF P4、第10路滑環、方向與步進速度。
+
+E07 現場排查
+1. 先記下 OLED 第一行。E07 MISS 表示從啟動或最後一次歸零標記開始，已下令超過 1.2 圈仍未出現下一次有效遮光。E07 BLOCKED 表示歸零訊號持續遮光，期間下令的步距超過 1/8 圈。停機時單用紙片擋住不會累積這段步距。
+2. MISS 同時有抖動、跳一下或機頭已偏位時，先斷電查看 P05B 是否在 28BYJ-48 軸上滑動、P05A 與大齒輪是否咬合或會跳齒，檢查機頭有無卡點。步進馬達失步也會造成發出步數與實際角度不符，單靠 MISS 無法斷定是哪一處滑動。
+3. BLOCKED 時先看 P26 是否擦到或持續擋住 P25。馬達保持停止，在 USB status 觀察 home_blocked，將紙片伸進 P25 光槽應變為 true，再抽出應回 false。若訊號不切換，檢查 PCF8574 的 P4、接線與接頭。若紙片正常，也要確認實際 P26 能切進光束並完全離開。
+4. 重新空倉做慢速「圈數校正」。之後先以最後能對準的速度／加速測少量牌。若原速度為 3600、加速超過 1000 容易偏位，可在機構檢查後試 3600／800。仍會抖動就把加速退到 600，繼續偏位時改用新機基準 600／300 排查。
+5. 清錯前可讀 USB status。home_fault 顯示 MISS 或 BLOCKED，home_fault_pos 為出錯當時的累計指令半步，home_fault_travel 為從對應起點走過的指令半步。這些數字由控制器計算，桌上實際角度仍要看對位記號。
+轉向速度設 3600 或以上時，機頭定位期間優先以 1 ms 間隔查詢 PCF 的回零與按鍵訊號，OLED 待定位結束後再刷新。此時上一畫面短暫停留屬預期行為。
+
+查看 E06 紀錄
+1. 本局運轉時可用 USB 輸入 status，結束後可輸入 log export。e06_count 是本局非預期遮光次數，e06_last_stage 是最近一次的動作階段。OLED 繼續顯示發牌進度。舊版紀錄若顯示 UNEXPECTED_CARD，代表當時的韌體曾因 E06 停機。
+2. TAIL 表示上一張已計數，正在收尾。若只放一張牌也記到 E06，可查看牌尾是否彈回 P24 光槽。若多張才發生，核對桌面實際張數，查看第二張是否跟進出牌輪。
+3. POSITIONING 表示機頭正在定位。若當時出口無牌，查看 P24 至 GPIO10 的接頭，以及線束是否隨轉向擺入光槽。SPINUP 表示出牌輪正在預轉，可查看紙牌有沒有提早滑進出口。
+4. E06 本身只記錄。下一張開始前出口仍未清空會報 E03，有效送牌後持續遮光超過 1400 ms 會報 E05。
+
+出口的 CHANGE 中斷觀察候選電平與時間。遮光持續至少 1500 µs、透光至少 12000 µs 後，
+才由中斷/100us計時器將合格轉換放入31筆有效容量的佇列；不單純擴大佇列或吞掉overflow。
+保留原候選時間戳，完整短牌脈衝仍可回放計數；原始GPIO遮擋仍阻止開始/轉向。
+status新增exit_raw_edges、exit_qualified_edges、exit_overflows，都是本次開機累計值。
+feed_pwm/eject_pwm仍是當前輸出命令；feed_setting/eject_setting才是已設定的正轉PWM。
+eject_setting 顯示二檔 PWM。eject_stage1 和 eject_stage2 分別顯示兩檔 PWM，eject_start_ms 顯示已設定的一檔毫秒數。
+其餘新設定可由reverse_pwm/reverse_ms/speed/acceleration查詢。
+程式濾波不能排除所有電磁干擾；仍需核對10k上拉至3.3V、共地、接點及原圖馬達端104陶瓷電容。
+馬達線與出口訊號線分開走；任何新增電容/走線修改後，需用真牌重測遮光/透光與不重複計數。
+E09斷線時所有驅動停止。待機/故障可嘗試I2C恢復，恢復後仍須按RUN/ack重置，絕不自動續發。
+OLED本身斷線時無法在該螢幕顯示錯誤，改用USB狀態與實際接線檢查。
+E10增加馬達抑噪/接地/導線固定，先排除電氣問題，不單靠放大濾波掩蓋。
+
+計數原則：
+出口直接 GPIO 中斷保存原始邊緣時間。每張啟動取牌以後，連續遮光至少 1.5 ms、接著連續透光至少 12 ms 才構成一張。
+有效遮光時，N20 依設定限時倒轉或停下，RF300 持續送牌。出口確認透光後計數，收尾 60 ms 後排程下一張。落點角度不參與計數。
+感測器只能確認脈衝，不能驗證牌實際落在誰面前，也不能量牌厚或分辨完全重疊雙張。
+參考光電每圈一個標記，只作圈數校正與運轉檢查，不是連續位置編碼器。

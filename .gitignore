@@ -1,0 +1,25 @@
+# Build tools, dependencies and temporary previews
+.build/
+.build-temp/
+.build-tests/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Office locks and operating-system metadata
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Interrupted release packaging
+*.tmp.zip

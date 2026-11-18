@@ -1,0 +1,13 @@
+﻿路數,訊號,固定端,旋轉端,備註
+1,5V,升壓5V母線,DRV8833 VM與出口IR LED,馬達電源；依實際電流核對線材與滑環
+2,GND,總地,旋轉頭所有GND,所有電路共地
+3,3.3V,ESP32-C3 3V3,OLED與PCF8574 VCC及接收端上拉,禁止改成5V邏輯
+4,SDA,GPIO21,OLED SDA和PCF SDA,100kHz；上拉3.3V
+5,SCL,GPIO20,OLED SCL和PCF SCL,100kHz；上拉3.3V
+6,取牌IN1,GPIO5,DRV8833 AIN1,輸入10k下拉
+7,取牌IN2,GPIO6,DRV8833 AIN2,輸入10k下拉
+8,出牌PWM,GPIO7,DRV8833 BIN1,BIN2永久GND；輸入10k下拉
+9,出口回傳,GPIO10,出口ITR接收管C,10k上拉3.3V
+10,參考到PCF,固定底盒參考ITR接收管C,PCF8574 P4,47k上拉3.3V；不是ESP直接GPIO
+11,備用,不接,不接,兩端絕緣
+12,備用,不接,不接,兩端絕緣

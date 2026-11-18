@@ -1,0 +1,27 @@
+{
+  "captured_utc": "2026-11-18T12:06:01.004325+00:00",
+  "files": {
+    "V1.0.0/firmware/CardDealer/BoardConfig.h": "bbcef6c518b2b9187db24b2970919a570dfc181489436423e9fb1c530810b64b",
+    "V1.0.0/firmware/CardDealer/CardDealer.ino": "3f6c36d01820e62334b5e5e65c2c9b61755c36781622fca371e55c5775bcb2b1",
+    "V1.0.0/firmware/CardDealer/DealerCore.cpp": "c43493485e68870ef61bdf069900b7b043fbb22607d3be68231c1e689647f8fc",
+    "V1.0.0/firmware/CardDealer/DealerCore.h": "d7e7f8dd11602ccd129f3c38f63ce9f6b62581544b9825849a97f0e21123457e",
+    "V1.0.0/firmware/CardDealer/Display.cpp": "aaf5ff275b95977d863cce9bc7cee0cfc39309faa64aeb4fddbd746c1dafc7c3",
+    "V1.0.0/firmware/CardDealer/Display.h": "33d646dd7c3c475cb98f9e8593959172213fe67e2ed98a4ab4dbb9ab73facdfa",
+    "V1.0.0/firmware/CardDealer/EdgeEvent.h": "1bb125a681b7e95b7192903a1d709fbaa85a22b66be11d22fe4926f16f28b833",
+    "V1.0.0/firmware/CardDealer/ExitQualifier.h": "d1f72b16b64a80797aae69cbbdf4cd99e925c69873b881270a42977cd7da404c",
+    "V1.0.0/firmware/CardDealer/FlightLog.cpp": "e9926c1a9bf3d2c53cad79e63daa673d8250653aa873f670ae19fe0969da42f9",
+    "V1.0.0/firmware/CardDealer/FlightLog.h": "f069765c8baaeb8e91972ae26ae13438c90848350da0ef9f0590682a120237d0",
+    "V1.0.0/firmware/CardDealer/Font16.h": "1b4d2bb38d3c1d3b472dab8b80d0efd26a41975250313cf84c6d20cf43de0b86",
+    "V1.0.0/firmware/CardDealer/MotionLimits.h": "bb1cf62c6ef3f248861d4639f5e1a9640fdd8896ae726786b8555fbdbcca1132",
+    "V1.0.0/firmware/CardDealer/RadioPower.h": "1472c8f87725f3a12222e0b12e7724cdfe0bd629f280baf9e440264749f9d21d",
+    "V1.0.0/firmware/CardDealer/StepperPlan.h": "1bbad5b814d6989431ef1c72c7070a6b92461f3e26fad488d0838ad665c053bb",
+    "V1.0.0/firmware/tests/core_tests.cpp": "3090f13c6f4519fb8f156184f14104e35712216fb0cca61f41d9da20f8078ed6",
+    "V1.0.0/firmware/tests/exit_pipeline_tests.cpp": "da8d80bd614d7b492ffda038b76e3a0d18f0dad4c86eb463dfdbd2d05a4b60b8",
+    "V1.0.0/firmware/tests/exit_sampler_tests.cpp": "2158d10daed314979ae51e10fdfae9b2015ea349c75106854e4bad93b10e5c0e",
+    "V1.0.0/firmware/tests/flight_log_tests.cpp": "3bf0f1b4bfeb185e21dce89f1de811c0760c244067743cd129c01c4275522634",
+    "V1.0.0/firmware/tests/flight_stubs/esp_partition.h": "0b9bface14562a5bee02c359f5c35b54907363001107f2bd7483253c134c9bfd",
+    "V1.0.0/firmware/tests/flight_stubs/esp_rom_crc.h": "ee190f530233333c64e0b5531324745c4d1473e4560bb28fdba9ee0639f109f7",
+    "V1.0.0/firmware/tests/flight_stubs/SPIFFS.h": "b079a43436d94cf72c8991d4300810aee45dd3f981169e51b38d5baeae7644ef",
+    "V1.0.0/firmware/tests/test_read_deal_log.py": "433644e382077dd165517eecca16789238b95c80c6c4cc2a2b5c7c3357ddf806"
+  }
+}
